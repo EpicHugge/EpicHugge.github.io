@@ -1,8 +1,7 @@
 ---
 layout: default
-title: "EpicHugge's Portfolio"
+title: Portfolio
+permalink: /
 ---
 
-# Hello World!
-
-Welcome to my new site using the Cayman theme!
+<!-- Portfolio content goes here -->
