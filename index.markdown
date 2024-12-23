@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Home"
+title: "EpicHugge's Portfolio"
 ---
 
 # Hello World!
