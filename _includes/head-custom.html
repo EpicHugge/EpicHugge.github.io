@@ -1,19 +1,25 @@
 <!-- _includes/head-custom.html -->
 <style>
-  /* 1. Set a grayish-black background and white text for the entire body */
-  body {
+  /* 1. Reset box-sizing for all elements */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* 2. Remove default margins and paddings */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure html and body take full height */
     background-color: #1a1a1a !important; /* Grayish-black background */
     color: #fefefe !important;           /* White text */
-    margin: 0;                            /* Remove default margins */
-    padding: 0;                           /* Remove default padding */
   }
 
-  /* 2. Set the html background to match the body to eliminate borders */
-  html {
-    background-color: #1a1a1a !important; /* Grayish-black background */
+  /* 3. Ensure the main content occupies full height */
+  .main-content {
+    min-height: calc(100vh - 160px); /* Adjust based on header and footer height */
   }
 
-  /* 3. Update link colors */
+  /* 4. Update link colors */
   a {
     color: #c1c1c1 !important; /* Gray links */
     text-decoration: none;     /* Remove underline */
@@ -25,15 +31,12 @@
     text-decoration: underline; /* Underline on hover */
   }
 
-  /* 4. Navigation Menu Styles */
+  /* 5. Navigation Menu Styles */
   .navigation {
     position: absolute;
     top: 20px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
   }
-
-  /* Remove button-specific styles */
-  /* .navigation .btn { ... } */ /* This section is no longer needed */
 
   /* Style navigation links as normal text links */
   .navigation a {
@@ -43,21 +46,22 @@
     color: #c1c1c1 !important; /* Ensure consistent link color */
   }
 
-  /* 5. Remove background image and set header background color */
+  /* 6. Remove background image and set header background color */
   .page-header {
     position: relative; /* Ensure it contains the absolute navigation */
     background-image: none !important;    /* Remove background image */
     background-color: #1a1a1a !important; /* Set header background color */
     background: #1a1a1a !important;       /* Override any shorthand background */
+    padding: 40px 20px; /* Add padding for better spacing */
   }
 
-  /* 6. Style active navigation link */
+  /* 7. Style active navigation link */
   .navigation a.active {
     text-decoration: underline; /* Underline the active link */
     color: #fefefe !important;   /* Change color to white for active link */
   }
 
-  /* 7. Optional: Style footer links similarly */
+  /* 8. Style footer links similarly */
   .site-footer a {
     color: #ff9900 !important; /* Orange footer links */
     text-decoration: none;
@@ -69,14 +73,14 @@
     text-decoration: underline;
   }
 
-  /* 8. Ensure the main content and footer occupy full width */
-  .main-content {
-    min-height: 100vh; /* Ensure main content takes at least full viewport height */
-  }
-
-  /* 9. Remove any box shadows or borders that might contribute to the greenish border */
+  /* 9. Remove any box shadows or borders globally */
   * {
     box-shadow: none !important;
     border: none !important;
+  }
+
+  /* 10. Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
   }
 </style>
