@@ -8,13 +8,13 @@
 
   /* 2. Update link colors */
   a {
-    color: #fefefe !important; /* White links */
+    color: #c1c1c1 !important; /* Gray links */
     text-decoration: none;     /* Remove underline */
     transition: color 0.3s, text-decoration 0.3s;
   }
 
   a:hover {
-    color: #ffcc00 !important; /* Yellow on hover */
+    color: #fefefe !important; /* White on hover */
     text-decoration: underline; /* Underline on hover */
   }
 
@@ -35,9 +35,12 @@
     font-weight: bold;  /* Make links bold */
   }
 
-  /* Optional: Ensure the header is positioned relative to contain the absolute navigation */
+  /* 4. Remove background image and set header background color */
   .page-header {
-    position: relative;
+    position: relative; /* Ensure it contains the absolute navigation */
+    background-image: none !important;    /* Remove background image */
+    background-color: #1a1a1a !important; /* Set header background color */
+    background: #1a1a1a !important;       /* Override any shorthand background */
   }
 
   /* Optional: Style footer links similarly */
