@@ -1,54 +1,38 @@
 <!-- _includes/head-custom.html -->
 <style>
-  /* 1. Set a grayish-black background and white text for the entire body */
+  /* Existing styles */
   body {
-    background-color: #1a1a1a !important; /* Grayish-black */
-    color: #fefefe !important;           /* White text */
+    background-color: #1a1a1a !important;
+    color: #fefefe !important;
   }
-
-  /* 2. Update link colors */
   a {
-    color: #ff9900 !important; /* Orange links */
+    color: #ff9900 !important;
   }
 
-  a:hover {
-    color: #ffcc00 !important; /* Yellow on hover */
+  /* Navigation Menu Styles */
+  .navigation {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
   }
 
-  /* 3. Remove background image and set dark background color for the header */
+  .navigation .btn {
+    background-color: #444;
+    color: #fefefe;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .navigation .btn:hover {
+    background-color: #555;
+  }
+
+  /* Optional: Ensure the header is positioned relative to contain the absolute navigation */
   .page-header {
-    background-image: none !important;    /* Remove background image */
-    background-color: #1a1a1a !important; /* Dark grayish-black background */
-    background: #1a1a1a !important;       /* Override any shorthand background */
-  }
-
-  /* 4. Ensure header texts are white */
-  .page-header h1,
-  .page-header h2 {
-    color: #fefefe !important; /* White header texts */
-  }
-
-  /* 5. Darken the footer background and set text to white */
-  .site-footer {
-    background-color: #1a1a1a !important; /* Dark gray footer */
-    color: #fefefe !important;           /* White footer text */
-  }
-
-  .site-footer a {
-    color: #fefefe !important; /* White footer links */
-  }
-
-  /* 6. Customize button styles */
-  .btn {
-    background-color: #444 !important; /* Dark buttons */
-    color: #fefefe !important;           /* White button text */
-    border: none !important;             /* Remove borders */
-    padding: 10px 20px;                  /* Add some padding */
-    border-radius: 5px;                   /* Rounded corners */
-    text-decoration: none !important;    /* Remove underline */
-  }
-
-  .btn:hover {
-    background-color: #555 !important; /* Slightly lighter on hover */
+    position: relative;
   }
 </style>
