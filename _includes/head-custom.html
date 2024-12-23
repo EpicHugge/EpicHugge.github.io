@@ -4,9 +4,16 @@
   body {
     background-color: #1a1a1a !important; /* Grayish-black background */
     color: #fefefe !important;           /* White text */
+    margin: 0;                            /* Remove default margins */
+    padding: 0;                           /* Remove default padding */
   }
 
-  /* 2. Update link colors */
+  /* 2. Set the html background to match the body to eliminate borders */
+  html {
+    background-color: #1a1a1a !important; /* Grayish-black background */
+  }
+
+  /* 3. Update link colors */
   a {
     color: #c1c1c1 !important; /* Gray links */
     text-decoration: none;     /* Remove underline */
@@ -18,7 +25,7 @@
     text-decoration: underline; /* Underline on hover */
   }
 
-  /* 3. Navigation Menu Styles */
+  /* 4. Navigation Menu Styles */
   .navigation {
     position: absolute;
     top: 20px; /* Adjust as needed */
@@ -33,9 +40,10 @@
     margin-left: 15px; /* Space between links */
     font-size: 16px;    /* Adjust font size as needed */
     font-weight: bold;  /* Make links bold */
+    color: #c1c1c1 !important; /* Ensure consistent link color */
   }
 
-  /* 4. Remove background image and set header background color */
+  /* 5. Remove background image and set header background color */
   .page-header {
     position: relative; /* Ensure it contains the absolute navigation */
     background-image: none !important;    /* Remove background image */
@@ -43,13 +51,13 @@
     background: #1a1a1a !important;       /* Override any shorthand background */
   }
 
-  /* 5. Style active navigation link */
+  /* 6. Style active navigation link */
   .navigation a.active {
     text-decoration: underline; /* Underline the active link */
-    color: #fefefe !important;   /* Optional: Change color to white for active link */
+    color: #fefefe !important;   /* Change color to white for active link */
   }
 
-  /* Optional: Style footer links similarly */
+  /* 7. Optional: Style footer links similarly */
   .site-footer a {
     color: #ff9900 !important; /* Orange footer links */
     text-decoration: none;
@@ -59,5 +67,16 @@
   .site-footer a:hover {
     color: #ffcc00 !important; /* Yellow on hover */
     text-decoration: underline;
+  }
+
+  /* 8. Ensure the main content and footer occupy full width */
+  .main-content {
+    min-height: 100vh; /* Ensure main content takes at least full viewport height */
+  }
+
+  /* 9. Remove any box shadows or borders that might contribute to the greenish border */
+  * {
+    box-shadow: none !important;
+    border: none !important;
   }
 </style>
