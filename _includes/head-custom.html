@@ -1,15 +1,21 @@
 <!-- _includes/head-custom.html -->
 <style>
-  /* Existing styles */
+  /* 1. Set a grayish-black background and white text for the entire body */
   body {
-    background-color: #1a1a1a !important;
-    color: #fefefe !important;
-  }
-  a {
-    color: #ff9900 !important;
+    background-color: #1a1a1a !important; /* Grayish-black background */
+    color: #fefefe !important;           /* White text */
   }
 
-  /* Navigation Menu Styles */
+  /* 2. Update link colors */
+  a {
+    color: #ff9900 !important; /* Orange links */
+  }
+
+  a:hover {
+    color: #ffcc00 !important; /* Yellow on hover */
+  }
+
+  /* 3. Navigation Menu Styles */
   .navigation {
     position: absolute;
     top: 20px; /* Adjust as needed */
@@ -17,22 +23,25 @@
   }
 
   .navigation .btn {
-    background-color: #444;
-    color: #fefefe;
-    padding: 10px 15px;
-    margin-left: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s;
+    background-color: #444;         /* Dark button background */
+    color: #fefefe;                   /* White button text */
+    padding: 10px 15px;               /* Button padding */
+    margin-left: 10px;                /* Space between buttons */
+    border-radius: 5px;               /* Rounded corners */
+    text-decoration: none;            /* Remove underline */
+    font-size: 14px;                  /* Button font size */
+    transition: background-color 0.3s; /* Smooth hover transition */
   }
 
   .navigation .btn:hover {
-    background-color: #555;
+    background-color: #555; /* Slightly lighter on hover */
   }
 
-  /* Optional: Ensure the header is positioned relative to contain the absolute navigation */
+  /* 4. Remove background image and set header background color */
   .page-header {
-    position: relative;
+    position: relative; /* Ensure it contains the absolute navigation */
+    background-image: none !important;    /* Remove background image */
+    background-color: #1a1a1a !important; /* Set header background color */
+    background: #1a1a1a !important;       /* Override any shorthand background */
   }
 </style>
