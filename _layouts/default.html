@@ -29,8 +29,8 @@
 
       <!-- Navigation Menu -->
       <nav class="navigation">
-        <a href="{{ '/' | relative_url }}">Portfolio</a>
-        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Portfolio</a>
+        <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
       </nav>
     </header>
 
