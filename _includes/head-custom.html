@@ -1,9 +1,53 @@
+<!-- _includes/head-custom.html -->
 <style>
+  /* 1. Set a grayish-black background and white text for the entire body */
   body {
-    background-color: #111 !important;
-    color: #eee !important;
+    background-color: #1a1a1a !important; /* Grayish-black */
+    color: #fefefe !important;           /* White text */
   }
-  a {
-    color: #ff9900 !important;
+
+  /* 2. Darken the header background */
+  .page-header {
+    background-color: #2b2b2b !important; /* Darker gray for the header */
+  }
+
+  /* 3. Ensure header texts are white */
+  .page-header h1,
+  .page-header h2 {
+    color: #fefefe !important; /* White header texts */
+  }
+
+  /* 4. Update link colors to stand out against the dark background */
+  a,
+  a:visited {
+    color: #ff9900 !important; /* Example link color */
+  }
+
+  a:hover {
+    color: #ffcc00 !important; /* Yellow on hover */
+  }
+
+  /* 5. Adjust footer styles */
+  .site-footer {
+    background-color: #2b2b2b !important; /* Dark gray footer */
+    color: #fefefe !important;           /* White footer text */
+  }
+
+  .site-footer a {
+    color: #fefefe !important; /* White footer links */
+  }
+
+  /* 6. Customize button styles */
+  .btn {
+    background-color: #444 !important; /* Dark buttons */
+    color: #fefefe !important;           /* White button text */
+    border: none !important;             /* Remove borders */
+    padding: 10px 20px;                  /* Add some padding */
+    border-radius: 5px;                   /* Rounded corners */
+    text-decoration: none !important;    /* Remove underline */
+  }
+
+  .btn:hover {
+    background-color: #555 !important; /* Slightly lighter on hover */
   }
 </style>
