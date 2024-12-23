@@ -8,11 +8,14 @@
 
   /* 2. Update link colors */
   a {
-    color: #fefefe !important; /* Orange links */
+    color: #fefefe !important; /* White links */
+    text-decoration: none;     /* Remove underline */
+    transition: color 0.3s, text-decoration 0.3s;
   }
 
   a:hover {
-    color: #fefefe !important; /* Yellow on hover */
+    color: #ffcc00 !important; /* Yellow on hover */
+    text-decoration: underline; /* Underline on hover */
   }
 
   /* 3. Navigation Menu Styles */
@@ -22,26 +25,30 @@
     right: 20px; /* Adjust as needed */
   }
 
-  .navigation .btn {
-    background-color: #444;         /* Dark button background */
-    color: #fefefe;                   /* White button text */
-    padding: 10px 15px;               /* Button padding */
-    margin-left: 10px;                /* Space between buttons */
-    border-radius: 5px;               /* Rounded corners */
-    text-decoration: none;            /* Remove underline */
-    font-size: 14px;                  /* Button font size */
-    transition: background-color 0.3s; /* Smooth hover transition */
+  /* Remove button-specific styles */
+  /* .navigation .btn { ... } */ /* This section is no longer needed */
+
+  /* Style navigation links as normal text links */
+  .navigation a {
+    margin-left: 15px; /* Space between links */
+    font-size: 16px;    /* Adjust font size as needed */
+    font-weight: bold;  /* Make links bold */
   }
 
-  .navigation .btn:hover {
-    background-color: #555; /* Slightly lighter on hover */
-  }
-
-  /* 4. Remove background image and set header background color */
+  /* Optional: Ensure the header is positioned relative to contain the absolute navigation */
   .page-header {
-    position: relative; /* Ensure it contains the absolute navigation */
-    background-image: none !important;    /* Remove background image */
-    background-color: #1a1a1a !important; /* Set header background color */
-    background: #1a1a1a !important;       /* Override any shorthand background */
+    position: relative;
+  }
+
+  /* Optional: Style footer links similarly */
+  .site-footer a {
+    color: #ff9900 !important; /* Orange footer links */
+    text-decoration: none;
+    transition: color 0.3s, text-decoration 0.3s;
+  }
+
+  .site-footer a:hover {
+    color: #ffcc00 !important; /* Yellow on hover */
+    text-decoration: underline;
   }
 </style>
