@@ -32,37 +32,89 @@
     text-decoration: underline; /* Underline on hover */
   }
 
-  /* 5. Navigation Menu Styles */
+  /* 5. Header Container Styles */
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  /* 6. Logo Container Styles */
+  .logo-container {
+    flex: 0 0 auto;
+  }
+
+  .site-logo {
+    height: 80px; /* Adjust to make the logo bigger */
+    width: auto;
+  }
+
+  /* 7. Site Info Styles */
+  .site-info {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .project-name {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  .project-tagline {
+    margin: 0;
+    font-size: 16px;
+    color: #c1c1c1;
+  }
+
+  /* 8. Action Buttons Styles */
+  .action-buttons {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 10px;
+  }
+
+  .btn {
+    background-color: #444;
+    color: #fefefe;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+
+  .btn:hover {
+    background-color: #555;
+  }
+
+  /* 9. Navigation Menu Styles */
   .navigation {
-    position: absolute;
-    top: 20px; /* Adjust as needed */
-    right: 20px; /* Adjust as needed */
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
   }
 
-  /* Style navigation links as normal text links */
   .navigation a {
-    margin-left: 15px; /* Space between links */
-    font-size: 16px;    /* Adjust font size as needed */
-    font-weight: bold;  /* Make links bold */
-    color: #c1c1c1 !important; /* Ensure consistent link color */
+    font-size: 16px;
+    font-weight: bold;
+    color: #c1c1c1 !important;
   }
 
-  /* 6. Remove background image and set header background color */
-  .page-header {
-    position: relative; /* Ensure it contains the absolute navigation */
-    background-image: none !important;    /* Remove background image */
-    background-color: #1a1a1a !important; /* Set header background color */
-    background: #1a1a1a !important;       /* Override any shorthand background */
-    padding: 40px 20px; /* Add padding for better spacing */
-  }
-
-  /* 7. Style active navigation link */
   .navigation a.active {
     text-decoration: underline; /* Underline the active link */
     color: #fefefe !important;   /* Change color to white for active link */
   }
 
-  /* 8. Style footer links similarly */
+  /* 10. Remove background image and set header background color */
+  .page-header {
+    background-image: none !important;    /* Remove background image */
+    background-color: #1a1a1a !important; /* Set header background color */
+    background: #1a1a1a !important;       /* Override any shorthand background */
+    padding: 20px; /* Adjust padding as needed */
+  }
+
+  /* 11. Style footer links similarly */
   .site-footer a {
     color: #ff9900 !important; /* Orange footer links */
     text-decoration: none;
@@ -74,51 +126,36 @@
     text-decoration: underline;
   }
 
-  /* 9. Remove any box shadows or borders globally */
+  /* 12. Remove any box shadows or borders globally */
   * {
     box-shadow: none !important;
     border: none !important;
   }
 
-  /* 10. Prevent horizontal scrolling */
+  /* 13. Prevent horizontal scrolling */
   body {
     overflow-x: hidden;
   }
 
-  /* 11. Remove background from pseudo-elements if any */
-  .page-header::before,
-  .page-header::after {
-    background: none !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  /* 12. Style the logo container */
-  .logo-container {
-    position: absolute;
-    top: 20px; /* Align with navigation */
-    right: 150px; /* Adjust based on navigation width */
-  }
-
-  .site-logo {
-    height: 60px; /* Adjust as needed */
-    width: auto;
-  }
-
-  /* Responsive adjustments (optional) */
+  /* 14. Responsive Adjustments */
   @media (max-width: 768px) {
+    .header-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .site-info {
+      text-align: left;
+      margin-top: 10px;
+    }
+
     .navigation {
-      top: 10px;
-      right: 10px;
+      margin-left: 0;
+      margin-top: 10px;
     }
 
     .logo-container {
-      top: 10px;
-      right: 100px; /* Adjust for smaller screens */
-    }
-
-    .site-logo {
-      height: 50px; /* Smaller logo on mobile */
+      margin-bottom: 10px;
     }
   }
 </style>
