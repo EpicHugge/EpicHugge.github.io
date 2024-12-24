@@ -5,16 +5,17 @@
     box-sizing: border-box;
   }
 
-  /* 2. Remove default margins and paddings */
+  /* 2. Remove default margins and paddings, set background color */
   html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensure html and body take full height */
+    height: 100%;
     background-color: #1a1a1a !important; /* Grayish-black background */
     color: #fefefe !important;           /* White text */
+    overflow-x: hidden;                  /* Prevent horizontal scrolling */
   }
 
-  /* 3. Ensure the main content occupies full height */
+  /* 3. Ensure the main content occupies full height minus header and footer */
   .main-content {
     min-height: calc(100vh - 160px); /* Adjust based on header and footer height */
   }
@@ -37,6 +38,9 @@
     top: 20px; /* Adjust as needed */
     right: 20px; /* Adjust as needed */
   }
+
+  /* Remove button-specific styles */
+  /* .navigation .btn { ... } */ /* This section is no longer needed */
 
   /* Style navigation links as normal text links */
   .navigation a {
