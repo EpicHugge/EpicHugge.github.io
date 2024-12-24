@@ -39,9 +39,6 @@
     right: 20px; /* Adjust as needed */
   }
 
-  /* Remove button-specific styles */
-  /* .navigation .btn { ... } */ /* This section is no longer needed */
-
   /* Style navigation links as normal text links */
   .navigation a {
     margin-left: 15px; /* Space between links */
@@ -86,5 +83,42 @@
   /* 10. Prevent horizontal scrolling */
   body {
     overflow-x: hidden;
+  }
+
+  /* 11. Remove background from pseudo-elements if any */
+  .page-header::before,
+  .page-header::after {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* 12. Style the logo container */
+  .logo-container {
+    position: absolute;
+    top: 20px; /* Align with navigation */
+    right: 150px; /* Adjust based on navigation width */
+  }
+
+  .site-logo {
+    height: 60px; /* Adjust as needed */
+    width: auto;
+  }
+
+  /* Responsive adjustments (optional) */
+  @media (max-width: 768px) {
+    .navigation {
+      top: 10px;
+      right: 10px;
+    }
+
+    .logo-container {
+      top: 10px;
+      right: 100px; /* Adjust for smaller screens */
+    }
+
+    .site-logo {
+      height: 50px; /* Smaller logo on mobile */
+    }
   }
 </style>
