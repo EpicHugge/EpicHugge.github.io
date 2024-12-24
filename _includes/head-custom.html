@@ -36,8 +36,10 @@
   .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center all child elements */
     flex-wrap: wrap;
+    padding: 10px 20px; /* Adjust padding as needed */
+    gap: 20px; /* Space between items */
   }
 
   /* 6. Logo Container Styles */
@@ -46,7 +48,7 @@
   }
 
   .site-logo {
-    height: 80px; /* Adjust to make the logo bigger */
+    height: 120px; /* Increased height */
     width: auto;
   }
 
@@ -92,7 +94,7 @@
   .navigation {
     display: flex;
     gap: 15px;
-    margin-left: auto;
+    margin-left: 0; /* Remove auto margin */
   }
 
   .navigation a {
@@ -137,15 +139,24 @@
     overflow-x: hidden;
   }
 
-  /* 14. Responsive Adjustments */
+  /* 14. Remove background from pseudo-elements if any */
+  .page-header::before,
+  .page-header::after {
+    background: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* 15. Responsive Adjustments */
   @media (max-width: 768px) {
     .header-container {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
+      gap: 15px; /* Reduce gap on smaller screens */
     }
 
     .site-info {
-      text-align: left;
+      text-align: center;
       margin-top: 10px;
     }
 
@@ -156,6 +167,10 @@
 
     .logo-container {
       margin-bottom: 10px;
+    }
+
+    .site-logo {
+      height: 100px; /* Slightly smaller on mobile */
     }
   }
 </style>
