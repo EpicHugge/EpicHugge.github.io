@@ -12,35 +12,43 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 
-    <!-- Add Favicon (We'll cover this in Section 2) -->
+    <!-- Favicon (We'll cover this in a later step) -->
     <link rel="icon" type="image/png" href="{{ '/assets/images/favicon.png' | relative_url }}">
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      <div class="header-container">
+        <!-- Logo Image -->
+        <div class="logo-container">
+          <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="site-logo">
+          </a>
+        </div>
 
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
-      {% if site.show_downloads %}
-        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-      {% endif %}
+        <!-- Site Title and Tagline -->
+        <div class="site-info">
+          <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+          <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+        </div>
 
-      <!-- Navigation Menu -->
-      <nav class="navigation">
-        <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Portfolio</a>
-        <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
-      </nav>
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          {% if site.github.is_project_page %}
+            <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+          {% endif %}
+          {% if site.show_downloads %}
+            <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+            <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+          {% endif %}
+        </div>
 
-      <!-- Logo Image -->
-      <div class="logo-container">
-        <a href="{{ '/' | relative_url }}">
-          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Logo" class="site-logo">
-        </a>
+        <!-- Navigation Menu -->
+        <nav class="navigation">
+          <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Portfolio</a>
+          <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
+        </nav>
       </div>
     </header>
 
