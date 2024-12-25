@@ -35,15 +35,21 @@ a:hover {
 }
 
 .header-container {
+  position: relative; /* Allows absolute positioning of logo */
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Centers nav-links */
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px; /* Thin header */
 }
 
 /* 3. Logo Styles */
+.logo {
+  position: absolute;
+  left: 20px; /* Adjust for desired spacing */
+}
+
 .logo a {
   font-size: 1.5rem;
   font-weight: bold;
