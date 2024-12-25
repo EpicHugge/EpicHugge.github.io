@@ -37,18 +37,20 @@ a:hover {
 
 .header-container {
   display: flex;
-  align-items: center;
-  justify-content: center; /* Centers nav-links */
+  align-items: center; /* Vertically centers items */
+  justify-content: center; /* Horizontally centers nav-links */
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 40px; /* Increased padding for a bigger header */
-  position: relative; /* Allows absolute positioning of logo */
+  position: relative; /* Allows absolute positioning of logo and nav-links */
 }
 
 /* 3. Logo Styles */
 .logo {
   position: absolute;
   left: 40px; /* Adjusted for increased padding */
+  top: 50%; /* Vertically centers the logo */
+  transform: translateY(-50%); /* Adjusts for perfect centering */
 }
 
 .logo a {
@@ -64,7 +66,8 @@ a:hover {
   gap: 40px; /* Increased gap between links */
   position: absolute; /* Enables absolute positioning */
   left: 50%; /* Positions the left edge at 50% of the container */
-  transform: translateX(-50%); /* Shifts the element left by 50% of its width */
+  top: 50%; /* Vertically centers the nav-links */
+  transform: translate(-50%, -50%); /* Centers the nav-links both horizontally and vertically */
 }
 
 .nav-links a {
