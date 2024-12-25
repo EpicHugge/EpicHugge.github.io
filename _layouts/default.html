@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
+    <link rel="shortcut icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
+    <link rel="manifest" href="{{ '/assets/images/site.webmanifest' | relative_url }}">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="{{ '/assets/images/browserconfig.xml' | relative_url }}">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <!-- Fixed Header -->
+    <header class="fixed-header">
+      <div class="header-container">
+        <!-- Text Logo -->
+        <div class="logo">
+          <a href="{{ '/' | relative_url }}">YourBrand</a>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="nav-links" aria-label="Main Navigation">
+          <a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a>
+          <a href="{{ '/projects/' | relative_url }}" class="{% if page.url == '/projects/' %}active{% endif %}">Projects</a>
+          <a href="{{ '/about/' | relative_url }}" class="{% if page.url == '/about/' %}active{% endif %}">About</a>
+          <a href="{{ '/contact/' | relative_url }}" class="{% if page.url == '/contact/' %}active{% endif %}">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <!-- End of Fixed Header -->
+
+    <main id="content" class="main-content" role="main">
+      {{ content }}
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/yourusername">YourBrand</a> &copy; {{ site.time | date: "%Y" }}. All rights reserved.</span>
+        <!-- Removed GitHub Pages Credit -->
+      </footer>
+    </main>
+  </body>
+</html>
