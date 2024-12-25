@@ -39,11 +39,12 @@ a:hover {
 .header-container {
   display: flex;
   align-items: center; /* Vertically centers items */
-  justify-content: space-between; /* Distributes space between items */
+  justify-content: center; /* Horizontally centers the entire group */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px; /* Horizontal padding */
   height: 100%; /* Inherits height from .fixed-header */
+  gap: 40px; /* Space between logo and nav-links */
 }
 
 /* 4. Logo Styles */
@@ -58,6 +59,7 @@ a:hover {
 .nav-links {
   display: flex;
   gap: 40px; /* Space between navigation links */
+  /* Removed margin-left and used gap for spacing */
 }
 
 .nav-links a {
@@ -94,15 +96,15 @@ a:hover {
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; /* Center items horizontally */
     padding: 15px 20px; /* Adjusted padding for smaller screens */
     height: auto; /* Allows header height to adjust based on content */
+    gap: 20px; /* Reduced gap for smaller screens */
   }
 
   .nav-links {
-    gap: 20px;
-    margin-top: 15px;
-    justify-content: center; /* Centers nav-links on smaller screens */
+    gap: 20px; /* Reduced space between navigation links */
+    justify-content: center; /* Center navigation links */
   }
 
   .nav-links a {
