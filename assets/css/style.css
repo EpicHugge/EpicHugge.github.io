@@ -52,6 +52,7 @@ a:hover {
 }
 
 .logo a {
+  font-family: 'More Sugar', cursive; /* Applied More Sugar font */
   font-size: 2rem; /* Increased font size for logo */
   font-weight: bold;
   color: #fefefe;
