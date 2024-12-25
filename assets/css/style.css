@@ -30,8 +30,9 @@ a:hover {
   left: 0;
   width: 100%;
   background-color: #2a2a2a; /* Darker gray for header */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
   z-index: 1000;
+  height: 80px; /* Increased header height */
 }
 
 .header-container {
@@ -40,18 +41,18 @@ a:hover {
   justify-content: center; /* Centers nav-links */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 20px 40px; /* Increased padding for a bigger header */
   position: relative; /* Allows absolute positioning of logo */
 }
 
 /* 3. Logo Styles */
 .logo {
   position: absolute;
-  left: 20px; /* Adjust for desired spacing */
+  left: 40px; /* Adjusted for increased padding */
 }
 
 .logo a {
-  font-size: 1.5rem;
+  font-size: 2rem; /* Increased font size for logo */
   font-weight: bold;
   color: #fefefe;
 }
@@ -59,34 +60,34 @@ a:hover {
 /* 4. Navigation Links Styles */
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 40px; /* Increased gap between links */
   position: absolute; /* Enables absolute positioning */
   left: 50%; /* Positions the left edge at 50% of the container */
   transform: translateX(-50%); /* Shifts the element left by 50% of its width */
 }
 
 .nav-links a {
-  font-size: 1rem;
+  font-size: 1.2rem; /* Increased font size for navigation links */
   color: #c1c1c1; /* Grayed out links */
 }
 
 .nav-links a.active {
   color: #fefefe; /* White for active link */
-  border-bottom: 2px solid #fefefe; /* Underline for active link */
+  border-bottom: 3px solid #fefefe; /* Thicker underline for active link */
 }
 
 /* 5. Main Content Padding */
 .main-content {
-  padding-top: 60px; /* Space for the fixed header */
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 100px; /* Increased space for the bigger fixed header */
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* 6. Footer Styles */
 .site-footer {
-  margin-top: 40px;
+  margin-top: 60px;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem; /* Slightly larger footer text */
   color: #c1c1c1;
 }
 
@@ -100,21 +101,32 @@ a:hover {
   .header-container {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
+    padding: 15px 20px; /* Adjusted padding for smaller screens */
+    height: auto; /* Allow height to adjust based on content */
   }
 
   .nav-links {
-    gap: 15px;
-    margin-top: 10px;
+    gap: 20px;
+    margin-top: 15px;
     position: static; /* Removes absolute positioning */
     transform: none; /* Removes transformation */
   }
 
   .nav-links a {
-    font-size: 0.9rem;
+    font-size: 1rem; /* Adjusted font size for smaller screens */
   }
 
   .logo a {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  }
+
+  .fixed-header {
+    height: auto; /* Allows header height to adjust based on content */
+  }
+
+  .main-content {
+    padding-top: 80px; /* Adjusted padding for smaller screens */
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
