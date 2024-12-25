@@ -1,176 +1,96 @@
-<!-- _includes/head-custom.html -->
-<style>
-  /* 1. Reset box-sizing for all elements */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+/* 1. Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  /* 2. Remove default margins and paddings, set background color */
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #1a1a1a !important; /* Grayish-black background */
-    color: #fefefe !important;           /* White text */
-    overflow-x: hidden;                  /* Prevent horizontal scrolling */
-  }
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1a1a1a; /* Grayish-black background */
+  color: #fefefe; /* White text */
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
-  /* 3. Ensure the main content occupies full height minus header and footer */
-  .main-content {
-    min-height: calc(100vh - 160px); /* Adjust based on header and footer height */
-  }
+a {
+  text-decoration: none;
+  color: #c1c1c1; /* Grayed out links */
+  transition: color 0.3s;
+}
 
-  /* 4. Update link colors */
-  a {
-    color: #c1c1c1 !important; /* Gray links */
-    text-decoration: none;     /* Remove underline */
-    transition: color 0.3s, text-decoration 0.3s;
-  }
+a:hover {
+  color: #fefefe; /* White on hover */
+}
 
-  a:hover {
-    color: #fefefe !important; /* White on hover */
-    text-decoration: underline; /* Underline on hover */
-  }
+/* 2. Fixed Header Styles */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2a2a2a; /* Darker gray for header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
-  /* 5. Header Container Styles */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px; /* Thin header */
+}
+
+/* 3. Logo Styles */
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fefefe;
+}
+
+/* 4. Navigation Links Styles */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  font-size: 1rem;
+  color: #c1c1c1; /* Grayed out links */
+}
+
+.nav-links a.active {
+  color: #fefefe; /* White for active link */
+  border-bottom: 2px solid #fefefe; /* Underline for active link */
+}
+
+/* 5. Main Content Padding */
+.main-content {
+  padding-top: 60px; /* Space for the fixed header */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* 6. Responsive Design */
+@media (max-width: 768px) {
   .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center all child elements */
-    flex-wrap: wrap;
-    padding: 10px 20px; /* Adjust padding as needed */
-    gap: 20px; /* Space between items */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
   }
 
-  /* 6. Logo Container Styles */
-  .logo-container {
-    flex: 0 0 auto;
-  }
-
-  .site-logo {
-    height: 120px; /* Increased height */
-    width: auto;
-  }
-
-  /* 7. Site Info Styles */
-  .site-info {
-    flex: 1 1 auto;
-    text-align: center;
-  }
-
-  .project-name {
-    margin: 0;
-    font-size: 24px;
-  }
-
-  .project-tagline {
-    margin: 0;
-    font-size: 16px;
-    color: #c1c1c1;
-  }
-
-  /* 8. Action Buttons Styles */
-  .action-buttons {
-    flex: 0 0 auto;
-    display: flex;
-    gap: 10px;
-  }
-
-  .btn {
-    background-color: #444;
-    color: #fefefe;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 14px;
-    transition: background-color 0.3s;
-  }
-
-  .btn:hover {
-    background-color: #555;
-  }
-
-  /* 9. Navigation Menu Styles */
-  .navigation {
-    display: flex;
+  .nav-links {
     gap: 15px;
-    margin-left: 0; /* Remove auto margin */
+    margin-top: 10px;
   }
 
-  .navigation a {
-    font-size: 16px;
-    font-weight: bold;
-    color: #c1c1c1 !important;
+  .nav-links a {
+    font-size: 0.9rem;
   }
 
-  .navigation a.active {
-    text-decoration: underline; /* Underline the active link */
-    color: #fefefe !important;   /* Change color to white for active link */
+  .logo a {
+    font-size: 1.2rem;
   }
-
-  /* 10. Remove background image and set header background color */
-  .page-header {
-    background-image: none !important;    /* Remove background image */
-    background-color: #1a1a1a !important; /* Set header background color */
-    background: #1a1a1a !important;       /* Override any shorthand background */
-    padding: 20px; /* Adjust padding as needed */
-  }
-
-  /* 11. Style footer links similarly */
-  .site-footer a {
-    color: #ff9900 !important; /* Orange footer links */
-    text-decoration: none;
-    transition: color 0.3s, text-decoration 0.3s;
-  }
-
-  .site-footer a:hover {
-    color: #ffcc00 !important; /* Yellow on hover */
-    text-decoration: underline;
-  }
-
-  /* 12. Remove any box shadows or borders globally */
-  * {
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  /* 13. Prevent horizontal scrolling */
-  body {
-    overflow-x: hidden;
-  }
-
-  /* 14. Remove background from pseudo-elements if any */
-  .page-header::before,
-  .page-header::after {
-    background: none !important;
-    box-shadow: none !important;
-    border: none !important;
-  }
-
-  /* 15. Responsive Adjustments */
-  @media (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      align-items: center;
-      gap: 15px; /* Reduce gap on smaller screens */
-    }
-
-    .site-info {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .navigation {
-      margin-left: 0;
-      margin-top: 10px;
-    }
-
-    .logo-container {
-      margin-bottom: 10px;
-    }
-
-    .site-logo {
-      height: 100px; /* Slightly smaller on mobile */
-    }
-  }
-</style>
+}
