@@ -109,7 +109,7 @@ a:hover {
 .introduction {
   display: flex;
   align-items: center;            /* Vertically centers the text and logo */
-  justify-content: flex-start;    /* Aligns content to the start (left) */
+  justify-content: center;        /* Centers the content horizontally */
   gap: 10px;                      /* Controls the space between text and logo */
   margin: 40px auto;              /* Centers the introduction section horizontally */
   max-width: 1000px;              /* Sets a maximum width to prevent stretching on large screens */
