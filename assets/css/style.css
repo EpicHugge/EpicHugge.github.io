@@ -111,99 +111,51 @@ a:hover {
 /* 9. Introduction Section Styles */
 .introduction {
   display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center;     /* Vertically centers the text and logo */
-  margin: 40px 0;          /* Space above and below the introduction */
-  max-width: 1000px;       /* Adjust as needed */
-  margin-left: auto;       /* Centers the container */
-  margin-right: auto;      /* Centers the container */
-  padding: 0 20px;         /* Optional: Adjust horizontal padding as needed */
+  align-items: center;          /* Vertically centers the text and logo */
+  justify-content: center;      /* Horizontally centers the content within the container */
+  gap: 20px;                    /* Controls the space between text and logo */
+  margin: 40px auto;            /* Centers the introduction section and adds vertical spacing */
+  max-width: 1000px;            /* Sets a maximum width to prevent stretching on large screens */
+  padding: 0 20px;              /* Optional: Adjusts horizontal padding as needed */
 }
 
 .intro-text {
-  flex: 1; /* Allows the text to take up available space */
-}
-
-.intro-main {
-  color: #fefefe;
-  font-size: 40px;         /* Ensures consistency with previous settings */
-  font-weight: bold;
-  text-align: left;
-  margin-bottom: 5px;      /* Maintained spacing */
-  /* Removed text-transform to allow mixed case */
-}
-
-.intro-sub {
-  color: #c1c1c1;
-  font-size: 23.5px;       /* Ensures consistency with previous settings */
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-.intro-location {
-  color: #fefefe;
-  font-size: 19px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-}
-
-.intro-location .location-pointer {
-  width: 19px;
-  height: 19px;
-  margin-right: 5px;
+  /* Remove flex: 1; if previously set to allow text to take full width */
+  flex: none;                   /* Ensures the text takes only the necessary space */
+  text-align: left;             /* Aligns text to the left */
 }
 
 .intro-logo {
-  margin-left: 0px;        /* Reduced spacing to bring logo closer */
-  /* Optional: Use negative margin for overlap */
-  /* margin-left: -10px; */
+  /* Remove any existing margin-left to bring the logo closer */
+  margin-left: 0;               /* Eliminates left margin */
 }
 
 .intro-logo-image {
-  height: 200px;           /* Increased logo size */
-  width: auto;
+  height: 200px;                /* Sets the logo height to 200px */
+  width: auto;                  /* Maintains aspect ratio */
 }
 
-/* Optional: Add a slight transition for hover effect */
+/* Optional: Add a subtle hover effect to the logo */
 .intro-logo-image:hover {
   transform: scale(1.05);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 /* Responsive Design Adjustments */
 @media (max-width: 768px) {
   .introduction {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 100%;
-    padding: 0 10px;
+    flex-direction: column;     /* Stacks text and logo vertically on smaller screens */
+    align-items: center;        /* Centers items horizontally */
+    gap: 15px;                  /* Adjusts space between text and logo for smaller screens */
+    max-width: 100%;            /* Allows full width on smaller screens */
   }
 
   .intro-text {
-    margin-bottom: 15px;
-  }
-
-  .intro-sub {
-    font-size: 20px;
-  }
-
-  .intro-location {
-    font-size: 17px;
-  }
-
-  .intro-location .location-pointer {
-    width: 17px;
-    height: 17px;
-  }
-
-  .intro-logo {
-    margin-left: 0;
-    margin-top: 10px; /* Optional: Add some top margin for spacing */
+    text-align: center;         /* Centers text on smaller screens */
   }
 
   .intro-logo-image {
-    height: 150px; /* Adjusted size for smaller screens if needed */
+    height: 150px;              /* Reduces logo size for better fit on smaller screens */
   }
 }
+
