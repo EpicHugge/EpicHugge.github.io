@@ -154,7 +154,8 @@ a:hover {
   overflow: hidden; /* Ensures text is clipped during typing */
   white-space: nowrap;
   letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end) forwards; /* Typing animation */
+  /* Removed border-right from .intro-main to prevent conflict with .caret */
+  animation: typing 3.5s steps(40, end) forwards; /* Typing animation runs once */
   display: inline-block;
   position: relative;
 }
