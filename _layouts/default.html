@@ -70,5 +70,43 @@
       <span class="site-footer-owner"><a href="https://github.com/yourusername">EpicHugge</a> &copy; {{ site.time | date: "%Y" }}. All rights reserved.</span>
       <!-- Removed GitHub Pages Credit -->
     </footer>
+
+    <!-- Typing Animation Control Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const introMain = document.querySelector('.intro-main');
+
+        // Total duration before starting caret blink: typing duration (3.5 seconds)
+        const typingDuration = 3500; // in milliseconds
+
+        // Duration to blink caret: 5 seconds
+        const blinkDuration = 5000; // in milliseconds
+
+        // Start caret blinking after typing animation
+        setTimeout(() => {
+          introMain.classList.add('blink-caret');
+        }, typingDuration);
+
+        // Stop caret blinking and hide it after blinkDuration
+        setTimeout(() => {
+          introMain.classList.remove('blink-caret');
+          introMain.classList.add('hide-caret');
+        }, typingDuration + blinkDuration);
+      });
+    </script>
+
+    <!-- Additional Scripts (If Any) -->
+    {% if site.use_aos %}
+    <!-- AOS JS (Animate On Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true,     // Whether animation should happen only once
+      });
+    </script>
+    {% endif %}
+
+    <!-- Any other scripts can be added here -->
   </body>
 </html>
