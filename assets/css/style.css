@@ -123,30 +123,31 @@ a:hover {
 
 .intro-main {
   color: #fefefe;
-  font-size: 40px;
+  font-size: 40px; /* Updated font size */
   font-weight: bold;
   text-align: left;
-  margin-bottom: 1px; /* Reduced spacing */
+  margin-bottom: 5px; /* Reduced spacing */
+  /* Removed text-transform to allow mixed case */
 }
 
 .intro-sub {
   color: #c1c1c1;
-  font-size: 23,5px;
-  text-align: center;
-  margin-bottom: 1px; /* Maintained spacing */
+  font-size: 23.5px; /* Updated font size */
+  text-align: left; /* Changed alignment to left */
+  margin-bottom: 5px; /* Maintained spacing */
 }
 
 .intro-location {
   color: #fefefe;
-  font-size: 19px;
+  font-size: 19px; /* Updated font size */
   text-align: left;
   display: flex;
   align-items: center; /* Vertically centers the image with text */
 }
 
 .intro-location .location-pointer {
-  width: 19px; /* Increased from 12px */
-  height: 19px;
+  width: 19px; /* Increased size from 16px */
+  height: 19px; /* Increased size from 16px */
   margin-right: 5px; /* Space between image and text */
 }
 
@@ -155,7 +156,7 @@ a:hover {
 }
 
 .intro-logo-image {
-  height: 30px; /* Matches the font size of .intro-main */
+  height: 40px; /* Updated to match main text font size */
   width: auto;
 }
 
@@ -197,11 +198,24 @@ a:hover {
     margin-bottom: 15px; /* Space below the text section */
   }
 
+  .intro-sub {
+    font-size: 20px; /* Slight adjustment for better fit */
+  }
+
+  .intro-location {
+    font-size: 17px; /* Slight adjustment for better fit */
+  }
+
+  .intro-location .location-pointer {
+    width: 17px; /* Adjusted size for smaller screens */
+    height: 17px;
+  }
+
   .intro-logo {
     margin-left: 0; /* Remove left margin on small screens */
   }
 
   .intro-logo-image {
-    height: 25px; /* Adjusted size for smaller screens */
+    height: 35px; /* Adjusted size for smaller screens */
   }
 }
