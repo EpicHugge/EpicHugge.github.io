@@ -155,7 +155,7 @@ a:hover {
 }
 
 .intro-logo {
-  margin-left: 0px; /* Reduced space between text and logo */
+  margin-left: -10px; /* Reduced space between text and logo */
 }
 
 .intro-logo-image {
