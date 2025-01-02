@@ -68,6 +68,7 @@ a:hover {
   font-size: 2rem; /* Adjust as needed */
   font-weight: bold;
   color: #fefefe;
+  text-transform: uppercase;
 }
 
 /* 6. Navigation Links Styles */
