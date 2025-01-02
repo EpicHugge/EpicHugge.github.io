@@ -1,6 +1,6 @@
 /* 1. CSS Variables */
 :root {
-  --primary-color: #ff9800;
+  --primary-color: #ff9800; /* Keep as orange if needed elsewhere */
   --secondary-color: #c1c1c1;
   --background-color: #1a1a1a;
   --text-color: #fefefe;
@@ -72,6 +72,7 @@ a:hover {
   src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* Improves loading behavior */
 }
 
 /* 7. Logo Styles */
@@ -83,11 +84,16 @@ a:hover {
 }
 
 .logo a {
-  font-family: 'More Sugar Custom', cursive; /* Changed to More Sugar Custom */
+  font-family: 'More Sugar Custom', cursive; /* Ensure this font is correctly loaded */
   font-size: 2rem;
   font-weight: bold;
   color: var(--text-color);
   text-transform: uppercase;
+  transition: color var(--transition-duration);
+}
+
+.logo a:hover {
+  color: #fefefe; /* Changed hover color to #fefefe */
 }
 
 /* 8. Navigation Links Styles */
@@ -101,11 +107,16 @@ a:hover {
   font-size: 1.2rem;
   color: var(--secondary-color);
   font-weight: bold;
+  transition: color var(--transition-duration);
 }
 
 .nav-links a.active {
   color: var(--text-color);
   border-bottom: 3px solid var(--text-color);
+}
+
+.nav-links a:hover {
+  color: var(--primary-color); /* Keep as orange or change if desired */
 }
 
 /* 9. Main Content Padding */
@@ -141,7 +152,7 @@ a:hover {
   font-weight: bold;
   margin-bottom: 5px;
   overflow: hidden;
-  border-right: .15em solid orange;
+  border-right: .15em solid #fefefe; /* Changed from orange to #fefefe */
   white-space: nowrap;
   letter-spacing: .15em;
   animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
@@ -156,8 +167,8 @@ a:hover {
   transition: color var(--transition-duration), transform var(--transition-duration);
 }
 
-.intro-sub:hover, .intro-location:hover {
-  color: var(--primary-color);
+.intro-main:hover, .intro-sub:hover, .intro-location:hover {
+  color: #fefefe; /* Changed hover color to #fefefe */
   transform: scale(1.05);
 }
 
@@ -241,7 +252,7 @@ a:hover {
 
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: #fefefe; } /* Updated caret color */
 }
 
 /* 15. Back to Top Button Styles */
