@@ -48,7 +48,7 @@
       <!-- Introduction Section -->
       <div class="introduction">
         <div class="intro-text">
-          <p class="intro-main">Yo!, I'm Hugo</p>
+          <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
           <p class="intro-sub">Aspiring Quest Designer</p>
           <p class="intro-location">
             <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
@@ -75,24 +75,25 @@
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const introMain = document.querySelector('.intro-main');
+        const caret = document.querySelector('.caret');
 
-        if (!introMain) return; // Exit if the element is not found (e.g., on non-home pages)
+        if (!introMain || !caret) return; // Exit if the elements are not found (e.g., on non-home pages)
 
-        // Total duration before starting caret blink: typing duration (3.5 seconds)
-        const typingDuration = 3500; // in milliseconds
+        // Typing animation duration (matches CSS typing animation duration)
+        const typingDuration = 3500; // 3.5 seconds
 
-        // Duration to blink caret: 5 seconds
-        const blinkDuration = 5000; // in milliseconds
+        // Caret blinking duration after typing completes
+        const blinkDuration = 5000; // 5 seconds
 
-        // Start caret blinking after typing animation
+        // Start caret blinking after typing animation completes
         setTimeout(() => {
-          introMain.classList.add('blink-caret');
+          caret.classList.add('blink-caret');
         }, typingDuration);
 
         // Stop caret blinking and hide it after blinkDuration
         setTimeout(() => {
-          introMain.classList.remove('blink-caret');
-          introMain.classList.add('hide-caret');
+          caret.classList.remove('blink-caret');
+          caret.classList.add('hide-caret');
         }, typingDuration + blinkDuration);
       });
     </script>
