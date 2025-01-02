@@ -5,14 +5,23 @@
   padding: 0;
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes at least the full viewport height */
   font-family: 'Open Sans', sans-serif;
   background-color: #1a1a1a; /* Grayish-black background */
   color: #fefefe; /* White text */
   line-height: 1.6;
-  min-height: 100vh;
 }
 
+/* 2. Link Styles */
 a {
   text-decoration: none;
   color: #c1c1c1; /* Grayed out links */
@@ -23,7 +32,7 @@ a:hover {
   color: #fefefe; /* White on hover */
 }
 
-/* 2. Fixed Header Styles */
+/* 3. Fixed Header Styles */
 .fixed-header {
   position: fixed;
   top: 0;
@@ -35,7 +44,7 @@ a:hover {
   height: 80px; /* Header height */
 }
 
-/* 3. Header Container with Flexbox */
+/* 4. Header Container with Flexbox */
 .header-container {
   display: flex;
   align-items: center; /* Vertically centers items */
@@ -47,7 +56,7 @@ a:hover {
   position: relative; /* Establishes a positioning context for the logo */
 }
 
-/* 4. Load Custom Font */
+/* 5. Load Custom Font */
 @font-face {
   font-family: 'More Sugar Custom';
   src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
@@ -55,7 +64,7 @@ a:hover {
   font-style: normal;
 }
 
-/* 5. Logo Styles */
+/* 6. Logo Styles */
 .logo {
   position: absolute;
   left: 40px; /* Anchors logo to the left */
@@ -71,7 +80,7 @@ a:hover {
   text-transform: uppercase; /* Makes the logo text uppercase */
 }
 
-/* 6. Navigation Links Styles */
+/* 7. Navigation Links Styles */
 .nav-links {
   display: flex;
   gap: 40px; /* Space between navigation links */
@@ -88,24 +97,15 @@ a:hover {
   border-bottom: 3px solid #fefefe; /* Thicker underline for active link */
 }
 
-/* 7. Main Content Padding */
+/* 8. Main Content Padding */
 .main-content {
+  flex: 1; /* Allows main content to grow and push the footer to the bottom */
+  display: flex;
+  justify-content: center; /* Centers the introduction section */
+  align-items: center; /* Vertically centers the introduction section */
   padding-top: 100px; /* Space for fixed header */
   padding-left: 40px;
   padding-right: 40px;
-}
-
-/* 8. Footer Styles */
-.site-footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 1rem; /* Slightly larger footer text */
-  color: #c1c1c1;
-}
-
-.site-footer a {
-  color: #fefefe;
-  text-decoration: underline;
 }
 
 /* 9. Introduction Section Styles */
@@ -158,27 +158,31 @@ a:hover {
 .intro-logo-image {
   height: 200px;                  /* Sets the logo height to 200px */
   width: auto;                    /* Maintains aspect ratio */
-  /* Optional: Add a subtle transition for hover effect */
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .intro-logo-image:hover {
   transform: scale(1.05);         /* Slightly enlarges logo on hover */
 }
 
-/* Center the entire introduction section within the site feed */
-.main-content {
-  display: flex;
-  justify-content: center;        /* Centers the introduction section */
+/* 10. Footer Styles */
+.site-footer {
+  width: 100%;                    /* Ensures the footer spans the full width */
+  text-align: center;             /* Centers the text horizontally */
+  font-size: 1rem;                /* Slightly larger footer text */
+  color: #c1c1c1;                 /* Maintains text color */
+  padding: 20px 0;                /* Adds vertical padding for spacing */
+  background-color: #1a1a1a;      /* Matches the website's background */
 }
 
-/* Responsive Design Adjustments */
+/* 11. Responsive Design Adjustments */
 @media (max-width: 768px) {
   .introduction {
     flex-direction: column;       /* Stacks text and logo vertically on smaller screens */
     align-items: center;          /* Centers items horizontally */
     gap: 15px;                    /* Adjusts space between text and logo for smaller screens */
     max-width: 100%;              /* Allows full width on smaller screens */
+    padding: 0 10px;
   }
 
   .intro-text {
@@ -194,5 +198,3 @@ a:hover {
     height: 150px;                /* Reduces logo size for better fit on smaller screens */
   }
 }
-
-
