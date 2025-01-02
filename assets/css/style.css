@@ -160,7 +160,7 @@ a:hover {
   width: auto;
 }
 
-/* 10. Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
