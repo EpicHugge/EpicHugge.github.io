@@ -76,6 +76,8 @@
       document.addEventListener('DOMContentLoaded', function() {
         const introMain = document.querySelector('.intro-main');
 
+        if (!introMain) return; // Exit if the element is not found (e.g., on non-home pages)
+
         // Total duration before starting caret blink: typing duration (3.5 seconds)
         const typingDuration = 3500; // in milliseconds
 
