@@ -113,7 +113,7 @@ a:hover {
   display: flex;
   align-items: center;            /* Vertically centers the text and logo */
   justify-content: center;        /* Horizontally centers the content within the container */
-  gap: 10px;                      /* Reduced gap to bring text and logo closer */
+  gap: 10px;                      /* Controls the space between text and logo */
   margin: 40px auto;              /* Centers the introduction section and adds vertical spacing */
   max-width: 1000px;              /* Sets a maximum width to prevent stretching on large screens */
   padding: 0 20px;                /* Optional: Adjusts horizontal padding as needed */
@@ -124,6 +124,33 @@ a:hover {
   text-align: left;               /* Aligns text to the left */
 }
 
+.intro-main {
+  color: #fefefe;                 /* White color */
+  font-size: 40px;                /* Font size */
+  font-weight: bold;
+  margin-bottom: 5px;             /* Spacing below the main text */
+  /* Removed text-transform to allow mixed case */
+}
+
+.intro-sub {
+  color: #c1c1c1;                 /* Light gray color */
+  font-size: 23.5px;              /* Font size */
+  margin-bottom: 5px;             /* Spacing below the subtitle */
+}
+
+.intro-location {
+  color: #fefefe;                 /* White color */
+  font-size: 19px;                /* Font size */
+  display: flex;
+  align-items: center;            /* Vertically centers the pointer with text */
+}
+
+.location-pointer {
+  width: 19px;                    /* Sets the width to 19px */
+  height: 19px;                   /* Sets the height to 19px */
+  margin-right: 5px;              /* Space between the pointer and the text */
+}
+
 .intro-logo {
   margin-left: 0px;               /* Eliminates left margin to bring logo closer */
 }
@@ -131,19 +158,18 @@ a:hover {
 .intro-logo-image {
   height: 200px;                  /* Sets the logo height to 200px */
   width: auto;                    /* Maintains aspect ratio */
-}
-
-/* Correcting the Location Pointer Size */
-.location-pointer {
-  width: 19px;                    /* Sets the width to 19px */
-  height: 19px;                   /* Sets the height to 19px */
-  margin-right: 5px;              /* Space between the pointer and the text */
-}
-
-/* Optional: Add a subtle hover effect to the logo */
-.intro-logo-image:hover {
-  transform: scale(1.05);
+  /* Optional: Add a subtle transition for hover effect */
   transition: transform 0.3s ease;
+}
+
+.intro-logo-image:hover {
+  transform: scale(1.05);         /* Slightly enlarges logo on hover */
+}
+
+/* Center the entire introduction section within the site feed */
+.main-content {
+  display: flex;
+  justify-content: center;        /* Centers the introduction section */
 }
 
 /* Responsive Design Adjustments */
@@ -159,8 +185,14 @@ a:hover {
     text-align: center;           /* Centers text on smaller screens */
   }
 
+  .intro-logo {
+    margin-left: 0px;             /* Ensures no left margin on small screens */
+    margin-top: 10px;             /* Adds top margin for spacing */
+  }
+
   .intro-logo-image {
     height: 150px;                /* Reduces logo size for better fit on smaller screens */
   }
 }
+
 
