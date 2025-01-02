@@ -26,9 +26,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(-45deg, #1a1a1a, #2c3e50, #2980b9, #8e44ad);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  background-color: #1a1a1a; /* Solid background color */
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -68,7 +66,15 @@ a:hover {
   position: relative;
 }
 
-/* 6. Logo Styles */
+/* 6. Load Custom Font */
+@font-face {
+  font-family: 'More Sugar Custom';
+  src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 7. Logo Styles */
 .logo {
   position: absolute;
   left: 40px;
@@ -77,14 +83,14 @@ a:hover {
 }
 
 .logo a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'More Sugar Custom', cursive; /* Changed to More Sugar Custom */
   font-size: 2rem;
   font-weight: bold;
   color: var(--text-color);
   text-transform: uppercase;
 }
 
-/* 7. Navigation Links Styles */
+/* 8. Navigation Links Styles */
 .nav-links {
   display: flex;
   gap: 40px;
@@ -102,7 +108,7 @@ a:hover {
   border-bottom: 3px solid var(--text-color);
 }
 
-/* 8. Main Content Padding */
+/* 9. Main Content Padding */
 .main-content {
   flex: 1;
   padding-top: 100px;
@@ -110,7 +116,7 @@ a:hover {
   padding-right: 40px;
 }
 
-/* 9. Introduction Section Styles */
+/* 10. Introduction Section Styles */
 .introduction {
   display: flex;
   align-items: center;
@@ -181,7 +187,7 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* 10. Footer Styles */
+/* 11. Footer Styles */
 .site-footer {
   width: 100%;
   text-align: center;
@@ -191,7 +197,7 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* 11. Responsive Design Adjustments */
+/* 12. Responsive Design Adjustments */
 @media (max-width: 768px) {
   .introduction {
     flex-direction: column;
@@ -212,19 +218,6 @@ a:hover {
 
   .intro-logo-image {
     height: 150px;
-  }
-}
-
-/* 12. Animated Gradient Background */
-@keyframes gradientBG {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 
