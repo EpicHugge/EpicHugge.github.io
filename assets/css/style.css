@@ -115,22 +115,23 @@ a:hover {
 
 .intro-main {
   color: #fefefe;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .intro-sub {
   color: #c1c1c1;
-  font-size: 17px;
+  font-size: 35px;
   text-align: left;
   margin-bottom: 5px;
 }
 
 .intro-location {
   color: #fefefe;
-  font-size: 12px;
+  font-size: 22px;
+  font-weight: bold;
   text-align: left;
 }
 
