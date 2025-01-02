@@ -38,7 +38,7 @@ a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1a1a1a; /* Changed to match website background */
+  background-color: #1a1a1a; /* Matches website background */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
   z-index: 1000;
   height: 80px; /* Header height */
@@ -100,10 +100,7 @@ a:hover {
 /* 8. Main Content Padding */
 .main-content {
   flex: 1; /* Allows main content to grow and push the footer to the bottom */
-  display: flex;
-  justify-content: center; /* Centers the introduction section */
-  align-items: center; /* Vertically centers the introduction section */
-  padding-top: 100px; /* Space for fixed header */
+  padding-top: 100px; /* Space for fixed header (80px header + 20px spacing) */
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -112,9 +109,9 @@ a:hover {
 .introduction {
   display: flex;
   align-items: center;            /* Vertically centers the text and logo */
-  justify-content: center;        /* Horizontally centers the content within the container */
+  justify-content: flex-start;    /* Aligns content to the start (left) */
   gap: 10px;                      /* Controls the space between text and logo */
-  margin: 40px auto;              /* Centers the introduction section and adds vertical spacing */
+  margin: 40px auto;              /* Centers the introduction section horizontally */
   max-width: 1000px;              /* Sets a maximum width to prevent stretching on large screens */
   padding: 0 20px;                /* Optional: Adjusts horizontal padding as needed */
 }
