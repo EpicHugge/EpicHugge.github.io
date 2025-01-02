@@ -259,6 +259,49 @@ a:hover {
   to { width: 100%; }
 }
 
+/* Caret Blinking Animation */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fefefe; }
+}
+
+/* Blinking Caret */
+.blink-caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Hide Caret */
+.hide-caret {
+  border-right: .15em solid transparent;
+}
+
+/* Intro Main Styles */
+.intro-main {
+  font-family: 'Montserrat', sans-serif;
+  color: #fefefe; /* Ensures text is #fefefe */
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  overflow: hidden; /* Ensures text is clipped during typing */
+  border-right: .15em solid #fefefe; /* Static caret */
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end) forwards; /* Typing animation */
+  display: inline-block;
+  position: relative;
+}
+
+/* Caret Blinking */
+.blink-caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Hide Caret */
+.hide-caret {
+  border-right: .15em solid transparent;
+}
+
+
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
   50% { border-color: #fefefe; }
