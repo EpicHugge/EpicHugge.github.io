@@ -155,7 +155,7 @@ a:hover {
   border-right: .15em solid #fefefe; /* Updated caret color */
   white-space: nowrap;
   letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end), blink-caret 1s step-end forwards; /* Updated animation */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end 5 forwards; /* Updated animation */
   display: inline-block;
 }
 
