@@ -133,6 +133,14 @@ a:hover {
   font-size: 22px;
   font-weight: bold;
   text-align: left;
+  display: flex;
+  align-items: center; /* Vertically centers the image with text */
+}
+
+.intro-location .location-pointer {
+  width: 12px; /* Matches the font size */
+  height: 12px;
+  margin-right: 5px; /* Space between image and text */
 }
 
 /* 10. Responsive Design */
