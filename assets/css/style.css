@@ -112,12 +112,12 @@ a:hover {
 .introduction {
   display: flex;
   justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Vertically centers the text and logo */
-  margin: 40px 0; /* Space above and below the introduction */
-  max-width: 800px; /* Sets a maximum width for the introduction section */
-  margin-left: auto; /* Centers the container */
-  margin-right: auto; /* Centers the container */
-  padding: 0 20px; /* Optional: Adjust horizontal padding as needed */
+  align-items: center;     /* Vertically centers the text and logo */
+  margin: 40px 0;          /* Space above and below the introduction */
+  max-width: 1000px;       /* Adjust as needed */
+  margin-left: auto;       /* Centers the container */
+  margin-right: auto;      /* Centers the container */
+  padding: 0 20px;         /* Optional: Adjust horizontal padding as needed */
 }
 
 .intro-text {
@@ -126,100 +126,84 @@ a:hover {
 
 .intro-main {
   color: #fefefe;
-  font-size: 40px; /* Updated font size */
+  font-size: 40px;         /* Ensures consistency with previous settings */
   font-weight: bold;
   text-align: left;
-  margin-bottom: 5px; /* Reduced spacing */
+  margin-bottom: 5px;      /* Maintained spacing */
   /* Removed text-transform to allow mixed case */
 }
 
 .intro-sub {
   color: #c1c1c1;
-  font-size: 23.5px; /* Updated font size */
-  text-align: left; /* Changed alignment to left */
-  margin-bottom: 5px; /* Maintained spacing */
+  font-size: 23.5px;       /* Ensures consistency with previous settings */
+  text-align: left;
+  margin-bottom: 5px;
 }
 
 .intro-location {
   color: #fefefe;
-  font-size: 19px; /* Updated font size */
+  font-size: 19px;
   text-align: left;
   display: flex;
-  align-items: center; /* Vertically centers the image with text */
+  align-items: center;
 }
 
 .intro-location .location-pointer {
-  width: 19px; /* Increased size from 16px */
-  height: 19px; /* Increased size from 16px */
-  margin-right: 5px; /* Space between image and text */
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
 }
 
 .intro-logo {
-  margin-left: -10px; /* Reduced space between text and logo */
+  margin-left: 0px;        /* Reduced spacing to bring logo closer */
+  /* Optional: Use negative margin for overlap */
+  /* margin-left: -10px; */
 }
 
 .intro-logo-image {
-  height: 200px; /* Increased from 40px */
+  height: 200px;           /* Increased logo size */
   width: auto;
 }
 
-/* Responsive Design */
+/* Optional: Add a slight transition for hover effect */
+.intro-logo-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Responsive Design Adjustments */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    padding: 15px 20px; /* Adjusted padding for smaller screens */
-    height: auto; /* Allows header height to adjust based on content */
-  }
-
-  .logo {
-    position: static; /* Removes absolute positioning */
-    transform: none; /* Removes translate */
-    margin-bottom: 15px; /* Adds space below the logo */
-  }
-
-  .nav-links {
-    gap: 20px; /* Reduced space between navigation links */
-  }
-
-  .nav-links a {
-    font-size: 1rem; /* Adjusted font size for smaller screens */
-  }
-
-  .logo a {
-    font-size: 1.5rem; /* Adjusted font size for smaller screens */
-  }
-
   .introduction {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    max-width: 100%; /* Allows full width on smaller screens */
+    max-width: 100%;
     padding: 0 10px;
   }
 
   .intro-text {
-    margin-bottom: 15px; /* Space below the text section */
+    margin-bottom: 15px;
   }
 
   .intro-sub {
-    font-size: 20px; /* Slight adjustment for better fit */
+    font-size: 20px;
   }
 
   .intro-location {
-    font-size: 17px; /* Slight adjustment for better fit */
+    font-size: 17px;
   }
 
   .intro-location .location-pointer {
-    width: 17px; /* Adjusted size for smaller screens */
+    width: 17px;
     height: 17px;
   }
 
   .intro-logo {
-    margin-left: 0; /* Remove left margin on small screens */
+    margin-left: 0;
+    margin-top: 10px; /* Optional: Add some top margin for spacing */
   }
 
   .intro-logo-image {
-    height: 40px; /* Adjusted size for smaller screens */
+    height: 150px; /* Adjusted size for smaller screens if needed */
   }
 }
