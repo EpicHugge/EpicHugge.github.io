@@ -44,6 +44,7 @@
     <!-- End of Fixed Header -->
 
     <main id="content" class="main-content" role="main">
+      {% if page.url == "/" %}
       <!-- Introduction Section -->
       <div class="introduction">
         <div class="intro-text">
@@ -59,8 +60,10 @@
         </div>
       </div>
       <!-- End of Introduction Section -->
+      {% endif %}
 
       <!-- Your existing content goes here -->
+      {% include content.html %}
     </main>
 
     <footer class="site-footer">
