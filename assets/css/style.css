@@ -1,6 +1,6 @@
 /* 1. CSS Variables */
 :root {
-  --primary-color: #ff9800;
+  --primary-color: #ff9800; /* Keep as orange if needed elsewhere */
   --secondary-color: #c1c1c1;
   --background-color: #1a1a1a;
   --text-color: #fefefe;
@@ -147,16 +147,25 @@ a:hover {
 
 .intro-main {
   font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);
+  color: #fefefe; /* Ensures text is #fefefe */
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 5px;
   overflow: hidden;
-  border-right: .15em solid #fefefe; /* Updated caret color */
+  border-right: .15em solid #fefefe; /* Static caret */
   white-space: nowrap;
   letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end 5 forwards; /* Updated animation */
+  animation: typing 3.5s steps(40, end) forwards; /* Typing animation */
   display: inline-block;
+  position: relative;
+}
+
+.intro-main.blink-caret {
+  animation: blink-caret 0.75s step-end infinite; /* Caret blinking */
+}
+
+.intro-main.hide-caret {
+  border-right: .15em solid transparent; /* Hide caret */
 }
 
 .intro-sub, .intro-location {
@@ -246,13 +255,13 @@ a:hover {
 
 /* 14. Typing Animation */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #fefefe; } /* Updated caret color */
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fefefe; }
 }
 
 /* 15. Back to Top Button Styles */
