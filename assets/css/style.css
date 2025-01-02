@@ -151,7 +151,7 @@ a:hover {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 5px;
-  overflow: hidden;
+  overflow: hidden; /* Ensures text is clipped during typing */
   border-right: .15em solid #fefefe; /* Static caret */
   white-space: nowrap;
   letter-spacing: .15em;
@@ -160,12 +160,18 @@ a:hover {
   position: relative;
 }
 
-.intro-main.blink-caret {
-  animation: blink-caret 0.75s step-end infinite; /* Caret blinking */
+.caret {
+  display: inline-block;
+  width: .15em;
+  /* The caret's border is already defined in .intro-main */
 }
 
-.intro-main.hide-caret {
-  border-right: .15em solid transparent; /* Hide caret */
+.blink-caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+.hide-caret {
+  border-right: .15em solid transparent;
 }
 
 .intro-sub, .intro-location {
@@ -259,55 +265,13 @@ a:hover {
   to { width: 100%; }
 }
 
-/* Caret Blinking Animation */
+/* 15. Caret Blinking Animation */
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
   50% { border-color: #fefefe; }
 }
 
-/* Blinking Caret */
-.blink-caret {
-  animation: blink-caret 0.75s step-end infinite;
-}
-
-/* Hide Caret */
-.hide-caret {
-  border-right: .15em solid transparent;
-}
-
-/* Intro Main Styles */
-.intro-main {
-  font-family: 'Montserrat', sans-serif;
-  color: #fefefe; /* Ensures text is #fefefe */
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  overflow: hidden; /* Ensures text is clipped during typing */
-  border-right: .15em solid #fefefe; /* Static caret */
-  white-space: nowrap;
-  letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end) forwards; /* Typing animation */
-  display: inline-block;
-  position: relative;
-}
-
-/* Caret Blinking */
-.blink-caret {
-  animation: blink-caret 0.75s step-end infinite;
-}
-
-/* Hide Caret */
-.hide-caret {
-  border-right: .15em solid transparent;
-}
-
-
-@keyframes blink-caret {
-  0%, 100% { border-color: transparent; }
-  50% { border-color: #fefefe; }
-}
-
-/* 15. Back to Top Button Styles */
+/* 16. Back to Top Button Styles */
 #back-to-top {
   position: fixed;
   bottom: 40px;
@@ -330,7 +294,7 @@ a:hover {
   transform: translateY(-5px);
 }
 
-/* 16. Accordion Styles (Optional) */
+/* 17. Accordion Styles (Optional) */
 .accordion-header {
   cursor: pointer;
   padding: 15px;
