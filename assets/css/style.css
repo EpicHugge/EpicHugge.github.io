@@ -80,11 +80,12 @@ a:hover {
 .nav-links a {
   font-size: 1.2rem; /* Increased font size for navigation links */
   color: #c1c1c1; /* Grayed out links */
+  font-weight: bold;
 }
 
 .nav-links a.active {
   color: #fefefe; /* White for active link */
-  border-bottom: 3px solid #fefefe; /* Thicker underline for active link */
+  border-bottom: 2px solid #fefefe; /* Thicker underline for active link */
 }
 
 /* 7. Main Content Padding */
