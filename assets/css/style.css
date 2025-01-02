@@ -39,15 +39,22 @@ a:hover {
 .header-container {
   display: flex;
   align-items: center; /* Vertically centers items */
-  justify-content: center; /* Horizontally centers the entire group */
+  justify-content: center; /* Centers navigation links horizontally */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 40px; /* Horizontal padding */
   height: 100%; /* Inherits height from .fixed-header */
-  gap: 40px; /* Space between logo and nav-links */
+  position: relative; /* Establishes a positioning context for the logo */
 }
 
 /* 4. Logo Styles */
+.logo {
+  position: absolute;
+  left: 40px; /* Anchors logo to the left */
+  top: 50%;
+  transform: translateY(-50%); /* Vertically centers the logo */
+}
+
 .logo a {
   font-family: 'More Sugar', cursive; /* Applied More Sugar font */
   font-size: 2rem; /* Increased font size for logo */
@@ -59,7 +66,6 @@ a:hover {
 .nav-links {
   display: flex;
   gap: 40px; /* Space between navigation links */
-  /* Removed margin-left and used gap for spacing */
 }
 
 .nav-links a {
@@ -99,12 +105,16 @@ a:hover {
     align-items: center; /* Center items horizontally */
     padding: 15px 20px; /* Adjusted padding for smaller screens */
     height: auto; /* Allows header height to adjust based on content */
-    gap: 20px; /* Reduced gap for smaller screens */
+  }
+
+  .logo {
+    position: static; /* Removes absolute positioning */
+    transform: none; /* Removes translate */
+    margin-bottom: 15px; /* Adds space below the logo */
   }
 
   .nav-links {
     gap: 20px; /* Reduced space between navigation links */
-    justify-content: center; /* Center navigation links */
   }
 
   .nav-links a {
