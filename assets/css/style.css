@@ -47,7 +47,15 @@ a:hover {
   position: relative; /* Establishes a positioning context for the logo */
 }
 
-/* 4. Logo Styles */
+/* 4. Load Custom Font */
+@font-face {
+  font-family: 'More Sugar Custom';
+  src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 5. Logo Styles */
 .logo {
   position: absolute;
   left: 40px; /* Anchors logo to the left */
@@ -56,13 +64,13 @@ a:hover {
 }
 
 .logo a {
-  font-family: 'More Sugar', cursive; /* Applied More Sugar font */
-  font-size: 2rem; /* Increased font size for logo */
+  font-family: 'More Sugar Custom', cursive; /* Apply More Sugar Custom font */
+  font-size: 2rem; /* Adjust as needed */
   font-weight: bold;
   color: #fefefe;
 }
 
-/* 5. Navigation Links Styles */
+/* 6. Navigation Links Styles */
 .nav-links {
   display: flex;
   gap: 40px; /* Space between navigation links */
@@ -78,14 +86,14 @@ a:hover {
   border-bottom: 3px solid #fefefe; /* Thicker underline for active link */
 }
 
-/* 6. Main Content Padding */
+/* 7. Main Content Padding */
 .main-content {
   padding-top: 100px; /* Space for fixed header */
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* 7. Footer Styles */
+/* 8. Footer Styles */
 .site-footer {
   margin-top: 60px;
   text-align: center;
@@ -98,7 +106,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 8. Responsive Design */
+/* 9. Responsive Design */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
