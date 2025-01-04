@@ -288,15 +288,16 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 20px 0;
+    padding: 0; /* Remove padding when hidden */
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
 
   /* Show Navigation Links When Active */
   .nav-links.nav-active {
-    max-height: 500px; /* Arbitrary large value to show all links */
+    max-height: 500px; /* Adjust as needed to fit all links */
+    padding: 20px 0; /* Add padding when visible */
   }
 
   /* Center Logo on Mobile */
