@@ -412,3 +412,36 @@ a:hover {
 .accordion-content.show {
   display: block;
 }
+
+/* 1. About Page Specific Styles */
+.about-page .intro-text,
+.about-page .intro-location {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-page img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* 2. Responsive Adjustments for About Page */
+@media (max-width: 768px) {
+  .about-page .intro-text,
+  .about-page .intro-location {
+    text-align: center; /* Center align text on mobile */
+  }
+
+  .about-page .intro-location {
+    justify-content: center; /* Center align the flex items */
+  }
+
+  .about-page img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
