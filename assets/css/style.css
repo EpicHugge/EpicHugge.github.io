@@ -344,9 +344,8 @@ a:hover {
     height: 150px;
   }
 
-  /* 14. About Page Specific Styles */
+  /* About Page Specific Styles */
   .about-page .about-container {
-    display: flex;
     flex-direction: column; /* Stack vertically on mobile */
     align-items: center;
     text-align: center;
@@ -506,43 +505,4 @@ a:hover {
 /* 19. Fade-In Animation Class */
 .fade-in {
   animation: fadeIn 1s ease-out forwards;
-}
-
-/* 20. Additional Aesthetic Improvements */
-
-/* Enhanced Typography for About Page */
-.about-page .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #fefefe; /* High contrast against dark background */
-}
-
-.about-page .about-text p strong {
-  color: var(--primary-color); /* Highlights key phrases */
-}
-
-/* Decorative Border for Portrait Image */
-.about-page .about-image img {
-  border: 2px solid var(--primary-color); /* Adds a colored border */
-}
-
-/* Image Hover Effect */
-.about-page .about-image img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-page .about-image img:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
-}
-
-/* Improved Container Spacing */
-.about-page .about-container {
-  padding: 60px 40px; /* Increased vertical padding */
-}
-
-@media (max-width: 768px) {
-  .about-page .about-container {
-    padding: 20px 20px; /* Adjusted padding for mobile */
-  }
 }
