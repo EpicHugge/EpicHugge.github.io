@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  background-color: #1a1a1a; /* Solid background color */
+  background-color: var(--background-color); /* Solid background color */
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -351,4 +351,54 @@ a:hover {
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
+}
+
+/* 16. Back to Top Button Styles */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
+  z-index: 100;
+}
+
+#back-to-top:hover {
+  background-color: #e67e22;
+  transform: translateY(-5px);
+}
+
+/* 17. Accordion Styles (Optional) */
+.accordion-header {
+  cursor: pointer;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color var(--transition-duration);
+}
+
+.accordion-header:hover {
+  background-color: #e67e22;
+}
+
+.accordion-content {
+  padding: 0 15px;
+  display: none;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.accordion-content.show {
+  display: block;
 }
