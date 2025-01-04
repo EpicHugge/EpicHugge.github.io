@@ -238,6 +238,7 @@ a:hover {
 .intro-location {
   display: flex;
   align-items: center;
+  justify-content: flex-start; /* Default alignment on desktop */
 }
 
 .location-pointer {
@@ -327,6 +328,10 @@ a:hover {
 
   .intro-sub, .intro-location {
     text-align: center; /* Ensure individual elements are center-aligned */
+  }
+
+  .intro-location {
+    justify-content: center; /* Center align the flex items */
   }
 
   .intro-logo {
