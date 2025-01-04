@@ -1,6 +1,6 @@
 /* 1. CSS Variables */
 :root {
-  --primary-color: #ff9800; /* Keep as orange if needed elsewhere */
+  --primary-color: #ff9800; /* Orange color */
   --secondary-color: #c1c1c1;
   --background-color: #1a1a1a;
   --text-color: #fefefe;
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .logo a:hover {
-  color: #fefefe; /* Changed hover color to #fefefe */
+  color: #fefefe; /* Hover color */
 }
 
 /* 8. Navigation Links Styles */
@@ -116,7 +116,7 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: var(--primary-color); /* Keep as orange or change if desired */
+  color: var(--primary-color); /* Hover color */
 }
 
 /* 9. Hamburger Menu Styles */
@@ -231,7 +231,7 @@ a:hover {
 }
 
 .intro-main:hover, .intro-sub:hover, .intro-location:hover {
-  color: #fefefe; /* Changed hover color to #fefefe */
+  color: #fefefe; /* Hover color */
   transform: scale(1.05);
 }
 
@@ -301,11 +301,12 @@ a:hover {
     padding: 20px 0; /* Add padding when visible */
   }
 
-  /* Center Logo on Mobile */
+  /* Center Logo on Mobile and Vertically Align */
   .logo {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
   }
 
   /* Adjust Hamburger Position to Avoid Overlapping with Logo */
