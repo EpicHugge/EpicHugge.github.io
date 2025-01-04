@@ -116,7 +116,7 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: var(--primary-color); /* Hover color */
+  color: #fefefe; /* Hover color */
 }
 
 /* 9. Hamburger Menu Styles */
