@@ -322,7 +322,11 @@ a:hover {
   }
 
   .intro-text {
-    text-align: center;
+    text-align: center; /* Center align text on mobile */
+  }
+
+  .intro-sub, .intro-location {
+    text-align: center; /* Ensure individual elements are center-aligned */
   }
 
   .intro-logo {
