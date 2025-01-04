@@ -119,7 +119,46 @@ a:hover {
   color: var(--primary-color); /* Keep as orange or change if desired */
 }
 
-/* 9. Main Content Padding */
+/* 9. Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  left: 40px; /* Align with logo on desktop */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001; /* Above navigation */
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation (Toggle) */
+.toggle .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 10. Main Content Padding */
 .main-content {
   flex: 1;
   padding-top: 100px;
@@ -127,7 +166,7 @@ a:hover {
   padding-right: 40px;
 }
 
-/* 10. Introduction Section Styles */
+/* 11. Introduction Section Styles */
 .introduction {
   display: flex;
   align-items: center;
@@ -152,13 +191,37 @@ a:hover {
   font-weight: bold;
   margin-bottom: 5px;
   overflow: hidden;
-  border-right: .15em solid #fefefe; /* Changed from orange to #fefefe */
   white-space: nowrap;
   letter-spacing: .15em;
-  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  border-right: .15em solid #fefefe; /* Static caret */
+  animation: typing 3.5s steps(40, end) forwards; /* Typing animation runs once */
   display: inline-block;
+  position: relative;
 }
 
+.caret {
+  display: inline-block;
+  width: .15em;
+  border-right: .15em solid #fefefe; /* Static caret */
+}
+
+/* Blinking Caret Animation */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fefefe; }
+}
+
+/* Blinking Caret */
+.blink-caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Hide Caret */
+.hide-caret {
+  border-right: .15em solid transparent;
+}
+
+/* Intro Sub and Location Styles */
 .intro-sub, .intro-location {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-color);
@@ -198,7 +261,7 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* 11. Footer Styles */
+/* 12. Footer Styles */
 .site-footer {
   width: 100%;
   text-align: center;
@@ -208,8 +271,47 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* 12. Responsive Design Adjustments */
+/* 13. Responsive Design Adjustments */
 @media (max-width: 768px) {
+  /* Show Hamburger Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hide Navigation Links by Default */
+  .nav-links {
+    position: absolute;
+    top: 80px; /* Below the header */
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  /* Show Navigation Links When Active */
+  .nav-links.nav-active {
+    max-height: 500px; /* Arbitrary large value to show all links */
+  }
+
+  /* Center Logo on Mobile */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Adjust Hamburger Position to Avoid Overlapping with Logo */
+  .hamburger {
+    left: 10px;
+  }
+
+  /* Adjust Intro Section Layout */
   .introduction {
     flex-direction: column;
     align-items: center;
@@ -232,7 +334,7 @@ a:hover {
   }
 }
 
-/* 13. Fade-In Animation */
+/* 14. Fade-In Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -244,63 +346,8 @@ a:hover {
   }
 }
 
-/* 14. Typing Animation */
+/* 15. Typing Animation */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #fefefe; } /* Updated caret color */
-}
-
-/* 15. Back to Top Button Styles */
-#back-to-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  display: none;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color var(--transition-duration), transform var(--transition-duration);
-  z-index: 100;
-}
-
-#back-to-top:hover {
-  background-color: #e67e22;
-  transform: translateY(-5px);
-}
-
-/* 16. Accordion Styles (Optional) */
-.accordion-header {
-  cursor: pointer;
-  padding: 15px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: background-color var(--transition-duration);
-}
-
-.accordion-header:hover {
-  background-color: #e67e22;
-}
-
-.accordion-content {
-  padding: 0 15px;
-  display: none;
-  background-color: #f1f1f1;
-  color: #333;
-}
-
-.accordion-content.show {
-  display: block;
+  from { width: 0; }
+  to { width: 100%; }
 }
