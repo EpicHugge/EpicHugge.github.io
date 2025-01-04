@@ -1,6 +1,6 @@
 /* 1. CSS Variables */
 :root {
-  --primary-color: #ff9800; /* Orange color */
+  --primary-color: #ff9800; /* Orange */
   --secondary-color: #c1c1c1;
   --background-color: #1a1a1a;
   --text-color: #fefefe;
@@ -26,7 +26,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color); /* Solid background color */
+  background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
 }
@@ -39,7 +39,7 @@ a {
 }
 
 a:hover {
-  color: var(--text-color);
+  color: #fefefe; /* Changed hover color to #fefefe */
 }
 
 /* 4. Fixed Header Styles */
@@ -84,7 +84,7 @@ a:hover {
 }
 
 .logo a {
-  font-family: 'More Sugar Custom', cursive; /* Ensure this font is correctly loaded */
+  font-family: 'More Sugar Custom', cursive;
   font-size: 2rem;
   font-weight: bold;
   color: var(--text-color);
@@ -93,7 +93,7 @@ a:hover {
 }
 
 .logo a:hover {
-  color: #fefefe; /* Hover color */
+  color: #fefefe;
 }
 
 /* 8. Navigation Links Styles */
@@ -116,7 +116,7 @@ a:hover {
 }
 
 .nav-links a:hover {
-  color: #fefefe; /* Hover color */
+  color: #fefefe; /* Changed hover color to #fefefe */
 }
 
 /* 9. Hamburger Menu Styles */
@@ -167,6 +167,7 @@ a:hover {
 }
 
 /* 11. Introduction Section Styles */
+/* This section is now handled by the About page */
 .introduction {
   display: flex;
   align-items: center;
@@ -231,7 +232,7 @@ a:hover {
 }
 
 .intro-main:hover, .intro-sub:hover, .intro-location:hover {
-  color: #fefefe; /* Hover color */
+  color: #fefefe; /* Changed hover color to #fefefe */
   transform: scale(1.05);
 }
 
@@ -301,12 +302,11 @@ a:hover {
     padding: 20px 0; /* Add padding when visible */
   }
 
-  /* Center Logo on Mobile and Vertically Align */
+  /* Center Logo on Mobile */
   .logo {
     position: absolute;
     left: 50%;
-    top: 50%; /* Center vertically */
-    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    transform: translateX(-50%);
   }
 
   /* Adjust Hamburger Position to Avoid Overlapping with Logo */
@@ -342,6 +342,48 @@ a:hover {
 
   .intro-logo-image {
     height: 150px;
+  }
+
+  /* 1. About Page Specific Styles */
+  .about-page .about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .about-page .about-text {
+    flex: 1;
+  }
+
+  .about-page .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+
+  /* Responsive Adjustments for About Page */
+  @media (max-width: 768px) {
+    .about-page .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-page .about-text {
+      text-align: center; /* Center align text on mobile */
+    }
+
+    .about-page .about-image {
+      margin-top: 20px;
+    }
+
+    .about-page .about-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Make the image circular on mobile */
+    }
   }
 }
 
@@ -413,35 +455,43 @@ a:hover {
   display: block;
 }
 
-/* 1. About Page Specific Styles */
-.about-page .intro-text,
-.about-page .intro-location {
-  max-width: 600px;
-  margin: 0 auto;
+/* 18. About Page Specific Styles */
+.about-page .about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.about-page img {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
+.about-page .about-text {
+  flex: 1;
 }
 
-/* 2. Responsive Adjustments for About Page */
+.about-page .about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
 @media (max-width: 768px) {
-  .about-page .intro-text,
-  .about-page .intro-location {
+  .about-page .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-page .about-text {
     text-align: center; /* Center align text on mobile */
   }
 
-  .about-page .intro-location {
-    justify-content: center; /* Center align the flex items */
+  .about-page .about-image {
+    margin-top: 20px;
   }
 
-  .about-page img {
+  .about-page .about-image img {
     width: 150px;
     height: 150px;
+    border-radius: 50%; /* Make the image circular on mobile */
   }
 }
-
