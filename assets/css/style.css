@@ -475,6 +475,12 @@ a:hover {
   background-color: #333333; /* Dark background for the text box */
   padding: 20px;
   border-radius: 8px;
+  opacity: 0; /* Initial state for fade-in */
+  transition: opacity 1s ease-out;
+}
+
+.about-page .about-text.fade-in {
+  opacity: 1; /* Fade-in effect */
 }
 
 .about-page .about-text p {
@@ -487,34 +493,20 @@ a:hover {
   height: auto;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  opacity: 0; /* Initial state for fade-in */
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .about-page .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: transparent; /* Remove background on mobile */
-    border-radius: 0; /* Remove rounded corners on mobile */
-  }
+.about-page .about-image.fade-in img {
+  opacity: 1; /* Fade-in effect */
+}
 
-  .about-page .about-text {
-    max-width: 100%;
-    background-color: transparent; /* Remove background on mobile */
-    padding: 0;
-  }
+.about-page .about-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
 
-  .about-page .about-text p {
-    font-size: 1rem;
-  }
-
-  .about-page .about-image img {
-    width: 150px; /* Reduced size for mobile */
-    height: 150px;
-    border-radius: 50%; /* Make the image circular on mobile */
-    margin-top: 20px;
-    box-shadow: none; /* Remove shadow on mobile for a cleaner look */
-  }
+/* 19. Fade-In Animation Class */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
 }
