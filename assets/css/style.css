@@ -344,36 +344,46 @@ a:hover {
     height: 150px;
   }
 
-  /* About Page Specific Styles */
+  /* 1. About Page Specific Styles */
   .about-page .about-container {
-    flex-direction: column; /* Stack vertically on mobile */
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
     gap: 40px;
-    padding: 20px 20px; /* Adjusted padding for mobile */
-    background-color: transparent; /* Remove background on mobile */
-    border-radius: 0; /* Remove rounded corners on mobile */
-    max-width: 100%;
   }
 
   .about-page .about-text {
-    max-width: 100%;
-    background-color: transparent; /* Remove background on mobile */
-    padding: 0;
-    text-align: center; /* Center align text on mobile */
-  }
-
-  .about-page .about-text p {
-    font-size: 1rem;
+    flex: 1;
   }
 
   .about-page .about-image img {
-    width: 150px; /* Reduced size for mobile */
-    height: 150px;
-    border-radius: 50%; /* Make the image circular on mobile */
-    margin-top: 20px;
-    box-shadow: none; /* Remove shadow on mobile for a cleaner look */
-    border: 2px solid var(--primary-color); /* Keep border on mobile */
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+
+  /* Responsive Adjustments for About Page */
+  @media (max-width: 768px) {
+    .about-page .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-page .about-text {
+      text-align: center; /* Center align text on mobile */
+    }
+
+    .about-page .about-image {
+      margin-top: 20px;
+    }
+
+    .about-page .about-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Make the image circular on mobile */
+    }
   }
 }
 
@@ -448,15 +458,15 @@ a:hover {
 /* 18. About Page Specific Styles */
 .about-page .about-container {
   display: flex;
-  flex-direction: row; /* Desktop: side by side */
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #2c2c2c; /* Subtle background for the text box */
-  border-radius: 10px; /* Rounded corners for the text box */
+  background-color: #2c2c2c; /* Optional: subtle background for the text box */
+  border-radius: 10px; /* Optional: rounded corners for the text box */
 }
 
 .about-page .about-text {
@@ -465,22 +475,11 @@ a:hover {
   background-color: #333333; /* Dark background for the text box */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  opacity: 0; /* Initial state for fade-in */
-}
-
-.about-page .about-text.fade-in {
-  animation: fadeIn 1s ease-out forwards;
 }
 
 .about-page .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #fefefe; /* Ensures high contrast against dark background */
-}
-
-.about-page .about-text p strong {
-  color: var(--primary-color); /* Highlights key phrases */
 }
 
 .about-page .about-image img {
@@ -488,21 +487,34 @@ a:hover {
   height: auto;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  border: 2px solid var(--primary-color); /* Adds a colored border */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
-  opacity: 0; /* Initial state for fade-in */
 }
 
-.about-page .about-image.fade-in img {
-  animation: fadeIn 1s ease-out forwards;
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-page .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: transparent; /* Remove background on mobile */
+    border-radius: 0; /* Remove rounded corners on mobile */
+  }
 
-.about-page .about-image img:hover {
-  transform: scale(1.05); /* Slight zoom effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
-}
+  .about-page .about-text {
+    max-width: 100%;
+    background-color: transparent; /* Remove background on mobile */
+    padding: 0;
+  }
 
-/* 19. Fade-In Animation Class */
-.fade-in {
-  animation: fadeIn 1s ease-out forwards;
+  .about-page .about-text p {
+    font-size: 1rem;
+  }
+
+  .about-page .about-image img {
+    width: 150px; /* Reduced size for mobile */
+    height: 150px;
+    border-radius: 50%; /* Make the image circular on mobile */
+    margin-top: 20px;
+    box-shadow: none; /* Remove shadow on mobile for a cleaner look */
+  }
 }
