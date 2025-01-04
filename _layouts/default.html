@@ -28,7 +28,7 @@
     <header class="fixed-header">
       <div class="header-container">
         <!-- Hamburger Menu Icon (Visible on Mobile) -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -78,7 +78,7 @@
       <!-- Removed GitHub Pages Credit -->
     </footer>
 
-    <!-- Typing Animation Control Script -->
+    <!-- Typing Animation and Hamburger Menu Control Script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const introMain = document.querySelector('.intro-main');
@@ -111,6 +111,10 @@
       hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('nav-active');
         hamburger.classList.toggle('toggle');
+
+        // Toggle aria-expanded attribute for accessibility
+        const isExpanded = hamburger.classList.contains('toggle');
+        hamburger.setAttribute('aria-expanded', isExpanded);
       });
     </script>
 
