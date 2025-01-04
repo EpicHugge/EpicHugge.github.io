@@ -1,182 +1,497 @@
-/* 1. Reset and Base Styles */
+/* 1. CSS Variables */
+:root {
+  --primary-color: #ff9800; /* Orange */
+  --secondary-color: #c1c1c1;
+  --background-color: #1a1a1a;
+  --text-color: #fefefe;
+  --accent-color: #2980b9;
+  --transition-duration: 0.3s;
+}
+
+/* 2. Reset and Base Styles */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #1a1a1a; /* Grayish-black background */
-  color: #fefefe; /* White text */
-  line-height: 1.6;
-  min-height: 100vh;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* 3. Link Styles */
 a {
   text-decoration: none;
-  color: #c1c1c1; /* Grayed out links */
-  transition: color 0.3s;
+  color: var(--secondary-color);
+  transition: color var(--transition-duration);
 }
 
 a:hover {
-  color: #fefefe; /* White on hover */
+  color: #fefefe; /* Changed hover color to #fefefe */
 }
 
-/* 2. Fixed Header Styles */
+/* 4. Fixed Header Styles */
 .fixed-header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #1a1a1a; /* Changed to match website background */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly larger shadow */
+  background-color: var(--background-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  height: 80px; /* Header height */
+  height: 80px;
 }
 
-/* 3. Header Container with Flexbox */
+/* 5. Header Container with Flexbox */
 .header-container {
   display: flex;
-  align-items: center; /* Vertically centers items */
-  justify-content: center; /* Centers navigation links horizontally */
+  align-items: center;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px; /* Horizontal padding */
-  height: 100%; /* Inherits height from .fixed-header */
-  position: relative; /* Establishes a positioning context for the logo */
+  padding: 0 40px;
+  height: 100%;
+  position: relative;
 }
 
-/* 4. Load Custom Font */
+/* 6. Load Custom Font */
 @font-face {
   font-family: 'More Sugar Custom';
   src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+  font-display: swap; /* Improves loading behavior */
 }
 
-/* 5. Logo Styles */
+/* 7. Logo Styles */
 .logo {
   position: absolute;
-  left: 40px; /* Anchors logo to the left */
+  left: 40px;
   top: 50%;
-  transform: translateY(-50%); /* Vertically centers the logo */
+  transform: translateY(-50%);
 }
 
 .logo a {
-  font-family: 'More Sugar Custom', cursive; /* Apply More Sugar Custom font */
-  font-size: 2rem; /* Adjust as needed */
+  font-family: 'More Sugar Custom', cursive;
+  font-size: 2rem;
   font-weight: bold;
-  color: #fefefe;
-  text-transform: uppercase; /* Makes the logo text uppercase */
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: color var(--transition-duration);
 }
 
-/* 6. Navigation Links Styles */
+.logo a:hover {
+  color: #fefefe;
+}
+
+/* 8. Navigation Links Styles */
 .nav-links {
   display: flex;
-  gap: 40px; /* Space between navigation links */
+  gap: 40px;
 }
 
 .nav-links a {
-  font-size: 1.2rem; /* Increased font size for navigation links */
-  color: #c1c1c1; /* Grayed out links */
-  font-weight: bold; /* Make links bold */
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: color var(--transition-duration);
 }
 
 .nav-links a.active {
-  color: #fefefe; /* White for active link */
-  border-bottom: 3px solid #fefefe; /* Thicker underline for active link */
+  color: var(--text-color);
+  border-bottom: 3px solid var(--text-color);
 }
 
-/* 7. Main Content Padding */
+.nav-links a:hover {
+  color: #fefefe; /* Changed hover color to #fefefe */
+}
+
+/* 9. Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  left: 40px; /* Align with logo on desktop */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001; /* Above navigation */
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger Animation (Toggle) */
+.toggle .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.toggle .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 10. Main Content Padding */
 .main-content {
-  padding-top: 100px; /* Space for fixed header */
+  flex: 1;
+  padding-top: 100px;
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* 8. Footer Styles */
-.site-footer {
-  margin-top: 60px;
-  text-align: center;
-  font-size: 1rem; /* Slightly larger footer text */
-  color: #c1c1c1;
-}
-
-.site-footer a {
-  color: #fefefe;
-  text-decoration: underline;
-}
-
-/* 9. Introduction Section Styles */
+/* 11. Introduction Section Styles */
+/* This section is now handled by the About page */
 .introduction {
-  margin: 40px 0; /* Space above and below the introduction */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.intro-text {
+  flex: none;
+  text-align: left;
 }
 
 .intro-main {
-  color: #fefefe;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
   font-size: 40px;
   font-weight: bold;
-  text-align: left;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  border-right: .15em solid #fefefe; /* Static caret */
+  animation: typing 3.5s steps(40, end) forwards; /* Typing animation runs once */
+  display: inline-block;
+  position: relative;
 }
 
-.intro-sub {
-  color: #c1c1c1;
+.caret {
+  display: inline-block;
+  width: .15em;
+  border-right: .15em solid #fefefe; /* Static caret */
+}
+
+/* Blinking Caret Animation */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fefefe; }
+}
+
+/* Blinking Caret */
+.blink-caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Hide Caret */
+.hide-caret {
+  border-right: .15em solid transparent;
+}
+
+/* Intro Sub and Location Styles */
+.intro-sub, .intro-location {
+  font-family: 'Roboto', sans-serif;
+  color: var(--secondary-color);
   font-size: 23.5px;
-  text-align: left;
-  margin-bottom: 0px;
+  margin-bottom: 5px;
+  transition: color var(--transition-duration), transform var(--transition-duration);
+}
+
+.intro-main:hover, .intro-sub:hover, .intro-location:hover {
+  color: #fefefe; /* Changed hover color to #fefefe */
+  transform: scale(1.05);
 }
 
 .intro-location {
-  color: #fefefe;
-  font-size: 19px;
-  font-weight: bold;
-  text-align: left;
   display: flex;
-  align-items: center; /* Vertically centers the image with text */
+  align-items: center;
+  justify-content: flex-start; /* Default alignment on desktop */
 }
 
-.intro-location .location-pointer {
-  width: 19px; /* Matches the font size */
+.location-pointer {
+  width: 19px;
   height: 19px;
-  margin-right: 5px; /* Space between image and text */
+  margin-right: 5px;
 }
 
-/* 10. Responsive Design */
+.intro-logo {
+  margin-left: 0px;
+}
+
+.intro-logo-image {
+  height: 200px;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-logo-image:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* 12. Footer Styles */
+.site-footer {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  padding: 20px 0;
+  background-color: var(--background-color);
+}
+
+/* 13. Responsive Design Adjustments */
 @media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    padding: 15px 20px; /* Adjusted padding for smaller screens */
-    height: auto; /* Allows header height to adjust based on content */
+  /* Show Hamburger Menu */
+  .hamburger {
+    display: flex;
   }
 
-  .logo {
-    position: static; /* Removes absolute positioning */
-    transform: none; /* Removes translate */
-    margin-bottom: 15px; /* Adds space below the logo */
-  }
-
+  /* Hide Navigation Links by Default */
   .nav-links {
-    gap: 20px; /* Reduced space between navigation links */
+    position: absolute;
+    top: 80px; /* Below the header */
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0; /* Remove padding when hidden */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
 
-  .nav-links a {
-    font-size: 1rem; /* Adjusted font size for smaller screens */
+  /* Show Navigation Links When Active */
+  .nav-links.nav-active {
+    max-height: 500px; /* Adjust as needed to fit all links */
+    padding: 20px 0; /* Add padding when visible */
   }
 
-  .logo a {
-    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  /* Center Logo on Mobile */
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
-  .fixed-header {
-    height: auto; /* Allows header height to adjust based on content */
+  /* Adjust Hamburger Position to Avoid Overlapping with Logo */
+  .hamburger {
+    left: 10px;
   }
 
-  .main-content {
-    padding-top: 80px; /* Adjusted padding for smaller screens */
-    padding-left: 20px;
-    padding-right: 20px;
+  /* Adjust Intro Section Layout */
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .intro-text {
+    text-align: center; /* Center align text on mobile */
+  }
+
+  .intro-sub, .intro-location {
+    text-align: center; /* Ensure individual elements are center-aligned */
+  }
+
+  .intro-location {
+    justify-content: center; /* Center align the flex items */
+  }
+
+  .intro-logo {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+  .intro-logo-image {
+    height: 150px;
+  }
+
+  /* 1. About Page Specific Styles */
+  .about-page .about-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .about-page .about-text {
+    flex: 1;
+  }
+
+  .about-page .about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+
+  /* Responsive Adjustments for About Page */
+  @media (max-width: 768px) {
+    .about-page .about-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-page .about-text {
+      text-align: center; /* Center align text on mobile */
+    }
+
+    .about-page .about-image {
+      margin-top: 20px;
+    }
+
+    .about-page .about-image img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Make the image circular on mobile */
+    }
+  }
+}
+
+/* 14. Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 15. Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* 16. Back to Top Button Styles */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
+  z-index: 100;
+}
+
+#back-to-top:hover {
+  background-color: #e67e22;
+  transform: translateY(-5px);
+}
+
+/* 17. Accordion Styles (Optional) */
+.accordion-header {
+  cursor: pointer;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color var(--transition-duration);
+}
+
+.accordion-header:hover {
+  background-color: #e67e22;
+}
+
+.accordion-content {
+  padding: 0 15px;
+  display: none;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+/* 18. About Page Specific Styles */
+.about-page .about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.about-page .about-text {
+  flex: 1;
+}
+
+.about-page .about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+@media (max-width: 768px) {
+  .about-page .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-page .about-text {
+    text-align: center; /* Center align text on mobile */
+  }
+
+  .about-page .about-image {
+    margin-top: 20px;
+  }
+
+  .about-page .about-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make the image circular on mobile */
   }
 }

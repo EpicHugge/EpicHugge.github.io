@@ -31,13 +31,20 @@
     <!-- Fixed Header -->
     <header class="fixed-header">
       <div class="header-container">
+        <!-- Hamburger Menu Icon (Visible on Mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
         <!-- Logo -->
         <div class="logo">
           <a href="/">EpicHugge</a>
         </div>
 
         <!-- Navigation Links -->
-        <nav class="nav-links" aria-label="Main Navigation">
+        <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
           <a href="/" class="active">Home</a>
           <a href="/projects/" class="">Projects</a>
           <a href="/about/" class="">About</a>
@@ -48,23 +55,77 @@
     <!-- End of Fixed Header -->
 
     <main id="content" class="main-content" role="main">
+      
       <!-- Introduction Section -->
       <div class="introduction">
-        <p class="intro-main">Yo!, I'm Hugo</p>
-        <p class="intro-sub">Aspiring Quest Designer</p>
-        <p class="intro-location">
-          <img src="/assets/images/location-pointer.png" alt="Location Pointer" class="location-pointer">
-          UMEÅ, SWEDEN
-        </p>
+        <div class="intro-text">
+          <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
+          <p class="intro-sub">Aspiring Quest Designer</p>
+          <p class="intro-location">
+            <img src="/assets/images/location-pointer.png" alt="Location Pointer" class="location-pointer">
+            UMEÅ, SWEDEN
+          </p>
+        </div>
+        <div class="intro-logo">
+          <img src="/assets/images/logo-small.png" alt="Hugo's Logo" class="intro-logo-image">
+        </div>
       </div>
       <!-- End of Introduction Section -->
+      
 
       <!-- Your existing content goes here -->
+      <!-- Portfolio content goes here -->
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/yourusername">EpicHugge</a> &copy; 2025. All rights reserved.</span>
-        <!-- Removed GitHub Pages Credit -->
-      </footer>
     </main>
+
+    <footer class="site-footer">
+      <span class="site-footer-owner"><a href="https://github.com/yourusername">EpicHugge</a> &copy; 2025. All rights reserved.</span>
+      <!-- Removed GitHub Pages Credit -->
+    </footer>
+
+    <!-- Typing Animation and Hamburger Menu Control Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const introMain = document.querySelector('.intro-main');
+        const caret = document.querySelector('.caret');
+
+        if (!introMain || !caret) return; // Exit if the elements are not found (e.g., on non-home pages)
+
+        // Typing animation duration (matches CSS typing animation duration)
+        const typingDuration = 3500; // 3.5 seconds
+
+        // Caret blinking duration after typing completes
+        const blinkDuration = 5000; // 5 seconds
+
+        // Start caret blinking after typing animation completes
+        setTimeout(() => {
+          caret.classList.add('blink-caret');
+        }, typingDuration);
+
+        // Stop caret blinking and hide it after blinkDuration
+        setTimeout(() => {
+          caret.classList.remove('blink-caret');
+          caret.classList.add('hide-caret');
+        }, typingDuration + blinkDuration);
+      });
+
+      // Hamburger Menu Toggle
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+
+        // Toggle aria-expanded attribute for accessibility
+        const isExpanded = hamburger.classList.contains('toggle');
+        hamburger.setAttribute('aria-expanded', isExpanded);
+      });
+    </script>
+
+    <!-- Additional Scripts (If Any) -->
+    
+
+    <!-- Any other scripts can be added here -->
   </body>
 </html>
