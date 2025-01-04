@@ -475,11 +475,23 @@ a:hover {
   background-color: #333333; /* Dark background for the text box */
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  opacity: 0; /* Initial state for fade-in */
+  /* New Fade-In Class Applied */
+}
+
+.about-page .about-text.fade-in {
+  animation: fadeIn 1s ease-out forwards;
 }
 
 .about-page .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
+  color: #fefefe; /* Ensures high contrast against dark background */
+}
+
+.about-page .about-text p strong {
+  color: var(--primary-color); /* Highlights key phrases */
 }
 
 .about-page .about-image img {
@@ -487,35 +499,139 @@ a:hover {
   height: auto;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  border: 2px solid var(--primary-color); /* Adds a colored border */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  opacity: 0; /* Initial state for fade-in */
 }
 
-/* Responsive Adjustments */
+/* New Fade-In Class Applied */
+.about-page .about-image.fade-in img {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.about-page .about-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* 19. Fade-In Animation Class */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* 20. Additional Aesthetic Improvements */
+
+/* Enhanced Typography for About Page */
+.about-page .about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #fefefe; /* High contrast against dark background */
+}
+
+.about-page .about-text p strong {
+  color: var(--primary-color); /* Highlights key phrases */
+}
+
+/* Decorative Border for Portrait Image */
+.about-page .about-image img {
+  border: 2px solid var(--primary-color); /* Adds a colored border */
+}
+
+/* Image Hover Effect */
+.about-page .about-image img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-page .about-image img:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Improved Container Spacing */
+.about-page .about-container {
+  padding: 60px 40px; /* Increased vertical padding */
+}
+
 @media (max-width: 768px) {
   .about-page .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: transparent; /* Remove background on mobile */
-    border-radius: 0; /* Remove rounded corners on mobile */
-  }
-
-  .about-page .about-text {
-    max-width: 100%;
-    background-color: transparent; /* Remove background on mobile */
-    padding: 0;
-  }
-
-  .about-page .about-text p {
-    font-size: 1rem;
-  }
-
-  .about-page .about-image img {
-    width: 150px; /* Reduced size for mobile */
-    height: 150px;
-    border-radius: 50%; /* Make the image circular on mobile */
-    margin-top: 20px;
-    box-shadow: none; /* Remove shadow on mobile for a cleaner look */
+    padding: 20px 20px; /* Adjusted padding for mobile */
   }
 }
 
+/* 21. Fade-In Animation Keyframes (Already Defined) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 22. Typing Animation (Already Defined) */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* 23. Back to Top Button Styles (Already Defined) */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  display: none;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color var(--transition-duration), transform var(--transition-duration);
+  z-index: 100;
+}
+
+#back-to-top:hover {
+  background-color: #e67e22;
+  transform: translateY(-5px);
+}
+
+/* 24. Accordion Styles (Optional) */
+.accordion-header {
+  cursor: pointer;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: background-color var(--transition-duration);
+}
+
+.accordion-header:hover {
+  background-color: #e67e22;
+}
+
+.accordion-content {
+  padding: 0 15px;
+  display: none;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.accordion-content.show {
+  display: block;
+}
+
+/* 25. About Page Specific Styles (Repeated - Remove Duplicates if Any) */
+/* Ensure there's no duplication of the following styles above */
+
+/* ... Rest of your existing CSS ... */
+
+/* 26. Fade-In Animation Class (Ensuring it's defined once) */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
