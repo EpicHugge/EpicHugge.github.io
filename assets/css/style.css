@@ -1,6 +1,6 @@
 /* 1. CSS Variables */
 :root {
-  --primary-color: #fefefe; /* Orange */
+  --primary-color: #ff9800; /* Orange */
   --secondary-color: #c1c1c1;
   --background-color: #1a1a1a;
   --text-color: #fefefe;
@@ -448,15 +448,15 @@ a:hover {
 /* 18. About Page Specific Styles */
 .about-page .about-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; /* Desktop: side by side */
   align-items: center;
   justify-content: space-between;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #2c2c2c; /* Optional: subtle background for the text box */
-  border-radius: 10px; /* Optional: rounded corners for the text box */
+  background-color: #2c2c2c; /* Subtle background for the text box */
+  border-radius: 10px; /* Rounded corners for the text box */
 }
 
 .about-page .about-text {
