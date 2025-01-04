@@ -462,36 +462,59 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #2c2c2c; /* Optional: subtle background for the text box */
+  border-radius: 10px; /* Optional: rounded corners for the text box */
 }
 
 .about-page .about-text {
   flex: 1;
+  max-width: 600px; /* Restrict the width of the text box */
+  background-color: #333333; /* Dark background for the text box */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.about-page .about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .about-page .about-image img {
-  max-width: 100%;
+  width: 300px; /* Adjusted size for desktop */
   height: auto;
-  border-radius: 10px; /* Optional: rounded corners */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
   .about-page .about-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    background-color: transparent; /* Remove background on mobile */
+    border-radius: 0; /* Remove rounded corners on mobile */
   }
 
   .about-page .about-text {
-    text-align: center; /* Center align text on mobile */
+    max-width: 100%;
+    background-color: transparent; /* Remove background on mobile */
+    padding: 0;
   }
 
-  .about-page .about-image {
-    margin-top: 20px;
+  .about-page .about-text p {
+    font-size: 1rem;
   }
 
   .about-page .about-image img {
-    width: 150px;
+    width: 150px; /* Reduced size for mobile */
     height: 150px;
     border-radius: 50%; /* Make the image circular on mobile */
+    margin-top: 20px;
+    box-shadow: none; /* Remove shadow on mobile for a cleaner look */
   }
 }
