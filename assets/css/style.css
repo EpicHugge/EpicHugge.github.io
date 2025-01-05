@@ -171,7 +171,6 @@ a:hover {
   animation: fadeIn 1.5s ease-out forwards;
   opacity: 0;
 }
-
 .intro-text {
   flex: none;
   text-align: left;
@@ -273,7 +272,6 @@ a:hover {
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
-
   /* Show Navigation Links When Active */
   .nav-links.nav-active {
     max-height: 500px;
@@ -382,7 +380,7 @@ a:hover {
 
 /* 18. About Page Specific Styles (DESKTOP) */
 .about-page .about-container {
-  display: flex;            /* side-by-side on desktop */
+  display: flex; /* side-by-side on desktop */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -390,8 +388,14 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #2c2c2c; /* subtle background for about */
-  border-radius: 10px;       /* optional */
+  background-color: #2c2c2c; /* subtle background for about section */
+  border-radius: 10px;
+}
+
+/* Center the H1 Title on About Page for BOTH Desktop & Mobile */
+.about-page h1 {
+  text-align: center; 
+  margin-bottom: 20px; /* optional spacing under the heading */
 }
 
 /* About Text (Desktop) */
@@ -404,13 +408,11 @@ a:hover {
 
   /* FadeIn Setup */
   opacity: 0; 
-  /* or direct transition: transition: opacity 1s ease-out; */
+  /* Or direct transition: transition: opacity 1s ease-out; */
 }
 .about-page .about-text.fade-in {
   opacity: 1; 
-  /* or use keyframes:
-     animation: fadeIn 1s ease-out forwards;
-  */
+  /* or keyframes: animation: fadeIn 1s ease-out forwards; */
 }
 .about-page .about-text p {
   font-size: 1.1rem;
@@ -440,11 +442,11 @@ a:hover {
 /* 19. Flattened Media Query for About Page (MOBILE) */
 @media (max-width: 768px) {
   .about-page .about-container {
-    flex-direction: column;     /* stack text & portrait */
+    flex-direction: column;  /* stack text & portrait vertically */
     align-items: center;
     text-align: center;
     gap: 40px;
-    padding: 20px;             /* spacing on mobile */
+    padding: 20px;
     background-color: transparent;
     border-radius: 0;
     max-width: 100%;
@@ -453,7 +455,7 @@ a:hover {
     max-width: 100%;
     background-color: transparent;
     padding: 0;
-    margin-bottom: 20px;       /* spacing between text & image */
+    margin-bottom: 20px;
   }
   .about-page .about-image {
     margin-top: 0;
@@ -461,13 +463,10 @@ a:hover {
   .about-page .about-image img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;       /* circular on mobile */
+    border-radius: 50%; 
     box-shadow: none;
     margin-top: 0;
   }
-  .about-page h1 {
-  text-align: center;
-  margin-bottom: 20px; /* Optional extra spacing below */
 }
 
 /* 20. Fade-In Utility Class */
