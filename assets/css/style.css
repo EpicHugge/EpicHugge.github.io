@@ -474,3 +474,42 @@ a:hover {
 .fade-in {
   animation: fadeIn 1s ease-out forwards; /* keyframes-based fadeIn */
 }
+/* Contact Page (Desktop) */
+.contact-page h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Fade in container for contact content */
+.contact-page .contact-container {
+  max-width: 600px;      /* controls width */
+  margin: 40px auto;     /* centers horizontally with top/bottom margin */
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
+  background-color: #2c2c2c; /* or transparent if you prefer */
+  padding: 20px;
+  border-radius: 8px;
+
+  /* Fade-in start */
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Style mailto link slightly */
+.contact-page .contact-container a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.contact-page .contact-container a:hover {
+  color: #ffcc66; /* Slight hover color change */
+}
+
+/* Responsive adjustments (mobile) */
+@media (max-width: 768px) {
+  .contact-page .contact-container {
+    margin: 20px 20px;  /* smaller side margins on mobile */
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
