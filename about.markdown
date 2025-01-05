@@ -1,4 +1,3 @@
-# about.md front matter
 ---
 layout: default
 title: About
