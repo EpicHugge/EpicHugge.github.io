@@ -469,18 +469,27 @@ a:hover {
   border-radius: 10px; /* Optional: rounded corners for the text box */
 }
 
+/* Fade-In + Image Hover Enhancements */
+/* ----------------------------------- */
+
+/* 1) Ensure .about-text and .about-image elements start hidden for fade-in */
 .about-page .about-text {
   flex: 1;
-  max-width: 600px; /* Restrict the width of the text box */
+  max-width: 600px;
   background-color: #333333; /* Dark background for the text box */
   padding: 20px;
   border-radius: 8px;
   opacity: 0; /* Initial state for fade-in */
-  transition: opacity 1s ease-out;
+  /* Add a small transition if you prefer a direct opacity fade instead of keyframes:
+     transition: opacity 1s ease-out;
+  */
 }
 
 .about-page .about-text.fade-in {
   opacity: 1; /* Fade-in effect */
+  /* For a keyframes approach, add:
+     animation: fadeIn 1s ease-out forwards;
+  */
 }
 
 .about-page .about-text p {
@@ -488,17 +497,21 @@ a:hover {
   line-height: 1.8;
 }
 
+/* 2) Portrait image fade-in + hover scale */
 .about-page .about-image img {
   width: 300px; /* Adjusted size for desktop */
   height: auto;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
   opacity: 0; /* Initial state for fade-in */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 1s ease-out;
 }
 
 .about-page .about-image.fade-in img {
   opacity: 1; /* Fade-in effect */
+  /* Alternatively, for a keyframes approach:
+     animation: fadeIn 1s ease-out forwards;
+  */
 }
 
 .about-page .about-image img:hover {
@@ -508,5 +521,5 @@ a:hover {
 
 /* 19. Fade-In Animation Class */
 .fade-in {
-  animation: fadeIn 1s ease-out forwards;
+  animation: fadeIn 1s ease-out forwards; /* Keyframes approach for fadeIn */
 }
