@@ -2,6 +2,7 @@
 layout: default
 title: About
 permalink: /about/
+body_class: about-page
 ---
 
 # About Me
