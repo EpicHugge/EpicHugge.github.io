@@ -14,7 +14,7 @@ body_class: contact-page
   <!-- Mailto Link -->
   <p>
     <strong>Email:</strong> 
-    <a href="mailto:yourname@example.com?subject=Hello%20from%20the%20Website">
+    <a href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20the%20...">
       hugonykvist@hotmail.se
     </a>
   </p>
