@@ -37,9 +37,8 @@ a {
   color: var(--secondary-color);
   transition: color var(--transition-duration);
 }
-
 a:hover {
-  color: #fefefe; /* Changed hover color to #fefefe */
+  color: #fefefe; /* Hover color */
 }
 
 /* 4. Fixed Header Styles */
@@ -72,7 +71,7 @@ a:hover {
   src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-  font-display: swap; /* Improves loading behavior */
+  font-display: swap;
 }
 
 /* 7. Logo Styles */
@@ -82,7 +81,6 @@ a:hover {
   top: 50%;
   transform: translateY(-50%);
 }
-
 .logo a {
   font-family: 'More Sugar Custom', cursive;
   font-size: 2rem;
@@ -91,7 +89,6 @@ a:hover {
   text-transform: uppercase;
   transition: color var(--transition-duration);
 }
-
 .logo a:hover {
   color: #fefefe;
 }
@@ -101,7 +98,6 @@ a:hover {
   display: flex;
   gap: 40px;
 }
-
 .nav-links a {
   font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
@@ -109,14 +105,12 @@ a:hover {
   font-weight: bold;
   transition: color var(--transition-duration);
 }
-
 .nav-links a.active {
   color: var(--text-color);
   border-bottom: 3px solid var(--text-color);
 }
-
 .nav-links a:hover {
-  color: #fefefe; /* Changed hover color to #fefefe */
+  color: #fefefe;
 }
 
 /* 9. Hamburger Menu Styles */
@@ -131,12 +125,11 @@ a:hover {
   cursor: pointer;
   padding: 0;
   position: absolute;
-  left: 40px; /* Align with logo on desktop */
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1001; /* Above navigation */
+  z-index: 1001;
 }
-
 .hamburger-line {
   width: 100%;
   height: 3px;
@@ -144,16 +137,13 @@ a:hover {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
 /* Hamburger Animation (Toggle) */
 .toggle .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
-
 .toggle .hamburger-line:nth-child(2) {
   opacity: 0;
 }
-
 .toggle .hamburger-line:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
@@ -166,8 +156,8 @@ a:hover {
   padding-right: 40px;
 }
 
-/* 11. Introduction Section Styles */
-/* This section is now handled by the About page */
+/* 11. Introduction Section Styles (HOME PAGE) */
+/* This specifically handles the home page introduction. */
 .introduction {
   display: flex;
   align-items: center;
@@ -176,6 +166,8 @@ a:hover {
   margin: 40px auto;
   max-width: 1000px;
   padding: 0 20px;
+
+  /* Fade in effect for Home page intro */
   animation: fadeIn 1.5s ease-out forwards;
   opacity: 0;
 }
@@ -184,7 +176,6 @@ a:hover {
   flex: none;
   text-align: left;
 }
-
 .intro-main {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-color);
@@ -199,30 +190,23 @@ a:hover {
   display: inline-block;
   position: relative;
 }
-
 .caret {
   display: inline-block;
   width: .15em;
   border-right: .15em solid #fefefe; /* Static caret */
 }
-
 /* Blinking Caret Animation */
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
   50% { border-color: #fefefe; }
 }
-
-/* Blinking Caret */
 .blink-caret {
   animation: blink-caret 0.75s step-end infinite;
 }
-
-/* Hide Caret */
 .hide-caret {
   border-right: .15em solid transparent;
 }
-
-/* Intro Sub and Location Styles */
+/* Intro Sub and Location for HOME PAGE */
 .intro-sub, .intro-location {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-color);
@@ -230,34 +214,28 @@ a:hover {
   margin-bottom: 5px;
   transition: color var(--transition-duration), transform var(--transition-duration);
 }
-
 .intro-main:hover, .intro-sub:hover, .intro-location:hover {
-  color: #fefefe; /* Changed hover color to #fefefe */
+  color: #fefefe;
   transform: scale(1.05);
 }
-
 .intro-location {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Default alignment on desktop */
+  justify-content: flex-start;
 }
-
 .location-pointer {
   width: 19px;
   height: 19px;
   margin-right: 5px;
 }
-
 .intro-logo {
   margin-left: 0px;
 }
-
 .intro-logo-image {
   height: 200px;
   width: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .intro-logo-image:hover {
   transform: rotate(5deg) scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -273,9 +251,9 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* 13. Responsive Design Adjustments */
+/* 13. Responsive Design Adjustments (HOME PAGE) */
 @media (max-width: 768px) {
-  /* Show Hamburger Menu */
+  /* Show Hamburger Menu on Mobile */
   .hamburger {
     display: flex;
   }
@@ -283,14 +261,14 @@ a:hover {
   /* Hide Navigation Links by Default */
   .nav-links {
     position: absolute;
-    top: 80px; /* Below the header */
+    top: 80px;
     left: 0;
     width: 100%;
     background-color: var(--background-color);
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 0; /* Remove padding when hidden */
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -298,8 +276,8 @@ a:hover {
 
   /* Show Navigation Links When Active */
   .nav-links.nav-active {
-    max-height: 500px; /* Adjust as needed to fit all links */
-    padding: 20px 0; /* Add padding when visible */
+    max-height: 500px;
+    padding: 20px 0;
   }
 
   /* Center Logo on Mobile */
@@ -308,13 +286,11 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
   }
-
-  /* Adjust Hamburger Position to Avoid Overlapping with Logo */
   .hamburger {
     left: 10px;
   }
 
-  /* Adjust Intro Section Layout */
+  /* Adjust Intro Section Layout for Home */
   .introduction {
     flex-direction: column;
     align-items: center;
@@ -322,72 +298,25 @@ a:hover {
     max-width: 100%;
     padding: 0 10px;
   }
-
   .intro-text {
-    text-align: center; /* Center align text on mobile */
+    text-align: center;
   }
-
   .intro-sub, .intro-location {
-    text-align: center; /* Ensure individual elements are center-aligned */
+    text-align: center;
   }
-
   .intro-location {
-    justify-content: center; /* Center align the flex items */
+    justify-content: center;
   }
-
   .intro-logo {
     margin-left: 0px;
     margin-top: 10px;
   }
-
   .intro-logo-image {
     height: 150px;
   }
-
-  /* 1. About Page Specific Styles */
-  .about-page .about-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
-
-  .about-page .about-text {
-    flex: 1;
-  }
-
-  .about-page .about-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional: rounded corners */
-  }
-
-  /* Responsive Adjustments for About Page */
-  @media (max-width: 768px) {
-    .about-page .about-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about-page .about-text {
-      text-align: center; /* Center align text on mobile */
-    }
-
-    .about-page .about-image {
-      margin-top: 20px;
-    }
-
-    .about-page .about-image img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%; /* Make the image circular on mobile */
-    }
-  }
 }
 
-/* 14. Fade-In Animation */
+/* 14. Fade-In Animation (Used by .introduction and .fade-in) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -399,7 +328,7 @@ a:hover {
   }
 }
 
-/* 15. Typing Animation */
+/* 15. Typing Animation (Used by .intro-main) */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -422,7 +351,6 @@ a:hover {
   transition: background-color var(--transition-duration), transform var(--transition-duration);
   z-index: 100;
 }
-
 #back-to-top:hover {
   background-color: #e67e22;
   transform: translateY(-5px);
@@ -439,59 +367,107 @@ a:hover {
   outline: none;
   transition: background-color var(--transition-duration);
 }
-
 .accordion-header:hover {
   background-color: #e67e22;
 }
-
 .accordion-content {
   padding: 0 15px;
   display: none;
   background-color: #f1f1f1;
   color: #333;
 }
-
 .accordion-content.show {
   display: block;
 }
 
-/* 18. About Page Specific Styles */
+/* 18. About Page Specific Styles (DESKTOP) */
 .about-page .about-container {
-  display: flex;
+  display: flex;            /* side-by-side on desktop */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #2c2c2c; /* subtle background for about */
+  border-radius: 10px;       /* optional */
 }
 
+/* About Text (Desktop) */
 .about-page .about-text {
   flex: 1;
+  max-width: 600px;
+  background-color: #333333;
+  padding: 20px;
+  border-radius: 8px;
+
+  /* FadeIn Setup */
+  opacity: 0; 
+  /* or direct transition: transition: opacity 1s ease-out; */
+}
+.about-page .about-text.fade-in {
+  opacity: 1; 
+  /* or use keyframes:
+     animation: fadeIn 1s ease-out forwards;
+  */
+}
+.about-page .about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-color);
 }
 
+/* About Image (Desktop) */
 .about-page .about-image img {
-  max-width: 100%;
+  width: 300px;
   height: auto;
-  border-radius: 10px; /* Optional: rounded corners */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  /* FadeIn Setup */
+  opacity: 0; 
+  transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-page .about-image.fade-in img {
+  opacity: 1;
+}
+.about-page .about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
+/* 19. Flattened Media Query for About Page (MOBILE) */
 @media (max-width: 768px) {
   .about-page .about-container {
-    flex-direction: column;
+    flex-direction: column;     /* stack text & portrait */
     align-items: center;
     text-align: center;
+    gap: 40px;
+    padding: 20px;             /* spacing on mobile */
+    background-color: transparent;
+    border-radius: 0;
+    max-width: 100%;
   }
-
   .about-page .about-text {
-    text-align: center; /* Center align text on mobile */
+    max-width: 100%;
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 20px;       /* spacing between text & image */
   }
-
   .about-page .about-image {
-    margin-top: 20px;
+    margin-top: 0;
   }
-
   .about-page .about-image img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Make the image circular on mobile */
+    border-radius: 50%;       /* circular on mobile */
+    box-shadow: none;
+    margin-top: 0;
   }
+}
+
+/* 20. Fade-In Utility Class */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards; /* keyframes-based fadeIn */
 }
