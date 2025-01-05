@@ -10,7 +10,7 @@ body_class: about-page
 <div class="about-container">
   <!-- Text Section -->
   <div class="about-text fade-in">
-    <p>Hello! I'm **YourName**, a passionate developer based in City, Country. I love creating immersive experiences that blend storytelling with interactive challenges to engage and inspire audiences.</p>
+    <p>My name is Hugo and im a Aspiring Quest Designer studying the Game Designer Education at Futuregames in Umeå, Sweden.</p>
   </div>
   <!-- Image Section -->
   <div class="about-image fade-in">
