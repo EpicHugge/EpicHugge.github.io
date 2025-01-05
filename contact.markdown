@@ -8,14 +8,14 @@ body_class: contact-page
 # Contact Me
 
 <div class="contact-container fade-in">
-  <p>I’d love to hear from you! Whether you have a question, a project idea, or just want to say hello.</p>
-  <p>Please reach out via email:</p>
+  <p>I’d love to hear from you!.</p>
+  <p>You can reach me via email:</p>
 
   <!-- Mailto Link -->
   <p>
     <strong>Email:</strong> 
     <a href="mailto:yourname@example.com?subject=Hello%20from%20the%20Website">
-      yourname@example.com
+      hugonykvist@hotmail.se
     </a>
   </p>
 
