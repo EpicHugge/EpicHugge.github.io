@@ -465,6 +465,9 @@ a:hover {
     box-shadow: none;
     margin-top: 0;
   }
+  .about-page h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Optional extra spacing below */
 }
 
 /* 20. Fade-In Utility Class */
