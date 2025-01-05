@@ -1,8 +1,8 @@
+# about.md front matter
 ---
 layout: default
 title: About
-description: A brief introduction
-body_class: about-page
+permalink: /about/
 ---
 
 # About Me
