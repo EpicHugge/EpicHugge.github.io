@@ -125,10 +125,10 @@ a:hover {
   cursor: pointer;
   padding: 0;
   position: absolute;
-  left: 40px; 
+  left: 40px;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1001; 
+  z-index: 1001;
 }
 .hamburger-line {
   width: 100%;
@@ -156,7 +156,8 @@ a:hover {
   padding-right: 40px;
 }
 
-/* 11. Introduction Section Styles (Handled by About Page if needed) */
+/* 11. Introduction Section Styles (HOME PAGE) */
+/* This specifically handles the home page introduction. */
 .introduction {
   display: flex;
   align-items: center;
@@ -166,10 +167,78 @@ a:hover {
   max-width: 1000px;
   padding: 0 20px;
 
-  /* FadeIn example if you want it globally:
-     animation: fadeIn 1.5s ease-out forwards;
-     opacity: 0;
-  */
+  /* Fade in effect for Home page intro */
+  animation: fadeIn 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.intro-text {
+  flex: none;
+  text-align: left;
+}
+.intro-main {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  border-right: .15em solid #fefefe; /* Static caret */
+  animation: typing 3.5s steps(40, end) forwards; /* Typing animation runs once */
+  display: inline-block;
+  position: relative;
+}
+.caret {
+  display: inline-block;
+  width: .15em;
+  border-right: .15em solid #fefefe; /* Static caret */
+}
+/* Blinking Caret Animation */
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #fefefe; }
+}
+.blink-caret {
+  animation: blink-caret 0.75s step-end infinite;
+}
+.hide-caret {
+  border-right: .15em solid transparent;
+}
+/* Intro Sub and Location for HOME PAGE */
+.intro-sub, .intro-location {
+  font-family: 'Roboto', sans-serif;
+  color: var(--secondary-color);
+  font-size: 23.5px;
+  margin-bottom: 5px;
+  transition: color var(--transition-duration), transform var(--transition-duration);
+}
+.intro-main:hover, .intro-sub:hover, .intro-location:hover {
+  color: #fefefe;
+  transform: scale(1.05);
+}
+.intro-location {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.location-pointer {
+  width: 19px;
+  height: 19px;
+  margin-right: 5px;
+}
+.intro-logo {
+  margin-left: 0px;
+}
+.intro-logo-image {
+  height: 200px;
+  width: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.intro-logo-image:hover {
+  transform: rotate(5deg) scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* 12. Footer Styles */
@@ -182,7 +251,7 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* 13. Responsive Adjustments */
+/* 13. Responsive Design Adjustments (HOME PAGE) */
 @media (max-width: 768px) {
   /* Show Hamburger Menu on Mobile */
   .hamburger {
@@ -199,7 +268,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 0; 
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
@@ -207,7 +276,7 @@ a:hover {
 
   /* Show Navigation Links When Active */
   .nav-links.nav-active {
-    max-height: 500px; 
+    max-height: 500px;
     padding: 20px 0;
   }
 
@@ -217,14 +286,37 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
   }
-
-  /* Adjust Hamburger Position to Avoid Overlapping with Logo */
   .hamburger {
     left: 10px;
   }
+
+  /* Adjust Intro Section Layout for Home */
+  .introduction {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .intro-text {
+    text-align: center;
+  }
+  .intro-sub, .intro-location {
+    text-align: center;
+  }
+  .intro-location {
+    justify-content: center;
+  }
+  .intro-logo {
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .intro-logo-image {
+    height: 150px;
+  }
 }
 
-/* 14. FadeIn Keyframes (for the .fade-in class) */
+/* 14. Fade-In Animation (Used by .introduction and .fade-in) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -236,7 +328,7 @@ a:hover {
   }
 }
 
-/* 15. Typing Animation (Used in .intro-main) */
+/* 15. Typing Animation (Used by .intro-main) */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -288,9 +380,9 @@ a:hover {
   display: block;
 }
 
-/* 18. About Page Specific Styles (Desktop) */
+/* 18. About Page Specific Styles (DESKTOP) */
 .about-page .about-container {
-  display: flex;          /* side-by-side on desktop */
+  display: flex;            /* side-by-side on desktop */
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -298,8 +390,8 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #2c2c2c; /* subtle background for about section */
-  border-radius: 10px;       /* optional rounded corners */
+  background-color: #2c2c2c; /* subtle background for about */
+  border-radius: 10px;       /* optional */
 }
 
 /* About Text (Desktop) */
@@ -311,20 +403,15 @@ a:hover {
   border-radius: 8px;
 
   /* FadeIn Setup */
-  opacity: 0;
-  /* we can do direct or keyframes-based fadeIn:
-     animation: fadeIn 1s ease-out forwards; 
-     or a simpler transition: transition: opacity 1s ease-out;
+  opacity: 0; 
+  /* or direct transition: transition: opacity 1s ease-out; */
+}
+.about-page .about-text.fade-in {
+  opacity: 1; 
+  /* or use keyframes:
+     animation: fadeIn 1s ease-out forwards;
   */
 }
-
-/* The fade-in class triggers final opacity */
-.about-page .about-text.fade-in {
-  opacity: 1; /* if using direct transition or no keyframe */
-  /* if using keyframe, it's: animation: fadeIn 1s ease-out forwards; */
-}
-
-/* Text Styling */
 .about-page .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -333,57 +420,54 @@ a:hover {
 
 /* About Image (Desktop) */
 .about-page .about-image img {
-  width: 300px;  /* bigger portrait on desktop */
+  width: 300px;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   /* FadeIn Setup */
-  opacity: 0;
+  opacity: 0; 
   transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
-/* The fade-in class triggers final opacity for image */
 .about-page .about-image.fade-in img {
-  opacity: 1; 
+  opacity: 1;
 }
-
-/* Hover Scale on Desktop */
 .about-page .about-image img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
-/* 19. Flattened Mobile Media Query */
+/* 19. Flattened Media Query for About Page (MOBILE) */
 @media (max-width: 768px) {
-  /* about-container stacking for mobile */
   .about-page .about-container {
-    flex-direction: column;       /* stack top-to-bottom */
+    flex-direction: column;     /* stack text & portrait */
     align-items: center;
     text-align: center;
     gap: 40px;
-    padding: 20px;                /* optional spacing on mobile */
+    padding: 20px;             /* spacing on mobile */
     background-color: transparent;
     border-radius: 0;
     max-width: 100%;
   }
-
   .about-page .about-text {
     max-width: 100%;
-    background-color: transparent; /* remove dark background if you prefer */
+    background-color: transparent;
     padding: 0;
-    margin-bottom: 20px;          /* spacing between text and image */
+    margin-bottom: 20px;       /* spacing between text & image */
   }
-
   .about-page .about-image {
     margin-top: 0;
   }
-
   .about-page .about-image img {
-    width: 150px;                 /* smaller portrait */
+    width: 150px;
     height: 150px;
-    border-radius: 50%;           /* circular portrait on mobile */
-    box-shadow: none;             /* simpler design on mobile */
+    border-radius: 50%;       /* circular on mobile */
+    box-shadow: none;
     margin-top: 0;
   }
+}
+
+/* 20. Fade-In Utility Class */
+.fade-in {
+  animation: fadeIn 1s ease-out forwards; /* keyframes-based fadeIn */
 }
