@@ -74,7 +74,7 @@ a:hover {
   font-display: swap;
 }
 
-/* 7. Logo Styles */
+/* 7. Logo Styles (Desktop) */
 .logo {
   position: absolute;
   left: 40px;
@@ -157,7 +157,6 @@ a:hover {
 }
 
 /* 11. Introduction Section Styles (HOME PAGE) */
-/* This specifically handles the home page introduction. */
 .introduction {
   display: flex;
   align-items: center;
@@ -255,6 +254,7 @@ a:hover {
   /* Show Hamburger Menu on Mobile */
   .hamburger {
     display: flex;
+    left: 10px; /* keep hamburger pinned to the left */
   }
 
   /* Hide Navigation Links by Default */
@@ -278,14 +278,15 @@ a:hover {
     padding: 20px 0;
   }
 
-  /* Center Logo on Mobile */
+  /* Logo: Center horizontally & vertically */
   .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .hamburger {
-    left: 10px;
+    position: static;      /* remove absolute positioning */
+    transform: none;       /* remove translateY(-50%) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;          /* matches .fixed-header height */
+    margin: 0 auto;        /* center horizontally if needed */
   }
 
   /* Adjust Intro Section Layout for Home */
