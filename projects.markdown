@@ -4,6 +4,5 @@ title: Projects
 permalink: /projects/
 ---
 
-# Our Projects
+# My Projects
 
-Showcase your projects here. You can list them or include detailed descriptions and images.
