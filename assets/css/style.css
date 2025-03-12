@@ -515,22 +515,27 @@ a:hover {
   }
 }
 
+/* --- NEW SECTION SEPARATOR FOR BIGGER GAP --- */
+.section-separator {
+  /* Creates a large gap between introduction & portfolio piece */
+  height: 300px; /* Adjust as needed */
+  /* Optionally add a subtle background or pattern:
+     background: linear-gradient(...);
+  */
+}
+
 /* --- NEW PORTFOLIO SECTION STYLES FOR HOME PAGE --- */
-/* 
-   Since we added a <section class="portfolio-piece"> 
-   with <h2 class="portfolio-title"> 
-   and <video class="portfolio-video"> in default.html 
-*/
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
   max-width: 1000px; /* optional to constrain content width */
 }
 
+/* The portfolio piece can fade in via data-aos="fade-up" in HTML,
+   no extra "fade-in" class needed here. */
 .portfolio-title {
   font-size: 2rem;
   margin-bottom: 20px;
-  /* If you want a bigger or smaller text, adjust here */
 }
 
 .portfolio-hero {
@@ -544,8 +549,5 @@ a:hover {
   width: 100%;      /* ensures it scales for narrower screens */
   height: auto;
   border-radius: 8px; /* optional styling */
-  /* Add any margin or border if you like:
-     margin: 20px 0;
-     border: 2px solid #444;
-  */
+  /* margin: 20px 0; if you want extra space around the video */
 }
