@@ -524,7 +524,7 @@ a:hover {
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
-  max-width: 1000px; /* optional constraint */
+  max-width: 1500px; /* optional constraint */
   /* We will trigger a fade in on scroll either via AOS 
      or Intersection Observer. If using Intersection Observer,
      we can optionally start with opacity: 0 here. 
