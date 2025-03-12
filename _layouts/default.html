@@ -71,8 +71,8 @@
       <!-- Large Separation -->
       <div class="section-separator"></div>
 
-      <!-- Portfolio Section with Fade-In on Scroll -->
-      <section class="portfolio-piece" data-aos="fade-up">
+      <!-- Portfolio Section (will fade in locally via Intersection Observer) -->
+      <section class="portfolio-piece" id="portfolio-piece">
         <h2 class="portfolio-title">My First Portfolio Piece</h2>
         <div class="portfolio-hero">
           <video 
@@ -105,39 +105,61 @@
     <!-- Typing Animation and Hamburger Menu Control Script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Typing animation logic
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
 
-        if (!introMain || !caret) return; // Exit if not on home
+        if (introMain && caret) {
+          const typingDuration = 3500; // 3.5 seconds
+          const blinkDuration = 5000;  // 5 seconds
 
-        // Typing animation matches CSS typing animation duration
-        const typingDuration = 3500; // 3.5 seconds
-        // Caret blinking duration after typing completes
-        const blinkDuration = 5000; // 5 seconds
+          setTimeout(() => {
+            caret.classList.add('blink-caret');
+          }, typingDuration);
 
-        // Start caret blinking after typing animation completes
-        setTimeout(() => {
-          caret.classList.add('blink-caret');
-        }, typingDuration);
+          setTimeout(() => {
+            caret.classList.remove('blink-caret');
+            caret.classList.add('hide-caret');
+          }, typingDuration + blinkDuration);
+        }
 
-        // Stop caret blinking and hide it after blinkDuration
-        setTimeout(() => {
-          caret.classList.remove('blink-caret');
-          caret.classList.add('hide-caret');
-        }, typingDuration + blinkDuration);
-      });
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-      // Hamburger Menu Toggle
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('nav-links');
+        if (hamburger && navLinks) {
+          hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+            const isExpanded = hamburger.classList.contains('toggle');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+          });
+        }
 
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        hamburger.classList.toggle('toggle');
+        // -----------------------------------------
+        // LOCAL FADE-IN VIA INTERSECTION OBSERVER
+        // -----------------------------------------
+        const portfolioSection = document.getElementById('portfolio-piece');
+        if (portfolioSection) {
+          // Start off hidden
+          portfolioSection.style.opacity = '0';
+          portfolioSection.style.transform = 'translateY(20px)';
+          portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
 
-        // Toggle aria-expanded for accessibility
-        const isExpanded = hamburger.classList.contains('toggle');
-        hamburger.setAttribute('aria-expanded', isExpanded);
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Fade in
+                portfolioSection.style.opacity = '1';
+                portfolioSection.style.transform = 'translateY(0)';
+                // Stop observing once done
+                observer.unobserve(portfolioSection);
+              }
+            });
+          }, { threshold: 0.1 });
+
+          observer.observe(portfolioSection);
+        }
       });
     </script>
 
