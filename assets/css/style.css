@@ -515,24 +515,22 @@ a:hover {
   }
 }
 
-/* --- NEW SECTION SEPARATOR FOR BIGGER GAP --- */
+/* SECTION SEPARATOR FOR BIG GAP BETWEEN INTRO & PORTFOLIO */
 .section-separator {
-  /* Creates a large gap between introduction & portfolio piece */
-  height: 300px; /* Adjust as needed */
-  /* Optionally add a subtle background or pattern:
-     background: linear-gradient(...);
-  */
+  height: 300px; /* Adjust to create desired vertical spacing */
 }
 
-/* --- NEW PORTFOLIO SECTION STYLES FOR HOME PAGE --- */
+/* PORTFOLIO SECTION STYLES */
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
-  max-width: 1000px; /* optional to constrain content width */
+  max-width: 1000px; /* optional constraint */
+  /* We will trigger a fade in on scroll either via AOS 
+     or Intersection Observer. If using Intersection Observer,
+     we can optionally start with opacity: 0 here. 
+  */
 }
 
-/* The portfolio piece can fade in via data-aos="fade-up" in HTML,
-   no extra "fade-in" class needed here. */
 .portfolio-title {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -545,9 +543,8 @@ a:hover {
 }
 
 .portfolio-video {
-  max-width: 500px; /* reduce the video’s displayed size */
-  width: 100%;      /* ensures it scales for narrower screens */
+  max-width: 500px; 
+  width: 100%;
   height: auto;
-  border-radius: 8px; /* optional styling */
-  /* margin: 20px 0; if you want extra space around the video */
+  border-radius: 8px;
 }
