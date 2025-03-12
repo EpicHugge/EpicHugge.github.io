@@ -532,7 +532,7 @@ a:hover {
 }
 
 .portfolio-title {
-  font-size: 10rem;
+  font-size: 8rem;
   margin-bottom: 20px;
 }
 
@@ -543,7 +543,7 @@ a:hover {
 }
 
 .portfolio-video {
-  max-width: 1500px; 
+  max-width: 1200px; 
   width: 100%;
   height: auto;
   border-radius: 8px;
