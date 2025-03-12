@@ -524,13 +524,10 @@ a:hover {
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
-  max-width: 1500px; /* optional constraint */
-  /* We will trigger a fade in on scroll either via AOS 
-     or Intersection Observer. If using Intersection Observer,
-     we can optionally start with opacity: 0 here. 
-  */
+  max-width: 1500px; 
 }
 
+/* Larger Title */
 .portfolio-title {
   font-size: 5rem;
   margin-bottom: 20px;
@@ -547,4 +544,61 @@ a:hover {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Portfolio Additional Boxes */
+.portfolio-description {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #2c2c2c; /* same style as video area */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left; /* or center if you prefer */
+}
+
+.portfolio-lower {
+  max-width: 1000px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.lower-row {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.lower-row.row-1 .text-box {
+  flex: 1;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.lower-row.row-1 .portfolio-screenshot {
+  width: 50%;
+  border-radius: 8px;
+  height: auto;
+}
+
+.lower-row.row-2 .portfolio-screenshot {
+  width: 50%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* Flip layout for row-2: image left, text right */
+.lower-row.row-2 {
+  flex-direction: row-reverse;
+}
+
+.lower-row.row-2 .text-box {
+  flex: 1;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  color: #fff;
 }
