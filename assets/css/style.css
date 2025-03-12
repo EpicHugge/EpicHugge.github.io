@@ -474,6 +474,7 @@ a:hover {
 .fade-in {
   animation: fadeIn 1s ease-out forwards; /* keyframes-based fadeIn */
 }
+
 /* Contact Page (Desktop) */
 .contact-page h1 {
   text-align: center;
@@ -512,4 +513,39 @@ a:hover {
     font-size: 1rem;
     line-height: 1.5;
   }
+}
+
+/* --- NEW PORTFOLIO SECTION STYLES FOR HOME PAGE --- */
+/* 
+   Since we added a <section class="portfolio-piece"> 
+   with <h2 class="portfolio-title"> 
+   and <video class="portfolio-video"> in default.html 
+*/
+.portfolio-piece {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 800px; /* optional to constrain content width */
+}
+
+.portfolio-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  /* If you want a bigger or smaller text, adjust here */
+}
+
+.portfolio-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-video {
+  max-width: 500px; /* reduce the video’s displayed size */
+  width: 100%;      /* ensures it scales for narrower screens */
+  height: auto;
+  border-radius: 8px; /* optional styling */
+  /* Add any margin or border if you like:
+     margin: 20px 0;
+     border: 2px solid #444;
+  */
 }
