@@ -68,6 +68,26 @@
         </div>
       </div>
       <!-- End of Introduction Section -->
+
+      <!-- New Portfolio Section -->
+      <section class="portfolio-piece">
+        <h2 class="portfolio-title">My First Portfolio Piece</h2>
+        <div class="portfolio-hero">
+          <!-- WebM loop hero shot at center -->
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="portfolio-video"
+          >
+            <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
+            <!-- Fallback if the browser doesn't support webm: -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+      <!-- End of Portfolio Section -->
       {% endif %}
 
       <!-- Your existing content goes here -->
@@ -75,7 +95,10 @@
     </main>
 
     <footer class="site-footer">
-      <span class="site-footer-owner"><a href="https://github.com/yourusername">EpicHugge</a> &copy; {{ site.time | date: "%Y" }}. All rights reserved.</span>
+      <span class="site-footer-owner">
+        <a href="https://github.com/yourusername">EpicHugge</a> 
+        &copy; {{ site.time | date: "%Y" }}. All rights reserved.
+      </span>
       <!-- Removed GitHub Pages Credit -->
     </footer>
 
@@ -85,11 +108,10 @@
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
 
-        if (!introMain || !caret) return; // Exit if the elements are not found (e.g., on non-home pages)
+        if (!introMain || !caret) return; // Exit if not on home
 
-        // Typing animation duration (matches CSS typing animation duration)
+        // Typing animation matches CSS typing animation duration
         const typingDuration = 3500; // 3.5 seconds
-
         // Caret blinking duration after typing completes
         const blinkDuration = 5000; // 5 seconds
 
@@ -113,7 +135,7 @@
         navLinks.classList.toggle('nav-active');
         hamburger.classList.toggle('toggle');
 
-        // Toggle aria-expanded attribute for accessibility
+        // Toggle aria-expanded for accessibility
         const isExpanded = hamburger.classList.contains('toggle');
         hamburger.setAttribute('aria-expanded', isExpanded);
       });
