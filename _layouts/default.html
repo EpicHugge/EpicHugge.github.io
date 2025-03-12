@@ -69,24 +69,29 @@
       </div>
       <!-- End of Introduction Section -->
 
-     <!-- New Portfolio Section -->
-  <section class="portfolio-piece">
-    <h2 class="portfolio-title">My First Portfolio Piece</h2>
-    <div class="portfolio-hero">
-      <video 
-        autoplay 
-        loop 
-        muted 
-        playsinline 
-        class="portfolio-video"
-      >
-        <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
-        <!-- Fallback for browsers that don't support WebM -->
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </section>
-{% endif %}
+      <!-- Scroll Down Button -->
+      <div class="scroll-down">
+        <a href="#portfolio-piece" class="scroll-btn">See My Work</a>
+      </div>
+
+      <!-- New Portfolio Section -->
+      <section class="portfolio-piece" id="portfolio-piece">
+        <h2 class="portfolio-title">My First Portfolio Piece</h2>
+        <div class="portfolio-hero">
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="portfolio-video"
+          >
+            <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
+            <!-- Fallback for browsers that don't support WebM -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+      {% endif %}
       <!-- Your existing content goes here -->
       {{ content }}
     </main>
@@ -122,6 +127,26 @@
           caret.classList.remove('blink-caret');
           caret.classList.add('hide-caret');
         }, typingDuration + blinkDuration);
+
+        // SMOOTH SCROLL SCRIPT for "See My Work" button
+        const scrollBtn = document.querySelector('.scroll-btn');
+        if (scrollBtn) {
+          scrollBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetID = scrollBtn.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetID);
+            if (targetEl) {
+              // Adjust offset if you want to account for header height
+              const yOffset = -80; // approximate header offset
+              const yPos = targetEl.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+              window.scrollTo({
+                top: yPos,
+                behavior: 'smooth'
+              });
+            }
+          });
+        }
       });
 
       // Hamburger Menu Toggle
