@@ -524,7 +524,7 @@ a:hover {
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
-  max-width: 800px; /* optional to constrain content width */
+  max-width: 1000px; /* optional to constrain content width */
 }
 
 .portfolio-title {
