@@ -97,30 +97,32 @@
           </p>
         </div>
 
-<!-- Two more text boxes + screenshots -->
+<!-- Portfolio-lower container using table-like layout -->
 <div class="portfolio-lower">
-  <!-- Row 1: text left, screenshot right -->
+  <!-- Row 1: text on left, screenshot on right -->
   <div class="lower-row row-1">
-    <!-- text first, then screenshot second -->
-    <div class="text-box">
-      <p>Example text box #1: Lorem ipsum dolor sit amet...</p>
+    <!-- Text box cell -->
+    <div class="cell text-box">
+      <p>Example text box #1: Lorem ipsum...</p>
     </div>
-    <img 
-      src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
-      alt="Screenshot 1" 
-      class="portfolio-screenshot"
-    >
+
+    <!-- Screenshot cell -->
+    <div class="cell screenshot-cell">
+      <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
+           alt="Screenshot 1"
+           class="portfolio-screenshot">
+    </div>
   </div>
 
-  <!-- Row 2: screenshot left, text right (by HTML order) -->
+  <!-- Row 2: screenshot on left, text on right -->
   <div class="lower-row row-2">
-    <!-- screenshot first, text second -->
-    <img
-      src="{{ '/assets/images/screenshot2.png' | relative_url }}"
-      alt="Screenshot 2"
-      class="portfolio-screenshot"
-    >
-    <div class="text-box">
+    <div class="cell screenshot-cell">
+      <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" 
+           alt="Screenshot 2"
+           class="portfolio-screenshot">
+    </div>
+
+    <div class="cell text-box">
       <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
     </div>
   </div>
