@@ -97,16 +97,14 @@
           </p>
         </div>
 
-        <!-- Portfolio-lower container using table-like layout -->
+        <!-- Portfolio-lower container (table-like layout for 2 rows) -->
         <div class="portfolio-lower">
-          <!-- Row 1: text on left, screenshot on right -->
+          <!-- Row 1: text left, screenshot right -->
           <div class="lower-row row-1">
-            <!-- Text box cell -->
             <div class="cell text-box">
               <p>Example text box #1: Lorem ipsum...</p>
             </div>
 
-            <!-- Screenshot cell -->
             <div class="cell screenshot-cell">
               <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
                    alt="Screenshot 1"
@@ -130,7 +128,10 @@
 
         <!-- Floor Switcher (two arrows, one image area) -->
         <div class="floor-switcher" id="floor-switcher">
-          <!-- Arrow Left -->
+          <!-- Title Above the Switcher -->
+          <h3 class="floor-switcher-title">Overview</h3>
+
+          <!-- Left Arrow -->
           <span class="arrow arrow-left">&lt;</span>
 
           <!-- Main Floor Image -->
@@ -140,8 +141,11 @@
             class="floor-image"
           >
 
-          <!-- Arrow Right -->
+          <!-- Right Arrow -->
           <span class="arrow arrow-right">&gt;</span>
+
+          <!-- Floor Indicator -->
+          <p class="floor-indicator">Top Floor</p>
         </div>
       </section>
       {% endif %}
@@ -222,25 +226,34 @@
           const floorImage = floorSwitcher.querySelector('.floor-image');
           const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
 
           // Our two images to swap
           const floors = [
             {
               src: '{{ "/assets/images/top-floor.png" | relative_url }}',
-              alt: 'Top Floor Overview'
+              alt: 'Top Floor Overview',
+              label: 'Top Floor'
             },
             {
               src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
-              alt: 'Lower Floor Overview'
+              alt: 'Lower Floor Overview',
+              label: 'Lower Floor'
             }
           ];
 
-          let currentIndex = 0; // Start on the top-floor
+          let currentIndex = 0; // Start on top-floor
 
           function updateFloor() {
+            // Switch the source & alt
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
+            // Update the small text (floorIndicator)
+            floorIndicator.textContent = floors[currentIndex].label;
           }
+
+          // Initialize correct floor text on load
+          updateFloor();
 
           // Left Arrow (go back)
           arrowLeft.addEventListener('click', () => {
@@ -263,7 +276,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1000, // Animation duration in milliseconds
+        duration: 1000, // Animation duration
         once: true,     
       });
     </script>
