@@ -122,9 +122,7 @@
           });
         }
 
-        // -----------------------------------------
-        // LOCAL FADE-IN VIA INTERSECTION OBSERVER
-        // -----------------------------------------
+        // Intersection Observer fade-in for portfolio
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -142,6 +140,47 @@
           }, { threshold: 0.1 });
 
           observer.observe(portfolioSection);
+        }
+
+        // -----------------------------------------
+        // FLOOR SWITCHER CODE
+        // -----------------------------------------
+        const floorSwitcher = document.getElementById('floor-switcher');
+        if (floorSwitcher) {
+          const floorImage = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight = floorSwitcher.querySelector('.arrow-right');
+
+          // Our two images to swap
+          const floors = [
+            {
+              src: '/assets/images/top-floor.png',
+              alt: 'Top Floor Overview'
+            },
+            {
+              src: '/assets/images/lower-floor.png',
+              alt: 'Lower Floor Overview'
+            }
+          ];
+
+          let currentIndex = 0; // Start on the top-floor
+
+          function updateFloor() {
+            floorImage.src = floors[currentIndex].src;
+            floorImage.alt = floors[currentIndex].alt;
+          }
+
+          // Left Arrow (go back)
+          arrowLeft.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+            updateFloor();
+          });
+
+          // Right Arrow (go forward)
+          arrowRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % floors.length;
+            updateFloor();
+          });
         }
       });
     </script>

@@ -101,33 +101,51 @@
           </p>
         </div>
 
-        <!-- Two More Text Boxes + Two Screenshots -->
+        <!-- Portfolio-lower container using table-like layout -->
         <div class="portfolio-lower">
-          <!-- Row 1: text left, screenshot right -->
+          <!-- Row 1: text on left, screenshot on right -->
           <div class="lower-row row-1">
-            <div class="text-box">
-              <p>
-                Example text box #1: 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat odio sed tellus ultrices...
-              </p>
+            <!-- Text box cell -->
+            <div class="cell text-box">
+              <p>Example text box #1: Lorem ipsum...</p>
             </div>
-            <img src="/assets/images/screenshot1.png" 
-                 alt="Screenshot 1" 
-                 class="portfolio-screenshot">
+
+            <!-- Screenshot cell -->
+            <div class="cell screenshot-cell">
+              <img src="/assets/images/screenshot1.png" 
+                   alt="Screenshot 1"
+                   class="portfolio-screenshot">
+            </div>
           </div>
 
-          <!-- Row 2: screenshot left, text right (via row-reverse) -->
+          <!-- Row 2: screenshot on left, text on right -->
           <div class="lower-row row-2">
-            <img src="/assets/images/screenshot2.png" 
-                 alt="Screenshot 2" 
-                 class="portfolio-screenshot">
-            <div class="text-box">
-              <p>
-                Example text box #2: 
-                Morbi ornare metus at turpis vulputate, imperdiet commodo mi fermentum...
-              </p>
+            <div class="cell screenshot-cell">
+              <img src="/assets/images/screenshot2.png" 
+                   alt="Screenshot 2"
+                   class="portfolio-screenshot">
+            </div>
+
+            <div class="cell text-box">
+              <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
             </div>
           </div>
+        </div>
+
+        <!-- Floor Switcher (two arrows, one image area) -->
+        <div class="floor-switcher" id="floor-switcher">
+          <!-- Arrow Left -->
+          <span class="arrow arrow-left">&lt;</span>
+
+          <!-- Main Floor Image -->
+          <img 
+            src="/assets/images/top-floor.png" 
+            alt="Top Floor Overview" 
+            class="floor-image"
+          >
+
+          <!-- Arrow Right -->
+          <span class="arrow arrow-right">&gt;</span>
         </div>
       </section>
       
@@ -181,9 +199,7 @@
           });
         }
 
-        // -----------------------------------------
-        // LOCAL FADE-IN VIA INTERSECTION OBSERVER
-        // -----------------------------------------
+        // Intersection Observer fade-in for portfolio
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -201,6 +217,47 @@
           }, { threshold: 0.1 });
 
           observer.observe(portfolioSection);
+        }
+
+        // -----------------------------------------
+        // FLOOR SWITCHER CODE
+        // -----------------------------------------
+        const floorSwitcher = document.getElementById('floor-switcher');
+        if (floorSwitcher) {
+          const floorImage = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight = floorSwitcher.querySelector('.arrow-right');
+
+          // Our two images to swap
+          const floors = [
+            {
+              src: '/assets/images/top-floor.png',
+              alt: 'Top Floor Overview'
+            },
+            {
+              src: '/assets/images/lower-floor.png',
+              alt: 'Lower Floor Overview'
+            }
+          ];
+
+          let currentIndex = 0; // Start on the top-floor
+
+          function updateFloor() {
+            floorImage.src = floors[currentIndex].src;
+            floorImage.alt = floors[currentIndex].alt;
+          }
+
+          // Left Arrow (go back)
+          arrowLeft.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+            updateFloor();
+          });
+
+          // Right Arrow (go forward)
+          arrowRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % floors.length;
+            updateFloor();
+          });
         }
       });
     </script>

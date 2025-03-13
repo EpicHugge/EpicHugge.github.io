@@ -191,7 +191,7 @@ a:hover {
 .caret {
   display: inline-block;
   width: .15em;
-  border-right: .15em solid #fefefe; /* Static caret */
+  border-right: .15em solid #fefefe; 
 }
 /* Blinking Caret Animation */
 @keyframes blink-caret {
@@ -251,13 +251,11 @@ a:hover {
 
 /* 13. Responsive Design Adjustments (HOME PAGE) */
 @media (max-width: 768px) {
-  /* Show Hamburger Menu on Mobile */
   .hamburger {
     display: flex;
-    left: 10px; /* keep hamburger pinned to the left */
+    left: 10px;
   }
 
-  /* Hide Navigation Links by Default */
   .nav-links {
     position: absolute;
     top: 80px;
@@ -272,13 +270,11 @@ a:hover {
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
   }
-  /* Show Navigation Links When Active */
   .nav-links.nav-active {
     max-height: 500px;
     padding: 20px 0;
   }
 
-  /* Logo: Center horizontally & vertically */
   .logo {
     position: static;
     transform: none;
@@ -289,7 +285,6 @@ a:hover {
     margin: 0 auto;
   }
 
-  /* Adjust Intro Section Layout for Home */
   .introduction {
     flex-direction: column;
     align-items: center;
@@ -393,13 +388,10 @@ a:hover {
   border-radius: 10px;
 }
 
-/* Center the H1 Title on About Page for BOTH Desktop & Mobile */
 .about-page h1 {
   text-align: center; 
   margin-bottom: 20px;
 }
-
-/* About Text (Desktop) */
 .about-page .about-text {
   flex: 1;
   max-width: 600px;
@@ -416,8 +408,6 @@ a:hover {
   line-height: 1.8;
   color: var(--text-color);
 }
-
-/* About Image (Desktop) */
 .about-page .about-image img {
   width: 300px;
   height: auto;
@@ -433,8 +423,6 @@ a:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
-
-/* 19. Flattened Media Query for About Page (MOBILE) */
 @media (max-width: 768px) {
   .about-page .about-container {
     flex-direction: column; 
@@ -538,47 +526,73 @@ a:hover {
   text-align: left;
 }
 
+/* Portfolio-lower container using table-like layout */
 .portfolio-lower {
   max-width: 1000px;
   margin: 40px auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   gap: 30px;
 }
 
+/* Each row is a table row */
 .lower-row {
+  display: table;
+  width: 100%;
+  table-layout: fixed; 
+}
+
+/* Each cell in the row: text box or screenshot container */
+.cell {
+  display: table-cell;
+  vertical-align: top; 
+  padding: 20px;
+}
+
+/* The text box cell matches the row height automatically */
+.text-box {
+  background-color: #2c2c2c;
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* The screenshot cell also automatically matches row height. */
+.screenshot-cell img.portfolio-screenshot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Floor Switcher */
+.floor-switcher {
   display: flex;
-  gap: 20px; 
   align-items: center;
+  justify-content: center;
+  max-width: 1000px; 
+  margin: 40px auto;
+  gap: 20px;
 }
 
-/* Row 1: normal order */
-.lower-row.row-1 .text-box {
-  flex: 1;
-  background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 8px;
+.floor-switcher .arrow {
+  cursor: pointer;
+  font-size: 2rem;
   color: #fff;
-}
-.lower-row.row-1 .portfolio-screenshot {
-  width: 50%;
+  background-color: #2c2c2c;
+  padding: 10px 20px;
   border-radius: 8px;
-  height: auto;
+  user-select: none;
+  transition: background-color 0.3s ease;
 }
 
-/* Row 2: reversed order (screenshot left, text box right) */
-.lower-row.row-2 {
-  flex-direction: row-reverse;
+.floor-switcher .arrow:hover {
+  background-color: #444444;
 }
-.lower-row.row-2 .portfolio-screenshot {
-  width: 50%;
-  border-radius: 8px;
+
+.floor-image {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
   height: auto;
-}
-.lower-row.row-2 .text-box {
-  flex: 1;
-  background-color: #2c2c2c;
-  padding: 20px;
   border-radius: 8px;
-  color: #fff;
 }
