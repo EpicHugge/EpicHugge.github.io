@@ -38,7 +38,7 @@ a {
   transition: color var(--transition-duration);
 }
 a:hover {
-  color: #fefefe; /* Hover color */
+  color: #fefefe; 
 }
 
 /* 4. Fixed Header Styles */
@@ -53,7 +53,7 @@ a:hover {
   height: 80px;
 }
 
-/* 5. Header Container with Flexbox */
+/* 5. Header Container */
 .header-container {
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ a:hover {
   font-display: swap;
 }
 
-/* 7. Logo Styles (Desktop) */
+/* 7. Logo (Desktop) */
 .logo {
   position: absolute;
   left: 40px;
@@ -93,7 +93,7 @@ a:hover {
   color: #fefefe;
 }
 
-/* 8. Navigation Links Styles */
+/* 8. Navigation Links */
 .nav-links {
   display: flex;
   gap: 40px;
@@ -113,9 +113,9 @@ a:hover {
   color: #fefefe;
 }
 
-/* 9. Hamburger Menu Styles */
+/* 9. Hamburger Menu */
 .hamburger {
-  display: none; /* Hidden on desktop */
+  display: none; 
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -137,7 +137,6 @@ a:hover {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-/* Hamburger Animation (Toggle) */
 .toggle .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -156,7 +155,7 @@ a:hover {
   padding-right: 40px;
 }
 
-/* 11. Introduction Section Styles (HOME PAGE) */
+/* 11. Introduction Section */
 .introduction {
   display: flex;
   align-items: center;
@@ -165,8 +164,6 @@ a:hover {
   margin: 40px auto;
   max-width: 1000px;
   padding: 0 20px;
-
-  /* Fade in effect for Home page intro */
   animation: fadeIn 1.5s ease-out forwards;
   opacity: 0;
 }
@@ -183,8 +180,8 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: .15em;
-  border-right: .15em solid #fefefe; /* Static caret */
-  animation: typing 3.5s steps(40, end) forwards; /* Typing animation runs once */
+  border-right: .15em solid #fefefe; 
+  animation: typing 3.5s steps(40, end) forwards;
   display: inline-block;
   position: relative;
 }
@@ -193,7 +190,6 @@ a:hover {
   width: .15em;
   border-right: .15em solid #fefefe; 
 }
-/* Blinking Caret Animation */
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
   50% { border-color: #fefefe; }
@@ -204,7 +200,6 @@ a:hover {
 .hide-caret {
   border-right: .15em solid transparent;
 }
-/* Intro Sub and Location for HOME PAGE */
 .intro-sub, .intro-location {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-color);
@@ -249,13 +244,12 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* 13. Responsive Design Adjustments (HOME PAGE) */
+/* 13. Responsive Adjustments (HOME) */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
     left: 10px;
   }
-
   .nav-links {
     position: absolute;
     top: 80px;
@@ -274,7 +268,6 @@ a:hover {
     max-height: 500px;
     padding: 20px 0;
   }
-
   .logo {
     position: static;
     transform: none;
@@ -284,7 +277,6 @@ a:hover {
     height: 80px;
     margin: 0 auto;
   }
-
   .introduction {
     flex-direction: column;
     align-items: center;
@@ -310,7 +302,7 @@ a:hover {
   }
 }
 
-/* 14. Fade-In Animation (Used by .introduction and .fade-in) */
+/* 14. Fade-In Animation (Used by .introduction) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -328,7 +320,7 @@ a:hover {
   to { width: 100%; }
 }
 
-/* 16. Back to Top Button Styles */
+/* 16. Back to Top Button */
 #back-to-top {
   position: fixed;
   bottom: 40px;
@@ -374,7 +366,7 @@ a:hover {
   display: block;
 }
 
-/* 18. About Page Specific Styles (DESKTOP) */
+/* 18. About Page Styles (Desktop) */
 .about-page .about-container {
   display: flex;
   flex-direction: row;
@@ -387,7 +379,6 @@ a:hover {
   background-color: #2c2c2c; 
   border-radius: 10px;
 }
-
 .about-page h1 {
   text-align: center; 
   margin-bottom: 20px;
@@ -515,8 +506,6 @@ a:hover {
   height: auto;
   border-radius: 8px;
 }
-
-/* Portfolio Additional Boxes */
 .portfolio-description {
   max-width: 1000px;
   margin: 20px auto;
@@ -526,7 +515,7 @@ a:hover {
   text-align: left;
 }
 
-/* Portfolio-lower container using table-like layout */
+/* Table-like layout for your text/screenshot rows */
 .portfolio-lower {
   max-width: 1000px;
   margin: 40px auto;
@@ -534,29 +523,21 @@ a:hover {
   flex-direction: column; 
   gap: 30px;
 }
-
-/* Each row is a table row */
 .lower-row {
   display: table;
   width: 100%;
   table-layout: fixed; 
 }
-
-/* Each cell in the row: text box or screenshot container */
 .cell {
   display: table-cell;
   vertical-align: top; 
   padding: 20px;
 }
-
-/* The text box cell matches the row height automatically */
 .text-box {
   background-color: #2c2c2c;
   color: #fff;
   border-radius: 8px;
 }
-
-/* The screenshot cell also automatically matches row height. */
 .screenshot-cell img.portfolio-screenshot {
   display: block;
   max-width: 100%;
@@ -566,15 +547,52 @@ a:hover {
 
 /* Floor Switcher */
 .floor-switcher {
+  max-width: 1000px;
+  margin: 40px auto; 
+}
+.floor-switcher-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1000px; 
-  margin: 40px auto;
   gap: 20px;
 }
-
-.floor-switcher .arrow {
+.floor-image-container {
+  position: relative; 
+}
+/* Title placed on top of the image */
+.floor-switcher-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+/* The floor image */
+.floor-image {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+/* Floor indicator text also on top of the image */
+.floor-indicator {
+  position: absolute;
+  bottom: 10px;  
+  right: 10px;   
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  z-index: 2;
+}
+.arrow {
   cursor: pointer;
   font-size: 2rem;
   color: #fff;
@@ -584,15 +602,49 @@ a:hover {
   user-select: none;
   transition: background-color 0.3s ease;
 }
-
-.floor-switcher .arrow:hover {
+.arrow:hover {
   background-color: #444444;
 }
 
-.floor-image {
-  display: block;
+/* NEW: Blockout & Reiterations Section */
+.blockout-section {
   max-width: 1000px;
-  width: 100%;
-  height: auto;
+  margin: 60px auto;
+  text-align: center; 
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.blockout-gallery {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.blockout-gallery img {
+  width: 30%;
   border-radius: 8px;
+  height: auto;
+}
+.blockout-description {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.section-divider {
+  border: none;
+  border-top: 2px solid #555;
+  margin: 30px 0;
+}
+.reflection-textbox {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
 }

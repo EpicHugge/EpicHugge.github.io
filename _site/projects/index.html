@@ -127,41 +127,43 @@
           observer.observe(portfolioSection);
         }
 
-        // -----------------------------------------
         // FLOOR SWITCHER CODE
-        // -----------------------------------------
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
           const floorImage = floorSwitcher.querySelector('.floor-image');
           const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
 
-          // Our two images to swap
           const floors = [
             {
               src: '/assets/images/top-floor.png',
-              alt: 'Top Floor Overview'
+              alt: 'Top Floor Overview',
+              label: 'Top Floor'
             },
             {
               src: '/assets/images/lower-floor.png',
-              alt: 'Lower Floor Overview'
+              alt: 'Lower Floor Overview',
+              label: 'Lower Floor'
             }
           ];
 
-          let currentIndex = 0; // Start on the top-floor
+          let currentIndex = 0;
 
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
+            floorIndicator.textContent = floors[currentIndex].label;
           }
 
-          // Left Arrow (go back)
+          // Initialize correct floor text on load
+          updateFloor();
+
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
 
-          // Right Arrow (go forward)
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();

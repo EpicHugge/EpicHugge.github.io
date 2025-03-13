@@ -101,16 +101,13 @@
           </p>
         </div>
 
-        <!-- Portfolio-lower container using table-like layout -->
+        <!-- 2 text boxes + screenshots (table-like layout) -->
         <div class="portfolio-lower">
-          <!-- Row 1: text on left, screenshot on right -->
+          <!-- Row 1: text left, screenshot right -->
           <div class="lower-row row-1">
-            <!-- Text box cell -->
             <div class="cell text-box">
               <p>Example text box #1: Lorem ipsum...</p>
             </div>
-
-            <!-- Screenshot cell -->
             <div class="cell screenshot-cell">
               <img src="/assets/images/screenshot1.png" 
                    alt="Screenshot 1"
@@ -125,27 +122,66 @@
                    alt="Screenshot 2"
                    class="portfolio-screenshot">
             </div>
-
             <div class="cell text-box">
               <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
             </div>
           </div>
         </div>
 
-        <!-- Floor Switcher (two arrows, one image area) -->
+        <!-- Floor Switcher -->
         <div class="floor-switcher" id="floor-switcher">
-          <!-- Arrow Left -->
-          <span class="arrow arrow-left">&lt;</span>
+          <div class="floor-switcher-content">
+            <!-- Left Arrow -->
+            <span class="arrow arrow-left">&lt;</span>
 
-          <!-- Main Floor Image -->
-          <img 
-            src="/assets/images/top-floor.png" 
-            alt="Top Floor Overview" 
-            class="floor-image"
-          >
+            <!-- Container for the image + overlays (title & floor indicator) -->
+            <div class="floor-image-container">
+              <!-- Overview title absolutely placed on top -->
+              <h3 class="floor-switcher-title">Overview</h3>
 
-          <!-- Arrow Right -->
-          <span class="arrow arrow-right">&gt;</span>
+              <!-- Main Floor Image -->
+              <img 
+                src="/assets/images/top-floor.png" 
+                alt="Top Floor Overview" 
+                class="floor-image"
+              >
+
+              <!-- Floor indicator also on top of the image -->
+              <p class="floor-indicator">Top Floor</p>
+            </div>
+
+            <!-- Right Arrow -->
+            <span class="arrow arrow-right">&gt;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blockout & Reiterations Section -->
+      <section class="blockout-section">
+        <h2 class="section-title">Blockout &amp; Reiterations</h2>
+
+        <!-- 3 images in a row -->
+        <div class="blockout-gallery">
+          <img src="/assets/images/blockout1.png" alt="Blockout 1">
+          <img src="/assets/images/blockout2.png" alt="Blockout 2">
+          <img src="/assets/images/blockout3.png" alt="Blockout 3">
+        </div>
+
+        <!-- Large text box under them -->
+        <div class="blockout-description">
+          <p>
+            Example text describing how the blockout changed over time, iteration details, changes made after testing, etc...
+          </p>
+        </div>
+
+        <!-- Divider line -->
+        <hr class="section-divider"/>
+
+        <!-- Reflections text box -->
+        <div class="reflection-textbox">
+          <p>
+            Reflections: Here is where you talk about lessons learned, challenges faced, and how you'd improve the design further.
+          </p>
         </div>
       </section>
       
@@ -219,41 +255,43 @@
           observer.observe(portfolioSection);
         }
 
-        // -----------------------------------------
         // FLOOR SWITCHER CODE
-        // -----------------------------------------
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
           const floorImage = floorSwitcher.querySelector('.floor-image');
           const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
 
-          // Our two images to swap
           const floors = [
             {
               src: '/assets/images/top-floor.png',
-              alt: 'Top Floor Overview'
+              alt: 'Top Floor Overview',
+              label: 'Top Floor'
             },
             {
               src: '/assets/images/lower-floor.png',
-              alt: 'Lower Floor Overview'
+              alt: 'Lower Floor Overview',
+              label: 'Lower Floor'
             }
           ];
 
-          let currentIndex = 0; // Start on the top-floor
+          let currentIndex = 0;
 
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
+            floorIndicator.textContent = floors[currentIndex].label;
           }
 
-          // Left Arrow (go back)
+          // Initialize correct floor text on load
+          updateFloor();
+
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
 
-          // Right Arrow (go forward)
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
