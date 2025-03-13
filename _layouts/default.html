@@ -97,34 +97,34 @@
           </p>
         </div>
 
-        <!-- Two More Text Boxes + Two Screenshots -->
-        <div class="portfolio-lower">
-          <!-- Row 1: text left, screenshot right -->
-          <div class="lower-row row-1">
-            <div class="text-box">
-              <p>
-                Example text box #1: 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat odio sed tellus ultrices...
-              </p>
-            </div>
-            <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
-                 alt="Screenshot 1" 
-                 class="portfolio-screenshot">
-          </div>
+<!-- Two more text boxes + screenshots -->
+<div class="portfolio-lower">
+  <!-- Row 1: text left, screenshot right -->
+  <div class="lower-row row-1">
+    <!-- text first, then screenshot second -->
+    <div class="text-box">
+      <p>Example text box #1: Lorem ipsum dolor sit amet...</p>
+    </div>
+    <img 
+      src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
+      alt="Screenshot 1" 
+      class="portfolio-screenshot"
+    >
+  </div>
 
-          <!-- Row 2: screenshot left, text right (via row-reverse) -->
-          <div class="lower-row row-2">
-            <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" 
-                 alt="Screenshot 2" 
-                 class="portfolio-screenshot">
-            <div class="text-box">
-              <p>
-                Example text box #2: 
-                Morbi ornare metus at turpis vulputate, imperdiet commodo mi fermentum...
-              </p>
-            </div>
-          </div>
-        </div>
+  <!-- Row 2: screenshot left, text right (by HTML order) -->
+  <div class="lower-row row-2">
+    <!-- screenshot first, text second -->
+    <img
+      src="{{ '/assets/images/screenshot2.png' | relative_url }}"
+      alt="Screenshot 2"
+      class="portfolio-screenshot"
+    >
+    <div class="text-box">
+      <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
+    </div>
+  </div>
+</div>
       </section>
       {% endif %}
 
