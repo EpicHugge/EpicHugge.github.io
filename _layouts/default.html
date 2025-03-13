@@ -97,36 +97,52 @@
           </p>
         </div>
 
-<!-- Portfolio-lower container using table-like layout -->
-<div class="portfolio-lower">
-  <!-- Row 1: text on left, screenshot on right -->
-  <div class="lower-row row-1">
-    <!-- Text box cell -->
-    <div class="cell text-box">
-      <p>Example text box #1: Lorem ipsum...</p>
-    </div>
+        <!-- Portfolio-lower container using table-like layout -->
+        <div class="portfolio-lower">
+          <!-- Row 1: text on left, screenshot on right -->
+          <div class="lower-row row-1">
+            <!-- Text box cell -->
+            <div class="cell text-box">
+              <p>Example text box #1: Lorem ipsum...</p>
+            </div>
 
-    <!-- Screenshot cell -->
-    <div class="cell screenshot-cell">
-      <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
-           alt="Screenshot 1"
-           class="portfolio-screenshot">
-    </div>
-  </div>
+            <!-- Screenshot cell -->
+            <div class="cell screenshot-cell">
+              <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
+                   alt="Screenshot 1"
+                   class="portfolio-screenshot">
+            </div>
+          </div>
 
-  <!-- Row 2: screenshot on left, text on right -->
-  <div class="lower-row row-2">
-    <div class="cell screenshot-cell">
-      <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" 
-           alt="Screenshot 2"
-           class="portfolio-screenshot">
-    </div>
+          <!-- Row 2: screenshot on left, text on right -->
+          <div class="lower-row row-2">
+            <div class="cell screenshot-cell">
+              <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" 
+                   alt="Screenshot 2"
+                   class="portfolio-screenshot">
+            </div>
 
-    <div class="cell text-box">
-      <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
-    </div>
-  </div>
-</div>
+            <div class="cell text-box">
+              <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floor Switcher (two arrows, one image area) -->
+        <div class="floor-switcher" id="floor-switcher">
+          <!-- Arrow Left -->
+          <span class="arrow arrow-left">&lt;</span>
+
+          <!-- Main Floor Image -->
+          <img 
+            src="{{ '/assets/images/top-floor.png' | relative_url }}" 
+            alt="Top Floor Overview" 
+            class="floor-image"
+          >
+
+          <!-- Arrow Right -->
+          <span class="arrow arrow-right">&gt;</span>
+        </div>
       </section>
       {% endif %}
 
@@ -178,9 +194,7 @@
           });
         }
 
-        // -----------------------------------------
-        // LOCAL FADE-IN VIA INTERSECTION OBSERVER
-        // -----------------------------------------
+        // Intersection Observer fade-in for portfolio
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -199,6 +213,47 @@
 
           observer.observe(portfolioSection);
         }
+
+        // -----------------------------------------
+        // FLOOR SWITCHER CODE
+        // -----------------------------------------
+        const floorSwitcher = document.getElementById('floor-switcher');
+        if (floorSwitcher) {
+          const floorImage = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight = floorSwitcher.querySelector('.arrow-right');
+
+          // Our two images to swap
+          const floors = [
+            {
+              src: '{{ "/assets/images/top-floor.png" | relative_url }}',
+              alt: 'Top Floor Overview'
+            },
+            {
+              src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
+              alt: 'Lower Floor Overview'
+            }
+          ];
+
+          let currentIndex = 0; // Start on the top-floor
+
+          function updateFloor() {
+            floorImage.src = floors[currentIndex].src;
+            floorImage.alt = floors[currentIndex].alt;
+          }
+
+          // Left Arrow (go back)
+          arrowLeft.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+            updateFloor();
+          });
+
+          // Right Arrow (go forward)
+          arrowRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % floors.length;
+            updateFloor();
+          });
+        }
       });
     </script>
 
@@ -213,54 +268,7 @@
       });
     </script>
     {% endif %}
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Existing typing / hamburger code ...
 
-  // Floor Switcher Code
-  const floorSwitcher = document.getElementById('floor-switcher');
-  if (floorSwitcher) {
-    // Grab elements
-    const floorImage = floorSwitcher.querySelector('.floor-image');
-    const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-    const arrowRight = floorSwitcher.querySelector('.arrow-right');
-
-    // Our two images to swap
-    const floors = [
-      {
-        src: '{{ "/assets/images/top-floor.png" | relative_url }}',
-        alt: 'Top Floor Overview'
-      },
-      {
-        src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
-        alt: 'Lower Floor Overview'
-      }
-    ];
-
-    // Start on the first image
-    let currentIndex = 0;
-
-    function updateFloor() {
-      floorImage.src = floors[currentIndex].src;
-      floorImage.alt = floors[currentIndex].alt;
-    }
-
-    // Click Left
-    arrowLeft.addEventListener('click', () => {
-      // if we’re at index 0, wrap to last
-      currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-      updateFloor();
-    });
-
-    // Click Right
-    arrowRight.addEventListener('click', () => {
-      // cycle forward, wrap around with modulo
-      currentIndex = (currentIndex + 1) % floors.length;
-      updateFloor();
-    });
-  }
-});
-</script>
     <!-- Any other scripts can be added here -->
   </body>
 </html>
