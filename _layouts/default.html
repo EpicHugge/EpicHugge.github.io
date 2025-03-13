@@ -101,12 +101,9 @@
         <div class="portfolio-lower">
           <!-- Row 1: text left, screenshot right -->
           <div class="lower-row row-1">
-            <!-- Text box cell -->
             <div class="cell text-box">
               <p>Example text box #1: Lorem ipsum...</p>
             </div>
-
-            <!-- Screenshot cell -->
             <div class="cell screenshot-cell">
               <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
                    alt="Screenshot 1"
@@ -121,7 +118,6 @@
                    alt="Screenshot 2"
                    class="portfolio-screenshot">
             </div>
-
             <div class="cell text-box">
               <p>Example text box #2: Morbi ornare metus at turpis vulputate...</p>
             </div>
@@ -129,27 +125,24 @@
         </div>
 
         <!-- Floor Switcher -->
-        <!-- 
-          1) We have a heading above the arrows & image 
-          2) The floor indicator is absolutely placed on top of the image 
-        -->
         <div class="floor-switcher" id="floor-switcher">
-          <!-- Title centered above the entire switcher -->
-          <h3 class="floor-switcher-title">Overview</h3>
-
-          <!-- Container for the arrows + image so we can position them in a row -->
           <div class="floor-switcher-content">
             <!-- Left Arrow -->
             <span class="arrow arrow-left">&lt;</span>
 
-            <!-- The image container for absolute positioning of floorIndicator -->
+            <!-- Container for the image + overlays (title & floor indicator) -->
             <div class="floor-image-container">
+              <!-- Overview title absolutely placed on top -->
+              <h3 class="floor-switcher-title">Overview</h3>
+
+              <!-- Main Floor Image -->
               <img 
                 src="{{ '/assets/images/top-floor.png' | relative_url }}" 
                 alt="Top Floor Overview" 
                 class="floor-image"
               >
-              <!-- Overlaid floor indicator text -->
+
+              <!-- Floor indicator also on top of the image -->
               <p class="floor-indicator">Top Floor</p>
             </div>
 
@@ -183,12 +176,10 @@
           const typingDuration = 3500; // 3.5 seconds
           const blinkDuration = 5000;  // 5 seconds
 
-          // Start caret blink after typing
           setTimeout(() => {
             caret.classList.add('blink-caret');
           }, typingDuration);
 
-          // Stop caret blink and hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
@@ -228,9 +219,7 @@
           observer.observe(portfolioSection);
         }
 
-        // -----------------------------------------
         // FLOOR SWITCHER CODE
-        // -----------------------------------------
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
           const floorImage = floorSwitcher.querySelector('.floor-image');
@@ -238,7 +227,6 @@
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
           const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
 
-          // Our two images to swap
           const floors = [
             {
               src: '{{ "/assets/images/top-floor.png" | relative_url }}',
@@ -252,7 +240,7 @@
             }
           ];
 
-          let currentIndex = 0; // Start on top-floor
+          let currentIndex = 0;
 
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
@@ -263,13 +251,11 @@
           // Initialize correct floor text on load
           updateFloor();
 
-          // Left Arrow (go back)
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
 
-          // Right Arrow (go forward)
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
@@ -284,7 +270,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1000, // Animation duration in milliseconds
+        duration: 1000, 
         once: true,     
       });
     </script>
