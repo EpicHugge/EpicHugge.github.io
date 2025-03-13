@@ -538,44 +538,44 @@ a:hover {
   text-align: left;
 }
 
+/* Portfolio-lower container using table-like layout */
 .portfolio-lower {
   max-width: 1000px;
   margin: 40px auto;
   display: flex;
-  flex-direction: column;
-  gap: 30px;
+  flex-direction: column; /* We stack row-1, row-2, etc. */
+  gap: 30px; /* spacing between rows */
 }
 
+/* Each row is a table row */
 .lower-row {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+  display: table;
+  width: 100%; /* ensures row stretches across container */
+  table-layout: fixed; /* cells share leftover space equally */
 }
 
-/* row-1: normal layout */
-.lower-row.row-1 .text-box {
-  flex: 1;
-  background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 8px;
-  color: #fff;
-}
-.lower-row.row-1 .portfolio-screenshot {
-  width: 50%;
-  border-radius: 8px;
-  height: auto;
+/* Each cell in the row: text box or screenshot container */
+.cell {
+  display: table-cell;
+  vertical-align: top; /* top-align content if one is taller */
+  padding: 20px;       /* spacing inside each cell */
 }
 
-/* row-2: also normal layout (no row-reverse needed!) */
-.lower-row.row-2 .portfolio-screenshot {
-  width: 50%;
-  border-radius: 8px;
-  height: auto;
-}
-.lower-row.row-2 .text-box {
-  flex: 1;
+/* The text box cell matches the row height automatically */
+.text-box {
   background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 8px;
   color: #fff;
+  border-radius: 8px;
+  /* If you want a consistent look for the box, 
+     keep the same background & border as before. */
+}
+
+/* The screenshot cell also automatically matches row height. 
+   We use a nested class or ID for the <img> style. */
+.screenshot-cell img.portfolio-screenshot {
+  display: block; /* ensures no extra gap below image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* This image won't distort, it keeps aspect ratio. */
 }
