@@ -596,3 +596,30 @@ a:hover {
   height: auto;
   border-radius: 8px;
 }
+.floor-switcher-title {
+  text-align: center;
+  font-size: 2rem; /* or any size you prefer */
+  margin-bottom: 10px;
+}
+
+.floor-switcher-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.floor-image-container {
+  position: relative; /* for absolute overlay of floorIndicator */
+}
+
+.floor-indicator {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+}
