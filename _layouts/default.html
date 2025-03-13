@@ -213,7 +213,54 @@
       });
     </script>
     {% endif %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Existing typing / hamburger code ...
 
+  // Floor Switcher Code
+  const floorSwitcher = document.getElementById('floor-switcher');
+  if (floorSwitcher) {
+    // Grab elements
+    const floorImage = floorSwitcher.querySelector('.floor-image');
+    const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+    const arrowRight = floorSwitcher.querySelector('.arrow-right');
+
+    // Our two images to swap
+    const floors = [
+      {
+        src: '{{ "/assets/images/top-floor.png" | relative_url }}',
+        alt: 'Top Floor Overview'
+      },
+      {
+        src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
+        alt: 'Lower Floor Overview'
+      }
+    ];
+
+    // Start on the first image
+    let currentIndex = 0;
+
+    function updateFloor() {
+      floorImage.src = floors[currentIndex].src;
+      floorImage.alt = floors[currentIndex].alt;
+    }
+
+    // Click Left
+    arrowLeft.addEventListener('click', () => {
+      // if we’re at index 0, wrap to last
+      currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+      updateFloor();
+    });
+
+    // Click Right
+    arrowRight.addEventListener('click', () => {
+      // cycle forward, wrap around with modulo
+      currentIndex = (currentIndex + 1) % floors.length;
+      updateFloor();
+    });
+  }
+});
+</script>
     <!-- Any other scripts can be added here -->
   </body>
 </html>
