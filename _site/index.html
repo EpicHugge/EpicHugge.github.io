@@ -25,7 +25,6 @@
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
 
   </head>
-  <!-- Updated body tag with class -->
   <body class="">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
@@ -72,6 +71,61 @@
         </div>
       </div>
       <!-- End of Introduction Section -->
+
+      <!-- Large Separation -->
+      <div class="section-separator"></div>
+
+      <!-- Portfolio Section (fades in via Intersection Observer) -->
+      <section class="portfolio-piece" id="portfolio-piece">
+        <h2 class="portfolio-title">Level Design Assignment</h2>
+        <div class="portfolio-hero">
+          <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="portfolio-video"
+          >
+            <source src="/assets/videos/level-hero-shot.webm" type="video/webm">
+            <!-- Fallback for browsers that don't support WebM -->
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- 1) A text box directly under the hero shot -->
+        <div class="portfolio-description">
+          <p>
+            Example text
+          </p>
+        </div>
+
+        <!-- 2) Two more text boxes and two screenshots in a varied layout -->
+        <div class="portfolio-lower">
+          <!-- Row 1: Text left, screenshot right -->
+          <div class="lower-row row-1">
+            <div class="text-box">
+              <p>
+                Example text box #1
+              </p>
+            </div>
+            <img src="/assets/images/screenshot1.png" 
+                 alt="Screenshot 1" 
+                 class="portfolio-screenshot">
+          </div>
+
+          <!-- Row 2: Screenshot left, text right -->
+          <div class="lower-row row-2">
+            <img src="/assets/images/screenshot2.png" 
+                 alt="Screenshot 2" 
+                 class="portfolio-screenshot">
+            <div class="text-box">
+              <p>
+                Example text box #2. 
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
       
 
       <!-- Your existing content goes here -->
@@ -80,47 +134,71 @@
     </main>
 
     <footer class="site-footer">
-      <span class="site-footer-owner"><a href="https://github.com/yourusername">EpicHugge</a> &copy; 2025. All rights reserved.</span>
+      <span class="site-footer-owner">
+        <a href="https://github.com/yourusername">EpicHugge</a> 
+        &copy; 2025. All rights reserved.
+      </span>
       <!-- Removed GitHub Pages Credit -->
     </footer>
 
     <!-- Typing Animation and Hamburger Menu Control Script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // Typing animation logic
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
 
-        if (!introMain || !caret) return; // Exit if the elements are not found (e.g., on non-home pages)
+        if (introMain && caret) {
+          const typingDuration = 3500; // 3.5 seconds
+          const blinkDuration = 5000;  // 5 seconds
 
-        // Typing animation duration (matches CSS typing animation duration)
-        const typingDuration = 3500; // 3.5 seconds
+          setTimeout(() => {
+            caret.classList.add('blink-caret');
+          }, typingDuration);
 
-        // Caret blinking duration after typing completes
-        const blinkDuration = 5000; // 5 seconds
+          setTimeout(() => {
+            caret.classList.remove('blink-caret');
+            caret.classList.add('hide-caret');
+          }, typingDuration + blinkDuration);
+        }
 
-        // Start caret blinking after typing animation completes
-        setTimeout(() => {
-          caret.classList.add('blink-caret');
-        }, typingDuration);
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
 
-        // Stop caret blinking and hide it after blinkDuration
-        setTimeout(() => {
-          caret.classList.remove('blink-caret');
-          caret.classList.add('hide-caret');
-        }, typingDuration + blinkDuration);
-      });
+        if (hamburger && navLinks) {
+          hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+            const isExpanded = hamburger.classList.contains('toggle');
+            hamburger.setAttribute('aria-expanded', isExpanded);
+          });
+        }
 
-      // Hamburger Menu Toggle
-      const hamburger = document.getElementById('hamburger');
-      const navLinks = document.getElementById('nav-links');
+        // -----------------------------------------
+        // LOCAL FADE-IN VIA INTERSECTION OBSERVER
+        // -----------------------------------------
+        const portfolioSection = document.getElementById('portfolio-piece');
+        if (portfolioSection) {
+          // Start off hidden
+          portfolioSection.style.opacity = '0';
+          portfolioSection.style.transform = 'translateY(20px)';
+          portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
 
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        hamburger.classList.toggle('toggle');
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                // Fade in
+                portfolioSection.style.opacity = '1';
+                portfolioSection.style.transform = 'translateY(0)';
+                // Stop observing once done
+                observer.unobserve(portfolioSection);
+              }
+            });
+          }, { threshold: 0.1 });
 
-        // Toggle aria-expanded attribute for accessibility
-        const isExpanded = hamburger.classList.contains('toggle');
-        hamburger.setAttribute('aria-expanded', isExpanded);
+          observer.observe(portfolioSection);
+        }
       });
     </script>
 
