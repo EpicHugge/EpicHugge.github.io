@@ -97,7 +97,7 @@
           </p>
         </div>
 
-        <!-- Portfolio-lower container using table-like layout -->
+        <!-- 2 text boxes + screenshots (table-like layout) -->
         <div class="portfolio-lower">
           <!-- Row 1: text left, screenshot right -->
           <div class="lower-row row-1">
@@ -151,6 +151,35 @@
           </div>
         </div>
       </section>
+
+      <!-- Blockout & Reiterations Section -->
+      <section class="blockout-section">
+        <h2 class="section-title">Blockout &amp; Reiterations</h2>
+
+        <!-- 3 images in a row -->
+        <div class="blockout-gallery">
+          <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1">
+          <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2">
+          <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+        </div>
+
+        <!-- Large text box under them -->
+        <div class="blockout-description">
+          <p>
+            Example text describing how the blockout changed over time, iteration details, changes made after testing, etc...
+          </p>
+        </div>
+
+        <!-- Divider line -->
+        <hr class="section-divider"/>
+
+        <!-- Reflections text box -->
+        <div class="reflection-textbox">
+          <p>
+            Reflections: Here is where you talk about lessons learned, challenges faced, and how you'd improve the design further.
+          </p>
+        </div>
+      </section>
       {% endif %}
 
       <!-- Your existing content goes here -->
@@ -176,10 +205,12 @@
           const typingDuration = 3500; // 3.5 seconds
           const blinkDuration = 5000;  // 5 seconds
 
+          // Start caret blink after typing
           setTimeout(() => {
             caret.classList.add('blink-caret');
           }, typingDuration);
 
+          // Stop caret blink and hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
