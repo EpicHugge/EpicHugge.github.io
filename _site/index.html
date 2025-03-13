@@ -78,6 +78,8 @@
       <!-- Portfolio Section (fades in via Intersection Observer) -->
       <section class="portfolio-piece" id="portfolio-piece">
         <h2 class="portfolio-title">Level Design Assignment</h2>
+
+        <!-- Hero (Video) -->
         <div class="portfolio-hero">
           <video 
             autoplay 
@@ -92,20 +94,21 @@
           </video>
         </div>
 
-        <!-- 1) A text box directly under the hero shot -->
+        <!-- Text box under hero shot -->
         <div class="portfolio-description">
           <p>
-            Example text
+            Example text: This level design assignment demonstrates the blockout to final design stages...
           </p>
         </div>
 
-        <!-- 2) Two more text boxes and two screenshots in a varied layout -->
+        <!-- Two More Text Boxes + Two Screenshots -->
         <div class="portfolio-lower">
-          <!-- Row 1: Text left, screenshot right -->
+          <!-- Row 1: text left, screenshot right -->
           <div class="lower-row row-1">
             <div class="text-box">
               <p>
-                Example text box #1
+                Example text box #1: 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi feugiat odio sed tellus ultrices...
               </p>
             </div>
             <img src="/assets/images/screenshot1.png" 
@@ -113,14 +116,15 @@
                  class="portfolio-screenshot">
           </div>
 
-          <!-- Row 2: Screenshot left, text right -->
+          <!-- Row 2: screenshot left, text right (via row-reverse) -->
           <div class="lower-row row-2">
             <img src="/assets/images/screenshot2.png" 
                  alt="Screenshot 2" 
                  class="portfolio-screenshot">
             <div class="text-box">
               <p>
-                Example text box #2. 
+                Example text box #2: 
+                Morbi ornare metus at turpis vulputate, imperdiet commodo mi fermentum...
               </p>
             </div>
           </div>
@@ -152,10 +156,12 @@
           const typingDuration = 3500; // 3.5 seconds
           const blinkDuration = 5000;  // 5 seconds
 
+          // Start caret blink after typing
           setTimeout(() => {
             caret.classList.add('blink-caret');
           }, typingDuration);
 
+          // Stop caret blink and hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
@@ -180,7 +186,6 @@
         // -----------------------------------------
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
-          // Start off hidden
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
@@ -188,10 +193,8 @@
           const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
-                // Fade in
                 portfolioSection.style.opacity = '1';
                 portfolioSection.style.transform = 'translateY(0)';
-                // Stop observing once done
                 observer.unobserve(portfolioSection);
               }
             });

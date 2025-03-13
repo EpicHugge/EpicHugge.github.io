@@ -97,10 +97,12 @@
           const typingDuration = 3500; // 3.5 seconds
           const blinkDuration = 5000;  // 5 seconds
 
+          // Start caret blink after typing
           setTimeout(() => {
             caret.classList.add('blink-caret');
           }, typingDuration);
 
+          // Stop caret blink and hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
@@ -125,7 +127,6 @@
         // -----------------------------------------
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
-          // Start off hidden
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
@@ -133,10 +134,8 @@
           const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
-                // Fade in
                 portfolioSection.style.opacity = '1';
                 portfolioSection.style.transform = 'translateY(0)';
-                // Stop observing once done
                 observer.unobserve(portfolioSection);
               }
             });

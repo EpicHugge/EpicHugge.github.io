@@ -280,13 +280,13 @@ a:hover {
 
   /* Logo: Center horizontally & vertically */
   .logo {
-    position: static;      /* remove absolute positioning */
-    transform: none;       /* remove translateY(-50%) */
+    position: static;
+    transform: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;          /* matches .fixed-header height */
-    margin: 0 auto;        /* center horizontally if needed */
+    height: 80px;
+    margin: 0 auto;
   }
 
   /* Adjust Intro Section Layout for Home */
@@ -381,7 +381,7 @@ a:hover {
 
 /* 18. About Page Specific Styles (DESKTOP) */
 .about-page .about-container {
-  display: flex; /* side-by-side on desktop */
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -389,14 +389,14 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  background-color: #2c2c2c; /* subtle background for about section */
+  background-color: #2c2c2c; 
   border-radius: 10px;
 }
 
 /* Center the H1 Title on About Page for BOTH Desktop & Mobile */
 .about-page h1 {
   text-align: center; 
-  margin-bottom: 20px; /* optional spacing under the heading */
+  margin-bottom: 20px;
 }
 
 /* About Text (Desktop) */
@@ -406,14 +406,10 @@ a:hover {
   background-color: #333333;
   padding: 20px;
   border-radius: 8px;
-
-  /* FadeIn Setup */
   opacity: 0; 
-  /* Or direct transition: transition: opacity 1s ease-out; */
 }
 .about-page .about-text.fade-in {
   opacity: 1; 
-  /* or keyframes: animation: fadeIn 1s ease-out forwards; */
 }
 .about-page .about-text p {
   font-size: 1.1rem;
@@ -427,8 +423,6 @@ a:hover {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  /* FadeIn Setup */
   opacity: 0; 
   transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -443,7 +437,7 @@ a:hover {
 /* 19. Flattened Media Query for About Page (MOBILE) */
 @media (max-width: 768px) {
   .about-page .about-container {
-    flex-direction: column;  /* stack text & portrait vertically */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: 40px;
@@ -472,7 +466,7 @@ a:hover {
 
 /* 20. Fade-In Utility Class */
 .fade-in {
-  animation: fadeIn 1s ease-out forwards; /* keyframes-based fadeIn */
+  animation: fadeIn 1s ease-out forwards; 
 }
 
 /* Contact Page (Desktop) */
@@ -480,36 +474,28 @@ a:hover {
   text-align: center;
   margin-bottom: 20px;
 }
-
-/* Fade in container for contact content */
 .contact-page .contact-container {
-  max-width: 600px;      /* controls width */
-  margin: 40px auto;     /* centers horizontally with top/bottom margin */
+  max-width: 600px;
+  margin: 40px auto;
   font-size: 1.1rem;
   line-height: 1.8;
   color: var(--text-color);
-  background-color: #2c2c2c; /* or transparent if you prefer */
+  background-color: #2c2c2c;
   padding: 20px;
   border-radius: 8px;
-
-  /* Fade-in start */
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
 }
-
-/* Style mailto link slightly */
 .contact-page .contact-container a {
   color: var(--primary-color);
   text-decoration: underline;
 }
 .contact-page .contact-container a:hover {
-  color: #ffcc66; /* Slight hover color change */
+  color: #ffcc66;
 }
-
-/* Responsive adjustments (mobile) */
 @media (max-width: 768px) {
   .contact-page .contact-container {
-    margin: 20px 20px;  /* smaller side margins on mobile */
+    margin: 20px 20px;
     font-size: 1rem;
     line-height: 1.5;
   }
@@ -517,7 +503,7 @@ a:hover {
 
 /* SECTION SEPARATOR FOR BIG GAP BETWEEN INTRO & PORTFOLIO */
 .section-separator {
-  height: 300px; /* Adjust to create desired vertical spacing */
+  height: 300px; 
 }
 
 /* PORTFOLIO SECTION STYLES */
@@ -526,19 +512,15 @@ a:hover {
   margin: 60px auto;
   max-width: 1500px; 
 }
-
-/* Larger Title */
 .portfolio-title {
   font-size: 5rem;
   margin-bottom: 20px;
 }
-
 .portfolio-hero {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .portfolio-video {
   max-width: 1000px; 
   width: 100%;
@@ -550,10 +532,10 @@ a:hover {
 .portfolio-description {
   max-width: 1000px;
   margin: 20px auto;
-  background-color: #2c2c2c; /* same style as video area */
+  background-color: #2c2c2c;
   padding: 20px;
   border-radius: 8px;
-  text-align: left; /* or center if you prefer */
+  text-align: left;
 }
 
 .portfolio-lower {
@@ -570,6 +552,7 @@ a:hover {
   align-items: center;
 }
 
+/* Row 1: normal order */
 .lower-row.row-1 .text-box {
   flex: 1;
   background-color: #2c2c2c;
@@ -577,24 +560,21 @@ a:hover {
   border-radius: 8px;
   color: #fff;
 }
-
 .lower-row.row-1 .portfolio-screenshot {
   width: 50%;
   border-radius: 8px;
   height: auto;
 }
 
+/* Row 2: reversed order (screenshot left, text box right) */
+.lower-row.row-2 {
+  flex-direction: row-reverse;
+}
 .lower-row.row-2 .portfolio-screenshot {
   width: 50%;
   border-radius: 8px;
   height: auto;
 }
-
-/* Flip layout for row-2: image left, text right */
-.lower-row.row-2 {
-  flex-direction: row-reverse;
-}
-
 .lower-row.row-2 .text-box {
   flex: 1;
   background-color: #2c2c2c;
