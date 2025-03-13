@@ -564,17 +564,66 @@ a:hover {
   border-radius: 8px;
 }
 
-/* Floor Switcher */
+/* ============== NEW/UPDATED FLOOR SWITCHER STYLES ============== */
+
+/* The outer container for the entire floor switcher */
 .floor-switcher {
+  max-width: 1000px;
+  margin: 40px auto; 
+}
+
+/* Container for the arrows + the image container in a row */
+.floor-switcher-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1000px; 
-  margin: 40px auto;
   gap: 20px;
 }
 
-.floor-switcher .arrow {
+/* Where the image + the overlay text (title + floor indicator) go */
+.floor-image-container {
+  position: relative; /* needed for absolute positioning of overlays */
+}
+
+/* We are no longer putting "Overview" as a separate heading above everything;
+   now we place it on top of the image, centered. */
+.floor-switcher-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1.4rem;
+  z-index: 2;
+}
+
+/* The main floor image for the switcher */
+.floor-image {
+  display: block;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* The floor indicator, placed in a corner over the image */
+.floor-indicator {
+  position: absolute;
+  bottom: 10px;  /* place it near the bottom edge */
+  right: 10px;   /* shift it to the right edge */
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 1rem;
+  z-index: 2;
+}
+
+/* The arrows on either side */
+.arrow {
   cursor: pointer;
   font-size: 2rem;
   color: #fff;
@@ -585,41 +634,8 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 
-.floor-switcher .arrow:hover {
+.arrow:hover {
   background-color: #444444;
 }
 
-.floor-image {
-  display: block;
-  max-width: 1000px;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.floor-switcher-title {
-  text-align: center;
-  font-size: 2rem; /* or any size you prefer */
-  margin-bottom: 10px;
-}
-
-.floor-switcher-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.floor-image-container {
-  position: relative; /* for absolute overlay of floorIndicator */
-}
-
-.floor-indicator {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 1rem;
-}
+/* ============== END NEW FLOOR SWITCHER STYLES ============== */
