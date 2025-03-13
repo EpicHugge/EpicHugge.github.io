@@ -97,14 +97,16 @@
           </p>
         </div>
 
-        <!-- Portfolio-lower container (table-like layout for 2 rows) -->
+        <!-- Portfolio-lower container using table-like layout -->
         <div class="portfolio-lower">
           <!-- Row 1: text left, screenshot right -->
           <div class="lower-row row-1">
+            <!-- Text box cell -->
             <div class="cell text-box">
               <p>Example text box #1: Lorem ipsum...</p>
             </div>
 
+            <!-- Screenshot cell -->
             <div class="cell screenshot-cell">
               <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
                    alt="Screenshot 1"
@@ -126,26 +128,34 @@
           </div>
         </div>
 
-        <!-- Floor Switcher (two arrows, one image area) -->
+        <!-- Floor Switcher -->
+        <!-- 
+          1) We have a heading above the arrows & image 
+          2) The floor indicator is absolutely placed on top of the image 
+        -->
         <div class="floor-switcher" id="floor-switcher">
-          <!-- Title Above the Switcher -->
+          <!-- Title centered above the entire switcher -->
           <h3 class="floor-switcher-title">Overview</h3>
 
-          <!-- Left Arrow -->
-          <span class="arrow arrow-left">&lt;</span>
+          <!-- Container for the arrows + image so we can position them in a row -->
+          <div class="floor-switcher-content">
+            <!-- Left Arrow -->
+            <span class="arrow arrow-left">&lt;</span>
 
-          <!-- Main Floor Image -->
-          <img 
-            src="{{ '/assets/images/top-floor.png' | relative_url }}" 
-            alt="Top Floor Overview" 
-            class="floor-image"
-          >
+            <!-- The image container for absolute positioning of floorIndicator -->
+            <div class="floor-image-container">
+              <img 
+                src="{{ '/assets/images/top-floor.png' | relative_url }}" 
+                alt="Top Floor Overview" 
+                class="floor-image"
+              >
+              <!-- Overlaid floor indicator text -->
+              <p class="floor-indicator">Top Floor</p>
+            </div>
 
-          <!-- Right Arrow -->
-          <span class="arrow arrow-right">&gt;</span>
-
-          <!-- Floor Indicator -->
-          <p class="floor-indicator">Top Floor</p>
+            <!-- Right Arrow -->
+            <span class="arrow arrow-right">&gt;</span>
+          </div>
         </div>
       </section>
       {% endif %}
@@ -245,10 +255,8 @@
           let currentIndex = 0; // Start on top-floor
 
           function updateFloor() {
-            // Switch the source & alt
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
-            // Update the small text (floorIndicator)
             floorIndicator.textContent = floors[currentIndex].label;
           }
 
@@ -276,7 +284,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1000, // Animation duration
+        duration: 1000, // Animation duration in milliseconds
         once: true,     
       });
     </script>
