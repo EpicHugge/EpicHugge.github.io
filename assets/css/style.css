@@ -1,6 +1,6 @@
 /* 1. CSS Variables */
 :root {
-  --primary-color: #ff9800; /* Orange */
+  --primary-color: #ff9800;  /* Orange */
   --secondary-color: #c1c1c1;
   --background-color: #1a1a1a;
   --text-color: #fefefe;
@@ -21,6 +21,7 @@ body, html {
   height: 100%;
 }
 
+/* Body Setup */
 body {
   display: flex;
   flex-direction: column;
@@ -31,17 +32,17 @@ body {
   line-height: 1.6;
 }
 
-/* 3. Link Styles */
+/* Link Hover */
 a {
   text-decoration: none;
   color: var(--secondary-color);
   transition: color var(--transition-duration);
 }
 a:hover {
-  color: #fefefe; 
+  color: #fefefe;
 }
 
-/* 4. Fixed Header Styles */
+/* Fixed Header */
 .fixed-header {
   position: fixed;
   top: 0;
@@ -53,7 +54,7 @@ a:hover {
   height: 80px;
 }
 
-/* 5. Header Container */
+/* Header Container */
 .header-container {
   display: flex;
   align-items: center;
@@ -65,16 +66,7 @@ a:hover {
   position: relative;
 }
 
-/* 6. Load Custom Font */
-@font-face {
-  font-family: 'More Sugar Custom';
-  src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 7. Logo (Desktop) */
+/* Logo */
 .logo {
   position: absolute;
   left: 40px;
@@ -82,7 +74,7 @@ a:hover {
   transform: translateY(-50%);
 }
 .logo a {
-  font-family: 'More Sugar Custom', cursive;
+  font-family: 'More Sugar Custom', cursive;  /* If that font is loaded */
   font-size: 2rem;
   font-weight: bold;
   color: var(--text-color);
@@ -93,7 +85,7 @@ a:hover {
   color: #fefefe;
 }
 
-/* 8. Navigation Links */
+/* Navigation Links */
 .nav-links {
   display: flex;
   gap: 40px;
@@ -113,9 +105,9 @@ a:hover {
   color: #fefefe;
 }
 
-/* 9. Hamburger Menu */
+/* Hamburger Menu (Mobile) */
 .hamburger {
-  display: none; 
+  display: none; /* Hidden by default, shown on mobile */
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -137,6 +129,7 @@ a:hover {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
+/* Toggle hamburger lines to X */
 .toggle .hamburger-line:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -147,7 +140,7 @@ a:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* 10. Main Content Padding */
+/* Main Content Spacing */
 .main-content {
   flex: 1;
   padding-top: 100px;
@@ -155,7 +148,7 @@ a:hover {
   padding-right: 40px;
 }
 
-/* 11. Introduction Section */
+/* Introduction Section */
 .introduction {
   display: flex;
   align-items: center;
@@ -180,7 +173,7 @@ a:hover {
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: .15em;
-  border-right: .15em solid #fefefe; 
+  border-right: .15em solid #fefefe;
   animation: typing 3.5s steps(40, end) forwards;
   display: inline-block;
   position: relative;
@@ -188,7 +181,7 @@ a:hover {
 .caret {
   display: inline-block;
   width: .15em;
-  border-right: .15em solid #fefefe; 
+  border-right: .15em solid #fefefe;
 }
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
@@ -234,7 +227,7 @@ a:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* 12. Footer Styles */
+/* Footer */
 .site-footer {
   width: 100%;
   text-align: center;
@@ -244,7 +237,7 @@ a:hover {
   background-color: var(--background-color);
 }
 
-/* 13. Responsive Adjustments (HOME) */
+/* Responsive Adjustments (Mobile) */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -302,7 +295,7 @@ a:hover {
   }
 }
 
-/* 14. Fade-In Animation (Used by .introduction) */
+/* Fade-In & Typing Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -313,183 +306,21 @@ a:hover {
     transform: translateY(0);
   }
 }
-
-/* 15. Typing Animation (Used by .intro-main) */
 @keyframes typing {
   from { width: 0; }
-  to { width: 100%; }
+  to   { width: 100%; }
 }
 
-/* 16. Back to Top Button */
-#back-to-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  display: none;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  transition: background-color var(--transition-duration), transform var(--transition-duration);
-  z-index: 100;
-}
-#back-to-top:hover {
-  background-color: #e67e22;
-  transform: translateY(-5px);
-}
-
-/* 17. Accordion Styles (Optional) */
-.accordion-header {
-  cursor: pointer;
-  padding: 15px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  text-align: left;
-  outline: none;
-  transition: background-color var(--transition-duration);
-}
-.accordion-header:hover {
-  background-color: #e67e22;
-}
-.accordion-content {
-  padding: 0 15px;
-  display: none;
-  background-color: #f1f1f1;
-  color: #333;
-}
-.accordion-content.show {
-  display: block;
-}
-
-/* 18. About Page Styles (Desktop) */
-.about-page .about-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #2c2c2c; 
-  border-radius: 10px;
-}
-.about-page h1 {
-  text-align: center; 
-  margin-bottom: 20px;
-}
-.about-page .about-text {
-  flex: 1;
-  max-width: 600px;
-  background-color: #333333;
-  padding: 20px;
-  border-radius: 8px;
-  opacity: 0; 
-}
-.about-page .about-text.fade-in {
-  opacity: 1; 
-}
-.about-page .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-color);
-}
-.about-page .about-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  opacity: 0; 
-  transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
-}
-.about-page .about-image.fade-in img {
-  opacity: 1;
-}
-.about-page .about-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-@media (max-width: 768px) {
-  .about-page .about-container {
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-    gap: 40px;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 0;
-    max-width: 100%;
-  }
-  .about-page .about-text {
-    max-width: 100%;
-    background-color: transparent;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  .about-page .about-image {
-    margin-top: 0;
-  }
-  .about-page .about-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; 
-    box-shadow: none;
-    margin-top: 0;
-  }
-}
-
-/* 20. Fade-In Utility Class */
-.fade-in {
-  animation: fadeIn 1s ease-out forwards; 
-}
-
-/* Contact Page (Desktop) */
-.contact-page h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.contact-page .contact-container {
-  max-width: 600px;
-  margin: 40px auto;
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-color);
-  background-color: #2c2c2c;
-  padding: 20px;
-  border-radius: 8px;
-  opacity: 0;
-  animation: fadeIn 1s ease-out forwards;
-}
-.contact-page .contact-container a {
-  color: var(--primary-color);
-  text-decoration: underline;
-}
-.contact-page .contact-container a:hover {
-  color: #ffcc66;
-}
-@media (max-width: 768px) {
-  .contact-page .contact-container {
-    margin: 20px 20px;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-
-/* SECTION SEPARATOR FOR BIG GAP BETWEEN INTRO & PORTFOLIO */
+/* Large Separator below Intro */
 .section-separator {
-  height: 300px; 
+  height: 300px;
 }
 
-/* PORTFOLIO SECTION STYLES */
+/* Portfolio Section */
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
-  max-width: 1500px; 
+  max-width: 1500px;
 }
 .portfolio-title {
   font-size: 5rem;
@@ -501,7 +332,7 @@ a:hover {
   align-items: center;
 }
 .portfolio-video {
-  max-width: 1000px; 
+  max-width: 1000px;
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -515,22 +346,22 @@ a:hover {
   text-align: left;
 }
 
-/* Table-like layout for your text/screenshot rows */
+/* Two text boxes + screenshots layout */
 .portfolio-lower {
   max-width: 1000px;
   margin: 40px auto;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   gap: 30px;
 }
 .lower-row {
   display: table;
   width: 100%;
-  table-layout: fixed; 
+  table-layout: fixed;
 }
 .cell {
   display: table-cell;
-  vertical-align: top; 
+  vertical-align: top;
   padding: 20px;
 }
 .text-box {
@@ -545,10 +376,10 @@ a:hover {
   border-radius: 8px;
 }
 
-/* Floor Switcher */
+/* Floor Switcher (two floors) */
 .floor-switcher {
   max-width: 1000px;
-  margin: 40px auto; 
+  margin: 40px auto;
 }
 .floor-switcher-content {
   display: flex;
@@ -557,22 +388,22 @@ a:hover {
   gap: 20px;
 }
 .floor-image-container {
-  position: relative; 
+  position: relative;
 }
-/* Title placed on top of the image */
 .floor-switcher-title {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
   position: absolute;
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0,0,0,0.5);
   padding: 5px 10px;
   border-radius: 4px;
-  font-size: 1.4rem;
   z-index: 2;
 }
-/* The floor image */
 .floor-image {
   display: block;
   max-width: 1000px;
@@ -580,12 +411,11 @@ a:hover {
   height: auto;
   border-radius: 8px;
 }
-/* Floor indicator text also on top of the image */
 .floor-indicator {
   position: absolute;
-  bottom: 10px;  
-  right: 10px;   
-  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0,0,0,0.6);
   color: #fff;
   padding: 5px 10px;
   border-radius: 4px;
@@ -603,48 +433,91 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 .arrow:hover {
-  background-color: #444444;
+  background-color: #444;
 }
 
-/* NEW: Blockout & Reiterations Section */
+/* Blockout & Reiterations Section (Slideshow + text to the right) */
 .blockout-section {
   max-width: 1000px;
   margin: 60px auto;
-  text-align: center; 
+  text-align: center;
 }
 .section-title {
   font-size: 2rem;
   margin-bottom: 20px;
 }
-.blockout-gallery {
+/* Slideshow container & text box side-by-side */
+.blockout-container {
   display: flex;
-  gap: 20px;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.blockout-gallery img {
-  width: 30%;
+/* Single slideshow frame for the 3 blockout images */
+.blockout-slider {
+  position: relative;
+  width: 50%;
+  max-width: 500px;
+}
+.blockout-image {
+  width: 100%;
   border-radius: 8px;
-  height: auto;
 }
-.blockout-description {
+/* Arrows for blockout slideshow */
+.blockout-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.blockout-arrow.left {
+  left: 10px;
+}
+.blockout-arrow.right {
+  right: 10px;
+}
+.blockout-arrow:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Textbox on the right side */
+.blockout-text {
+  width: 40%;
   background-color: #2c2c2c;
-  color: #fff;
+  color: var(--text-color);
   padding: 20px;
   border-radius: 8px;
   text-align: left;
-  margin-bottom: 20px;
 }
-.section-divider {
-  border: none;
-  border-top: 2px solid #555;
-  margin: 30px 0;
+/* Large text box under slideshow */
+.blockout-description {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #2c2c2c;
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--text-color);
 }
+
+/* Reflection Textbox */
 .reflection-textbox {
   background-color: #2c2c2c;
   color: #fff;
   padding: 20px;
   border-radius: 8px;
   text-align: left;
+  margin-top: 20px;
+}
+
+/* Divider line */
+.section-divider {
+  border: none;
+  border-top: 2px solid #555;
+  margin: 30px 0;
 }
