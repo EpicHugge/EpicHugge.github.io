@@ -57,7 +57,7 @@
     <main id="content" class="main-content" role="main">
       
 
-      <!-- Your existing content goes here -->
+      <!-- Any other page content goes here -->
       <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -86,36 +86,30 @@
         <a href="https://github.com/yourusername">EpicHugge</a> 
         &copy; 2025. All rights reserved.
       </span>
-      <!-- Removed GitHub Pages Credit -->
+      <!-- Possibly remove GitHub Pages credit if desired -->
     </footer>
 
-    <!-- Typing Animation and Hamburger Menu Control Script -->
+    <!-- Typing Animation, Hamburgers, Fade-In, plus new Slideshow script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Typing animation logic
+        // ========== 1) TYPING ANIMATION ==========
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
-
         if (introMain && caret) {
           const typingDuration = 3500; // 3.5 seconds
-          const blinkDuration = 5000;  // 5 seconds
-
-          // Start caret blink after typing
-          setTimeout(() => {
-            caret.classList.add('blink-caret');
-          }, typingDuration);
-
-          // Stop caret blink and hide it
+          const blinkDuration  = 5000; // 5 seconds
+          // Start blinking caret after typing finishes
+          setTimeout(() => caret.classList.add('blink-caret'), typingDuration);
+          // Stop caret blinking & hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
           }, typingDuration + blinkDuration);
         }
 
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
+        // ========== 2) HAMBURGER MENU TOGGLE ==========
+        const hamburger   = document.getElementById('hamburger');
+        const navLinks    = document.getElementById('nav-links');
         if (hamburger && navLinks) {
           hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
@@ -125,14 +119,14 @@
           });
         }
 
-        // Intersection Observer fade-in for portfolio
+        // ========== 3) FADE-IN USING INTERSECTION OBSERVER ==========
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
 
-          const observer = new IntersectionObserver((entries) => {
+          const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 portfolioSection.style.opacity = '1';
@@ -141,58 +135,71 @@
               }
             });
           }, { threshold: 0.1 });
-
           observer.observe(portfolioSection);
         }
 
-        // FLOOR SWITCHER CODE
+        // ========== 4) FLOOR SWITCHER ==========
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
-          const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+          const floorImage    = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft     = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight    = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator= floorSwitcher.querySelector('.floor-indicator');
 
           const floors = [
             {
-              src: '/assets/images/top-floor.png',
+              src: '',
               alt: 'Top Floor Overview',
               label: 'Top Floor'
             },
             {
-              src: '/assets/images/lower-floor.png',
+              src: '',
               alt: 'Lower Floor Overview',
               label: 'Lower Floor'
             }
           ];
-
           let currentIndex = 0;
-
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
-
-          // Initialize correct floor text on load
+          // Initialize
           updateFloor();
-
+          // Arrows
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
-
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
           });
+        }
+
+        // ========== 5) BLOCKOUT SLIDESHOW (3 images) ==========
+        const blockoutImage = document.getElementById('blockout-image');
+        if (blockoutImage) {
+          const blockoutImages = [
+            '',
+            '',
+            ''
+          ];
+          let idx = 0;
+          function cycleBlockout(step) {
+            idx = (idx + step + blockoutImages.length) % blockoutImages.length;
+            blockoutImage.src = blockoutImages[idx];
+          }
+          // Auto-cycle every 4 seconds
+          setInterval(() => cycleBlockout(1), 4000);
+
+          // For the left & right arrows
+          window.cycleBlockout = cycleBlockout; 
         }
       });
     </script>
 
     <!-- Additional Scripts (If Any) -->
     
-
-    <!-- Any other scripts can be added here -->
   </body>
 </html>

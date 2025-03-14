@@ -75,7 +75,7 @@
       <!-- Large Separation -->
       <div class="section-separator"></div>
 
-      <!-- Portfolio Section (fades in via Intersection Observer) -->
+      <!-- Portfolio Section (with fade-in) -->
       <section class="portfolio-piece" id="portfolio-piece">
         <h2 class="portfolio-title">Level Design Assignment</h2>
 
@@ -89,7 +89,7 @@
             class="portfolio-video"
           >
             <source src="/assets/videos/level-hero-shot.webm" type="video/webm">
-            <!-- Fallback for browsers that don't support WebM -->
+            <!-- Fallback if WebM not supported -->
             Your browser does not support the video tag.
           </video>
         </div>
@@ -100,6 +100,9 @@
             Example text: This level design assignment demonstrates the blockout to final design stages...
           </p>
         </div>
+
+        <!-- Divider between sections -->
+        <div class="section-divider"></div>
 
         <!-- 2 text boxes + screenshots (table-like layout) -->
         <div class="portfolio-lower">
@@ -128,25 +131,23 @@
           </div>
         </div>
 
-        <!-- Floor Switcher -->
+        <!-- Divider between sections -->
+        <div class="section-divider"></div>
+
+        <!-- Floor Switcher (two floors) -->
         <div class="floor-switcher" id="floor-switcher">
           <div class="floor-switcher-content">
             <!-- Left Arrow -->
             <span class="arrow arrow-left">&lt;</span>
 
-            <!-- Container for the image + overlays (title & floor indicator) -->
+            <!-- Container for image & overlays -->
             <div class="floor-image-container">
-              <!-- Overview title absolutely placed on top -->
               <h3 class="floor-switcher-title">Overview</h3>
-
-              <!-- Main Floor Image -->
               <img 
                 src="/assets/images/top-floor.png" 
                 alt="Top Floor Overview" 
                 class="floor-image"
               >
-
-              <!-- Floor indicator also on top of the image -->
               <p class="floor-indicator">Top Floor</p>
             </div>
 
@@ -154,39 +155,54 @@
             <span class="arrow arrow-right">&gt;</span>
           </div>
         </div>
-      </section>
 
-      <!-- Blockout & Reiterations Section -->
-      <section class="blockout-section">
-        <h2 class="section-title">Blockout &amp; Reiterations</h2>
+        <!-- Divider between sections -->
+        <div class="section-divider"></div>
 
-        <!-- 3 images in a row -->
-        <div class="blockout-gallery">
-          <img src="/assets/images/blockout1.png" alt="Blockout 1">
-          <img src="/assets/images/blockout2.png" alt="Blockout 2">
-          <img src="/assets/images/blockout3.png" alt="Blockout 3">
-        </div>
+        <!-- Blockout & Reiterations Section (single slideshow + text to the right) -->
+        <section class="blockout-section">
+          <h2 class="section-title">Blockout &amp; Reiterations</h2>
 
-        <!-- Large text box under them -->
-        <div class="blockout-description">
-          <p>
-            Example text describing how the blockout changed over time, iteration details, changes made after testing, etc...
-          </p>
-        </div>
+          <div class="blockout-container">
+            <!-- Single slideshow frame cycling 3 images -->
+            <div class="blockout-slider">
+              <img id="blockout-image" 
+                   src="/assets/images/blockout1.png" 
+                   alt="Blockout 1"
+                   class="blockout-image">
+              <button class="blockout-arrow left" onclick="cycleBlockout(-1)">&#10094;</button>
+              <button class="blockout-arrow right" onclick="cycleBlockout(1)">&#10095;</button>
+            </div>
 
-        <!-- Divider line -->
-        <hr class="section-divider"/>
+            <!-- Text box on the right -->
+            <div class="blockout-text">
+              <p>
+                This slideshow demonstrates how the blockout progressed over time, with major changes based on feedback.
+              </p>
+            </div>
+          </div>
 
-        <!-- Reflections text box -->
+          <!-- Large text box under slideshow -->
+          <div class="blockout-description">
+            <p>
+              Example text describing in detail how the blockout changed over multiple iterations, the reasons behind each revision, and the impact on gameplay flow.
+            </p>
+          </div>
+        </section>
+
+        <!-- Divider between sections -->
+        <div class="section-divider"></div>
+
+        <!-- Reflection Text Box (final section) -->
         <div class="reflection-textbox">
           <p>
-            Reflections: Here is where you talk about lessons learned, challenges faced, and how you'd improve the design further.
+            Reflections: Key takeaways from the iteration process. Challenges faced and how I'd approach similar tasks in the future.
           </p>
         </div>
       </section>
       
 
-      <!-- Your existing content goes here -->
+      <!-- Any other page content goes here -->
       
 
     </main>
@@ -196,36 +212,30 @@
         <a href="https://github.com/yourusername">EpicHugge</a> 
         &copy; 2025. All rights reserved.
       </span>
-      <!-- Removed GitHub Pages Credit -->
+      <!-- Possibly remove GitHub Pages credit if desired -->
     </footer>
 
-    <!-- Typing Animation and Hamburger Menu Control Script -->
+    <!-- Typing Animation, Hamburgers, Fade-In, plus new Slideshow script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Typing animation logic
+        // ========== 1) TYPING ANIMATION ==========
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
-
         if (introMain && caret) {
           const typingDuration = 3500; // 3.5 seconds
-          const blinkDuration = 5000;  // 5 seconds
-
-          // Start caret blink after typing
-          setTimeout(() => {
-            caret.classList.add('blink-caret');
-          }, typingDuration);
-
-          // Stop caret blink and hide it
+          const blinkDuration  = 5000; // 5 seconds
+          // Start blinking caret after typing finishes
+          setTimeout(() => caret.classList.add('blink-caret'), typingDuration);
+          // Stop caret blinking & hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
           }, typingDuration + blinkDuration);
         }
 
-        // Hamburger Menu Toggle
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
+        // ========== 2) HAMBURGER MENU TOGGLE ==========
+        const hamburger   = document.getElementById('hamburger');
+        const navLinks    = document.getElementById('nav-links');
         if (hamburger && navLinks) {
           hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
@@ -235,14 +245,14 @@
           });
         }
 
-        // Intersection Observer fade-in for portfolio
+        // ========== 3) FADE-IN USING INTERSECTION OBSERVER ==========
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
 
-          const observer = new IntersectionObserver((entries) => {
+          const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 portfolioSection.style.opacity = '1';
@@ -251,58 +261,71 @@
               }
             });
           }, { threshold: 0.1 });
-
           observer.observe(portfolioSection);
         }
 
-        // FLOOR SWITCHER CODE
+        // ========== 4) FLOOR SWITCHER ==========
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
-          const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+          const floorImage    = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft     = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight    = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator= floorSwitcher.querySelector('.floor-indicator');
 
           const floors = [
             {
-              src: '/assets/images/top-floor.png',
+              src: '',
               alt: 'Top Floor Overview',
               label: 'Top Floor'
             },
             {
-              src: '/assets/images/lower-floor.png',
+              src: '',
               alt: 'Lower Floor Overview',
               label: 'Lower Floor'
             }
           ];
-
           let currentIndex = 0;
-
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
-
-          // Initialize correct floor text on load
+          // Initialize
           updateFloor();
-
+          // Arrows
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
-
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
           });
+        }
+
+        // ========== 5) BLOCKOUT SLIDESHOW (3 images) ==========
+        const blockoutImage = document.getElementById('blockout-image');
+        if (blockoutImage) {
+          const blockoutImages = [
+            '',
+            '',
+            ''
+          ];
+          let idx = 0;
+          function cycleBlockout(step) {
+            idx = (idx + step + blockoutImages.length) % blockoutImages.length;
+            blockoutImage.src = blockoutImages[idx];
+          }
+          // Auto-cycle every 4 seconds
+          setInterval(() => cycleBlockout(1), 4000);
+
+          // For the left & right arrows
+          window.cycleBlockout = cycleBlockout; 
         }
       });
     </script>
 
     <!-- Additional Scripts (If Any) -->
     
-
-    <!-- Any other scripts can be added here -->
   </body>
 </html>
