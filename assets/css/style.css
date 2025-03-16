@@ -584,6 +584,14 @@ main > section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
+/* Portfolio Extra (Blockout & Reiterations and Reflections) */
+.portfolio-extra {
+  margin-top: 40px;
+}
+.portfolio-extra section {
+  margin-bottom: 40px;
+}
+
 /* Floor Switcher */
 .floor-switcher {
   max-width: 1000px;
@@ -645,7 +653,7 @@ main > section {
 /* --- Blockout & Reiterations Section --- */
 .blockout-section {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 0 auto;
   text-align: center; 
 }
 .section-title {
