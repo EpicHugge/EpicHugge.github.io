@@ -12,7 +12,7 @@ permalink: /about/
     </p>
   </div>
   <div class="about-hero-media">
-    <!-- Replace these image paths with your actual images/gifs -->
+    <!-- Replace with your actual images/gifs -->
     <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" class="about-portrait">
     <img src="{{ '/assets/images/climbing.gif' | relative_url }}" alt="Hugo Climbing" class="about-gif">
   </div>
@@ -31,9 +31,19 @@ permalink: /about/
     When I'm not designing levels, you'll find me climbing, playing with my dog, or diving into immersive RPGs and sims. These passions not only keep me active but also inspire the creativity I bring into my work.
   </p>
   <div class="about-interests-media">
-    <!-- Replace these placeholders with your own gifs/images -->
+    <!-- Replace with your own gifs/images -->
     <img src="{{ '/assets/images/dog-playing.gif' | relative_url }}" alt="Hugo Playing with Dog" class="about-dog">
     <img src="{{ '/assets/images/climbing.gif' | relative_url }}" alt="Hugo Climbing" class="about-climbing">
+  </div>
+</section>
+
+<section class="about-industry">
+  <h2>Industry Involvement</h2>
+  <div class="about-industry-content">
+    <h3>Arctic Game Dev Volunteer</h3>
+    <p>
+      As a volunteer for Arctic Game Dev, I had the opportunity to support game development initiatives, network with industry professionals, and assist in organizing game-related events. Being part of the local game dev scene has given me valuable insights into industry collaboration, event coordination, and professional networking.
+    </p>
   </div>
 </section>
 
