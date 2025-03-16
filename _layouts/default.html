@@ -142,6 +142,22 @@
           </div>
         </div>
 
+        <!-- Floor Switcher -->
+        <div class="floor-switcher" id="floor-switcher">
+          <div class="floor-switcher-content">
+            <!-- Left Arrow -->
+            <span class="arrow arrow-left">&lt;</span>
+            <!-- Floor Image Container -->
+            <div class="floor-image-container">
+              <h3 class="floor-switcher-title">Overview</h3>
+              <img src="{{ '/assets/images/top-floor.png' | relative_url }}" alt="Top Floor Overview" class="floor-image">
+              <p class="floor-indicator">Top Floor</p>
+            </div>
+            <!-- Right Arrow -->
+            <span class="arrow arrow-right">&gt;</span>
+          </div>
+        </div>
+
         <!-- Blockout & Reiterations and Reflections for First Project -->
         <div class="portfolio-extra">
           <section class="blockout-section">
@@ -333,7 +349,43 @@
           }
         });
 
-        // Blockout Carousel Code
+        // Floor Switcher Code
+        const floorSwitcher = document.getElementById('floor-switcher');
+        if (floorSwitcher) {
+          const floorImage = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+          const floors = [
+            {
+              src: '{{ "/assets/images/top-floor.png" | relative_url }}',
+              alt: 'Top Floor Overview',
+              label: 'Top Floor'
+            },
+            {
+              src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
+              alt: 'Lower Floor Overview',
+              label: 'Lower Floor'
+            }
+          ];
+          let currentIndex = 0;
+          function updateFloor() {
+            floorImage.src = floors[currentIndex].src;
+            floorImage.alt = floors[currentIndex].alt;
+            floorIndicator.textContent = floors[currentIndex].label;
+          }
+          updateFloor();
+          arrowLeft.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+            updateFloor();
+          });
+          arrowRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % floors.length;
+            updateFloor();
+          });
+        }
+
+        // Blockout Carousel Code (for both portfolio pieces)
         const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
         carouselContainers.forEach(container => {
           const images = container.querySelectorAll('.carousel-image');
