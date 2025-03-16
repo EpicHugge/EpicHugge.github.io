@@ -68,6 +68,14 @@
       </div>
       <!-- End of Introduction Section -->
 
+      <!-- Personal Quote & CTA Section -->
+      <section class="personal-quote">
+        <blockquote>
+          "Design is not just what it looks like and feels like. Design is how it works." – Steve Jobs
+        </blockquote>
+        <a href="{{ '/contact/' | relative_url }}" class="cta-button">Contact Me</a>
+      </section>
+
       <!-- Big Separator with Scroll Indicator -->
       <div class="section-separator">
         <a href="#portfolio-piece" class="scroll-indicator">
@@ -120,12 +128,14 @@
             </div>
             <div class="card-image">
               <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
+              <div class="image-overlay">Narrative</div>
             </div>
           </div>
           <!-- Guiding the Player Card: Image Left, Text Right -->
           <div class="portfolio-sidecard">
             <div class="card-image">
               <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
+              <div class="image-overlay">Guiding the Player</div>
             </div>
             <div class="card-text">
               <h2><strong>Guiding the Player</strong></h2>
@@ -142,7 +152,7 @@
           </div>
         </div>
 
-        <!-- Blockout & Reiterations Section for First Project -->
+        <!-- Blockout & Reiterations and Reflections for First Project -->
         <div class="portfolio-extra">
           <section class="blockout-section">
             <h2 class="section-title">Blockout &amp; Reiterations</h2>
@@ -182,7 +192,6 @@
             <p>
               If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to further enhance the atmosphere.
               I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion.
-              While I’m happy with this as my <strong>first proper level design work</strong>, I now realize that <strong>stealth levels require many intricate mechanics to feel engaging</strong>.
             </p>
           </section>
         </div>
@@ -217,12 +226,14 @@
             </div>
             <div class="card-image">
               <img src="{{ '/assets/images/placeholder-screenshot.png' | relative_url }}" alt="Concept &amp; Design Screenshot Placeholder">
+              <div class="image-overlay">Concept &amp; Design</div>
             </div>
           </div>
           <!-- Card 2: Development Process (Image Left, Text Right) -->
           <div class="portfolio-sidecard">
             <div class="card-image">
               <img src="{{ '/assets/images/placeholder-screenshot.png' | relative_url }}" alt="Development Process Screenshot Placeholder">
+              <div class="image-overlay">Development Process</div>
             </div>
             <div class="card-text">
               <h2><strong>Development Process</strong></h2>
@@ -233,7 +244,7 @@
           </div>
         </div>
 
-        <!-- Blockout & Reiterations Section for Second Project -->
+        <!-- Blockout & Reiterations and Reflections for Second Project -->
         <div class="portfolio-extra">
           <section class="blockout-section">
             <h2 class="section-title">Blockout &amp; Reiterations</h2>
@@ -308,7 +319,7 @@
           });
         }
 
-        // Intersection Observer fade-in for portfolio
+        // Intersection Observer fade-in for portfolio (for first portfolio piece)
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -325,6 +336,16 @@
           }, { threshold: 0.1 });
           observer.observe(portfolioSection);
         }
+
+        // Header Shrink on Scroll
+        window.addEventListener('scroll', function() {
+          const header = document.querySelector('.fixed-header');
+          if (window.scrollY > 50) {
+            header.classList.add('shrink');
+          } else {
+            header.classList.remove('shrink');
+          }
+        });
 
         // FLOOR SWITCHER CODE
         const floorSwitcher = document.getElementById('floor-switcher');
@@ -363,10 +384,10 @@
           });
         }
 
-        // Blockout Carousel Code
-        const carouselContainer = document.querySelector('.blockout-carousel .carousel-container');
-        if (carouselContainer) {
-          const images = carouselContainer.querySelectorAll('.carousel-image');
+        // Blockout Carousel Code (for both portfolio pieces)
+        const carouselContainer = document.querySelectorAll('.blockout-carousel .carousel-container');
+        carouselContainer.forEach(container => {
+          const images = container.querySelectorAll('.carousel-image');
           let currentCarouselIndex = 0;
           const showImage = (index) => {
             images.forEach((img, i) => {
@@ -379,9 +400,10 @@
           };
           // Initial display
           showImage(currentCarouselIndex);
-          // Button event listeners
-          const prevButton = document.querySelector('.blockout-carousel .carousel-prev');
-          const nextButton = document.querySelector('.blockout-carousel .carousel-next');
+          // Button event listeners (use parent container)
+          const parent = container.parentElement;
+          const prevButton = parent.querySelector('.carousel-prev');
+          const nextButton = parent.querySelector('.carousel-next');
           prevButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex === 0) ? images.length - 1 : currentCarouselIndex - 1;
             showImage(currentCarouselIndex);
@@ -395,7 +417,7 @@
             currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
             showImage(currentCarouselIndex);
           }, 5000);
-        }
+        });
       });
     </script>
 
