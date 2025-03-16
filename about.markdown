@@ -13,13 +13,13 @@ permalink: /about/
     </p>
   </div>
   <div class="about-hero-media">
-    <!-- Collage of Profile & Full-Body Images -->
+    <!-- Collage of Profile & Full-Body Images (they will now fit better) -->
     <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" class="about-portrait">
     <img src="{{ '/assets/images/hugo-fullbody.jpg' | relative_url }}" alt="Hugo Full Body" class="about-fullbody">
   </div>
 </section>
 
-<!-- MY JOURNEY: Background & Skills (with a background image and overlay) -->
+<!-- MY JOURNEY: Background & Skills with Parallax Effect -->
 <section class="about-journey">
   <div class="journey-overlay">
     <h2>My Journey</h2>
@@ -29,15 +29,21 @@ permalink: /about/
   </div>
 </section>
 
-<!-- PERSONAL INTERESTS: Show Your Personality -->
+<!-- PERSONAL INTERESTS: Show Your Personality with WebM Animations -->
 <section class="about-interests">
   <h2>Beyond Game Design</h2>
   <p>
-    When I'm not designing game levels, you'll find me out climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired every day.
+    When I'm not designing levels, you'll find me climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired every day.
   </p>
   <div class="about-interests-media">
-    <img src="{{ '/assets/images/dog-playing.webm' | relative_url }}" alt="Playing with My Dog" class="about-dog">
-    <img src="{{ '/assets/images/climbing.webm' | relative_url }}" alt="Climbing" class="about-climbing">
+    <video autoplay loop muted playsinline class="about-dog">
+      <source src="{{ '/assets/images/dog-playing.webm' | relative_url }}" type="video/webm">
+      Your browser does not support the video.
+    </video>
+    <video autoplay loop muted playsinline class="about-climbing">
+      <source src="{{ '/assets/images/climbing.webm' | relative_url }}" type="video/webm">
+      Your browser does not support the video.
+    </video>
   </div>
 </section>
 
@@ -57,6 +63,6 @@ permalink: /about/
 <section class="about-contact">
   <h2>Let's Connect</h2>
   <p>
-    Feel free to explore my work and drop me a line at <a href="mailto:hugo@example.com">hugo@example.com</a>—I’d love to chat!
+    Feel free to explore my work and drop me a line at <a href="mailto:hugo@example.com">hugo@example.com</a>—I'd love to chat!
   </p>
 </section>
