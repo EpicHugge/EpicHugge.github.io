@@ -6,13 +6,11 @@ permalink: /about/
 
 <!-- HERO SECTION: Quick Introduction with Hockey Background -->
 <section class="about-hero">
-  <div class="hero-overlay">
-    <div class="about-hero-text">
-      <h1>Hey, I'm Hugo!</h1>
-      <p>
-        I'm a Game Design student specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
-      </p>
-    </div>
+  <div class="about-hero-text">
+    <h1>Hey, I'm Hugo!</h1>
+    <p>
+      I'm a Game Design student specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+    </p>
   </div>
 </section>
 
