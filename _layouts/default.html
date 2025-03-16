@@ -68,14 +68,14 @@
       </div>
       <!-- End of Introduction Section -->
 
-      <!-- Separator with Animated Scroll Indicator -->
+      <!-- Big Separator with Scroll Indicator -->
       <div class="section-separator">
         <a href="#portfolio-piece" class="scroll-indicator">
           <span class="scroll-arrow">&#8595;</span>
         </a>
       </div>
 
-      <!-- First Portfolio Piece (Level Design Assignment) -->
+      <!-- First Portfolio Piece: Level Design Assignment -->
       <section class="portfolio-piece" id="portfolio-piece">
         <h2 class="portfolio-title">Level Design Assignment</h2>
 
@@ -87,23 +87,23 @@
           </video>
         </div>
 
-        <!-- Level Summary (Full-Width Introduction) -->
+        <!-- Level Summary -->
         <div class="portfolio-description">
           <h2><strong>Level Summary</strong></h2>
           <p>
-            Set in <strong>feudal Japan</strong>, this level takes place in a <strong>tense, heavily guarded gatehouse</strong>—the village’s main <strong>checkpoint and defense post</strong>. 
+            Set in <strong>feudal Japan</strong>, this level takes place in a <strong>tense, heavily guarded gatehouse</strong>—the village’s main <strong>checkpoint and defense post</strong>.
             The player must <strong>sneak through the multi-level structure</strong>, avoiding patrols while searching for a way to <strong>unlock the main gate and escape</strong>.
           </p>
           <p>
-            Designed with <strong>verticality and multiple paths</strong>, the gatehouse offers both <strong>stealth and combat opportunities</strong>, depending on the player’s choices. 
-            Environmental storytelling is woven throughout, revealing glimpses of <strong>confiscated goods, a holding cell, and a smuggler’s fate</strong>. 
+            Designed with <strong>verticality and multiple paths</strong>, the gatehouse offers both <strong>stealth and combat opportunities</strong> depending on the player's choices.
+            Environmental storytelling is woven throughout, revealing glimpses of <strong>confiscated goods, a holding cell, and a smuggler’s fate</strong>.
             Every detail is placed with intent, creating a <strong>tight, immersive space that rewards exploration and strategic movement</strong>.
           </p>
         </div>
 
         <!-- Side-by-Side Cards for Narrative & Guiding the Player -->
         <div class="portfolio-sidecards">
-          <!-- Narrative Card: Text on Left, Image on Right -->
+          <!-- Narrative Card: Text Left, Image Right -->
           <div class="portfolio-sidecard">
             <div class="card-text">
               <h2><strong>Narrative</strong></h2>
@@ -111,7 +111,8 @@
                 Framed for his captain’s murder, <strong>Date Nasanube (or Senji Tome)</strong> must escape the village and turn the people against <strong>General Oda Nobunaga</strong> by burning the grain storage.
               </p>
               <p>
-                The environment tells its own story—a prisoner, <strong>Ushi Maki Ramen</strong>, has been caught smuggling goods and offers a secret escape in exchange for help. Meanwhile, guards misuse confiscated wares, exposing the corruption within.
+                The environment tells its own story—a prisoner, <strong>Ushi Maki Ramen</strong>, has been caught smuggling goods and offers a secret escape in exchange for help.
+                Meanwhile, guards misuse confiscated wares, exposing the corruption within.
               </p>
               <p>
                 Players can choose their approach: sneak through hidden paths or fight their way to freedom.
@@ -121,7 +122,7 @@
               <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
             </div>
           </div>
-          <!-- Guiding the Player Card: Image on Left, Text on Right -->
+          <!-- Guiding the Player Card: Image Left, Text Right -->
           <div class="portfolio-sidecard">
             <div class="card-image">
               <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
@@ -141,27 +142,58 @@
           </div>
         </div>
 
-        <!-- Floor Switcher -->
-        <div class="floor-switcher" id="floor-switcher">
-          <div class="floor-switcher-content">
-            <span class="arrow arrow-left">&lt;</span>
-            <div class="floor-image-container">
-              <h3 class="floor-switcher-title">Overview</h3>
-              <img src="{{ '/assets/images/top-floor.png' | relative_url }}" alt="Top Floor Overview" class="floor-image">
-              <p class="floor-indicator">Top Floor</p>
+        <!-- Blockout & Reiterations Section for First Project -->
+        <div class="portfolio-extra">
+          <section class="blockout-section">
+            <h2 class="section-title">Blockout &amp; Reiterations</h2>
+            <div class="blockout-carousel">
+              <div class="carousel-container">
+                <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1" class="carousel-image active">
+                <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2" class="carousel-image">
+                <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3" class="carousel-image">
+              </div>
+              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-next" aria-label="Next">&#8250;</button>
             </div>
-            <span class="arrow arrow-right">&gt;</span>
-          </div>
+            <div class="blockout-description">
+              <p>
+                The level started as a <strong>hand-drawn layout</strong> followed by <strong>inspiration research</strong> for both the exterior and interior of the gatehouse.
+                Using <strong>ProBuilder in Unity</strong>, I built the initial blockout and tested it with <strong>mentors and peers</strong>.
+              </p>
+              <p>
+                The biggest issue was <strong>excessive symmetry</strong>, which made movement predictable. To fix this, I added structural support beams on the lower floor and a new commander’s study on the upper floor,
+                breaking up the uniformity. I also refined lighting and environmental cues to better guide the player.
+              </p>
+              <p>
+                These changes made the level <strong>more engaging and challenging</strong>, maintaining the advantage of high ground while ensuring movement felt <strong>dynamic and varied</strong>.
+              </p>
+            </div>
+          </section>
+          <section class="reflection-textbox">
+            <h2><strong>Reflections</strong></h2>
+            <p>
+              This project taught me <strong>how to use ProBuilder and similar tools</strong> as well as <strong>lighting techniques and player guidance</strong> in stealth-based level design.
+              I learned the <strong>importance of giving players a vantage point early on</strong>, allowing them to plan their route strategically.
+            </p>
+            <p>
+              The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning the layout to using new tools like ProBuilder.
+              At first, it was frustrating, but overcoming those struggles helped me <strong>understand how to approach the early phases of level creation more effectively</strong>.
+            </p>
+            <p>
+              If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to further enhance the atmosphere.
+              I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion.
+              While I’m happy with this as my <strong>first proper level design work</strong>, I now realize that <strong>stealth levels require many intricate mechanics to feel engaging</strong>.
+            </p>
+          </section>
         </div>
       </section>
 
-      <!-- Second Portfolio Piece Template (Game Project 2) -->
+      <!-- Second Portfolio Piece: Game Project 2 -->
       <section class="portfolio-piece" id="portfolio-piece-2">
         <h2 class="portfolio-title">Game Project 2</h2>
 
         <!-- Hero (Image Placeholder) -->
         <div class="portfolio-hero">
-          <!-- Replace with video if needed -->
           <img src="{{ '/assets/images/placeholder-hero.png' | relative_url }}" alt="Project 2 Hero Placeholder" class="portfolio-video">
         </div>
 
@@ -169,7 +201,7 @@
         <div class="portfolio-description">
           <h2><strong>Project Overview</strong></h2>
           <p>
-            Brief overview of Game Project 2 goes here. Describe the concept, key objectives, and the overall design direction.
+            Brief overview of Game Project 2 goes here. Describe the concept, key objectives, and overall design direction.
           </p>
         </div>
 
@@ -200,51 +232,34 @@
             </div>
           </div>
         </div>
-      </section>
 
-      <!-- Blockout & Reiterations Section -->
-      <section class="blockout-section">
-        <h2 class="section-title">Blockout &amp; Reiterations</h2>
-
-        <!-- Carousel for Blockout Images -->
-        <div class="blockout-carousel">
-          <div class="carousel-container">
-            <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1" class="carousel-image active">
-            <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2" class="carousel-image">
-            <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3" class="carousel-image">
-          </div>
-          <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-          <button class="carousel-next" aria-label="Next">&#8250;</button>
-        </div>
-
-        <!-- Large text box under carousel -->
-        <div class="blockout-description">
-          <p>
-            The level started as a <strong>hand-drawn layout</strong>, followed by <strong>inspiration research</strong> for both the exterior and interior of the gatehouse. Using <strong>ProBuilder in Unity</strong>, I built the initial blockout and tested it with <strong>mentors and peers</strong>.
-          </p>
-          <p>
-            The biggest issue was <strong>excessive symmetry</strong>, which made movement predictable. To fix this, I added structural support beams on the lower floor and a new commander’s study on the upper floor, breaking up the uniformity. I also refined lighting and environmental cues to better guide the player without disrupting the stealth mechanics.
-          </p>
-          <p>
-            These changes made the level <strong>more engaging and challenging</strong>, maintaining the advantage of high ground while ensuring movement felt <strong>dynamic and varied</strong>.
-          </p>
-        </div>
-
-        <!-- Divider line -->
-        <hr class="section-divider"/>
-
-        <!-- Reflections Section -->
-        <div class="reflection-textbox">
-          <h2><strong>Reflections</strong></h2>
-          <p>
-            This project taught me <strong>how to use ProBuilder and similar tools</strong>, as well as <strong>lighting techniques and player guidance</strong> in stealth-based level design. I learned the <strong>importance of giving players a vantage point early on</strong>, allowing them to plan their route strategically.
-          </p>
-          <p>
-            The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning the layout to using new tools like ProBuilder. At first, it was frustrating, but overcoming those struggles helped me <strong>understand how to approach the early phases of level creation more effectively</strong>.
-          </p>
-          <p>
-            If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to enhance the atmosphere further. I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion. While I’m happy with this as my <strong>first proper level design work</strong>, I now realize that <strong>stealth levels require many intricate mechanics to feel engaging</strong>. It was a tough but valuable learning experience that will shape how I approach future projects.
-          </p>
+        <!-- Blockout & Reiterations Section for Second Project -->
+        <div class="portfolio-extra">
+          <section class="blockout-section">
+            <h2 class="section-title">Blockout &amp; Reiterations</h2>
+            <div class="blockout-carousel">
+              <div class="carousel-container">
+                <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1" class="carousel-image active">
+                <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2" class="carousel-image">
+                <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3" class="carousel-image">
+              </div>
+              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+              <button class="carousel-next" aria-label="Next">&#8250;</button>
+            </div>
+            <div class="blockout-description">
+              <p>
+                Describe the initial layout and blockout process for Game Project 2.
+                Explain how early sketches and prototypes evolved into the final design.
+              </p>
+            </div>
+          </section>
+          <section class="reflection-textbox">
+            <h2><strong>Reflections</strong></h2>
+            <p>
+              Share your insights on the creative and technical challenges encountered during Game Project 2.
+              Discuss what you learned and how it will influence your future projects.
+            </p>
+          </section>
         </div>
       </section>
       {% endif %}
