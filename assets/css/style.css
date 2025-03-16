@@ -591,7 +591,6 @@ main > section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-/* (Hover overlay rule removed) */
 
 /* Portfolio Extra (Blockout & Reiterations and Reflections) */
 .portfolio-extra {
@@ -740,4 +739,26 @@ main > section {
 }
 .carousel-next {
   right: 10px;
+}
+
+/* NEW: Under Construction Styles for Projects Tab */
+.under-construction {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+.under-construction h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.under-construction p {
+  font-size: 1.2rem;
+  color: var(--text-color);
 }
