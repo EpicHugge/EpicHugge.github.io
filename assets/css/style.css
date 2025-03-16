@@ -308,7 +308,7 @@ a:hover {
   }
 }
 
-/* 14. Fade-In Animation (Used by .introduction) */
+/* 14. Fade-In Animation (Used by .fade-in class) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -318,6 +318,9 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
 }
 
 /* 15. Typing Animation (Used by .intro-main) */
@@ -373,7 +376,7 @@ a:hover {
 }
 
 /* 18. About Page Styles (Desktop) */
-/* HERO SECTION: Two-Column Layout with Hockey Image as Standard Image */
+/* HERO SECTION: Two-Column Layout with Portrait Image */
 .about-hero {
   display: flex;
   align-items: center;
@@ -403,15 +406,19 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.about-hero-media img.about-hockey {
+.about-hero-media img.about-portrait {
   max-width: 90%;
   max-height: 400px;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.about-hero-media img.about-portrait:hover {
+  transform: scale(1.05);
 }
 
-/* MY JOURNEY: Normal background (removed special background effects) */
+/* MY JOURNEY: Normal Background */
 .about-journey {
   padding: 60px 20px;
   margin-bottom: 60px;
@@ -456,6 +463,10 @@ a:hover {
   max-width: 45%;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.about-interests-media video:hover {
+  transform: scale(1.03);
 }
 
 /* INDUSTRY INVOLVEMENT */
