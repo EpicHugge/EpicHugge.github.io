@@ -376,46 +376,57 @@ a:hover {
 }
 
 /* 18. About Page Styles (Desktop) */
-/* HERO SECTION: Two-Column Layout with Portrait Image */
-.about-hero {
+/* HERO CARD: Introduction Card with Portrait & Text */
+.about-hero-card {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
   padding: 40px 20px;
   margin-bottom: 60px;
-  gap: 20px;
-  border-bottom: 1px solid #444;
 }
-.about-hero-text {
+.about-hero-card .card {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .about-hero-card .card {
+    flex-direction: row;
+  }
+}
+.about-hero-card .card-media {
   flex: 1;
-  text-align: left;
+  overflow: hidden;
 }
-.about-hero-text h1 {
-  font-size: 3.5rem;
+.about-hero-card .card-media img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.about-hero-card .card-media img:hover {
+  transform: scale(1.03);
+}
+.about-hero-card .card-content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+.about-hero-card .card-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
   color: var(--text-color);
 }
-.about-hero-text p {
-  font-size: 1.5rem;
-  line-height: 1.4;
+.about-hero-card .card-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
   color: var(--secondary-color);
-}
-.about-hero-media {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-hero-media img.about-portrait {
-  max-width: 90%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
-}
-.about-hero-media img.about-portrait:hover {
-  transform: scale(1.05);
 }
 
 /* MY JOURNEY: Normal Background */
