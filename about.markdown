@@ -4,8 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-<!-- HERO SECTION: Quick Introduction & Hockey Image -->
-<section class="about-hero">
+<!-- HERO SECTION: Quick Introduction & Portrait Image -->
+<section class="about-hero fade-in">
   <div class="about-hero-text">
     <h1>Yo!, I'm Hugo!</h1>
     <p>
@@ -13,12 +13,12 @@ permalink: /about/
     </p>
   </div>
   <div class="about-hero-media">
-    <img src="{{ '/assets/images/hugo-hockey.jpg' | relative_url }}" alt="Hugo Playing Hockey" class="about-hockey">
+    <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" class="about-portrait">
   </div>
 </section>
 
 <!-- MY JOURNEY: Background & Skills -->
-<section class="about-journey">
+<section class="about-journey fade-in">
   <h2>My Journey</h2>
   <p>
     I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films.
@@ -26,7 +26,7 @@ permalink: /about/
 </section>
 
 <!-- PERSONAL INTERESTS: Show Your Personality with WebM Animations -->
-<section class="about-interests">
+<section class="about-interests fade-in">
   <h2>Beyond Game Design</h2>
   <p>
     When I'm not designing levels or Quests, you'll find me climbing, playing with my familys dog, or immersing myself in RPGs or Movies. These passions fuel my creativity and keep me inspired.
@@ -44,7 +44,7 @@ permalink: /about/
 </section>
 
 <!-- INDUSTRY INVOLVEMENT: Arctic Game Dev Volunteering -->
-<section class="about-industry">
+<section class="about-industry fade-in">
   <div class="about-industry-content">
     <h2>Industry Involvement</h2>
     <h3>Arctic Game Dev Volunteer</h3>
@@ -56,7 +56,7 @@ permalink: /about/
 </section>
 
 <!-- CONTACT & CALL TO ACTION -->
-<section class="about-contact">
+<section class="about-contact fade-in">
   <h2>Contact Me!</h2>
   <p>
     Feel free to explore my work and <a href="{{ '/contact/' | relative_url }}">get in touch</a>—I'd love to chat!
