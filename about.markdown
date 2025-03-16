@@ -59,6 +59,6 @@ permalink: /about/
 <section class="about-contact">
   <h2>Contact Me!</h2>
   <p>
-    Feel free to explore my work and drop me a line at <a href="mailto:hugo@example.com">hugo@example.com</a>—I'd love to chat!
+    Feel free to explore my work and <a href="{{ '/contact/' | relative_url }}">get in touch</a>—I'd love to chat!
   </p>
 </section>
