@@ -75,19 +75,13 @@
         </a>
       </div>
 
-      <!-- Portfolio Section -->
+      <!-- First Portfolio Piece (Level Design Assignment) -->
       <section class="portfolio-piece" id="portfolio-piece">
         <h2 class="portfolio-title">Level Design Assignment</h2>
 
         <!-- Hero (Video) -->
         <div class="portfolio-hero">
-          <video 
-            autoplay 
-            loop 
-            muted 
-            playsinline 
-            class="portfolio-video"
-          >
+          <video autoplay loop muted playsinline class="portfolio-video">
             <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
             Your browser does not support the video tag.
           </video>
@@ -153,14 +147,57 @@
             <span class="arrow arrow-left">&lt;</span>
             <div class="floor-image-container">
               <h3 class="floor-switcher-title">Overview</h3>
-              <img 
-                src="{{ '/assets/images/top-floor.png' | relative_url }}" 
-                alt="Top Floor Overview" 
-                class="floor-image"
-              >
+              <img src="{{ '/assets/images/top-floor.png' | relative_url }}" alt="Top Floor Overview" class="floor-image">
               <p class="floor-indicator">Top Floor</p>
             </div>
             <span class="arrow arrow-right">&gt;</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Second Portfolio Piece Template (Game Project 2) -->
+      <section class="portfolio-piece" id="portfolio-piece-2">
+        <h2 class="portfolio-title">Game Project 2</h2>
+
+        <!-- Hero (Image Placeholder) -->
+        <div class="portfolio-hero">
+          <!-- Replace with video if needed -->
+          <img src="{{ '/assets/images/placeholder-hero.png' | relative_url }}" alt="Project 2 Hero Placeholder" class="portfolio-video">
+        </div>
+
+        <!-- Project Overview -->
+        <div class="portfolio-description">
+          <h2><strong>Project Overview</strong></h2>
+          <p>
+            Brief overview of Game Project 2 goes here. Describe the concept, key objectives, and the overall design direction.
+          </p>
+        </div>
+
+        <!-- Side-by-Side Cards for Additional Details -->
+        <div class="portfolio-sidecards">
+          <!-- Card 1: Concept & Design (Text Left, Image Right) -->
+          <div class="portfolio-sidecard">
+            <div class="card-text">
+              <h2><strong>Concept &amp; Design</strong></h2>
+              <p>
+                Explain the design inspirations, themes, and creative concept behind Game Project 2.
+              </p>
+            </div>
+            <div class="card-image">
+              <img src="{{ '/assets/images/placeholder-screenshot.png' | relative_url }}" alt="Concept &amp; Design Screenshot Placeholder">
+            </div>
+          </div>
+          <!-- Card 2: Development Process (Image Left, Text Right) -->
+          <div class="portfolio-sidecard">
+            <div class="card-image">
+              <img src="{{ '/assets/images/placeholder-screenshot.png' | relative_url }}" alt="Development Process Screenshot Placeholder">
+            </div>
+            <div class="card-text">
+              <h2><strong>Development Process</strong></h2>
+              <p>
+                Outline the development process, technical challenges, and solutions employed during Game Project 2.
+              </p>
+            </div>
           </div>
         </div>
       </section>
