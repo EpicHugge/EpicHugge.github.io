@@ -58,48 +58,54 @@
       
 
       <!-- Your existing content goes here -->
-      <!-- HERO SECTION: Quick Introduction & Hockey Image -->
-<section class="about-hero">
-  <div class="about-hero-text">
-    <h1>Hey, I'm Hugo!</h1>
+      <!-- HERO CARD: Introduction -->
+<section class="about-hero-card fade-in">
+  <div class="card">
+    <div class="card-media">
+      <img src="/assets/images/hugo-portrait.jpg" alt="Hugo Portrait" />
+    </div>
+    <div class="card-content">
+      <h1>Yo!, I'm Hugo!</h1>
+      <p>
+        I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- MY JOURNEY CARD -->
+<section class="about-journey-card fade-in">
+  <div class="card">
+    <h2>My Journey</h2>
     <p>
-      I'm a Game Design student specializing in Level &amp; Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+      I've always been fascinated by storytelling and interactive worlds—whether through video games, D&amp;D campaigns, or films.
     </p>
   </div>
-  <div class="about-hero-media">
-    <img src="/assets/images/hugo-hockey.jpg" alt="Hugo Playing Hockey" class="about-hockey" />
+</section>
+
+<!-- PERSONAL INTERESTS CARD -->
+<section class="about-interests-card fade-in">
+  <div class="card">
+    <h2>Beyond Game Design</h2>
+    <p>
+      When I'm not designing levels or quests, you'll find me climbing, playing with my family's dog, or immersing myself in RPGs or movies. These passions fuel my creativity and keep me inspired.
+    </p>
+    <div class="about-interests-media">
+      <video autoplay="" loop="" muted="" playsinline="" class="about-dog">
+        <source src="/assets/images/dog-playing.webm" type="video/webm" />
+        Your browser does not support the video.
+      </video>
+      <video autoplay="" loop="" muted="" playsinline="" class="about-climbing">
+        <source src="/assets/images/climbing.webm" type="video/webm" />
+        Your browser does not support the video.
+      </video>
+    </div>
   </div>
 </section>
 
-<!-- MY JOURNEY: Background & Skills -->
-<section class="about-journey">
-  <h2>My Journey</h2>
-  <p>
-    I've always been fascinated by storytelling and interactive worlds—whether through video games, D&amp;D campaigns, or films. Studying at Futuregames, I've focused on Level &amp; Quest Design, honing my skills in ProBuilder, Unreal Engine, player guidance, and lighting for gameplay readability.
-  </p>
-</section>
-
-<!-- PERSONAL INTERESTS: Show Your Personality with WebM Animations -->
-<section class="about-interests">
-  <h2>Beyond Game Design</h2>
-  <p>
-    When I'm not designing game levels, you'll find me climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired.
-  </p>
-  <div class="about-interests-media">
-    <video autoplay="" loop="" muted="" playsinline="" class="about-dog">
-      <source src="/assets/images/dog-playing.webm" type="video/webm" />
-      Your browser does not support the video.
-    </video>
-    <video autoplay="" loop="" muted="" playsinline="" class="about-climbing">
-      <source src="/assets/images/climbing.webm" type="video/webm" />
-      Your browser does not support the video.
-    </video>
-  </div>
-</section>
-
-<!-- INDUSTRY INVOLVEMENT: Arctic Game Dev Volunteering -->
-<section class="about-industry">
-  <div class="about-industry-content">
+<!-- INDUSTRY INVOLVEMENT CARD -->
+<section class="about-industry-card fade-in">
+  <div class="card">
     <h2>Industry Involvement</h2>
     <h3>Arctic Game Dev Volunteer</h3>
     <p>
@@ -109,12 +115,14 @@
   </div>
 </section>
 
-<!-- CONTACT & CALL TO ACTION -->
-<section class="about-contact">
-  <h2>Let's Connect</h2>
-  <p>
-    Feel free to explore my work and drop me a line at <a href="mailto:hugo@example.com">hugo@example.com</a>—I'd love to chat!
-  </p>
+<!-- CONTACT CARD -->
+<section class="about-contact-card fade-in">
+  <div class="card">
+    <h2>Contact Me!</h2>
+    <p>
+      Feel free to explore my work and <a href="/contact/">get in touch</a>—I'd love to chat!
+    </p>
+  </div>
 </section>
 
     </main>
@@ -185,54 +193,14 @@
           }
         });
 
-        // FLOOR SWITCHER CODE
-        const floorSwitcher = document.getElementById('floor-switcher');
-        if (floorSwitcher) {
-          const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-          const floors = [
-            {
-              src: '/assets/images/top-floor.png',
-              alt: 'Top Floor Overview',
-              label: 'Top Floor'
-            },
-            {
-              src: '/assets/images/lower-floor.png',
-              alt: 'Lower Floor Overview',
-              label: 'Lower Floor'
-            }
-          ];
-          let currentIndex = 0;
-          function updateFloor() {
-            floorImage.src = floors[currentIndex].src;
-            floorImage.alt = floors[currentIndex].alt;
-            floorIndicator.textContent = floors[currentIndex].label;
-          }
-          updateFloor();
-          arrowLeft.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-            updateFloor();
-          });
-          arrowRight.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % floors.length;
-            updateFloor();
-          });
-        }
-
-        // Blockout Carousel Code (for both portfolio pieces)
+        // Blockout Carousel Code
         const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
         carouselContainers.forEach(container => {
           const images = container.querySelectorAll('.carousel-image');
           let currentCarouselIndex = 0;
           const showImage = (index) => {
             images.forEach((img, i) => {
-              if (i === index) {
-                img.classList.add('active');
-              } else {
-                img.classList.remove('active');
-              }
+              img.classList.toggle('active', i === index);
             });
           };
           showImage(currentCarouselIndex);

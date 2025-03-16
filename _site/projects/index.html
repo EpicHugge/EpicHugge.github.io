@@ -134,54 +134,14 @@
           }
         });
 
-        // FLOOR SWITCHER CODE
-        const floorSwitcher = document.getElementById('floor-switcher');
-        if (floorSwitcher) {
-          const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-          const floors = [
-            {
-              src: '/assets/images/top-floor.png',
-              alt: 'Top Floor Overview',
-              label: 'Top Floor'
-            },
-            {
-              src: '/assets/images/lower-floor.png',
-              alt: 'Lower Floor Overview',
-              label: 'Lower Floor'
-            }
-          ];
-          let currentIndex = 0;
-          function updateFloor() {
-            floorImage.src = floors[currentIndex].src;
-            floorImage.alt = floors[currentIndex].alt;
-            floorIndicator.textContent = floors[currentIndex].label;
-          }
-          updateFloor();
-          arrowLeft.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-            updateFloor();
-          });
-          arrowRight.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % floors.length;
-            updateFloor();
-          });
-        }
-
-        // Blockout Carousel Code (for both portfolio pieces)
+        // Blockout Carousel Code
         const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
         carouselContainers.forEach(container => {
           const images = container.querySelectorAll('.carousel-image');
           let currentCarouselIndex = 0;
           const showImage = (index) => {
             images.forEach((img, i) => {
-              if (i === index) {
-                img.classList.add('active');
-              } else {
-                img.classList.remove('active');
-              }
+              img.classList.toggle('active', i === index);
             });
           };
           showImage(currentCarouselIndex);
