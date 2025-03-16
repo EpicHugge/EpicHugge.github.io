@@ -797,44 +797,49 @@ main > section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-.about-journey,
-.about-interests,
-.about-industry,
-.about-contact {
-  max-width: 800px;
-  margin: 0 auto 60px;
+
+/* MY JOURNEY with Background (using hockey image as example) */
+.about-journey {
+  position: relative;
+  padding: 60px 20px;
+  margin-bottom: 60px;
+  color: var(--text-color);
   text-align: center;
+  background: url('{{ "/assets/images/hugo-hockey.jpg" | relative_url }}') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-.about-journey h2,
-.about-interests h2,
-.about-industry h2,
-.about-contact h2 {
+.about-journey .journey-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+}
+.about-journey h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: var(--primary-color);
 }
-.about-journey p,
-.about-interests p,
-.about-industry p,
-.about-contact p {
+.about-journey p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--secondary-color);
 }
 
-/* New Industry Involvement Section */
-.about-industry-content h3 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+/* PERSONAL INTERESTS */
+.about-interests {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about-interests h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
   color: var(--primary-color);
 }
-.about-industry-content p {
+.about-interests p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--secondary-color);
 }
-
-/* Personal Interests Media */
 .about-interests-media {
   display: flex;
   justify-content: center;
@@ -846,5 +851,49 @@ main > section {
   border-radius: 8px;
 }
 
-/* NEW: End of About Page Sections (Contact) */
-/* (Keep existing about-contact styles as defined above) */
+/* INDUSTRY INVOLVEMENT */
+.about-industry {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about-industry h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.about-industry-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.about-industry-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+.about-industry-content img.about-volunteers {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+/* CONTACT & CALL TO ACTION */
+.about-contact {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about-contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.about-contact p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+/* --- End of About Page Styles --- */
