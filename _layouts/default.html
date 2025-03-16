@@ -68,14 +68,6 @@
       </div>
       <!-- End of Introduction Section -->
 
-      <!-- Personal Quote & CTA Section -->
-      <section class="personal-quote">
-        <blockquote>
-          "Design is not just what it looks like and feels like. Design is how it works." – Steve Jobs
-        </blockquote>
-        <a href="{{ '/contact/' | relative_url }}" class="cta-button">Contact Me</a>
-      </section>
-
       <!-- Big Separator with Scroll Indicator -->
       <div class="section-separator">
         <a href="#portfolio-piece" class="scroll-indicator">
@@ -128,14 +120,12 @@
             </div>
             <div class="card-image">
               <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
-              <div class="image-overlay">Narrative</div>
             </div>
           </div>
           <!-- Guiding the Player Card: Image Left, Text Right -->
           <div class="portfolio-sidecard">
             <div class="card-image">
               <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
-              <div class="image-overlay">Guiding the Player</div>
             </div>
             <div class="card-text">
               <h2><strong>Guiding the Player</strong></h2>
@@ -226,14 +216,12 @@
             </div>
             <div class="card-image">
               <img src="{{ '/assets/images/placeholder-screenshot.png' | relative_url }}" alt="Concept &amp; Design Screenshot Placeholder">
-              <div class="image-overlay">Concept &amp; Design</div>
             </div>
           </div>
           <!-- Card 2: Development Process (Image Left, Text Right) -->
           <div class="portfolio-sidecard">
             <div class="card-image">
               <img src="{{ '/assets/images/placeholder-screenshot.png' | relative_url }}" alt="Development Process Screenshot Placeholder">
-              <div class="image-overlay">Development Process</div>
             </div>
             <div class="card-text">
               <h2><strong>Development Process</strong></h2>
@@ -281,7 +269,7 @@
 
     <footer class="site-footer">
       <span class="site-footer-owner">
-        <a href="https://github.com/yourusername">EpicHugge</a> 
+        <a href="https://github.com/yourusername">EpicHugge</a>
         &copy; {{ site.time | date: "%Y" }}. All rights reserved.
       </span>
       <!-- Removed GitHub Pages Credit -->
@@ -296,11 +284,9 @@
         if (introMain && caret) {
           const typingDuration = 3500; // 3.5 seconds
           const blinkDuration = 5000;  // 5 seconds
-          // Start caret blink after typing
           setTimeout(() => {
             caret.classList.add('blink-caret');
           }, typingDuration);
-          // Stop caret blink and hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
@@ -319,7 +305,7 @@
           });
         }
 
-        // Intersection Observer fade-in for portfolio (for first portfolio piece)
+        // Intersection Observer fade-in for portfolio (first portfolio piece)
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -372,7 +358,6 @@
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
-          // Initialize correct floor text on load
           updateFloor();
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
@@ -385,8 +370,8 @@
         }
 
         // Blockout Carousel Code (for both portfolio pieces)
-        const carouselContainer = document.querySelectorAll('.blockout-carousel .carousel-container');
-        carouselContainer.forEach(container => {
+        const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+        carouselContainers.forEach(container => {
           const images = container.querySelectorAll('.carousel-image');
           let currentCarouselIndex = 0;
           const showImage = (index) => {
@@ -398,9 +383,7 @@
               }
             });
           };
-          // Initial display
           showImage(currentCarouselIndex);
-          // Button event listeners (use parent container)
           const parent = container.parentElement;
           const prevButton = parent.querySelector('.carousel-prev');
           const nextButton = parent.querySelector('.carousel-next');
@@ -412,7 +395,6 @@
             currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
             showImage(currentCarouselIndex);
           });
-          // Auto-rotate every 5 seconds
           setInterval(() => {
             currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
             showImage(currentCarouselIndex);
@@ -426,8 +408,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       AOS.init({
-        duration: 1000, 
-        once: true,     
+        duration: 1000,
+        once: true,
       });
     </script>
     {% endif %}
