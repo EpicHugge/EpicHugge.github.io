@@ -449,7 +449,7 @@ a:hover {
   }
 }
 
-/* 20. Fade-In Utility Class */
+/* NEW: Fade-In Utility Class */
 .fade-in {
   animation: fadeIn 1s ease-out forwards;
 }
@@ -799,6 +799,7 @@ main > section {
 }
 .about-journey,
 .about-interests,
+.about-industry,
 .about-contact {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -806,6 +807,7 @@ main > section {
 }
 .about-journey h2,
 .about-interests h2,
+.about-industry h2,
 .about-contact h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -813,11 +815,26 @@ main > section {
 }
 .about-journey p,
 .about-interests p,
+.about-industry p,
 .about-contact p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--secondary-color);
 }
+
+/* New Industry Involvement Section */
+.about-industry-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.about-industry-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+/* Personal Interests Media */
 .about-interests-media {
   display: flex;
   justify-content: center;
@@ -828,3 +845,6 @@ main > section {
   max-width: 45%;
   border-radius: 8px;
 }
+
+/* NEW: End of About Page Sections (Contact) */
+/* (Keep existing about-contact styles as defined above) */
