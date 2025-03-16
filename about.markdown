@@ -36,8 +36,8 @@ permalink: /about/
     When I'm not designing game levels, you'll find me out climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired every day.
   </p>
   <div class="about-interests-media">
-    <img src="{{ '/assets/images/dog-playing.gif' | relative_url }}" alt="Playing with My Dog" class="about-dog">
-    <img src="{{ '/assets/images/climbing.gif' | relative_url }}" alt="Climbing" class="about-climbing">
+    <img src="{{ '/assets/images/dog-playing.webm' | relative_url }}" alt="Playing with My Dog" class="about-dog">
+    <img src="{{ '/assets/images/climbing.webm' | relative_url }}" alt="Climbing" class="about-climbing">
   </div>
 </section>
 
