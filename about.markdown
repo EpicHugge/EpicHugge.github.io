@@ -7,7 +7,7 @@ permalink: /about/
 <!-- HERO SECTION: Quick Introduction & Hockey Image -->
 <section class="about-hero">
   <div class="about-hero-text">
-    <h1>Hey, I'm Hugo!</h1>
+    <h1>Yo!, I'm Hugo!</h1>
     <p>
       I'm a Game Design student specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
     </p>
@@ -21,7 +21,7 @@ permalink: /about/
 <section class="about-journey">
   <h2>My Journey</h2>
   <p>
-    I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films. Studying at Futuregames, I've focused on Level & Quest Design, honing my skills in ProBuilder, Unreal Engine, player guidance, and lighting for gameplay readability.
+    I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films.
   </p>
 </section>
 
@@ -29,7 +29,7 @@ permalink: /about/
 <section class="about-interests">
   <h2>Beyond Game Design</h2>
   <p>
-    When I'm not designing game levels, you'll find me climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired.
+    When I'm not designing game levels or Quests, you'll find me climbing, playing with my familys dog, or immersing myself in RPGs or Movies. These passions fuel my creativity and keep me inspired.
   </p>
   <div class="about-interests-media">
     <video autoplay loop muted playsinline class="about-dog">
@@ -57,7 +57,7 @@ permalink: /about/
 
 <!-- CONTACT & CALL TO ACTION -->
 <section class="about-contact">
-  <h2>Let's Connect</h2>
+  <h2>Contact Me!</h2>
   <p>
     Feel free to explore my work and drop me a line at <a href="mailto:hugo@example.com">hugo@example.com</a>—I'd love to chat!
   </p>
