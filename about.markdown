@@ -4,35 +4,31 @@ title: About Me
 permalink: /about/
 ---
 
-<!-- HERO SECTION: Quick Introduction & Image Collage -->
+<!-- HERO SECTION: Quick Introduction with Hockey Background -->
 <section class="about-hero">
-  <div class="about-hero-text">
-    <h1>Hey, I'm Hugo!</h1>
-    <p>
-      I'm a Game Design student specializing in Level & Quest Design. I love creating immersive environments, player-driven narratives, and worlds that tell stories beyond words.
-    </p>
-  </div>
-  <div class="about-hero-media">
-    <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" class="about-portrait">
-    <img src="{{ '/assets/images/hugo-fullbody.jpg' | relative_url }}" alt="Hugo Full Body" class="about-fullbody">
+  <div class="hero-overlay">
+    <div class="about-hero-text">
+      <h1>Hey, I'm Hugo!</h1>
+      <p>
+        I'm a Game Design student specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- MY JOURNEY: Background & Skills (with a background image and overlay) -->
+<!-- MY JOURNEY: Background & Skills -->
 <section class="about-journey">
-  <div class="journey-overlay">
-    <h2>My Journey</h2>
-    <p>
-      I've always been fascinated by storytelling and interactive worlds—whether in video games, D&D campaigns, or films. My passion led me to study Game Design at Futuregames, where I dove deep into Level & Quest Design. Along the way, I've honed my skills using tools like ProBuilder and Unreal Engine and mastered techniques in player guidance and lighting for gameplay readability.
-    </p>
-  </div>
+  <h2>My Journey</h2>
+  <p>
+    I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films. Studying at Futuregames, I've focused on Level & Quest Design, honing my skills in ProBuilder, Unreal Engine, player guidance, and lighting for gameplay readability.
+  </p>
 </section>
 
 <!-- PERSONAL INTERESTS: Show Your Personality with WebM Animations -->
 <section class="about-interests">
   <h2>Beyond Game Design</h2>
   <p>
-    When I'm not designing levels, you'll find me climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired every day.
+    When I'm not designing game levels, you'll find me climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired.
   </p>
   <div class="about-interests-media">
     <video autoplay loop muted playsinline class="about-dog">
