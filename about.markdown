@@ -9,7 +9,7 @@ permalink: /about/
   <div class="about-hero-text">
     <h1>Yo!, I'm Hugo!</h1>
     <p>
-      I'm a Game Design student specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+      I'm a Game Design student at Futuregames in Umeå specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
     </p>
   </div>
   <div class="about-hero-media">
@@ -29,7 +29,7 @@ permalink: /about/
 <section class="about-interests">
   <h2>Beyond Game Design</h2>
   <p>
-    When I'm not designing game levels or Quests, you'll find me climbing, playing with my familys dog, or immersing myself in RPGs or Movies. These passions fuel my creativity and keep me inspired.
+    When I'm not designing levels or Quests, you'll find me climbing, playing with my familys dog, or immersing myself in RPGs or Movies. These passions fuel my creativity and keep me inspired.
   </p>
   <div class="about-interests-media">
     <video autoplay loop muted playsinline class="about-dog">
