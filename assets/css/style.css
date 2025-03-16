@@ -564,11 +564,6 @@ main > section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* For the second sidecard, reverse the order (image left, text right) */
-.portfolio-sidecards .portfolio-sidecard:nth-child(2) {
-  flex-direction: row-reverse;
-}
-
 /* Floor Switcher */
 .floor-switcher {
   max-width: 1000px;
