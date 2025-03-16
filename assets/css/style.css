@@ -482,7 +482,7 @@ a:hover {
 
 /* SECTION SEPARATOR FOR BIG GAP BETWEEN SECTIONS */
 .section-separator {
-  height: 400px; /* Increased height */
+  height: 400px; /* Increased height for more separation */
   position: relative;
 }
 
