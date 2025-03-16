@@ -53,7 +53,6 @@ a:hover {
   height: 80px;
   transition: height 0.3s ease, padding 0.3s ease;
 }
-
 .fixed-header.shrink {
   height: 60px;
   padding: 0 20px;
@@ -383,6 +382,8 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   padding: 40px 20px;
   margin-bottom: 60px;
+  max-width: 1000px; /* Increased width for all cards */
+  width: 100%;
 }
 
 /* HERO CARD: Introduction Card */
@@ -394,11 +395,9 @@ a:hover {
   margin-bottom: 60px;
 }
 .about-hero-card .card {
-  max-width: 800px;
-  width: 100%;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .about-hero-card .card {
@@ -436,16 +435,14 @@ a:hover {
 
 /* MY JOURNEY CARD */
 .about-journey-card .card {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 
 /* PERSONAL INTERESTS CARD */
 .about-interests-card .card {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 .about-interests-media {
   display: flex;
@@ -465,9 +462,8 @@ a:hover {
 
 /* INDUSTRY INVOLVEMENT CARD */
 .about-industry-card .card {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 .about-industry-card h2 {
   margin-bottom: 20px;
@@ -477,12 +473,20 @@ a:hover {
   margin-bottom: 10px;
   color: var(--primary-color);
 }
+.about-industry-card img.about-volunteers {
+  margin-top: 20px;
+  max-width: 80%; /* Scale down the volunteer image */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
 
 /* CONTACT CARD */
 .about-contact-card .card {
-  max-width: 800px;
-  margin: 0 auto;
   text-align: center;
+  margin: 0 auto;
 }
 
 /* 19. Contact Page (Desktop) */
