@@ -71,7 +71,7 @@
       <!-- Large Separation -->
       <div class="section-separator"></div>
 
-      <!-- Portfolio Section (improved contrast & readability via updated CSS) -->
+      <!-- Portfolio Section -->
       <section class="portfolio-piece" id="portfolio-piece">
         <h2 class="portfolio-title">Level Design Assignment</h2>
 
@@ -170,14 +170,12 @@
             <div class="floor-image-container">
               <!-- Overview title absolutely placed on top -->
               <h3 class="floor-switcher-title">Overview</h3>
-
               <!-- Main Floor Image -->
               <img 
                 src="{{ '/assets/images/top-floor.png' | relative_url }}" 
                 alt="Top Floor Overview" 
                 class="floor-image"
               >
-
               <!-- Floor indicator also on top of the image -->
               <p class="floor-indicator">Top Floor</p>
             </div>
@@ -192,14 +190,18 @@
       <section class="blockout-section">
         <h2 class="section-title">Blockout &amp; Reiterations</h2>
 
-        <!-- 3 images in a row -->
-        <div class="blockout-gallery">
-          <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1">
-          <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2">
-          <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+        <!-- Carousel for Blockout Images -->
+        <div class="blockout-carousel">
+          <div class="carousel-container">
+            <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1" class="carousel-image active">
+            <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2" class="carousel-image">
+            <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3" class="carousel-image">
+          </div>
+          <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+          <button class="carousel-next" aria-label="Next">&#8250;</button>
         </div>
 
-        <!-- Large text box under them -->
+        <!-- Large text box under carousel -->
         <div class="blockout-description">
           <p>
             The level started as a <strong>hand-drawn layout</strong>, followed by <strong>inspiration research</strong> 
@@ -264,16 +266,13 @@
         // Typing animation logic
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
-
         if (introMain && caret) {
           const typingDuration = 3500; // 3.5 seconds
           const blinkDuration = 5000;  // 5 seconds
-
           // Start caret blink after typing
           setTimeout(() => {
             caret.classList.add('blink-caret');
           }, typingDuration);
-
           // Stop caret blink and hide it
           setTimeout(() => {
             caret.classList.remove('blink-caret');
@@ -284,7 +283,6 @@
         // Hamburger Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
-
         if (hamburger && navLinks) {
           hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
@@ -300,7 +298,6 @@
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-
           const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
@@ -310,7 +307,6 @@
               }
             });
           }, { threshold: 0.1 });
-
           observer.observe(portfolioSection);
         }
 
@@ -321,7 +317,6 @@
           const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
           const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-
           const floors = [
             {
               src: '{{ "/assets/images/top-floor.png" | relative_url }}',
@@ -334,27 +329,56 @@
               label: 'Lower Floor'
             }
           ];
-
           let currentIndex = 0;
-
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
-
           // Initialize correct floor text on load
           updateFloor();
-
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
-
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
           });
+        }
+
+        // Blockout Carousel Code
+        const carouselContainer = document.querySelector('.blockout-carousel .carousel-container');
+        if (carouselContainer) {
+          const images = carouselContainer.querySelectorAll('.carousel-image');
+          let currentCarouselIndex = 0;
+          const showImage = (index) => {
+            images.forEach((img, i) => {
+              if (i === index) {
+                img.classList.add('active');
+              } else {
+                img.classList.remove('active');
+              }
+            });
+          };
+          // Initial display
+          showImage(currentCarouselIndex);
+          // Button event listeners
+          const prevButton = document.querySelector('.blockout-carousel .carousel-prev');
+          const nextButton = document.querySelector('.blockout-carousel .carousel-next');
+          prevButton.addEventListener('click', () => {
+            currentCarouselIndex = (currentCarouselIndex === 0) ? images.length - 1 : currentCarouselIndex - 1;
+            showImage(currentCarouselIndex);
+          });
+          nextButton.addEventListener('click', () => {
+            currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
+            showImage(currentCarouselIndex);
+          });
+          // Auto-rotate every 5 seconds
+          setInterval(() => {
+            currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
+            showImage(currentCarouselIndex);
+          }, 5000);
         }
       });
     </script>
