@@ -85,99 +85,68 @@
             class="portfolio-video"
           >
             <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
-            <!-- Fallback for browsers that don't support WebM -->
             Your browser does not support the video tag.
           </video>
         </div>
 
-        <!-- Text box under hero shot -->
-        <div class="portfolio-description">
-          <h2><strong>Level Summary</strong></h2>
-          <p>
-            Set in <strong>feudal Japan</strong>, this level takes place in a <strong>tense, heavily guarded gatehouse</strong>—the village’s main <strong>checkpoint and defense post</strong>. 
-            The player must <strong>sneak through the multi-level structure</strong>, avoiding patrols while searching for a way to <strong>unlock the main gate and escape</strong>.
-          </p>
-          <p>
-            Designed with <strong>verticality and multiple paths</strong>, the gatehouse offers both <strong>stealth and combat opportunities</strong>, depending on the player’s choices. 
-            Environmental storytelling is woven throughout, revealing glimpses of <strong>confiscated goods, a holding cell, and a smuggler’s fate</strong>. 
-            Every detail is placed with intent, creating a <strong>tight, immersive space that rewards exploration and strategic movement</strong>.
-          </p>
-        </div>
-
-        <!-- 2 text boxes + screenshots (table-like layout) -->
-        <div class="portfolio-lower">
-          <!-- Row 1: text left, screenshot right -->
-          <div class="lower-row row-1">
-            <div class="cell text-box">
-              <h2><strong>Narrative</strong></h2>
-              <p>
-                Framed for his captain’s murder, <strong>Date Nasanube (or Senji Tome)</strong> must 
-                <strong>escape the village</strong> and turn the people against <strong>General Oda Nobunaga</strong> 
-                by <strong>burning the grain storage</strong>. His path leads through the heavily guarded gatehouse, 
-                where stealth and strategy are key.
-              </p>
-              <p>
-                The <strong>environment tells its own story</strong>—a prisoner, <strong>Ushi Maki Ramen</strong>, has been 
-                caught smuggling goods and offers a secret escape in exchange for help. Meanwhile, guards openly 
-                misuse confiscated wares, exposing the corruption within. Players can <strong>choose their approach</strong>: 
-                sneak through hidden paths or fight their way to freedom.
-              </p>
-            </div>
-            <div class="cell screenshot-cell">
-              <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" 
-                   alt="Screenshot 1"
-                   class="portfolio-screenshot">
-            </div>
+        <!-- Portfolio Cards for Better Readability & Skimming -->
+        <div class="portfolio-cards">
+          <div class="portfolio-card">
+            <h3>Level Summary</h3>
+            <p>
+              Set in <strong>feudal Japan</strong>, this level takes place in a <strong>tense, heavily guarded gatehouse</strong>—the village’s main <strong>checkpoint and defense post</strong>. 
+              The player must <strong>sneak through the multi-level structure</strong>, avoiding patrols while searching for a way to <strong>unlock the main gate and escape</strong>.
+            </p>
+            <p>
+              Designed with <strong>verticality and multiple paths</strong>, the gatehouse offers both <strong>stealth and combat opportunities</strong>, depending on the player’s choices. 
+              Environmental storytelling is woven throughout, revealing glimpses of <strong>confiscated goods, a holding cell, and a smuggler’s fate</strong>. 
+              Every detail is placed with intent, creating a <strong>tight, immersive space that rewards exploration and strategic movement</strong>.
+            </p>
           </div>
-
-          <!-- Row 2: screenshot on left, text on right -->
-          <div class="lower-row row-2">
-            <div class="cell screenshot-cell">
-              <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" 
-                   alt="Screenshot 2"
-                   class="portfolio-screenshot">
-            </div>
-            <div class="cell text-box">
-<div class="guiding-player-section">
-    <h2><strong>Guiding the Player</strong></h2>
-    <p>
-        The level naturally guides players using <strong>lighting, elevation, and composition</strong>. 
-        From a <strong>high vantage point</strong>, players can scan the <strong>open gatehouse</strong> and plan their route.
-    </p>
-    <p>
-        A <strong>large window casts god rays</strong> onto the <strong>main gate</strong>, subtly marking the objective, 
-        while <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement. 
-        <strong>Bright cloth on vaultable windows</strong> clearly signals traversal points.
-    </p>
-    <p>
-        <strong>Verticality creates a natural difficulty curve</strong>—starting above grants control, but descending increases tension. 
-        These elements ensure <strong>intuitive navigation while supporting the stealth-focused design</strong>.
-    </p>
-</div>
+          <div class="portfolio-card">
+            <h3>Narrative</h3>
+            <p>
+              Framed for his captain’s murder, <strong>Date Nasanube (or Senji Tome)</strong> must 
+              <strong>escape the village</strong> and turn the people against <strong>General Oda Nobunaga</strong> 
+              by <strong>burning the grain storage</strong>. His path leads through the heavily guarded gatehouse, where stealth and strategy are key.
+            </p>
+            <p>
+              The <strong>environment tells its own story</strong>—a prisoner, <strong>Ushi Maki Ramen</strong>, has been caught smuggling goods and offers a secret escape in exchange for help. Meanwhile, guards openly misuse confiscated wares, exposing the corruption within. 
+              Players can <strong>choose their approach</strong>: sneak through hidden paths or fight their way to freedom.
+            </p>
+            <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
+          </div>
+          <div class="portfolio-card">
+            <h3>Guiding the Player</h3>
+            <p>
+              The level naturally guides players using <strong>lighting, elevation, and composition</strong>. 
+              From a <strong>high vantage point</strong>, players can scan the <strong>open gatehouse</strong> and plan their route.
+            </p>
+            <p>
+              A <strong>large window casts god rays</strong> onto the <strong>main gate</strong>, subtly marking the objective, while <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement. 
+              <strong>Bright cloth on vaultable windows</strong> clearly signals traversal points.
+            </p>
+            <p>
+              <strong>Verticality creates a natural difficulty curve</strong>—starting above grants control, but descending increases tension. 
+              These elements ensure <strong>intuitive navigation while supporting the stealth-focused design</strong>.
+            </p>
+            <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
           </div>
         </div>
 
         <!-- Floor Switcher -->
         <div class="floor-switcher" id="floor-switcher">
           <div class="floor-switcher-content">
-            <!-- Left Arrow -->
             <span class="arrow arrow-left">&lt;</span>
-
-            <!-- Container for the image + overlays (title & floor indicator) -->
             <div class="floor-image-container">
-              <!-- Overview title absolutely placed on top -->
               <h3 class="floor-switcher-title">Overview</h3>
-              <!-- Main Floor Image -->
               <img 
                 src="{{ '/assets/images/top-floor.png' | relative_url }}" 
                 alt="Top Floor Overview" 
                 class="floor-image"
               >
-              <!-- Floor indicator also on top of the image -->
               <p class="floor-indicator">Top Floor</p>
             </div>
-
-            <!-- Right Arrow -->
             <span class="arrow arrow-right">&gt;</span>
           </div>
         </div>
@@ -209,12 +178,10 @@
             The biggest issue was <strong>excessive symmetry</strong>, which made movement predictable. 
             To fix this, I <strong>added structural support beams on the lower floor</strong> and a 
             <strong>new commander’s study on the upper floor</strong>, breaking up the uniformity. 
-            I also <strong>refined lighting and environmental cues</strong> to better guide the player 
-            without disrupting the stealth mechanics.
+            I also <strong>refined lighting and environmental cues</strong> to better guide the player without disrupting the stealth mechanics.
           </p>
           <p>
-            These changes made the level <strong>more engaging and challenging</strong>, maintaining the 
-            advantage of <strong>high ground</strong> while ensuring movement felt <strong>dynamic and varied</strong>.
+            These changes made the level <strong>more engaging and challenging</strong>, maintaining the advantage of <strong>high ground</strong> while ensuring movement felt <strong>dynamic and varied</strong>.
           </p>
         </div>
 
@@ -225,21 +192,13 @@
         <div class="reflection-textbox">
           <h2><strong>Reflections</strong></h2>
           <p>
-            This project taught me <strong>how to use ProBuilder and similar tools</strong>, as well as 
-            <strong>lighting techniques and player guidance</strong> in stealth-based level design. 
-            I learned the <strong>importance of giving players a vantage point early on</strong>, allowing them to plan their route strategically.
+            This project taught me <strong>how to use ProBuilder and similar tools</strong>, as well as <strong>lighting techniques and player guidance</strong> in stealth-based level design. I learned the <strong>importance of giving players a vantage point early on</strong>, allowing them to plan their route strategically.
           </p>
           <p>
-            The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning the layout to using 
-            new tools like ProBuilder. At first, it was frustrating, but overcoming those struggles helped me 
-            <strong>understand how to approach the early phases of level creation more effectively</strong>.
+            The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning the layout to using new tools like ProBuilder. At first, it was frustrating, but overcoming those struggles helped me <strong>understand how to approach the early phases of level creation more effectively</strong>.
           </p>
           <p>
-            If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to enhance the atmosphere further. 
-            I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion. 
-            While I’m happy with this as my <strong>first proper level design work</strong>, I now realize that 
-            <strong>stealth levels require many intricate mechanics to feel engaging</strong>. 
-            It was a tough but valuable learning experience that will shape how I approach future projects.
+            If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to enhance the atmosphere further. I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion. While I’m happy with this as my <strong>first proper level design work</strong>, I now realize that <strong>stealth levels require many intricate mechanics to feel engaging</strong>. It was a tough but valuable learning experience that will shape how I approach future projects.
           </p>
         </div>
       </section>
@@ -380,7 +339,6 @@
       });
     </script>
 
-    <!-- Additional Scripts (If Any) -->
     {% if site.use_aos %}
     <!-- AOS JS (Animate On Scroll) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
