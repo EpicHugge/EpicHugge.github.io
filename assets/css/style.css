@@ -54,7 +54,6 @@ a:hover {
   transition: height 0.3s ease, padding 0.3s ease;
 }
 
-/* Header shrink on scroll */
 .fixed-header.shrink {
   height: 60px;
   padding: 0 20px;
@@ -517,33 +516,6 @@ main > section {
   margin-bottom: 80px;
 }
 
-/* Personal Quote & CTA Section */
-.personal-quote {
-  text-align: center;
-  margin: 40px auto;
-  padding: 20px;
-}
-.personal-quote blockquote {
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--secondary-color);
-  margin-bottom: 20px;
-}
-.cta-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  border: none;
-  border-radius: 4px;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.cta-button:hover {
-  background-color: #e67e22;
-  transform: scale(1.05);
-}
-
 /* --- Updated Portfolio Section Styles --- */
 .portfolio-piece {
   text-align: center;
@@ -619,19 +591,7 @@ main > section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-/* Image overlay on hover */
-.portfolio-sidecard .card-image:hover::after {
-  content: attr(alt);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 10px;
-  text-align: center;
-  font-size: 1rem;
-}
+/* (Hover overlay rule removed) */
 
 /* Portfolio Extra (Blockout & Reiterations and Reflections) */
 .portfolio-extra {
