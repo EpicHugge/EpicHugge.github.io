@@ -53,7 +53,6 @@ a:hover {
   height: 80px;
   transition: height 0.3s ease, padding 0.3s ease;
 }
-
 .fixed-header.shrink {
   height: 60px;
   padding: 0 20px;
@@ -390,7 +389,7 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 800px;  /* Increased width */
   width: 100%;
   overflow: hidden;
 }
@@ -419,7 +418,7 @@ a:hover {
   text-align: center;
 }
 .about-hero-card .card-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
   color: var(--text-color);
 }
@@ -429,13 +428,13 @@ a:hover {
   color: var(--secondary-color);
 }
 
-/* MY JOURNEY: Normal Background */
+/* MY JOURNEY: Normal Background with Contrast */
 .about-journey {
   padding: 60px 20px;
   margin-bottom: 60px;
   text-align: center;
   color: var(--text-color);
-  background-color: transparent;
+  background-color: #111111;
 }
 .about-journey h2 {
   font-size: 2.5rem;
@@ -448,11 +447,14 @@ a:hover {
   color: var(--secondary-color);
 }
 
-/* PERSONAL INTERESTS */
+/* PERSONAL INTERESTS: Enhanced Contrast */
 .about-interests {
   max-width: 800px;
   margin: 0 auto 60px;
   text-align: center;
+  background-color: #151515;
+  padding: 40px 20px;
+  border-radius: 8px;
 }
 .about-interests h2 {
   font-size: 2.5rem;
@@ -480,11 +482,14 @@ a:hover {
   transform: scale(1.03);
 }
 
-/* INDUSTRY INVOLVEMENT */
+/* INDUSTRY INVOLVEMENT: More Contrast */
 .about-industry {
   max-width: 800px;
   margin: 0 auto 60px;
   text-align: center;
+  background-color: #1c1c1c;
+  padding: 40px 20px;
+  border-radius: 8px;
 }
 .about-industry h2 {
   font-size: 2.5rem;
@@ -508,11 +513,14 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* CONTACT SECTION */
+/* CONTACT SECTION: Distinct Background */
 .about-contact {
   max-width: 800px;
   margin: 0 auto 60px;
   text-align: center;
+  background-color: #222222;
+  padding: 40px 20px;
+  border-radius: 8px;
 }
 .about-contact h2 {
   font-size: 2.5rem;
@@ -599,13 +607,11 @@ main > section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-
 .under-construction h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   color: var(--primary-color);
 }
-
 .under-construction p {
   font-size: 1.2rem;
   color: var(--text-color);
@@ -639,7 +645,6 @@ main > section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-
 /* Level Summary remains as is */
 .portfolio-description {
   max-width: 1000px;
@@ -650,7 +655,6 @@ main > section {
   text-align: left;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-
 /* New: Side-by-Side Cards for Narrative & Guiding the Player */
 .portfolio-sidecards {
   display: flex;
