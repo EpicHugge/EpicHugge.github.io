@@ -373,86 +373,144 @@ a:hover {
 }
 
 /* 18. About Page Styles (Desktop) */
-.about-page .about-container {
+/* Hero Section - Updated for better scaling and layout */
+.about-hero {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #2c2c2c;
-  border-radius: 10px;
+  padding: 40px 20px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #444;
+  gap: 20px;
 }
-.about-page h1 {
-  text-align: center;
+.about-hero-text {
+  flex: 1;
+  text-align: left;
+}
+.about-hero-text h1 {
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
-.about-page .about-text {
+.about-hero-text p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+.about-hero-media {
   flex: 1;
-  max-width: 600px;
-  background-color: #333333;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.about-hero-media img {
+  max-width: 90%;
+  max-height: 300px;
+  object-fit: cover;
   border-radius: 8px;
-  opacity: 0;
-}
-.about-page .about-text.fade-in {
-  opacity: 1;
-}
-.about-page .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: var(--text-color);
-}
-.about-page .about-image img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  opacity: 0;
-  transition: opacity 1s ease-out, transform 0.3s ease, box-shadow 0.3s ease;
-}
-.about-page .about-image.fade-in img {
-  opacity: 1;
-}
-.about-page .about-image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-}
-@media (max-width: 768px) {
-  .about-page .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 40px;
-    padding: 20px;
-    background-color: transparent;
-    border-radius: 0;
-    max-width: 100%;
-  }
-  .about-page .about-text {
-    max-width: 100%;
-    background-color: transparent;
-    padding: 0;
-    margin-bottom: 20px;
-  }
-  .about-page .about-image {
-    margin-top: 0;
-  }
-  .about-page .about-image img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: none;
-    margin-top: 0;
-  }
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* NEW: Fade-In Utility Class */
-.fade-in {
-  animation: fadeIn 1s ease-out forwards;
+/* My Journey with Background */
+.about-journey {
+  position: relative;
+  padding: 60px 20px;
+  margin-bottom: 60px;
+  text-align: center;
+  background: url({{ '/assets/images/hugo-hockey.jpg' | relative_url }}) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-color);
 }
+.journey-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 20px;
+}
+.about-journey h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.about-journey p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+/* Personal Interests */
+.about-interests {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about-interests h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.about-interests p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+.about-interests-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.about-interests-media video {
+  max-width: 45%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+/* Industry Involvement */
+.about-industry {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about-industry h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.about-industry-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.about-industry-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+.about-industry-content img.about-volunteers {
+  margin-top: 20px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+
+/* Contact Section */
+.about-contact {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+.about-contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+.about-contact p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--secondary-color);
+}
+
+/* --- End of About Page Styles --- */
 
 /* Contact Page (Desktop) */
 .contact-page h1 {
@@ -763,8 +821,8 @@ main > section {
   right: 10px;
 }
 
-/* NEW: About Page Specific Styles */
-/* Hero Section */
+/* --- New: About Page Specific Styles --- */
+/* Hero Section - Improved Layout */
 .about-hero {
   display: flex;
   align-items: center;
@@ -772,10 +830,10 @@ main > section {
   padding: 40px 20px;
   margin-bottom: 60px;
   border-bottom: 1px solid #444;
+  gap: 20px;
 }
 .about-hero-text {
   flex: 1;
-  margin-right: 20px;
   text-align: left;
 }
 .about-hero-text h1 {
@@ -792,11 +850,12 @@ main > section {
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  justify-content: center;
 }
-/* Limit the size of the hero images so they fit nicely */
 .about-hero-media img {
-  max-width: 45%;
-  height: auto;
+  max-width: 90%;
+  max-height: 300px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
@@ -849,7 +908,6 @@ main > section {
   gap: 20px;
   margin-top: 20px;
 }
-/* Style the video elements so they look similar to images */
 .about-interests-media video {
   max-width: 45%;
   border-radius: 8px;
