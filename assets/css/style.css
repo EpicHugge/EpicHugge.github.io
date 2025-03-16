@@ -411,13 +411,13 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* MY JOURNEY */
+/* MY JOURNEY: Normal background (removed special background effects) */
 .about-journey {
   padding: 60px 20px;
   margin-bottom: 60px;
   text-align: center;
   color: var(--text-color);
-  background-color: #111;
+  background-color: transparent;
 }
 .about-journey h2 {
   font-size: 2.5rem;
