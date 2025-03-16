@@ -13,13 +13,12 @@ permalink: /about/
     </p>
   </div>
   <div class="about-hero-media">
-    <!-- Collage of Profile & Full-Body Images (they will now fit better) -->
     <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" class="about-portrait">
     <img src="{{ '/assets/images/hugo-fullbody.jpg' | relative_url }}" alt="Hugo Full Body" class="about-fullbody">
   </div>
 </section>
 
-<!-- MY JOURNEY: Background & Skills with Parallax Effect -->
+<!-- MY JOURNEY: Background & Skills (with a background image and overlay) -->
 <section class="about-journey">
   <div class="journey-overlay">
     <h2>My Journey</h2>
