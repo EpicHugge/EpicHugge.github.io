@@ -4,13 +4,16 @@ title: About Me
 permalink: /about/
 ---
 
-<!-- HERO SECTION: Quick Introduction with Hockey Background -->
+<!-- HERO SECTION: Quick Introduction & Hockey Image -->
 <section class="about-hero">
   <div class="about-hero-text">
     <h1>Hey, I'm Hugo!</h1>
     <p>
       I'm a Game Design student specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
     </p>
+  </div>
+  <div class="about-hero-media">
+    <img src="{{ '/assets/images/hugo-hockey.jpg' | relative_url }}" alt="Hugo Playing Hockey" class="about-hockey">
   </div>
 </section>
 
