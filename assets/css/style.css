@@ -373,58 +373,48 @@ a:hover {
 }
 
 /* 18. About Page Styles (Desktop) */
-/* Hero Section - Updated for better scaling and layout */
+/* HERO SECTION: Use the hockey image as background */
 .about-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url({{ '/assets/images/hugo-hockey.jpg' | relative_url }}) no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px 20px;
-  margin-bottom: 60px;
-  border-bottom: 1px solid #444;
-  gap: 20px;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 .about-hero-text {
-  flex: 1;
-  text-align: left;
+  text-align: center;
+  max-width: 90%;
 }
 .about-hero-text h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  color: var(--text-color);
 }
 .about-hero-text p {
   font-size: 1.5rem;
   line-height: 1.4;
-}
-.about-hero-media {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.about-hero-media img {
-  max-width: 90%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  color: var(--secondary-color);
 }
 
-/* My Journey with Background */
+/* MY JOURNEY: Plain background */
 .about-journey {
-  position: relative;
   padding: 60px 20px;
   margin-bottom: 60px;
   text-align: center;
-  background: url({{ '/assets/images/hugo-hockey.jpg' | relative_url }}) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
   color: var(--text-color);
-}
-.journey-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px 20px;
+  background-color: #111;
 }
 .about-journey h2 {
   font-size: 2.5rem;
@@ -437,7 +427,7 @@ a:hover {
   color: var(--secondary-color);
 }
 
-/* Personal Interests */
+/* PERSONAL INTERESTS */
 .about-interests {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -465,7 +455,7 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* Industry Involvement */
+/* INDUSTRY INVOLVEMENT */
 .about-industry {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -493,7 +483,7 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* Contact Section */
+/* CONTACT & CALL TO ACTION */
 .about-contact {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -822,58 +812,48 @@ main > section {
 }
 
 /* --- New: About Page Specific Styles --- */
-/* Hero Section - Improved Layout */
+/* HERO SECTION: Using hockey image as full-width background */
 .about-hero {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background: url({{ '/assets/images/hugo-hockey.jpg' | relative_url }}) no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 40px 20px;
-  margin-bottom: 60px;
-  border-bottom: 1px solid #444;
-  gap: 20px;
+  justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 .about-hero-text {
-  flex: 1;
-  text-align: left;
+  text-align: center;
+  max-width: 90%;
 }
 .about-hero-text h1 {
   font-size: 3.5rem;
   margin-bottom: 20px;
+  color: var(--text-color);
 }
 .about-hero-text p {
   font-size: 1.5rem;
   line-height: 1.4;
-}
-.about-hero-media {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-}
-.about-hero-media img {
-  max-width: 90%;
-  max-height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  color: var(--secondary-color);
 }
 
-/* My Journey with Background */
+/* MY JOURNEY: Plain background for clarity */
 .about-journey {
-  position: relative;
   padding: 60px 20px;
   margin-bottom: 60px;
   text-align: center;
-  background: url({{ '/assets/images/hugo-hockey.jpg' | relative_url }}) no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
   color: var(--text-color);
-}
-.journey-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 40px 20px;
+  background-color: #111;
 }
 .about-journey h2 {
   font-size: 2.5rem;
@@ -886,7 +866,7 @@ main > section {
   color: var(--secondary-color);
 }
 
-/* Personal Interests */
+/* PERSONAL INTERESTS */
 .about-interests {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -914,7 +894,7 @@ main > section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* Industry Involvement */
+/* INDUSTRY INVOLVEMENT */
 .about-industry {
   max-width: 800px;
   margin: 0 auto 60px;
@@ -942,7 +922,7 @@ main > section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* Contact Section */
+/* CONTACT SECTION */
 .about-contact {
   max-width: 800px;
   margin: 0 auto 60px;
