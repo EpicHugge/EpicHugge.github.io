@@ -485,34 +485,42 @@ a:hover {
   height: 300px; 
 }
 
-/* PORTFOLIO SECTION STYLES */
+/* --- Updated Portfolio Section Styles --- */
 .portfolio-piece {
   text-align: center;
   margin: 60px auto;
   max-width: 1500px; 
+  padding: 40px 20px;
+  background-color: #1e1e1e; /* Slightly different dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 .portfolio-title {
   font-size: 5rem;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 .portfolio-hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 .portfolio-video {
   max-width: 1000px; 
   width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 .portfolio-description {
   max-width: 1000px;
   margin: 20px auto;
   background-color: #2c2c2c;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
   text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 /* Table-like layout for your text/screenshot rows */
@@ -524,28 +532,30 @@ a:hover {
   gap: 30px;
 }
 .lower-row {
-  display: table;
-  width: 100%;
-  table-layout: fixed; 
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
 }
 .cell {
-  display: table-cell;
-  vertical-align: top; 
+  flex: 1;
   padding: 20px;
 }
 .text-box {
   background-color: #2c2c2c;
   color: #fff;
   border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 .screenshot-cell img.portfolio-screenshot {
   display: block;
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* Floor Switcher */
+/* Floor Switcher remains unchanged */
 .floor-switcher {
   max-width: 1000px;
   margin: 40px auto; 
@@ -559,7 +569,6 @@ a:hover {
 .floor-image-container {
   position: relative; 
 }
-/* Title placed on top of the image */
 .floor-switcher-title {
   position: absolute;
   top: 10px;
@@ -572,7 +581,6 @@ a:hover {
   font-size: 1.4rem;
   z-index: 2;
 }
-/* The floor image */
 .floor-image {
   display: block;
   max-width: 1000px;
@@ -580,7 +588,6 @@ a:hover {
   height: auto;
   border-radius: 8px;
 }
-/* Floor indicator text also on top of the image */
 .floor-indicator {
   position: absolute;
   bottom: 10px;  
@@ -606,7 +613,7 @@ a:hover {
   background-color: #444444;
 }
 
-/* NEW: Blockout & Reiterations Section */
+/* NEW: Blockout & Reiterations Section (with added shadows) */
 .blockout-section {
   max-width: 1000px;
   margin: 60px auto;
@@ -627,6 +634,7 @@ a:hover {
   width: 30%;
   border-radius: 8px;
   height: auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 .blockout-description {
   background-color: #2c2c2c;
@@ -635,6 +643,7 @@ a:hover {
   border-radius: 8px;
   text-align: left;
   margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 .section-divider {
   border: none;
@@ -647,4 +656,5 @@ a:hover {
   padding: 20px;
   border-radius: 8px;
   text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
