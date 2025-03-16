@@ -4,16 +4,18 @@ title: About Me
 permalink: /about/
 ---
 
-<!-- HERO SECTION: Quick Introduction & Portrait Image -->
-<section class="about-hero fade-in">
-  <div class="about-hero-text">
-    <h1>Yo!, I'm Hugo!</h1>
-    <p>
-      I'm a Game Design student at Futuregames in Umeå specializing in Level & Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
-    </p>
-  </div>
-  <div class="about-hero-media">
-    <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" class="about-portrait">
+<!-- HERO CARD: Introduction -->
+<section class="about-hero-card fade-in">
+  <div class="card">
+    <div class="card-media">
+      <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait">
+    </div>
+    <div class="card-content">
+      <h1>Yo!, I'm Hugo!</h1>
+      <p>
+        I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+      </p>
+    </div>
   </div>
 </section>
 
