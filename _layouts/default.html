@@ -89,48 +89,57 @@
           </video>
         </div>
 
-        <!-- Portfolio Cards for Better Readability & Skimming -->
-        <div class="portfolio-cards">
-          <div class="portfolio-card">
-            <h3>Level Summary</h3>
-            <p>
-              Set in <strong>feudal Japan</strong>, this level takes place in a <strong>tense, heavily guarded gatehouse</strong>—the village’s main <strong>checkpoint and defense post</strong>. 
-              The player must <strong>sneak through the multi-level structure</strong>, avoiding patrols while searching for a way to <strong>unlock the main gate and escape</strong>.
-            </p>
-            <p>
-              Designed with <strong>verticality and multiple paths</strong>, the gatehouse offers both <strong>stealth and combat opportunities</strong>, depending on the player’s choices. 
-              Environmental storytelling is woven throughout, revealing glimpses of <strong>confiscated goods, a holding cell, and a smuggler’s fate</strong>. 
-              Every detail is placed with intent, creating a <strong>tight, immersive space that rewards exploration and strategic movement</strong>.
-            </p>
+        <!-- Level Summary (Full-Width Introduction) -->
+        <div class="portfolio-description">
+          <h2><strong>Level Summary</strong></h2>
+          <p>
+            Set in <strong>feudal Japan</strong>, this level takes place in a <strong>tense, heavily guarded gatehouse</strong>—the village’s main <strong>checkpoint and defense post</strong>. 
+            The player must <strong>sneak through the multi-level structure</strong>, avoiding patrols while searching for a way to <strong>unlock the main gate and escape</strong>.
+          </p>
+          <p>
+            Designed with <strong>verticality and multiple paths</strong>, the gatehouse offers both <strong>stealth and combat opportunities</strong>, depending on the player’s choices. 
+            Environmental storytelling is woven throughout, revealing glimpses of <strong>confiscated goods, a holding cell, and a smuggler’s fate</strong>. 
+            Every detail is placed with intent, creating a <strong>tight, immersive space that rewards exploration and strategic movement</strong>.
+          </p>
+        </div>
+
+        <!-- Side-by-Side Cards for Narrative & Guiding the Player -->
+        <div class="portfolio-sidecards">
+          <!-- Narrative Card: Text on Left, Image on Right -->
+          <div class="portfolio-sidecard">
+            <div class="card-text">
+              <h2><strong>Narrative</strong></h2>
+              <p>
+                Framed for his captain’s murder, <strong>Date Nasanube (or Senji Tome)</strong> must escape the village and turn the people against <strong>General Oda Nobunaga</strong> by burning the grain storage.
+              </p>
+              <p>
+                The environment tells its own story—a prisoner, <strong>Ushi Maki Ramen</strong>, has been caught smuggling goods and offers a secret escape in exchange for help. Meanwhile, guards misuse confiscated wares, exposing the corruption within.
+              </p>
+              <p>
+                Players can choose their approach: sneak through hidden paths or fight their way to freedom.
+              </p>
+            </div>
+            <div class="card-image">
+              <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
+            </div>
           </div>
-          <div class="portfolio-card">
-            <h3>Narrative</h3>
-            <p>
-              Framed for his captain’s murder, <strong>Date Nasanube (or Senji Tome)</strong> must 
-              <strong>escape the village</strong> and turn the people against <strong>General Oda Nobunaga</strong> 
-              by <strong>burning the grain storage</strong>. His path leads through the heavily guarded gatehouse, where stealth and strategy are key.
-            </p>
-            <p>
-              The <strong>environment tells its own story</strong>—a prisoner, <strong>Ushi Maki Ramen</strong>, has been caught smuggling goods and offers a secret escape in exchange for help. Meanwhile, guards openly misuse confiscated wares, exposing the corruption within. 
-              Players can <strong>choose their approach</strong>: sneak through hidden paths or fight their way to freedom.
-            </p>
-            <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
-          </div>
-          <div class="portfolio-card">
-            <h3>Guiding the Player</h3>
-            <p>
-              The level naturally guides players using <strong>lighting, elevation, and composition</strong>. 
-              From a <strong>high vantage point</strong>, players can scan the <strong>open gatehouse</strong> and plan their route.
-            </p>
-            <p>
-              A <strong>large window casts god rays</strong> onto the <strong>main gate</strong>, subtly marking the objective, while <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement. 
-              <strong>Bright cloth on vaultable windows</strong> clearly signals traversal points.
-            </p>
-            <p>
-              <strong>Verticality creates a natural difficulty curve</strong>—starting above grants control, but descending increases tension. 
-              These elements ensure <strong>intuitive navigation while supporting the stealth-focused design</strong>.
-            </p>
-            <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
+          <!-- Guiding the Player Card: Image on Left, Text on Right -->
+          <div class="portfolio-sidecard">
+            <div class="card-image">
+              <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
+            </div>
+            <div class="card-text">
+              <h2><strong>Guiding the Player</strong></h2>
+              <p>
+                The level naturally guides players using lighting, elevation, and composition. From a high vantage point, players can scan the open gatehouse and plan their route.
+              </p>
+              <p>
+                A large window casts god rays onto the main gate, subtly marking the objective, while brightly lit paths contrast with darker side rooms to steer movement.
+              </p>
+              <p>
+                Bright cloth on vaultable windows clearly signals traversal points. Verticality creates a natural difficulty curve—starting above grants control, but descending increases tension.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -170,18 +179,13 @@
         <!-- Large text box under carousel -->
         <div class="blockout-description">
           <p>
-            The level started as a <strong>hand-drawn layout</strong>, followed by <strong>inspiration research</strong> 
-            for both the exterior and interior of the gatehouse. Using <strong>ProBuilder in Unity</strong>, 
-            I built the initial blockout and tested it with <strong>mentors and peers</strong>.
+            The level started as a <strong>hand-drawn layout</strong>, followed by <strong>inspiration research</strong> for both the exterior and interior of the gatehouse. Using <strong>ProBuilder in Unity</strong>, I built the initial blockout and tested it with <strong>mentors and peers</strong>.
           </p>
           <p>
-            The biggest issue was <strong>excessive symmetry</strong>, which made movement predictable. 
-            To fix this, I <strong>added structural support beams on the lower floor</strong> and a 
-            <strong>new commander’s study on the upper floor</strong>, breaking up the uniformity. 
-            I also <strong>refined lighting and environmental cues</strong> to better guide the player without disrupting the stealth mechanics.
+            The biggest issue was <strong>excessive symmetry</strong>, which made movement predictable. To fix this, I added structural support beams on the lower floor and a new commander’s study on the upper floor, breaking up the uniformity. I also refined lighting and environmental cues to better guide the player without disrupting the stealth mechanics.
           </p>
           <p>
-            These changes made the level <strong>more engaging and challenging</strong>, maintaining the advantage of <strong>high ground</strong> while ensuring movement felt <strong>dynamic and varied</strong>.
+            These changes made the level <strong>more engaging and challenging</strong>, maintaining the advantage of high ground while ensuring movement felt <strong>dynamic and varied</strong>.
           </p>
         </div>
 
