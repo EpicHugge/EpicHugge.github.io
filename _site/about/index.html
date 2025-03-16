@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Me</title>
     <meta name="description" content="Your short description here.">
 
     <!-- Favicon Links -->
@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
 
   </head>
-  <body class="about-page">
+  <body class="">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <!-- Fixed Header -->
@@ -57,51 +57,95 @@
     <main id="content" class="main-content" role="main">
       
 
-      <!-- Any other page content goes here -->
-      <h1 id="about-me">About Me</h1>
+      <!-- Your existing content goes here -->
+      <!-- HERO SECTION: Quick Introduction & Image Collage -->
+<section class="about-hero">
+  <div class="about-hero-text">
+    <h1>Hey, I'm Hugo!</h1>
+    <p>
+      I'm a Game Design student specializing in Level &amp; Quest Design. I love creating immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+    </p>
+  </div>
+  <div class="about-hero-media">
+    <!-- Collage of Profile & Full-Body Images -->
+    <img src="/assets/images/hugo-portrait.jpg" alt="Hugo Portrait" class="about-portrait" />
+    <img src="/assets/images/hugo-fullbody.jpg" alt="Hugo Full Body" class="about-fullbody" />
+  </div>
+</section>
 
-<div class="about-container">
-  <!-- Text Section -->
-  <div class="about-text fade-in">
-    <p>My name is Hugo and im a Aspiring Quest Designer studying the Game Designer Education at Futuregames in Umeå, Sweden.</p>
+<!-- MY JOURNEY: Background & Skills (with a background image and overlay) -->
+<section class="about-journey">
+  <div class="journey-overlay">
+    <h2>My Journey</h2>
+    <p>
+      I've always been fascinated by storytelling and interactive worlds—whether in video games, D&amp;D campaigns, or films. My passion led me to study Game Design at Futuregames, where I dove deep into Level &amp; Quest Design. Along the way, I've honed my skills using tools like ProBuilder and Unreal Engine and mastered techniques in player guidance and lighting for gameplay readability.
+    </p>
   </div>
-  <!-- Image Section -->
-  <div class="about-image fade-in">
-    <img src="/assets/images/your-portrait.jpg" alt="Your Portrait" />
+</section>
+
+<!-- PERSONAL INTERESTS: Show Your Personality -->
+<section class="about-interests">
+  <h2>Beyond Game Design</h2>
+  <p>
+    When I'm not designing game levels, you'll find me out climbing, playing with my dog, or immersing myself in RPGs and immersive sims. These passions fuel my creativity and keep me inspired every day.
+  </p>
+  <div class="about-interests-media">
+    <img src="/assets/images/dog-playing.webm" alt="Playing with My Dog" class="about-dog" />
+    <img src="/assets/images/climbing.webm" alt="Climbing" class="about-climbing" />
   </div>
-</div>
+</section>
+
+<!-- INDUSTRY INVOLVEMENT: Arctic Game Dev Volunteering -->
+<section class="about-industry">
+  <div class="about-industry-content">
+    <h2>Industry Involvement</h2>
+    <h3>Arctic Game Dev Volunteer</h3>
+    <p>
+      Volunteering with Arctic Game Dev has given me the opportunity to support local game development initiatives, network with industry professionals, and help organize game-related events. This experience has deepened my insight into industry collaboration, event coordination, and professional networking.
+    </p>
+    <img src="/assets/images/arctic-volunteers.jpg" alt="Arctic Game Dev Volunteers" class="about-volunteers" />
+  </div>
+</section>
+
+<!-- CONTACT & CALL TO ACTION -->
+<section class="about-contact">
+  <h2>Let's Connect</h2>
+  <p>
+    Feel free to explore my work and drop me a line at <a href="mailto:hugo@example.com">hugo@example.com</a>—I’d love to chat!
+  </p>
+</section>
 
     </main>
 
     <footer class="site-footer">
       <span class="site-footer-owner">
-        <a href="https://github.com/yourusername">EpicHugge</a> 
+        <a href="https://github.com/yourusername">EpicHugge</a>
         &copy; 2025. All rights reserved.
       </span>
-      <!-- Possibly remove GitHub Pages credit if desired -->
+      <!-- Removed GitHub Pages Credit -->
     </footer>
 
-    <!-- Typing Animation, Hamburgers, Fade-In, plus new Slideshow script -->
+    <!-- Typing Animation and Hamburger Menu Control Script -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // ========== 1) TYPING ANIMATION ==========
+        // Typing animation logic
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
         if (introMain && caret) {
           const typingDuration = 3500; // 3.5 seconds
-          const blinkDuration  = 5000; // 5 seconds
-          // Start blinking caret after typing finishes
-          setTimeout(() => caret.classList.add('blink-caret'), typingDuration);
-          // Stop caret blinking & hide it
+          const blinkDuration = 5000;  // 5 seconds
+          setTimeout(() => {
+            caret.classList.add('blink-caret');
+          }, typingDuration);
           setTimeout(() => {
             caret.classList.remove('blink-caret');
             caret.classList.add('hide-caret');
           }, typingDuration + blinkDuration);
         }
 
-        // ========== 2) HAMBURGER MENU TOGGLE ==========
-        const hamburger   = document.getElementById('hamburger');
-        const navLinks    = document.getElementById('nav-links');
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
         if (hamburger && navLinks) {
           hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
@@ -111,14 +155,13 @@
           });
         }
 
-        // ========== 3) FADE-IN USING INTERSECTION OBSERVER ==========
+        // Intersection Observer fade-in for portfolio (first portfolio piece)
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-
-          const observer = new IntersectionObserver(entries => {
+          const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
                 portfolioSection.style.opacity = '1';
@@ -130,22 +173,31 @@
           observer.observe(portfolioSection);
         }
 
-        // ========== 4) FLOOR SWITCHER ==========
+        // Header Shrink on Scroll
+        window.addEventListener('scroll', function() {
+          const header = document.querySelector('.fixed-header');
+          if (window.scrollY > 50) {
+            header.classList.add('shrink');
+          } else {
+            header.classList.remove('shrink');
+          }
+        });
+
+        // FLOOR SWITCHER CODE
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
-          const floorImage    = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft     = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight    = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator= floorSwitcher.querySelector('.floor-indicator');
-
+          const floorImage = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
           const floors = [
             {
-              src: '',
+              src: '/assets/images/top-floor.png',
               alt: 'Top Floor Overview',
               label: 'Top Floor'
             },
             {
-              src: '',
+              src: '/assets/images/lower-floor.png',
               alt: 'Lower Floor Overview',
               label: 'Lower Floor'
             }
@@ -156,9 +208,7 @@
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
-          // Initialize
           updateFloor();
-          // Arrows
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
@@ -169,29 +219,42 @@
           });
         }
 
-        // ========== 5) BLOCKOUT SLIDESHOW (3 images) ==========
-        const blockoutImage = document.getElementById('blockout-image');
-        if (blockoutImage) {
-          const blockoutImages = [
-            '',
-            '',
-            ''
-          ];
-          let idx = 0;
-          function cycleBlockout(step) {
-            idx = (idx + step + blockoutImages.length) % blockoutImages.length;
-            blockoutImage.src = blockoutImages[idx];
-          }
-          // Auto-cycle every 4 seconds
-          setInterval(() => cycleBlockout(1), 4000);
-
-          // For the left & right arrows
-          window.cycleBlockout = cycleBlockout; 
-        }
+        // Blockout Carousel Code (for both portfolio pieces)
+        const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+        carouselContainers.forEach(container => {
+          const images = container.querySelectorAll('.carousel-image');
+          let currentCarouselIndex = 0;
+          const showImage = (index) => {
+            images.forEach((img, i) => {
+              if (i === index) {
+                img.classList.add('active');
+              } else {
+                img.classList.remove('active');
+              }
+            });
+          };
+          showImage(currentCarouselIndex);
+          const parent = container.parentElement;
+          const prevButton = parent.querySelector('.carousel-prev');
+          const nextButton = parent.querySelector('.carousel-next');
+          prevButton.addEventListener('click', () => {
+            currentCarouselIndex = (currentCarouselIndex === 0) ? images.length - 1 : currentCarouselIndex - 1;
+            showImage(currentCarouselIndex);
+          });
+          nextButton.addEventListener('click', () => {
+            currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
+            showImage(currentCarouselIndex);
+          });
+          setInterval(() => {
+            currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
+            showImage(currentCarouselIndex);
+          }, 5000);
+        });
       });
     </script>
 
-    <!-- Additional Scripts (If Any) -->
     
+
+    <!-- Any other scripts can be added here -->
   </body>
 </html>
