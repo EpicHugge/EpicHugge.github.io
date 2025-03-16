@@ -480,9 +480,14 @@ a:hover {
   }
 }
 
-/* SECTION SEPARATOR FOR BIG GAP BETWEEN INTRO & PORTFOLIO */
+/* SECTION SEPARATOR FOR BIG GAP BETWEEN SECTIONS */
 .section-separator {
   height: 300px; 
+}
+
+/* NEW: General Section Spacing */
+main > section {
+  margin-bottom: 80px;
 }
 
 /* --- Updated Portfolio Section Styles --- */
@@ -491,7 +496,7 @@ a:hover {
   margin: 60px auto;
   max-width: 1500px; 
   padding: 40px 20px;
-  background-color: #1e1e1e; /* Slightly different dark background */
+  background-color: #1e1e1e;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
@@ -513,45 +518,37 @@ a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-.portfolio-description {
-  max-width: 1000px;
-  margin: 20px auto;
-  background-color: #2c2c2c;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-}
 
-/* Table-like layout for your text/screenshot rows */
-.portfolio-lower {
-  max-width: 1000px;
+/* New Portfolio Cards Layout for Readability */
+.portfolio-cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 40px auto;
-  display: flex;
-  flex-direction: column; 
-  gap: 30px;
+  max-width: 1200px;
 }
-.lower-row {
-  display: flex;
-  gap: 30px;
-  align-items: stretch;
-}
-.cell {
-  flex: 1;
-  padding: 20px;
-}
-.text-box {
+.portfolio-card {
   background-color: #2c2c2c;
-  color: #fff;
-  border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-}
-.screenshot-cell img.portfolio-screenshot {
-  display: block;
-  max-width: 100%;
-  height: auto;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.portfolio-card:hover {
+  transform: scale(1.03);
+}
+.portfolio-card h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+.portfolio-card p {
+  margin-bottom: 10px;
+}
+.portfolio-card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
@@ -613,7 +610,7 @@ a:hover {
   background-color: #444444;
 }
 
-/* NEW: Blockout & Reiterations Section (with added shadows) */
+/* --- Blockout & Reiterations Section --- */
 .blockout-section {
   max-width: 1000px;
   margin: 60px auto;
@@ -646,7 +643,7 @@ a:hover {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* --- NEW: Carousel Styles for Blockout Section --- */
+/* --- Carousel Styles for Blockout Section --- */
 .blockout-carousel {
   position: relative;
   max-width: 1000px;
