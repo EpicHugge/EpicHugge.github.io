@@ -19,35 +19,39 @@ permalink: /about/
   </div>
 </section>
 
-<!-- MY JOURNEY: Background & Skills -->
-<section class="about-journey fade-in">
-  <h2>My Journey</h2>
-  <p>
-    I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films.
-  </p>
-</section>
-
-<!-- PERSONAL INTERESTS: Show Your Personality with WebM Animations -->
-<section class="about-interests fade-in">
-  <h2>Beyond Game Design</h2>
-  <p>
-    When I'm not designing levels or Quests, you'll find me climbing, playing with my familys dog, or immersing myself in RPGs or Movies. These passions fuel my creativity and keep me inspired.
-  </p>
-  <div class="about-interests-media">
-    <video autoplay loop muted playsinline class="about-dog">
-      <source src="{{ '/assets/images/dog-playing.webm' | relative_url }}" type="video/webm">
-      Your browser does not support the video.
-    </video>
-    <video autoplay loop muted playsinline class="about-climbing">
-      <source src="{{ '/assets/images/climbing.webm' | relative_url }}" type="video/webm">
-      Your browser does not support the video.
-    </video>
+<!-- MY JOURNEY CARD -->
+<section class="about-journey-card fade-in">
+  <div class="card">
+    <h2>My Journey</h2>
+    <p>
+      I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films.
+    </p>
   </div>
 </section>
 
-<!-- INDUSTRY INVOLVEMENT: Arctic Game Dev Volunteering -->
-<section class="about-industry fade-in">
-  <div class="about-industry-content">
+<!-- PERSONAL INTERESTS CARD -->
+<section class="about-interests-card fade-in">
+  <div class="card">
+    <h2>Beyond Game Design</h2>
+    <p>
+      When I'm not designing levels or quests, you'll find me climbing, playing with my family's dog, or immersing myself in RPGs or movies. These passions fuel my creativity and keep me inspired.
+    </p>
+    <div class="about-interests-media">
+      <video autoplay loop muted playsinline class="about-dog">
+        <source src="{{ '/assets/images/dog-playing.webm' | relative_url }}" type="video/webm">
+        Your browser does not support the video.
+      </video>
+      <video autoplay loop muted playsinline class="about-climbing">
+        <source src="{{ '/assets/images/climbing.webm' | relative_url }}" type="video/webm">
+        Your browser does not support the video.
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY INVOLVEMENT CARD -->
+<section class="about-industry-card fade-in">
+  <div class="card">
     <h2>Industry Involvement</h2>
     <h3>Arctic Game Dev Volunteer</h3>
     <p>
@@ -57,10 +61,12 @@ permalink: /about/
   </div>
 </section>
 
-<!-- CONTACT & CALL TO ACTION -->
-<section class="about-contact fade-in">
-  <h2>Contact Me!</h2>
-  <p>
-    Feel free to explore my work and <a href="{{ '/contact/' | relative_url }}">get in touch</a>—I'd love to chat!
-  </p>
+<!-- CONTACT CARD -->
+<section class="about-contact-card fade-in">
+  <div class="card">
+    <h2>Contact Me!</h2>
+    <p>
+      Feel free to explore my work and <a href="{{ '/contact/' | relative_url }}">get in touch</a>—I'd love to chat!
+    </p>
+  </div>
 </section>
