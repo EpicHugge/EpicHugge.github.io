@@ -48,7 +48,7 @@ a:hover {
   left: 0;
   width: 100%;
   background-color: var(--background-color);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   z-index: 1000;
   height: 80px;
   transition: height 0.3s ease, padding 0.3s ease;
@@ -545,9 +545,15 @@ a:hover {
   color: var(--secondary-color);
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-  40% { transform: translateX(-50%) translateY(10px); }
-  60% { transform: translateX(-50%) translateY(5px); }
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(5px);
+  }
 }
 
 /* NEW: General Section Spacing */
@@ -714,84 +720,6 @@ main > section {
 }
 .arrow:hover {
   background-color: #444444;
-}
-
-/* --- Blockout & Reiterations Section --- */
-.blockout-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-.blockout-description {
-  background-color: #2c2c2c;
-  color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: left;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-}
-.section-divider {
-  border: none;
-  border-top: 2px solid #555;
-  margin: 30px 0;
-}
-
-/* Enhanced Reflections Section */
-.reflection-textbox {
-  background-color: #2c2c2c;
-  color: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  margin-top: 40px;
-  border-left: 5px solid var(--primary-color);
-}
-
-/* --- Carousel Styles for Blockout Section using Flex Slider --- */
-.blockout-carousel {
-  position: relative;
-  max-width: 1000px;
-  margin: 0 auto 20px;
-  height: 500px;
-  overflow: hidden;
-}
-.carousel-container {
-  display: flex;
-  width: 300%; /* For 3 images */
-  height: 100%;
-  transition: transform 0.5s ease-in-out;
-}
-.carousel-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Navigation Buttons for Carousel */
-.carousel-prev,
-.carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(44, 44, 44, 0.7);
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 10;
-}
-.carousel-prev {
-  left: 10px;
-}
-.carousel-next {
-  right: 10px;
 }
 
 /* --- End of Portfolio Section Styles --- */
