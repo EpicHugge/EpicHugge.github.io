@@ -146,15 +146,31 @@
           </div>
         </div>
 
+        <!-- Floor Switcher (Overview) -->
+        <div class="floor-switcher" id="floor-switcher">
+          <div class="floor-switcher-content">
+            <!-- Left Arrow -->
+            <span class="arrow arrow-left">&lt;</span>
+            <!-- Floor Image Container -->
+            <div class="floor-image-container">
+              <h3 class="floor-switcher-title">Overview</h3>
+              <img src="/assets/images/top-floor.png" alt="Top Floor Overview" class="floor-image">
+              <p class="floor-indicator">Top Floor</p>
+            </div>
+            <!-- Right Arrow -->
+            <span class="arrow arrow-right">&gt;</span>
+          </div>
+        </div>
+
         <!-- Blockout & Reiterations and Reflections for First Project -->
         <div class="portfolio-extra">
           <section class="blockout-section">
             <h2 class="section-title">Blockout &amp; Reiterations</h2>
             <div class="blockout-carousel">
               <div class="carousel-container">
-                <img src="/assets/images/blockout1.png" alt="Blockout 1" class="carousel-image active">
-                <img src="/assets/images/blockout2.png" alt="Blockout 2" class="carousel-image">
-                <img src="/assets/images/blockout3.png" alt="Blockout 3" class="carousel-image">
+                <img src="/assets/images/blockout1.png" alt="Blockout 1">
+                <img src="/assets/images/blockout2.png" alt="Blockout 2">
+                <img src="/assets/images/blockout3.png" alt="Blockout 3">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
@@ -242,9 +258,9 @@
             <h2 class="section-title">Blockout &amp; Reiterations</h2>
             <div class="blockout-carousel">
               <div class="carousel-container">
-                <img src="/assets/images/blockout1.png" alt="Blockout 1" class="carousel-image active">
-                <img src="/assets/images/blockout2.png" alt="Blockout 2" class="carousel-image">
-                <img src="/assets/images/blockout3.png" alt="Blockout 3" class="carousel-image">
+                <img src="/assets/images/blockout1.png" alt="Blockout 1">
+                <img src="/assets/images/blockout2.png" alt="Blockout 2">
+                <img src="/assets/images/blockout3.png" alt="Blockout 3">
               </div>
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
@@ -338,33 +354,68 @@
           }
         });
 
-        // Blockout Carousel Code
-        const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
-        carouselContainers.forEach(container => {
-          const images = container.querySelectorAll('.carousel-image');
+        // Floor Switcher Code
+        const floorSwitcher = document.getElementById('floor-switcher');
+        if (floorSwitcher) {
+          const floorImage = floorSwitcher.querySelector('.floor-image');
+          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowRight = floorSwitcher.querySelector('.arrow-right');
+          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+          const floors = [
+            {
+              src: '/assets/images/top-floor.png',
+              alt: 'Top Floor Overview',
+              label: 'Top Floor'
+            },
+            {
+              src: '/assets/images/lower-floor.png',
+              alt: 'Lower Floor Overview',
+              label: 'Lower Floor'
+            }
+          ];
+          let currentIndex = 0;
+          function updateFloor() {
+            floorImage.src = floors[currentIndex].src;
+            floorImage.alt = floors[currentIndex].alt;
+            floorIndicator.textContent = floors[currentIndex].label;
+          }
+          updateFloor();
+          arrowLeft.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+            updateFloor();
+          });
+          arrowRight.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % floors.length;
+            updateFloor();
+          });
+        }
+
+        // Blockout Carousel Code using Flex Slider
+        const carouselContainer = document.querySelector('.blockout-carousel .carousel-container');
+        if (carouselContainer) {
+          const images = carouselContainer.querySelectorAll('img');
           let currentCarouselIndex = 0;
-          const showImage = (index) => {
-            images.forEach((img, i) => {
-              img.classList.toggle('active', i === index);
-            });
+          const totalImages = images.length; // expected 3 images
+          const updateCarousel = () => {
+            // Shift by 33.33% for each image
+            carouselContainer.style.transform = 'translateX(-' + (currentCarouselIndex * 33.33) + '%)';
           };
-          showImage(currentCarouselIndex);
-          const parent = container.parentElement;
-          const prevButton = parent.querySelector('.carousel-prev');
-          const nextButton = parent.querySelector('.carousel-next');
+          updateCarousel();
+          const prevButton = document.querySelector('.carousel-prev');
+          const nextButton = document.querySelector('.carousel-next');
           prevButton.addEventListener('click', () => {
-            currentCarouselIndex = (currentCarouselIndex === 0) ? images.length - 1 : currentCarouselIndex - 1;
-            showImage(currentCarouselIndex);
+            currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
+            updateCarousel();
           });
           nextButton.addEventListener('click', () => {
-            currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
-            showImage(currentCarouselIndex);
+            currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+            updateCarousel();
           });
           setInterval(() => {
-            currentCarouselIndex = (currentCarouselIndex + 1) % images.length;
-            showImage(currentCarouselIndex);
+            currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+            updateCarousel();
           }, 5000);
-        });
+        }
       });
     </script>
 
