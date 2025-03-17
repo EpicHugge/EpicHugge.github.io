@@ -390,16 +390,19 @@
         if (carouselContainer) {
           const images = carouselContainer.querySelectorAll('img');
           let currentCarouselIndex = 0;
-          const totalImages = images.length;
+          const totalImages = images.length; // expected 3 images
           const updateCarousel = () => {
-            carouselContainer.style.transform = 'translateX(-' + (currentCarouselIndex * 100) + '%)';
+            // Shift by 33.33% for each image
+            carouselContainer.style.transform = 'translateX(-' + (currentCarouselIndex * 33.33) + '%)';
           };
           updateCarousel();
-          document.querySelector('.carousel-prev').addEventListener('click', function(){
+          const prevButton = document.querySelector('.carousel-prev');
+          const nextButton = document.querySelector('.carousel-next');
+          prevButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
             updateCarousel();
           });
-          document.querySelector('.carousel-next').addEventListener('click', function(){
+          nextButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
             updateCarousel();
           });
