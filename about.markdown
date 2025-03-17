@@ -13,7 +13,7 @@ permalink: /about/
     <div class="card-content">
       <h1>Yo!, I'm Hugo!</h1>
       <p>
-        I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design. I create immersive environments, player-driven narratives, and worlds that tell stories beyond words.
+        I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design.
       </p>
     </div>
   </div>
