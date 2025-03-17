@@ -55,7 +55,7 @@ permalink: /about/
     <h2>Industry Involvement</h2>
     <h3>Arctic Game Dev Volunteer</h3>
     <p>
-      Volunteering with Arctic Game Dev has given me the opportunity to support local game development initiatives, network with industry professionals, and help organize game-related events. This experience has deepened my insight into industry collaboration, event coordination, and professional networking.
+      Volunteering with Arctic Game Dev has given me the opportunity to support local game development initiatives, network with industry professionals. This experience has deepened my insight into industry collaboration, event coordination, and professional networking.
     </p>
     <img src="{{ '/assets/images/arctic-volunteers.jpg' | relative_url }}" alt="Arctic Game Dev Volunteers" class="about-volunteers">
   </div>
