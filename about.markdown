@@ -34,7 +34,7 @@ permalink: /about/
   <div class="card">
     <h2>Beyond Game Design</h2>
     <p>
-      When I'm not designing levels or quests, you'll find me climbing, playing with my family's dog, or immersing myself in RPGs or movies. These passions fuel my creativity and keep me inspired.
+      When I'm not designing Levels or Quests, you'll find me at the Gym lifting weights or Bouldering, playing with my family's dog, or immersing myself in RPGs / Movies. These passions fuel my creativity and keep me inspired.
     </p>
     <div class="about-interests-media">
       <video autoplay loop muted playsinline class="about-dog">
