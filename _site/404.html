@@ -45,8 +45,7 @@
 
         <!-- Navigation Links -->
         <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-          <a href="/" class="">Home</a>
-          <a href="/projects/" class="">Projects</a>
+          <a href="/" class="">Portfolio</a>
           <a href="/about/" class="">About</a>
           <a href="/contact/" class="">Contact</a>
         </nav>
@@ -56,8 +55,6 @@
 
     <main id="content" class="main-content" role="main">
       
-
-      <!-- Your existing content goes here -->
       <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -89,37 +86,30 @@
       <!-- Removed GitHub Pages Credit -->
     </footer>
 
-    <!-- Typing Animation and Hamburger Menu Control Script -->
+    <!-- Scripts -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Typing animation logic
+        // Typing Animation
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
         if (introMain && caret) {
-          const typingDuration = 3500; // 3.5 seconds
-          const blinkDuration = 5000;  // 5 seconds
-          setTimeout(() => {
-            caret.classList.add('blink-caret');
-          }, typingDuration);
-          setTimeout(() => {
-            caret.classList.remove('blink-caret');
-            caret.classList.add('hide-caret');
-          }, typingDuration + blinkDuration);
+          const typingDuration = 3500, blinkDuration = 5000;
+          setTimeout(() => { caret.classList.add('blink-caret'); }, typingDuration);
+          setTimeout(() => { caret.classList.remove('blink-caret'); caret.classList.add('hide-caret'); }, typingDuration + blinkDuration);
         }
 
-        // Hamburger Menu Toggle
+        // Hamburger Menu
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
         if (hamburger && navLinks) {
           hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
             hamburger.classList.toggle('toggle');
-            const isExpanded = hamburger.classList.contains('toggle');
-            hamburger.setAttribute('aria-expanded', isExpanded);
+            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
           });
         }
 
-        // Intersection Observer fade-in for portfolio (first portfolio piece)
+        // Portfolio Fade-In
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -137,17 +127,13 @@
           observer.observe(portfolioSection);
         }
 
-        // Header Shrink on Scroll
+        // Header Shrink
         window.addEventListener('scroll', function() {
           const header = document.querySelector('.fixed-header');
-          if (window.scrollY > 50) {
-            header.classList.add('shrink');
-          } else {
-            header.classList.remove('shrink');
-          }
+          header.classList.toggle('shrink', window.scrollY > 50);
         });
 
-        // Floor Switcher Code
+        // Floor Switcher
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
           const floorImage = floorSwitcher.querySelector('.floor-image');
@@ -183,14 +169,13 @@
           });
         }
 
-        // Blockout Carousel Code using Flex Slider
+        // Blockout Carousel
         const carouselContainer = document.querySelector('.blockout-carousel .carousel-container');
         if (carouselContainer) {
           const images = carouselContainer.querySelectorAll('img');
           let currentCarouselIndex = 0;
-          const totalImages = images.length; // expected 3 images
+          const totalImages = images.length;
           const updateCarousel = () => {
-            // Shift by 33.33% for each image
             carouselContainer.style.transform = 'translateX(-' + (currentCarouselIndex * 33.33) + '%)';
           };
           updateCarousel();
@@ -213,7 +198,5 @@
     </script>
 
     
-
-    <!-- Any other scripts can be added here -->
   </body>
 </html>
