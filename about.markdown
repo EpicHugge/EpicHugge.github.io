@@ -8,7 +8,6 @@ permalink: /about/
 <section class="about-hero-card fade-in">
   <div class="card">
     <div class="card-media">
-      <!-- Smaller portrait size controlled via CSS -->
       <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait">
     </div>
     <div class="card-content">
