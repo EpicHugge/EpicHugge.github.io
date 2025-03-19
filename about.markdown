@@ -11,7 +11,7 @@ permalink: /about/
       <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait">
     </div>
     <div class="card-content">
-      <h1>Hey!, I'm Hugo!</h1>
+      <h1>Yo!, I'm Hugo!</h1>
       <p>
         I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design.
       </p>
