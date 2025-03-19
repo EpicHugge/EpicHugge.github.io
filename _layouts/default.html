@@ -353,24 +353,24 @@
 
         <div class="portfolio-extra">
           <section class="blockout-section">
-            <h2 class="section-title" style="font-size: 2.8rem;">Blockout</h2>
+  <h2 class="section-title" style="font-size: 2.8rem;">Blockout</h2>
 
-            <!-- Modified Carousel for Game Project 2 (No fixed height) -->
-            <div class="blockout-carousel" style="overflow: visible;">
-              <div class="carousel-container" style="height: auto;">
-                <img 
-                  src="{{ '/assets/images/gp2-blockout.png' | relative_url }}" 
-                  alt="Blockout 1"
-                >
-                <img 
-                  src="{{ '/assets/images/gp2-final.png' | relative_url }}" 
-                  alt="Blockout 2"
-                >
-              </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
-            </div>
-
+  <!-- Modified Carousel for Game Project 2 -->
+  <!-- ADD A UNIQUE CLASS gp2-carousel -->
+  <div class="blockout-carousel gp2-carousel"> 
+    <div class="carousel-container">
+      <img 
+        src="{{ '/assets/images/gp2-blockout.png' | relative_url }}" 
+        alt="Blockout 1"
+      >
+      <img 
+        src="{{ '/assets/images/gp2-final.png' | relative_url }}" 
+        alt="Blockout 2"
+      >
+    </div>
+    <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+    <button class="carousel-next" aria-label="Next">&#8250;</button>
+  </div>
             <div class="blockout-description">
               <h2><strong>Blockout</strong></h2>
               <p>
