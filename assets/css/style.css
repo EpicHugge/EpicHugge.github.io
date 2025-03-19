@@ -611,8 +611,7 @@ main > section {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-
-/* --- New Assignment Summary Section for Level Design Assignment --- */
+/* Level Summary remains as is (now Assignment Summary) */
 .portfolio-assignment-summary {
   max-width: 1000px;
   margin: 20px auto 40px;
@@ -621,12 +620,13 @@ main > section {
   border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+  color: #fff;
 }
 .assignment-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: var(--text-color);
   text-align: center;
+  color: #fff;
 }
 .assignment-content {
   display: flex;
@@ -640,21 +640,24 @@ main > section {
   background-color: #333;
   padding: 20px;
   border-radius: 8px;
-  color: var(--secondary-color);
+  color: #fff;
   box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+}
+.assignment-left ul {
+  list-style: disc inside;
+  margin-left: 20px;
+}
+.assignment-left h3,
+.assignment-right h3,
+.assignment-left h2,
+.assignment-right h2 {
+  color: #fff;
 }
 .assignment-left p,
 .assignment-right p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-@media (max-width: 768px) {
-  .assignment-content {
-    flex-direction: column;
-  }
-}
-
-/* --- End Assignment Summary Section --- */
 
 /* New: Side-by-Side Cards for Narrative & Guiding the Player */
 .portfolio-sidecards {
