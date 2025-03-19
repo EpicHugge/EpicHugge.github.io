@@ -459,7 +459,7 @@ a:hover {
   transform: scale(1.03);
 }
 
-/* INDUSTRY INVOLVEMENT CARD - White Titles */
+/* INDUSTRY INVOLVEMENT CARD - White Titles + Floaty image */
 .about-industry-card .card {
   max-width: 1000px;
   margin: 0 auto;
@@ -468,7 +468,13 @@ a:hover {
 .about-industry-card h2,
 .about-industry-card h3 {
   margin-bottom: 10px;
-  color: #fff;  /* switched from var(--primary-color) to white */
+  color: #fff; /* switched from var(--primary-color) to white */
+}
+
+/* Floaty animation for volunteering image */
+@keyframes floatyImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 .about-industry-card img.about-volunteers {
   margin-top: 20px;
@@ -478,6 +484,9 @@ a:hover {
   margin-right: auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+
+  /* The floaty effect */
+  animation: floatyImage 3s ease-in-out infinite;
 }
 
 /* CONTACT CARD - link orange */
