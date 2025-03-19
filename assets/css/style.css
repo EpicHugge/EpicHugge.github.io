@@ -307,22 +307,14 @@ a:hover {
   }
 }
 
-/* 14. Fade-In Animation (Used by .fade-in class) */
+/* 14. Fade-In Animation */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-.fade-in {
-  animation: fadeIn 1s ease-out forwards;
-}
+.fade-in { animation: fadeIn 1s ease-out forwards; }
 
-/* 15. Typing Animation (Used by .intro-main) */
+/* 15. Typing Animation */
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
@@ -361,32 +353,28 @@ a:hover {
   outline: none;
   transition: background-color var(--transition-duration);
 }
-.accordion-header:hover {
-  background-color: #e67e22;
-}
+.accordion-header:hover { background-color: #e67e22; }
 .accordion-content {
   padding: 0 15px;
   display: none;
   background-color: #f1f1f1;
   color: #333;
 }
-.accordion-content.show {
-  display: block;
-}
+.accordion-content.show { display: block; }
 
 /* 18. About Page Styles (Cards) */
-/* Generic Card Style */
+/* Generic Card */
 .card {
   background-color: #2c2c2c;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
   padding: 40px 20px;
   margin-bottom: 60px;
   max-width: 1000px;
   width: 100%;
 }
 
-/* HERO CARD: Introduction Card */
+/* HERO CARD */
 .about-hero-card {
   display: flex;
   justify-content: center;
@@ -400,15 +388,12 @@ a:hover {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  .about-hero-card .card {
-    flex-direction: row;
-  }
+  .about-hero-card .card { flex-direction: row; }
 }
 .about-hero-card .card-media {
   flex: 1;
   overflow: hidden;
 }
-/* The About Me portrait now has max-width: 400px */
 .about-hero-card .card-media img {
   width: 100%;
   max-width: 400px;
@@ -416,9 +401,7 @@ a:hover {
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-.about-hero-card .card-media img:hover {
-  transform: scale(1.03);
-}
+.about-hero-card .card-media img:hover { transform: scale(1.03); }
 .about-hero-card .card-content {
   flex: 1;
   padding: 20px;
@@ -457,12 +440,10 @@ a:hover {
 .about-interests-media video {
   max-width: 45%;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
   transition: transform 0.3s ease;
 }
-.about-interests-media video:hover {
-  transform: scale(1.03);
-}
+.about-interests-media video:hover { transform: scale(1.03); }
 
 /* INDUSTRY INVOLVEMENT CARD */
 .about-industry-card .card {
@@ -470,14 +451,8 @@ a:hover {
   margin: 0 auto;
   text-align: center;
 }
-.about-industry-card h2 {
-  margin-bottom: 20px;
-  color: var(--primary-color);
-}
-.about-industry-card h3 {
-  margin-bottom: 10px;
-  color: var(--primary-color);
-}
+.about-industry-card h2 { margin-bottom: 20px; color: var(--primary-color); }
+.about-industry-card h3 { margin-bottom: 10px; color: var(--primary-color); }
 .about-industry-card img.about-volunteers {
   margin-top: 20px;
   max-width: 80%;
@@ -485,7 +460,7 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 /* CONTACT CARD */
@@ -496,10 +471,7 @@ a:hover {
 }
 
 /* 19. Contact Page (Desktop) */
-.contact-page h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
+.contact-page h1 { text-align: center; margin-bottom: 20px; }
 .contact-page .contact-container {
   max-width: 600px;
   margin: 40px auto;
@@ -516,9 +488,7 @@ a:hover {
   color: var(--primary-color);
   text-decoration: underline;
 }
-.contact-page .contact-container a:hover {
-  color: #ffcc66;
-}
+.contact-page .contact-container a:hover { color: #ffcc66; }
 @media (max-width: 768px) {
   .contact-page .contact-container {
     margin: 20px 20px;
@@ -527,7 +497,7 @@ a:hover {
   }
 }
 
-/* SECTION SEPARATOR FOR BIG GAP BETWEEN SECTIONS */
+/* SECTION SEPARATOR */
 .section-separator {
   height: 400px;
   position: relative;
@@ -547,23 +517,15 @@ a:hover {
   color: var(--secondary-color);
 }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(5px);
-  }
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(10px); }
+  60% { transform: translateX(-50%) translateY(5px); }
 }
 
 /* NEW: General Section Spacing */
-main > section {
-  margin-bottom: 80px;
-}
+main > section { margin-bottom: 80px; }
 
-/* NEW: Under Construction Styles for Projects Tab */
+/* NEW: Under Construction Styles */
 .under-construction {
   text-align: center;
   margin: 80px auto;
@@ -571,7 +533,7 @@ main > section {
   padding: 20px;
   background-color: #2c2c2c;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 .under-construction h1 {
   font-size: 3rem;
@@ -585,19 +547,19 @@ main > section {
 
 /* --- Updated Portfolio Section Styles --- */
 .portfolio-piece {
-  text-align: left; /* Align all portfolio text left */
+  text-align: left;
   margin: 60px auto;
   max-width: 1500px;
   padding: 40px 20px;
   background-color: #1e1e1e;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
 .portfolio-title {
   font-size: 5rem;
   margin-bottom: 20px;
-  text-align: center; /* Title centered */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 .portfolio-hero {
   display: flex;
@@ -610,12 +572,12 @@ main > section {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
 /* --- New Assignment Summary Section --- */
 .portfolio-assignment-summary {
-  max-width: 600px; /* Reduced width */
+  max-width: 500px; /* Reduced width */
   margin: 20px auto 40px;
   background-color: #2c2c2c;
   padding: 30px;
@@ -630,22 +592,15 @@ main > section {
   text-align: center;
   color: #fff;
 }
-.assignment-content {
-  display: block;
-}
-.assignment-left {
-  text-align: left;
-}
+.assignment-content { display: block; }
+.assignment-left { text-align: left; }
 .assignment-left ul {
   list-style: disc inside;
   margin-left: 20px;
 }
-.assignment-left h3 {
-  color: #fff;
-}
+.assignment-left h3 { color: #fff; }
 
-/* New: Side-by-Side Cards for Narrative, Design, and Guiding the Player */
-/* Each card's text is aligned left while its title remains centered */
+/* --- Side-by-Side Cards for Portfolio --- */
 .portfolio-sidecards {
   display: flex;
   flex-direction: column;
@@ -664,17 +619,13 @@ main > section {
   transition: transform 0.3s ease;
   position: relative;
 }
-.portfolio-sidecard:hover {
-  transform: scale(1.02);
-}
+.portfolio-sidecard:hover { transform: scale(1.02); }
 .portfolio-sidecard .card-text {
   flex: 1;
   color: #fff;
-  text-align: left; /* Align text left */
+  text-align: left;
 }
-.portfolio-sidecard .card-text h2 {
-  text-align: center; /* Center the title */
-}
+.portfolio-sidecard .card-text h2 { text-align: center; }
 .portfolio-sidecard .card-image {
   flex: 1;
   position: relative;
@@ -685,15 +636,11 @@ main > section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
 
-/* Portfolio Extra (Blockout & Reiterations and Reflections) */
-.portfolio-extra {
-  margin-top: 40px;
-}
-.portfolio-extra section {
-  margin-bottom: 40px;
-}
+/* --- Portfolio Extra --- */
+.portfolio-extra { margin-top: 40px; }
+.portfolio-extra section { margin-bottom: 40px; }
 
-/* Floor Switcher */
+/* --- Floor Switcher --- */
 .floor-switcher {
   max-width: 1000px;
   margin: 40px auto;
@@ -707,7 +654,7 @@ main > section {
 .floor-image-container {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px; /* Increased size */
 }
 .floor-switcher-title {
   position: absolute;
@@ -748,9 +695,7 @@ main > section {
   user-select: none;
   transition: background-color 0.3s ease;
 }
-.arrow:hover {
-  background-color: #444444;
-}
+.arrow:hover { background-color: #444444; }
 
 /* --- Blockout & Reiterations Section --- */
 .blockout-section {
@@ -778,7 +723,7 @@ main > section {
   margin: 30px 0;
 }
 
-/* Enhanced Reflections Section */
+/* --- Reflections Section --- */
 .reflection-textbox {
   background-color: #2c2c2c;
   color: #fff;
@@ -788,9 +733,12 @@ main > section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.5);
   margin-top: 40px;
   border-left: 5px solid var(--primary-color);
+  max-width: 600px;  /* Smaller width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* --- Carousel Styles for Blockout Section using Flex Slider --- */
+/* --- Carousel Styles --- */
 .blockout-carousel {
   position: relative;
   max-width: 1000px;
@@ -800,7 +748,7 @@ main > section {
 }
 .carousel-container {
   display: flex;
-  width: 300%; /* For 3 images */
+  width: 300%;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
@@ -809,8 +757,6 @@ main > section {
   height: 100%;
   object-fit: cover;
 }
-
-/* Navigation Buttons for Carousel */
 .carousel-prev,
 .carousel-next {
   position: absolute;
@@ -824,11 +770,7 @@ main > section {
   border-radius: 50%;
   z-index: 10;
 }
-.carousel-prev {
-  left: 10px;
-}
-.carousel-next {
-  right: 10px;
-}
+.carousel-prev { left: 10px; }
+.carousel-next { right: 10px; }
 
 /* --- End of Portfolio Section Styles --- */
