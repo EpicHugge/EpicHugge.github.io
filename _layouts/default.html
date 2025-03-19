@@ -86,7 +86,7 @@
           </video>
         </div>
 
-        <!-- Assignment Summary (Single-column) -->
+        <!-- Assignment Summary -->
         <div class="portfolio-assignment-summary">
           <h2 class="assignment-title">Assignment Summary</h2>
           <div class="assignment-content" style="display: block;">
@@ -113,7 +113,7 @@
           </div>
         </div>
 
-        <!-- Portfolio Sidecards (Design / Narrative / Guiding) -->
+        <!-- Portfolio Sidecards -->
         <div class="portfolio-sidecards">
           <!-- Design Card -->
           <div class="portfolio-sidecard">
@@ -265,13 +265,13 @@
           <h2 class="assignment-title">Project Overview</h2>
           <div class="assignment-content" style="display: block;">
             <div class="assignment-left">
-    <ul>
-        <li><strong>Genre:</strong> 2D side-scrolling brawler with light platforming.</li>
-        <li><strong>Development Time:</strong> Four weeks.</li>
-        <li><strong>Team:</strong> Student group project.</li>
-        <li><strong>Core Features:</strong> Fast-paced melee combat, dynamic enemy encounters, and traversal mechanics.</li>
-    </ul>
-</div>
+              <ul>
+                  <li><strong>Genre:</strong> 2D side-scrolling brawler with light platforming.</li>
+                  <li><strong>Development Time:</strong> Four weeks.</li>
+                  <li><strong>Team:</strong> Student group project.</li>
+                  <li><strong>Core Features:</strong> Fast-paced melee combat, dynamic enemy encounters, and traversal mechanics.</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -298,6 +298,7 @@
               >
             </div>
           </div>
+
           <!-- Card 2: Development Process (Image Left, Text Right) -->
           <div class="portfolio-sidecard">
             <div class="card-image">
@@ -323,14 +324,9 @@
               </p>
             </div>
           </div>
-          <!-- New 3rd Card (Image Left, Text Right) -->
+
+          <!-- New 3rd Card: Collaboration (Text Left, Image Right) -->
           <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img 
-                src="{{ '/assets/images/gp2-screenshot3.png' | relative_url }}" 
-                alt="Design Iterations Screenshot"
-              >
-            </div>
             <div class="card-text">
               <h2><strong>Collaboration</strong></h2>
               <p>
@@ -346,14 +342,22 @@
                 implement their work seamlessly</strong>, keeping the level balanced, polished, and fun.
               </p>
             </div>
+            <div class="card-image">
+              <img 
+                src="{{ '/assets/images/gp2-screenshot3.png' | relative_url }}" 
+                alt="Design Iterations Screenshot"
+              >
+            </div>
           </div>
         </div>
 
         <div class="portfolio-extra">
           <section class="blockout-section">
             <h2 class="section-title" style="font-size: 2.8rem;">Blockout</h2>
-            <div class="blockout-carousel">
-              <div class="carousel-container">
+
+            <!-- Modified Carousel for Game Project 2 (No fixed height) -->
+            <div class="blockout-carousel" style="overflow: visible;">
+              <div class="carousel-container" style="height: auto;">
                 <img 
                   src="{{ '/assets/images/gp2-blockout.png' | relative_url }}" 
                   alt="Blockout 1"
@@ -366,6 +370,7 @@
               <button class="carousel-prev" aria-label="Previous">&#8249;</button>
               <button class="carousel-next" aria-label="Next">&#8250;</button>
             </div>
+
             <div class="blockout-description">
               <h2><strong>Blockout</strong></h2>
               <p>
@@ -385,21 +390,25 @@
           </section>
           <section class="reflection-textbox" style="max-width:600px; margin: 40px auto;">
             <h2><strong>Reflections</strong></h2>
-    <p>
-        Game Project 2 challenged me to <strong>adapt quickly, problem-solve under pressure, and collaborate across disciplines</strong>. 
-        Taking over Level Design mid-project, I prioritized <strong>efficiency</strong>, ensuring a <strong>functional, testable level</strong> 
-        without blocking development.
-    </p>
-    <p>
-        I learned to <strong>balance combat and traversal</strong>, refining <strong>enemy placement, encounter pacing, and platforming density</strong> 
-        to keep movement fluid while maintaining the <strong>brawler focus</strong>. Handling the <strong>hook traversal mechanic</strong> reinforced 
-        the importance of <strong>mechanical cohesion</strong>, ensuring features complement rather than disrupt gameplay.
-    </p>
-    <p>
-        This project strengthened my ability to <strong>iterate based on feedback</strong>, quickly adjusting <strong>level structure, AI placement, 
-        and encounter flow</strong>. It solidified my passion for <strong>Level Design</strong> and the value of <strong>cross-discipline collaboration</strong> 
-        in game development.
-    </p>
+            <p>
+              Game Project 2 challenged me to <strong>adapt quickly, problem-solve under pressure, 
+              and collaborate across disciplines</strong>. Taking over Level Design mid-project, 
+              I prioritized <strong>efficiency</strong>, ensuring a <strong>functional, testable level</strong> 
+              without blocking development.
+            </p>
+            <p>
+              I learned to <strong>balance combat and traversal</strong>, refining 
+              <strong>enemy placement, encounter pacing, and platforming density</strong> 
+              to keep movement fluid while maintaining the <strong>brawler focus</strong>. 
+              Handling the <strong>hook traversal mechanic</strong> reinforced the importance of 
+              <strong>mechanical cohesion</strong>, ensuring features complement rather than disrupt gameplay.
+            </p>
+            <p>
+              This project strengthened my ability to <strong>iterate based on feedback</strong>, 
+              quickly adjusting <strong>level structure, AI placement, and encounter flow</strong>. 
+              It solidified my passion for <strong>Level Design</strong> and the value of 
+              <strong>cross-discipline collaboration</strong> in game development.
+            </p>
           </section>
         </div>
       </section>
