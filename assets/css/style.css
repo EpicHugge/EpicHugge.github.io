@@ -328,12 +328,8 @@ a:hover {
 
 /* 15. Typing Animation */
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 /* 16. Back to Top Button */
@@ -383,6 +379,7 @@ a:hover {
 }
 
 /* 18. About Page Styles (Cards) */
+
 /* Generic Card */
 .card {
   background-color: #2c2c2c;
@@ -394,19 +391,18 @@ a:hover {
   width: 100%;
 }
 
-/* HERO CARD - smaller portrait for the about hero */
+/* HERO CARD - now same width as other cards */
 .about-hero-card {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
   margin-bottom: 60px;
 }
 .about-hero-card .card {
+  /* Remove special max-width & margin so it matches other cards. */
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  max-width: 900px;
+  width: 100%; /* same as generic card */
   overflow: hidden;
 }
 @media (min-width: 768px) {
@@ -414,9 +410,12 @@ a:hover {
     flex-direction: row; /* image on one side, text on the other */
   }
 }
+/* Keep the smaller portrait if desired, or revert to default. 
+   For now, we keep it smaller than default, but the card container 
+   itself is the same size as others. */
 .about-hero-card .card-media img {
   width: 100%;
-  max-width: 250px; /* smaller than default */
+  max-width: 400px; /* you can adjust if you want smaller or bigger */
   height: auto;
   object-fit: cover;
   transition: transform 0.3s ease;
