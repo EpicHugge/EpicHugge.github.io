@@ -785,24 +785,24 @@ main > section {
   margin-right: auto;
 }
 
-/* Carousel Styles */
+/* Carousel Styles (Reverted to original "cover" style, for both pieces) */
 .blockout-carousel {
   position: relative;
   max-width: 1000px;
   margin: 0 auto 20px;
-  /* Removed fixed height to allow images to scale naturally */
+  height: 500px; /* Reintroduce fixed height */
   overflow: hidden;
 }
 .carousel-container {
   display: flex;
-  width: 300%; 
-  /* Removed fixed height so it grows/shrinks based on images */
+  width: 300%;
+  height: 100%; /* Fill the 500px container */
   transition: transform 0.5s ease-in-out;
 }
 .carousel-container img {
   width: 100%;
-  height: auto;  
-  object-fit: contain; /* so images scale down without cropping */
+  height: 100%;
+  object-fit: cover; /* fill container, same as LDA blockout */
 }
 .carousel-prev,
 .carousel-next {
