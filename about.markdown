@@ -8,24 +8,15 @@ permalink: /about/
 <section class="about-hero-card fade-in">
   <div class="card">
     <div class="card-media">
+      <!-- Smaller portrait size controlled via CSS -->
       <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait">
     </div>
     <div class="card-content">
-      <h1>Yo!, I'm Hugo!</h1>
+      <h1>Hey!, I'm Hugo!</h1>
       <p>
         I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design.
       </p>
     </div>
-  </div>
-</section>
-
-<!-- MY JOURNEY CARD -->
-<section class="about-journey-card fade-in">
-  <div class="card">
-    <h2>My Journey</h2>
-    <p>
-      I've always been fascinated by storytelling and interactive worlds—whether through video games, D&D campaigns, or films.
-    </p>
   </div>
 </section>
 
