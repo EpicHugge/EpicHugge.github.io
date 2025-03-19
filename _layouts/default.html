@@ -1,13 +1,14 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     <meta name="description" content="{{ site.description }}">
 
-    <!-- Favicon Links -->
+    <!-- Favicon & Manifest -->
     <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/images/favicon-32x32.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
@@ -27,7 +28,7 @@
     <!-- Fixed Header -->
     <header class="fixed-header">
       <div class="header-container">
-        <!-- Hamburger Menu Icon (Visible on Mobile) -->
+        <!-- Hamburger Menu -->
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -48,269 +49,239 @@
         </nav>
       </div>
     </header>
-    <!-- End of Fixed Header -->
+    <!-- End Fixed Header -->
 
     <main id="content" class="main-content" role="main">
       {% if page.url == "/" %}
-      <!-- Introduction Section -->
-      <div class="introduction">
-        <div class="intro-text">
-          <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
-          <p class="intro-sub">Aspiring Quest Designer</p>
-          <p class="intro-location">
-            <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
-            UMEÅ, SWEDEN
-          </p>
-        </div>
-        <div class="intro-logo">
-          <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Hugo's Logo" class="intro-logo-image">
-        </div>
-      </div>
-      <!-- End of Introduction Section -->
-
-      <!-- Big Separator with Scroll Indicator -->
-      <div class="section-separator">
-        <a href="#portfolio-piece" class="scroll-indicator">
-          <span class="scroll-arrow">&#8595;</span>
-        </a>
-      </div>
-
-      <!-- First Portfolio Piece: Level Design Assignment -->
-      <section class="portfolio-piece" id="portfolio-piece">
-        <h2 class="portfolio-title">Level Design Assignment</h2>
-
-        <!-- Hero (Video) -->
-        <div class="portfolio-hero">
-          <video autoplay loop muted playsinline class="portfolio-video">
-            <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Assignment Summary (Modified: Single-column) -->
-        <div class="portfolio-assignment-summary">
-          <h2 class="assignment-title">Assignment Summary</h2>
-          <div class="assignment-content" style="display: block;">
-            <div class="assignment-left">
-              <h3><strong>Level Assignment Overview</strong></h3>
-              <ul>
-                <li><strong>Objective:</strong> Plan, build, and refine a mid-game level.</li>
-                <li><strong>Scope:</strong> A short vertical slice of the game.</li>
-              </ul>
-              <h3><strong>Player Context</strong></h3>
-              <ul>
-                <li>Takes place at the midpoint of the game.</li>
-                <li>Player has full knowledge of controls and mechanics.</li>
-                <li>Level should challenge but not overwhelm.</li>
-              </ul>
-              <h3><strong>Narrative Setup</strong></h3>
-              <ul>
-                <li>Play as Date Masamune/Senji Tome – a betrayed warrior.</li>
-                <li>Framed for murder by General Oda Nobunaga.</li>
-                <li>Mission: Weaken the general’s influence over surrounding villages.</li>
-              </ul>
-            </div>
+        <!-- Introduction Section -->
+        <div class="introduction">
+          <div class="intro-text">
+            <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
+            <p class="intro-sub">Aspiring Quest Designer</p>
+            <p class="intro-location">
+              <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
+              UMEÅ, SWEDEN
+            </p>
+          </div>
+          <div class="intro-logo">
+            <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Hugo's Logo" class="intro-logo-image">
           </div>
         </div>
 
-        <!-- New Design Card (Inserted above Narrative) -->
-        <div class="portfolio-sidecards">
-          <!-- Design Card: Image Left, Text Right -->
-          <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img src="{{ '/assets/images/screenshot-3.png' | relative_url }}" alt="Design Screenshot">
-            </div>
-            <div class="card-text">
-              <h2><strong>Design</strong></h2>
-              <p>
-                I chose a <strong>gatehouse setting</strong> to create a <strong>stealth-centric</strong> environment perfect for quiet, strategic gameplay. The level features a <strong>dark, moody atmosphere</strong> that heightens tension, while a <strong>clear spatial flow</strong>—achieved through <strong>strategic lighting</strong> and <strong>verticality</strong>—guides players subtly. The <strong>high ground</strong> and <strong>overlook position</strong> empower players to plan their routes effectively.
-              </p>
-            </div>
-          </div>
-          <!-- Narrative Card: Text Left, Image Right -->
-          <div class="portfolio-sidecard">
-            <div class="card-text">
-              <h2><strong>Narrative</strong></h2>
-              <p>
-                I used <strong>environmental storytelling, overheard dialogue, and NPC interaction</strong> 
-                to immerse the player in a world of <strong>betrayal and corruption</strong>.
-              </p>
-              <p>
-                <strong>Ushi Maki Ramen, a captured smuggler,</strong> offers a <strong>hidden escape</strong> in exchange for help. 
-                Guards <strong>misuse his confiscated wares</strong>, revealing their corruption through <strong>dialogue and scattered clues</strong>.
-              </p>
-              <p>
-                Players choose between <strong>escaping through the main gate</strong> or <strong>helping Ushi</strong> to access 
-                a <strong>hidden passage behind a bookshelf</strong>, rewarding exploration and choice.
-              </p>
-            </div>
-            <div class="card-image">
-              <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
-            </div>
-          </div>
-          <!-- Guiding the Player Card: Image Left, Text Right -->
-          <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
-            </div>
-            <div class="card-text">
-              <h2><strong>Guiding the Player</strong></h2>
-              <p>
-                I designed the level to <strong>naturally guide players</strong> using <strong>lighting, elevation, and composition</strong>. 
-                A <strong>high vantage point</strong> lets players scan the <strong>open gatehouse</strong> and plan their route.
-              </p>
-              <p>
-                A <strong>large window casts god rays onto the main gate</strong>, marking the objective, while 
-                <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement.
-              </p>
-              <p>
-                <strong>Bright cloth on vaultable windows</strong> signals traversal points, and <strong>verticality</strong> 
-                naturally increases difficulty. Starting high grants control, while descending raises tension.
-              </p>
-            </div>
-          </div>
+        <!-- Separator with Scroll Indicator -->
+        <div class="section-separator">
+          <a href="#portfolio-piece" class="scroll-indicator">
+            <span class="scroll-arrow">&#8595;</span>
+          </a>
         </div>
 
-        <!-- Floor Switcher (Overview) -->
-        <div class="floor-switcher" id="floor-switcher">
-          <div class="floor-switcher-content">
-            <!-- Left Arrow -->
-            <span class="arrow arrow-left">&lt;</span>
-            <!-- Floor Image Container -->
-            <div class="floor-image-container">
-              <h3 class="floor-switcher-title">Overview</h3>
-              <img src="{{ '/assets/images/top-floor.png' | relative_url }}" alt="Top Floor Overview" class="floor-image">
-              <p class="floor-indicator">Top Floor</p>
-            </div>
-            <!-- Right Arrow -->
-            <span class="arrow arrow-right">&gt;</span>
+        <!-- Portfolio Piece: Level Design Assignment -->
+        <section class="portfolio-piece" id="portfolio-piece">
+          <h2 class="portfolio-title">Level Design Assignment</h2>
+          <!-- Hero Video -->
+          <div class="portfolio-hero">
+            <video autoplay loop muted playsinline class="portfolio-video">
+              <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
           </div>
-        </div>
 
-        <!-- Blockout & Reiterations and Reflections for First Project -->
-        <div class="portfolio-extra">
-          <section class="blockout-section">
-            <h2 class="section-title">Blockout &amp; Reiterations</h2>
-            <div class="blockout-carousel">
-              <div class="carousel-container">
-                <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1">
-                <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2">
-                <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+          <!-- Assignment Summary -->
+          <div class="portfolio-assignment-summary">
+            <h2 class="assignment-title">Assignment Summary</h2>
+            <div class="assignment-content" style="display: block;">
+              <div class="assignment-left">
+                <h3><strong>Level Assignment Overview</strong></h3>
+                <ul>
+                  <li><strong>Objective:</strong> Plan, build, and refine a mid-game level.</li>
+                  <li><strong>Scope:</strong> A short vertical slice of the game.</li>
+                </ul>
+                <h3><strong>Player Context</strong></h3>
+                <ul>
+                  <li>Takes place at the midpoint of the game.</li>
+                  <li>Player has full knowledge of controls and mechanics.</li>
+                  <li>Level should challenge but not overwhelm.</li>
+                </ul>
+                <h3><strong>Narrative Setup</strong></h3>
+                <ul>
+                  <li>Play as Date Masamune/Senji Tome – a betrayed warrior.</li>
+                  <li>Framed for murder by General Oda Nobunaga.</li>
+                  <li>Mission: Weaken the general’s influence over surrounding villages.</li>
+                </ul>
               </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
-            </div>
-            <div class="blockout-description">
-              <p>
-                I started to create a <strong>hand-drawn layout</strong> and then I did <strong>architectural research</strong>, 
-                then I built the <strong>blockout in ProBuilder (Unity)</strong> and refined it through <strong>peer feedback</strong>.
-              </p>
-              <p>
-                To fix <strong>predictable symmetry</strong>, I <strong>added support beams on the lower floor</strong> 
-                and a <strong>commander’s study on the upper floor</strong>, improving flow. 
-                <strong>Lighting and environmental cues</strong> were adjusted to enhance <strong>player guidance</strong>.
-              </p>
-              <p>
-                These changes made the level <strong>more engaging</strong>, balancing <strong>high-ground advantages</strong> 
-                with <strong>varied movement options</strong> for a <strong>fluid experience</strong>.
-              </p>
-            </div>
-          </section>
-          <section class="reflection-textbox">
-            <h2><strong>Reflections</strong></h2>
-            <p>
-              This project taught me <strong>how to use ProBuilder and similar tools</strong> as well as <strong>lighting techniques and player guidance</strong> in stealth-based level design.
-              I learned the <strong>importance of giving players a vantage point early on</strong>, allowing them to plan their route strategically.
-            </p>
-            <p>
-              The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning the layout to using new tools like ProBuilder.
-              At first, it was frustrating, but overcoming those struggles helped me <strong>understand how to approach the early phases of level creation more effectively</strong>.
-            </p>
-            <p>
-              If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to further enhance the atmosphere.
-              I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion.
-            </p>
-          </section>
-        </div>
-      </section>
-
-      <!-- Second Portfolio Piece: Game Project 2 -->
-      <section class="portfolio-piece" id="portfolio-piece-2">
-        <h2 class="portfolio-title">Game Project 2</h2>
-
-        <!-- Hero (Image Placeholder) -->
-        <div class="portfolio-hero">
-          <img src="{{ '/assets/images/gp2-hero.png' | relative_url }}" alt="Project 2 Hero Placeholder" class="portfolio-video">
-        </div>
-
-        <!-- Project Overview -->
-        <div class="portfolio-description">
-          <h2><strong>Project Overview</strong></h2>
-          <p>
-            Brief overview of Game Project 2 goes here. Describe the concept, key objectives, and overall design direction.
-          </p>
-        </div>
-
-        <!-- Side-by-Side Cards for Additional Details -->
-        <div class="portfolio-sidecards">
-          <!-- Card 1: Concept & Design (Text Left, Image Right) -->
-          <div class="portfolio-sidecard">
-            <div class="card-text">
-              <h2><strong>Concept &amp; Design</strong></h2>
-              <p>
-                Explain the design inspirations, themes, and creative concept behind Game Project 2.
-              </p>
-            </div>
-            <div class="card-image">
-              <img src="{{ '/assets/images/gp2-screenshot1.png' | relative_url }}" alt="Concept &amp; Design Screenshot Placeholder">
             </div>
           </div>
-          <!-- Card 2: Development Process (Image Left, Text Right) -->
-          <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img src="{{ '/assets/images/gp2-screenshot2.png' | relative_url }}" alt="Development Process Screenshot Placeholder">
-            </div>
-            <div class="card-text">
-              <h2><strong>Development Process</strong></h2>
-              <p>
-                Outline the development process, technical challenges, and solutions employed during Game Project 2.
-              </p>
-            </div>
-          </div>
-        </div>
 
-        <!-- Blockout & Reiterations and Reflections for Second Project -->
-        <div class="portfolio-extra">
-          <section class="blockout-section">
-            <h2 class="section-title">Blockout &amp; Reiterations</h2>
-            <div class="blockout-carousel">
-              <div class="carousel-container">
-                <img src="{{ '/assets/images/gp2-blockout.png' | relative_url }}" alt="Blockout 1">
-                <img src="{{ '/assets/images/gp2-final.png' | relative_url }}" alt="Blockout 2">
-                <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+          <!-- Portfolio Sidecards -->
+          <div class="portfolio-sidecards">
+            <!-- Design Card -->
+            <div class="portfolio-sidecard">
+              <div class="card-image">
+                <img src="{{ '/assets/images/screenshot-3.png' | relative_url }}" alt="Design Screenshot">
               </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
+              <div class="card-text">
+                <h2><strong>Design</strong></h2>
+                <p>
+                  I chose a <strong>gatehouse setting</strong> to create a <strong>stealth-centric</strong> environment perfect for quiet, strategic gameplay. The level features a <strong>dark, moody atmosphere</strong> that heightens tension, while a <strong>clear spatial flow</strong>—achieved through <strong>strategic lighting</strong> and <strong>verticality</strong>—guides players subtly. The <strong>high ground</strong> and <strong>overlook position</strong> empower players to plan their routes effectively.
+                </p>
+              </div>
             </div>
-            <div class="blockout-description">
+            <!-- Narrative Card -->
+            <div class="portfolio-sidecard">
+              <div class="card-text">
+                <h2><strong>Narrative</strong></h2>
+                <p>
+                  I used <strong>environmental storytelling, overheard dialogue, and NPC interaction</strong> to immerse the player in a world of <strong>betrayal and corruption</strong>.
+                </p>
+                <p>
+                  <strong>Ushi Maki Ramen, a captured smuggler,</strong> offers a <strong>hidden escape</strong> in exchange for help. Guards <strong>misuse his confiscated wares</strong>, revealing their corruption through <strong>dialogue and scattered clues</strong>.
+                </p>
+                <p>
+                  Players choose between <strong>escaping through the main gate</strong> or <strong>helping Ushi</strong> to access a <strong>hidden passage behind a bookshelf</strong>, rewarding exploration and choice.
+                </p>
+              </div>
+              <div class="card-image">
+                <img src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Narrative Screenshot">
+              </div>
+            </div>
+            <!-- Guiding the Player Card -->
+            <div class="portfolio-sidecard">
+              <div class="card-image">
+                <img src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guiding the Player Screenshot">
+              </div>
+              <div class="card-text">
+                <h2><strong>Guiding the Player</strong></h2>
+                <p>
+                  I designed the level to <strong>naturally guide players</strong> using <strong>lighting, elevation, and composition</strong>. A <strong>high vantage point</strong> lets players scan the <strong>open gatehouse</strong> and plan their route.
+                </p>
+                <p>
+                  A <strong>large window casts god rays onto the main gate</strong>, marking the objective, while <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement.
+                </p>
+                <p>
+                  <strong>Bright cloth on vaultable windows</strong> signals traversal points, and <strong>verticality</strong> naturally increases difficulty. Starting high grants control, while descending raises tension.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floor Switcher (Overview) -->
+          <div class="floor-switcher" id="floor-switcher">
+            <div class="floor-switcher-content">
+              <span class="arrow arrow-left">&lt;</span>
+              <div class="floor-image-container">
+                <h3 class="floor-switcher-title">Overview</h3>
+                <img src="{{ '/assets/images/top-floor.png' | relative_url }}" alt="Top Floor Overview" class="floor-image">
+                <p class="floor-indicator">Top Floor</p>
+              </div>
+              <span class="arrow arrow-right">&gt;</span>
+            </div>
+          </div>
+
+          <!-- Blockout & Reiterations and Reflections -->
+          <div class="portfolio-extra">
+            <section class="blockout-section">
+              <h2 class="section-title">Blockout &amp; Reiterations</h2>
+              <div class="blockout-carousel">
+                <div class="carousel-container">
+                  <img src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1">
+                  <img src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2">
+                  <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+                </div>
+                <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-next" aria-label="Next">&#8250;</button>
+              </div>
+              <div class="blockout-description">
+                <p>
+                  I started to create a <strong>hand-drawn layout</strong> and then I did <strong>architectural research</strong>, then I built the <strong>blockout in ProBuilder (Unity)</strong> and refined it through <strong>peer feedback</strong>.
+                </p>
+                <p>
+                  To fix <strong>predictable symmetry</strong>, I <strong>added support beams on the lower floor</strong> and a <strong>commander’s study on the upper floor</strong>, improving flow. <strong>Lighting and environmental cues</strong> were adjusted to enhance <strong>player guidance</strong>.
+                </p>
+                <p>
+                  These changes made the level <strong>more engaging</strong>, balancing <strong>high-ground advantages</strong> with <strong>varied movement options</strong> for a <strong>fluid experience</strong>.
+                </p>
+              </div>
+            </section>
+            <section class="reflection-textbox">
+              <h2><strong>Reflections</strong></h2>
               <p>
-                Describe the initial layout and blockout process for Game Project 2.
-                Explain how early sketches and prototypes evolved into the final design.
+                This project taught me <strong>how to use ProBuilder and similar tools</strong> as well as <strong>lighting techniques and player guidance</strong> in stealth-based level design. I learned the <strong>importance of giving players a vantage point early on</strong>, allowing them to plan their route strategically.
               </p>
-            </div>
-          </section>
-          <section class="reflection-textbox">
-            <h2><strong>Reflections</strong></h2>
+              <p>
+                The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning the layout to using new tools like ProBuilder. At first, it was frustrating, but overcoming those struggles helped me <strong>understand how to approach the early phases of level creation more effectively</strong>.
+              </p>
+              <p>
+                If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> to further enhance the atmosphere. I would also implement <strong>audio and music</strong>, as I believe sound design could elevate the stealth experience by reinforcing tension and immersion.
+              </p>
+            </section>
+          </div>
+        </section>
+
+        <!-- Second Portfolio Piece: Game Project 2 -->
+        <section class="portfolio-piece" id="portfolio-piece-2">
+          <h2 class="portfolio-title">Game Project 2</h2>
+          <div class="portfolio-hero">
+            <img src="{{ '/assets/images/gp2-hero.png' | relative_url }}" alt="Project 2 Hero Placeholder" class="portfolio-video">
+          </div>
+          <div class="portfolio-description">
+            <h2><strong>Project Overview</strong></h2>
             <p>
-              Share your insights on the creative and technical challenges encountered during Game Project 2.
-              Discuss what you learned and how it will influence your future projects.
+              Brief overview of Game Project 2 goes here. Describe the concept, key objectives, and overall design direction.
             </p>
-          </section>
-        </div>
-      </section>
+          </div>
+          <div class="portfolio-sidecards">
+            <!-- Card 1: Concept & Design -->
+            <div class="portfolio-sidecard">
+              <div class="card-text">
+                <h2><strong>Concept &amp; Design</strong></h2>
+                <p>
+                  Explain the design inspirations, themes, and creative concept behind Game Project 2.
+                </p>
+              </div>
+              <div class="card-image">
+                <img src="{{ '/assets/images/gp2-screenshot1.png' | relative_url }}" alt="Concept &amp; Design Screenshot Placeholder">
+              </div>
+            </div>
+            <!-- Card 2: Development Process -->
+            <div class="portfolio-sidecard">
+              <div class="card-image">
+                <img src="{{ '/assets/images/gp2-screenshot2.png' | relative_url }}" alt="Development Process Screenshot Placeholder">
+              </div>
+              <div class="card-text">
+                <h2><strong>Development Process</strong></h2>
+                <p>
+                  Outline the development process, technical challenges, and solutions employed during Game Project 2.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-extra">
+            <section class="blockout-section">
+              <h2 class="section-title">Blockout &amp; Reiterations</h2>
+              <div class="blockout-carousel">
+                <div class="carousel-container">
+                  <img src="{{ '/assets/images/gp2-blockout.png' | relative_url }}" alt="Blockout 1">
+                  <img src="{{ '/assets/images/gp2-final.png' | relative_url }}" alt="Blockout 2">
+                  <img src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+                </div>
+                <button class="carousel-prev" aria-label="Previous">&#8249;</button>
+                <button class="carousel-next" aria-label="Next">&#8250;</button>
+              </div>
+              <div class="blockout-description">
+                <p>
+                  Describe the initial layout and blockout process for Game Project 2. Explain how early sketches and prototypes evolved into the final design.
+                </p>
+              </div>
+            </section>
+            <section class="reflection-textbox">
+              <h2><strong>Reflections</strong></h2>
+              <p>
+                Share your insights on the creative and technical challenges encountered during Game Project 2. Discuss what you learned and how it will influence your future projects.
+              </p>
+            </section>
+          </div>
+        </section>
       {% endif %}
-
-      <!-- Your existing content goes here -->
       {{ content }}
     </main>
 
@@ -322,37 +293,30 @@
       <!-- Removed GitHub Pages Credit -->
     </footer>
 
-    <!-- Typing Animation and Hamburger Menu Control Script -->
+    <!-- Scripts -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-        // Typing animation logic
+        // Typing Animation
         const introMain = document.querySelector('.intro-main');
         const caret = document.querySelector('.caret');
         if (introMain && caret) {
-          const typingDuration = 3500; // 3.5 seconds
-          const blinkDuration = 5000;  // 5 seconds
-          setTimeout(() => {
-            caret.classList.add('blink-caret');
-          }, typingDuration);
-          setTimeout(() => {
-            caret.classList.remove('blink-caret');
-            caret.classList.add('hide-caret');
-          }, typingDuration + blinkDuration);
+          const typingDuration = 3500, blinkDuration = 5000;
+          setTimeout(() => { caret.classList.add('blink-caret'); }, typingDuration);
+          setTimeout(() => { caret.classList.remove('blink-caret'); caret.classList.add('hide-caret'); }, typingDuration + blinkDuration);
         }
 
-        // Hamburger Menu Toggle
+        // Hamburger Menu
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
         if (hamburger && navLinks) {
           hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('nav-active');
             hamburger.classList.toggle('toggle');
-            const isExpanded = hamburger.classList.contains('toggle');
-            hamburger.setAttribute('aria-expanded', isExpanded);
+            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
           });
         }
 
-        // Intersection Observer fade-in for portfolio (first portfolio piece)
+        // Portfolio Fade-In
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
@@ -370,34 +334,22 @@
           observer.observe(portfolioSection);
         }
 
-        // Header Shrink on Scroll
+        // Header Shrink
         window.addEventListener('scroll', function() {
           const header = document.querySelector('.fixed-header');
-          if (window.scrollY > 50) {
-            header.classList.add('shrink');
-          } else {
-            header.classList.remove('shrink');
-          }
+          header.classList.toggle('shrink', window.scrollY > 50);
         });
 
-        // Floor Switcher Code
+        // Floor Switcher
         const floorSwitcher = document.getElementById('floor-switcher');
         if (floorSwitcher) {
           const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+          const arrowLeft = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
           const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
           const floors = [
-            {
-              src: '{{ "/assets/images/top-floor.png" | relative_url }}',
-              alt: 'Top Floor Overview',
-              label: 'Top Floor'
-            },
-            {
-              src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
-              alt: 'Lower Floor Overview',
-              label: 'Lower Floor'
-            }
+            { src: '{{ "/assets/images/top-floor.png" | relative_url }}', alt: 'Top Floor Overview', label: 'Top Floor' },
+            { src: '{{ "/assets/images/lower-floor.png" | relative_url }}', alt: 'Lower Floor Overview', label: 'Lower Floor' }
           ];
           let currentIndex = 0;
           function updateFloor() {
@@ -416,14 +368,13 @@
           });
         }
 
-        // Blockout Carousel Code using Flex Slider
+        // Blockout Carousel
         const carouselContainer = document.querySelector('.blockout-carousel .carousel-container');
         if (carouselContainer) {
           const images = carouselContainer.querySelectorAll('img');
           let currentCarouselIndex = 0;
-          const totalImages = images.length; // expected 3 images
+          const totalImages = images.length;
           const updateCarousel = () => {
-            // Shift by 33.33% for each image
             carouselContainer.style.transform = 'translateX(-' + (currentCarouselIndex * 33.33) + '%)';
           };
           updateCarousel();
@@ -446,16 +397,10 @@
     </script>
 
     {% if site.use_aos %}
-    <!-- AOS JS (Animate On Scroll) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+      <script>
+        AOS.init({ duration: 1000, once: true });
+      </script>
     {% endif %}
-
-    <!-- Any other scripts can be added here -->
   </body>
 </html>
