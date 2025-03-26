@@ -94,8 +94,13 @@
         const caret = document.querySelector('.caret');
         if (introMain && caret) {
           const typingDuration = 3500, blinkDuration = 5000;
-          setTimeout(() => { caret.classList.add('blink-caret'); }, typingDuration);
-          setTimeout(() => { caret.classList.remove('blink-caret'); caret.classList.add('hide-caret'); }, typingDuration + blinkDuration);
+          setTimeout(() => {
+            caret.classList.add('blink-caret');
+          }, typingDuration);
+          setTimeout(() => {
+            caret.classList.remove('blink-caret');
+            caret.classList.add('hide-caret');
+          }, typingDuration + blinkDuration);
         }
 
         // Hamburger Menu
@@ -115,6 +120,7 @@
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+
           const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
@@ -124,6 +130,7 @@
               }
             });
           }, { threshold: 0.1 });
+
           observer.observe(portfolioSection);
         }
 
@@ -140,6 +147,7 @@
           const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
           const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+
           const floors = [
             {
               src: '/assets/images/top-floor.png',
@@ -152,48 +160,60 @@
               label: 'Lower Floor'
             }
           ];
+
           let currentIndex = 0;
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
+
           updateFloor();
+
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
+
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
           });
         }
 
-        // Blockout Carousel
-        const carouselContainer = document.querySelector('.blockout-carousel .carousel-container');
-        if (carouselContainer) {
-          const images = carouselContainer.querySelectorAll('img');
+        // Blockout Carousel - handle all
+        const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+        carouselContainers.forEach((container) => {
+          const images = container.querySelectorAll('img');
           let currentCarouselIndex = 0;
           const totalImages = images.length;
+
           const updateCarousel = () => {
-            carouselContainer.style.transform = 'translateX(-' + (currentCarouselIndex * 33.33) + '%)';
+            // Adjust the transform based on current index and total images
+            container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
           };
+
           updateCarousel();
-          const prevButton = document.querySelector('.carousel-prev');
-          const nextButton = document.querySelector('.carousel-next');
+
+          const parent = container.parentElement;
+          const prevButton = parent.querySelector('.carousel-prev');
+          const nextButton = parent.querySelector('.carousel-next');
+
           prevButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
             updateCarousel();
           });
+
           nextButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
             updateCarousel();
           });
+
           setInterval(() => {
             currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
             updateCarousel();
           }, 5000);
-        }
+        });
       });
     </script>
 
