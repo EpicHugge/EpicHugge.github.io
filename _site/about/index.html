@@ -150,13 +150,12 @@
           });
         }
 
-        // Portfolio Fade-In
+        // Portfolio Fade-In for Level Design Assignment
         const portfolioSection = document.getElementById('portfolio-piece');
         if (portfolioSection) {
           portfolioSection.style.opacity = '0';
           portfolioSection.style.transform = 'translateY(20px)';
           portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-
           const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
               if (entry.isIntersecting) {
@@ -166,8 +165,25 @@
               }
             });
           }, { threshold: 0.1 });
-
           observer.observe(portfolioSection);
+        }
+
+        // Portfolio Fade-In for Game Project 2 Section
+        const portfolioSection2 = document.getElementById('portfolio-piece-2');
+        if (portfolioSection2) {
+          portfolioSection2.style.opacity = '0';
+          portfolioSection2.style.transform = 'translateY(20px)';
+          portfolioSection2.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+          const observer2 = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                portfolioSection2.style.opacity = '1';
+                portfolioSection2.style.transform = 'translateY(0)';
+                observer2.unobserve(portfolioSection2);
+              }
+            });
+          }, { threshold: 0.1 });
+          observer2.observe(portfolioSection2);
         }
 
         // Header Shrink
@@ -183,7 +199,6 @@
           const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
           const arrowRight = floorSwitcher.querySelector('.arrow-right');
           const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-
           const floors = [
             {
               src: '/assets/images/top-floor.png',
@@ -196,21 +211,17 @@
               label: 'Lower Floor'
             }
           ];
-
           let currentIndex = 0;
           function updateFloor() {
             floorImage.src = floors[currentIndex].src;
             floorImage.alt = floors[currentIndex].alt;
             floorIndicator.textContent = floors[currentIndex].label;
           }
-
           updateFloor();
-
           arrowLeft.addEventListener('click', () => {
             currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
             updateFloor();
           });
-
           arrowRight.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % floors.length;
             updateFloor();
@@ -223,28 +234,21 @@
           const images = container.querySelectorAll('img');
           let currentCarouselIndex = 0;
           const totalImages = images.length;
-
           const updateCarousel = () => {
-            // Adjust the transform based on current index and total images
             container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
           };
-
           updateCarousel();
-
           const parent = container.parentElement;
           const prevButton = parent.querySelector('.carousel-prev');
           const nextButton = parent.querySelector('.carousel-next');
-
           prevButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
             updateCarousel();
           });
-
           nextButton.addEventListener('click', () => {
             currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
             updateCarousel();
           });
-
           setInterval(() => {
             currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
             updateCarousel();
