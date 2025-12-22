@@ -205,6 +205,22 @@
     <!-- Global Scripts -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    const toolchainSection = document.querySelector('.toolchain');
+    if (toolchainSection) {
+      const chips = toolchainSection.querySelectorAll('.toolchip');
+      chips.forEach((chip, index) => {
+        chip.style.transitionDelay = `${index * 120}ms`;
+      });
+      const triggerToolchain = () => {
+        toolchainSection.classList.add('reveal');
+      };
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        triggerToolchain();
+      } else {
+        setTimeout(triggerToolchain, 1500);
+      }
+    }
+
     const progressBar = document.getElementById('scroll-progress');
     if (progressBar) {
       const updateProgress = () => {
@@ -220,7 +236,7 @@
     const introMain = document.querySelector('.intro-main');
     const caret = document.querySelector('.caret');
     if (introMain && caret) {
-      const typingDuration = 3500, blinkDuration = 5000;
+      const typingDuration = 2000, blinkDuration = 3500;
       setTimeout(() => {
         caret.classList.add('blink-caret');
       }, typingDuration);

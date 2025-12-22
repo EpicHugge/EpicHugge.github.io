@@ -72,27 +72,32 @@
 </section>
 
 <!-- Toolchain -->
-<section class="toolchain" aria-label="Toolbox">
+<section class="toolchain" aria-label="Toolbox" data-reveal="true">
   <div class="toolchain-icons">
     
-      <div class="toolchip" aria-label="Unity">
-        <img src="/assets/images/tool-icons/unity.svg" alt="" loading="lazy" decoding="async">
-        <span class="sr-only">Unity</span>
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/unity.png" alt="Unity logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Unity</span>
       </div>
     
-      <div class="toolchip" aria-label="Unreal Engine">
-        <img src="/assets/images/tool-icons/unreal.svg" alt="" loading="lazy" decoding="async">
-        <span class="sr-only">Unreal Engine</span>
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Unreal Engine</span>
       </div>
     
-      <div class="toolchip" aria-label="ProBuilder">
-        <img src="/assets/images/tool-icons/probuilder.svg" alt="" loading="lazy" decoding="async">
-        <span class="sr-only">ProBuilder</span>
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Perforce</span>
       </div>
     
-      <div class="toolchip" aria-label="FMOD">
-        <img src="/assets/images/tool-icons/fmod.svg" alt="" loading="lazy" decoding="async">
-        <span class="sr-only">FMOD</span>
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/github.png" alt="GitHub logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">GitHub</span>
+      </div>
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/blender.png" alt="Blender logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Blender</span>
       </div>
     
   </div>
@@ -221,6 +226,22 @@
     <!-- Global Scripts -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    const toolchainSection = document.querySelector('.toolchain');
+    if (toolchainSection) {
+      const chips = toolchainSection.querySelectorAll('.toolchip');
+      chips.forEach((chip, index) => {
+        chip.style.transitionDelay = `${index * 120}ms`;
+      });
+      const triggerToolchain = () => {
+        toolchainSection.classList.add('reveal');
+      };
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        triggerToolchain();
+      } else {
+        setTimeout(triggerToolchain, 1500);
+      }
+    }
+
     const progressBar = document.getElementById('scroll-progress');
     if (progressBar) {
       const updateProgress = () => {
@@ -236,7 +257,7 @@
     const introMain = document.querySelector('.intro-main');
     const caret = document.querySelector('.caret');
     if (introMain && caret) {
-      const typingDuration = 3500, blinkDuration = 5000;
+      const typingDuration = 2000, blinkDuration = 3500;
       setTimeout(() => {
         caret.classList.add('blink-caret');
       }, typingDuration);

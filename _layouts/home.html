@@ -18,12 +18,12 @@ layout: default
 </section>
 
 <!-- Toolchain -->
-<section class="toolchain" aria-label="Toolbox">
+<section class="toolchain" aria-label="Toolbox" data-reveal="true">
   <div class="toolchain-icons">
     {% for tool in site.data.toolchain %}
-      <div class="toolchip" aria-label="{{ tool.name }}">
-        <img src="{{ tool.icon | relative_url }}" alt="" loading="lazy" decoding="async">
-        <span class="sr-only">{{ tool.name }}</span>
+      <div class="toolchip">
+        <img src="{{ tool.icon | relative_url }}" alt="{{ tool.name }} logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">{{ tool.name }}</span>
       </div>
     {% endfor %}
   </div>
