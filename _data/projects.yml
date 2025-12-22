@@ -1,0 +1,53 @@
+- title: "Game Project 2"
+  slug: "game-project-2"
+  url: "/projects/game-project-2/"
+  role: "Level Designer"
+  timeframe: "4 week team project"
+  summary: "Stepped in as the level designer mid-production, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler."
+  image: "/assets/images/gp2-hero.png"
+  tags:
+    - Combat Design
+    - Level Design
+    - Team Project
+  cta: "Breakdown"
+  featured: true
+
+- title: "Level Design Assignment"
+  slug: "level-design-assignment"
+  url: "/projects/level-design-assignment/"
+  role: "Solo Level Designer"
+  timeframe: "Course assignment"
+  summary: "Vertical slice of a stealth encounter set inside a feudal Japanese gatehouse, from blockout to guided lighting pass."
+  image: "/assets/images/screenshot-3.png"
+  tags:
+    - Stealth Design
+    - Blockout
+    - Lighting
+  cta: "See Case Study"
+  featured: true
+
+- title: "Game Project 3"
+  slug: "game-project-3"
+  url: "/projects/game-project-3/"
+  role: "Level Designer"
+  timeframe: "In development"
+  summary: "Placeholder breakdown for the next combat-focused slice. Full write-up coming soon."
+  image: "/assets/images/placeholder-gp3.svg"
+  tags:
+    - Level Design
+    - Work in Progress
+  cta: "Preview"
+  featured: true
+
+- title: "Game Project 4"
+  slug: "game-project-4"
+  url: "/projects/game-project-4/"
+  role: "Product Owner"
+  timeframe: "In development"
+  summary: "High-level notes about my Product Owner responsibilities while we polish the experience."
+  image: "/assets/images/placeholder-gp4.svg"
+  tags:
+    - Production
+    - Leadership
+  cta: "Preview"
+  featured: true

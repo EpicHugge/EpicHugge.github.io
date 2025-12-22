@@ -1,0 +1,69 @@
+---
+layout: default
+---
+
+<!-- Introduction Section -->
+<section class="introduction">
+  <div class="intro-text">
+    <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
+    <p class="intro-sub">Aspiring Level Designer</p>
+    <p class="intro-location">
+      <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
+      SWEDEN
+    </p>
+  </div>
+  <div class="intro-logo">
+    <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- Toolchain -->
+<section class="toolchain" aria-label="Toolbox">
+  <div class="toolchain-icons">
+    {% for tool in site.data.toolchain %}
+      <div class="toolchip" aria-label="{{ tool.name }}">
+        <img src="{{ tool.icon | relative_url }}" alt="" loading="lazy" decoding="async">
+        <span class="sr-only">{{ tool.name }}</span>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Section Separator with Scroll Cue -->
+<div class="section-separator">
+  <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
+    <span class="scroll-arrow">&#8595;</span>
+  </a>
+</div>
+
+<!-- Featured Projects -->
+<section class="featured-projects" id="featured-projects">
+  <div class="section-header">
+    <p class="eyebrow">Featured Work</p>
+    <h2>Projects</h2>
+  </div>
+  <div class="featured-projects-grid">
+    {% assign featured_projects = site.data.projects | where: "featured", true %}
+    {% for project in featured_projects %}
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }} hero image" loading="lazy" decoding="async">
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">{{ project.role }} &middot; {{ project.timeframe }}</p>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary }}</p>
+          <div class="project-card-tags">
+            {% for tag in project.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          <a class="project-card-link" href="{{ project.url | relative_url }}">
+            {{ project.cta | default: 'View Project' }}
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

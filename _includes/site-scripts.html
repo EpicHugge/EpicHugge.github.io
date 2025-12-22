@@ -1,89 +1,4 @@
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-    <meta name="description" content="Your short description here.">
-
-    <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
-    <link rel="manifest" href="/assets/images/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-    <!-- Add any custom head elements here -->
-
-<!-- Google Fonts: More Sugar -->
-<link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
-
-  </head>
-  <body class="contact-page">
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <div class="scroll-progress" id="scroll-progress"></div>
-
-    <!-- Site Header -->
-<header class="fixed-header">
-  <div class="header-container">
-    <!-- Hamburger Menu Icon (Visible on Mobile) -->
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-      <span class="hamburger-line"></span>
-    </button>
-
-    <!-- Logo -->
-    <div class="logo">
-      <a href="/">EpicHugge</a>
-    </div>
-
-    <!-- Navigation Links -->
-    <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-      <a href="/" class="">Portfolio</a>
-      <a href="/projects/" class="">Projects</a>
-      <a href="/about/" class="">About</a>
-      <a href="/contact/" class="active">Contact</a>
-    </nav>
-  </div>
-</header>
-
-
-    <main id="content" class="main-content" role="main">
-      <h1 id="contact-me">Contact Me</h1>
-
-<div class="contact-container fade-in">
-  <p>I’d love to hear from you!.</p>
-  <p>You can reach me via email:</p>
-
-  <!-- Mailto Link -->
-  <p>
-    <strong>Email:</strong> 
-    <a href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20...">
-      hugonykvist@hotmail.se
-    </a>
-  </p>
-
-  <!-- Alternatively, you can embed a small mailto-based form if you want a "click to open email draft." 
-       But typically, a simple mailto link is enough for minimalistic setups. -->
-</div>
-
-    </main>
-
-    <footer class="site-footer">
-  <span class="site-footer-owner">
-    <a href="https://github.com/yourusername">EpicHugge</a>
-    &copy; 2025. All rights reserved.
-  </span>
-</footer>
-
-    <!-- Global Scripts -->
+<!-- Global Scripts -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const progressBar = document.getElementById('scroll-progress');
@@ -160,12 +75,12 @@
       const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
       const floors = [
         {
-          src: '/assets/images/top-floor.png',
+          src: '{{ "/assets/images/top-floor.png" | relative_url }}',
           alt: 'Top Floor Overview',
           label: 'Top Floor'
         },
         {
-          src: '/assets/images/lower-floor.png',
+          src: '{{ "/assets/images/lower-floor.png" | relative_url }}',
           alt: 'Lower Floor Overview',
           label: 'Lower Floor'
         }
@@ -216,7 +131,12 @@
   });
 </script>
 
-
-
-  </body>
-</html>
+{% if site.use_aos %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+{% endif %}

@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
@@ -25,189 +25,270 @@
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
 
   </head>
-  <body class="">
+  <body class="project-archive">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Fixed Header -->
-    <header class="fixed-header">
-      <div class="header-container">
-        <!-- Hamburger Menu Icon (Visible on Mobile) -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+    <!-- Site Header -->
+<header class="fixed-header">
+  <div class="header-container">
+    <!-- Hamburger Menu Icon (Visible on Mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
 
-        <!-- Logo -->
-        <div class="logo">
-          <a href="/">EpicHugge</a>
-        </div>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">EpicHugge</a>
+    </div>
 
-        <!-- Navigation Links -->
-        <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-          <a href="/" class="">Portfolio</a>
-          <a href="/about/" class="">About</a>
-          <a href="/contact/" class="">Contact</a>
-        </nav>
-      </div>
-    </header>
-    <!-- End of Fixed Header -->
+    <!-- Navigation Links -->
+    <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
+      <a href="/" class="">Portfolio</a>
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/about/" class="">About</a>
+      <a href="/contact/" class="">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
     <main id="content" class="main-content" role="main">
-      
-      <h1 id="my-projects">My Projects</h1>
-<div class="under-construction">
-  <h1>Projects Under Construction</h1>
-  <p>
-    Hold onto your hats! Our projects page is currently under construction. Our code ninjas and hamster engineers are busy creating something epic (Its' only me). Check back soon for the awesome projects in the works!
-  </p>
-</div>
+      <section class="featured-projects project-archive">
+  <div class="section-header">
+    <p class="eyebrow">Project Archive</p>
+    <h1>Projects</h1>
+  </div>
+  <div class="featured-projects-grid">
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/gp2-hero.png" alt="Game Project 2 cover image" loading="lazy" decoding="async" />
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Level Designer &middot; 4 week team project</p>
+          <h3>Game Project 2</h3>
+          <p>Stepped in as the level designer mid-production, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Combat Design</span>
+            
+              <span class="tag">Level Design</span>
+            
+              <span class="tag">Team Project</span>
+            
+          </div>
+          <a class="project-card-link" href="/projects/game-project-2/">Read case study &rarr;</a>
+        </div>
+      </article>
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/screenshot-3.png" alt="Level Design Assignment cover image" loading="lazy" decoding="async" />
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Solo Level Designer &middot; Course assignment</p>
+          <h3>Level Design Assignment</h3>
+          <p>Vertical slice of a stealth encounter set inside a feudal Japanese gatehouse, from blockout to guided lighting pass.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Stealth Design</span>
+            
+              <span class="tag">Blockout</span>
+            
+              <span class="tag">Lighting</span>
+            
+          </div>
+          <a class="project-card-link" href="/projects/level-design-assignment/">Read case study &rarr;</a>
+        </div>
+      </article>
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/placeholder-gp3.svg" alt="Game Project 3 cover image" loading="lazy" decoding="async" />
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Level Designer &middot; In development</p>
+          <h3>Game Project 3</h3>
+          <p>Placeholder breakdown for the next combat-focused slice. Full write-up coming soon.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Level Design</span>
+            
+              <span class="tag">Work in Progress</span>
+            
+          </div>
+          <a class="project-card-link" href="/projects/game-project-3/">Read case study &rarr;</a>
+        </div>
+      </article>
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/placeholder-gp4.svg" alt="Game Project 4 cover image" loading="lazy" decoding="async" />
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Product Owner &middot; In development</p>
+          <h3>Game Project 4</h3>
+          <p>High-level notes about my Product Owner responsibilities while we polish the experience.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Production</span>
+            
+              <span class="tag">Leadership</span>
+            
+          </div>
+          <a class="project-card-link" href="/projects/game-project-4/">Read case study &rarr;</a>
+        </div>
+      </article>
+    
+  </div>
+</section>
 
     </main>
 
     <footer class="site-footer">
-      <span class="site-footer-owner">
-        <a href="https://github.com/yourusername">EpicHugge</a>
-        &copy; 2025. All rights reserved.
-      </span>
-      <!-- Removed GitHub Pages Credit -->
-    </footer>
+  <span class="site-footer-owner">
+    <a href="https://github.com/yourusername">EpicHugge</a>
+    &copy; 2025. All rights reserved.
+  </span>
+</footer>
 
-    <!-- Scripts -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Typing Animation
-        const introMain = document.querySelector('.intro-main');
-        const caret = document.querySelector('.caret');
-        if (introMain && caret) {
-          const typingDuration = 3500, blinkDuration = 5000;
-          setTimeout(() => {
-            caret.classList.add('blink-caret');
-          }, typingDuration);
-          setTimeout(() => {
-            caret.classList.remove('blink-caret');
-            caret.classList.add('hide-caret');
-          }, typingDuration + blinkDuration);
-        }
+    <!-- Global Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+      const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      };
+      updateProgress();
+      window.addEventListener('scroll', updateProgress);
+    }
+    // Typing Animation
+    const introMain = document.querySelector('.intro-main');
+    const caret = document.querySelector('.caret');
+    if (introMain && caret) {
+      const typingDuration = 3500, blinkDuration = 5000;
+      setTimeout(() => {
+        caret.classList.add('blink-caret');
+      }, typingDuration);
+      setTimeout(() => {
+        caret.classList.remove('blink-caret');
+        caret.classList.add('hide-caret');
+      }, typingDuration + blinkDuration);
+    }
 
-        // Hamburger Menu
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        if (hamburger && navLinks) {
-          hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            hamburger.classList.toggle('toggle');
-            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
-          });
-        }
-
-        // Portfolio Fade-In for Level Design Assignment
-        const portfolioSection = document.getElementById('portfolio-piece');
-        if (portfolioSection) {
-          portfolioSection.style.opacity = '0';
-          portfolioSection.style.transform = 'translateY(20px)';
-          portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                portfolioSection.style.opacity = '1';
-                portfolioSection.style.transform = 'translateY(0)';
-                observer.unobserve(portfolioSection);
-              }
-            });
-          }, { threshold: 0.1 });
-          observer.observe(portfolioSection);
-        }
-
-        // Portfolio Fade-In for Game Project 2 Section
-        const portfolioSection2 = document.getElementById('portfolio-piece-2');
-        if (portfolioSection2) {
-          portfolioSection2.style.opacity = '0';
-          portfolioSection2.style.transform = 'translateY(20px)';
-          portfolioSection2.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-          const observer2 = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                portfolioSection2.style.opacity = '1';
-                portfolioSection2.style.transform = 'translateY(0)';
-                observer2.unobserve(portfolioSection2);
-              }
-            });
-          }, { threshold: 0.1 });
-          observer2.observe(portfolioSection2);
-        }
-
-        // Header Shrink
-        window.addEventListener('scroll', function() {
-          const header = document.querySelector('.fixed-header');
-          header.classList.toggle('shrink', window.scrollY > 50);
-        });
-
-        // Floor Switcher
-        const floorSwitcher = document.getElementById('floor-switcher');
-        if (floorSwitcher) {
-          const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-          const floors = [
-            {
-              src: '/assets/images/top-floor.png',
-              alt: 'Top Floor Overview',
-              label: 'Top Floor'
-            },
-            {
-              src: '/assets/images/lower-floor.png',
-              alt: 'Lower Floor Overview',
-              label: 'Lower Floor'
-            }
-          ];
-          let currentIndex = 0;
-          function updateFloor() {
-            floorImage.src = floors[currentIndex].src;
-            floorImage.alt = floors[currentIndex].alt;
-            floorIndicator.textContent = floors[currentIndex].label;
-          }
-          updateFloor();
-          arrowLeft.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-            updateFloor();
-          });
-          arrowRight.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % floors.length;
-            updateFloor();
-          });
-        }
-
-        // Blockout Carousel - handle all
-        const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
-        carouselContainers.forEach((container) => {
-          const images = container.querySelectorAll('img');
-          let currentCarouselIndex = 0;
-          const totalImages = images.length;
-          const updateCarousel = () => {
-            container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
-          };
-          updateCarousel();
-          const parent = container.parentElement;
-          const prevButton = parent.querySelector('.carousel-prev');
-          const nextButton = parent.querySelector('.carousel-next');
-          prevButton.addEventListener('click', () => {
-            currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
-            updateCarousel();
-          });
-          nextButton.addEventListener('click', () => {
-            currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-            updateCarousel();
-          });
-          setInterval(() => {
-            currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-            updateCarousel();
-          }, 5000);
-        });
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+        hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
       });
-    </script>
+    }
 
-    
+    // Fade-in for any portfolio pieces
+    const portfolioSections = document.querySelectorAll('.portfolio-piece');
+    if (portfolioSections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      portfolioSections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+        observer.observe(section);
+      });
+    }
+
+    // Header Shrink
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.fixed-header');
+      if (header) {
+        header.classList.toggle('shrink', window.scrollY > 50);
+      }
+    });
+
+    // Floor Switcher
+    const floorSwitcher = document.getElementById('floor-switcher');
+    if (floorSwitcher) {
+      const floorImage = floorSwitcher.querySelector('.floor-image');
+      const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+      const arrowRight = floorSwitcher.querySelector('.arrow-right');
+      const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+      const floors = [
+        {
+          src: '/assets/images/top-floor.png',
+          alt: 'Top Floor Overview',
+          label: 'Top Floor'
+        },
+        {
+          src: '/assets/images/lower-floor.png',
+          alt: 'Lower Floor Overview',
+          label: 'Lower Floor'
+        }
+      ];
+      let currentIndex = 0;
+      function updateFloor() {
+        floorImage.src = floors[currentIndex].src;
+        floorImage.alt = floors[currentIndex].alt;
+        floorIndicator.textContent = floors[currentIndex].label;
+      }
+      updateFloor();
+      arrowLeft.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+        updateFloor();
+      });
+      arrowRight.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % floors.length;
+        updateFloor();
+      });
+    }
+
+    // Blockout Carousel - handle all
+    const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+    carouselContainers.forEach((container) => {
+      const images = container.querySelectorAll('img');
+      let currentCarouselIndex = 0;
+      const totalImages = images.length;
+      const updateCarousel = () => {
+        container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
+      };
+      updateCarousel();
+      const parent = container.parentElement;
+      const prevButton = parent.querySelector('.carousel-prev');
+      const nextButton = parent.querySelector('.carousel-next');
+      prevButton.addEventListener('click', () => {
+        currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
+        updateCarousel();
+      });
+      nextButton.addEventListener('click', () => {
+        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+        updateCarousel();
+      });
+      setInterval(() => {
+        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+        updateCarousel();
+      }, 5000);
+    });
+  });
+</script>
+
+
+
   </body>
 </html>

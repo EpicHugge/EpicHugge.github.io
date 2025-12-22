@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
@@ -27,522 +27,331 @@
   </head>
   <body class="">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+    <div class="scroll-progress" id="scroll-progress"></div>
 
-    <!-- Fixed Header -->
-    <header class="fixed-header">
-      <div class="header-container">
-        <!-- Hamburger Menu Icon (Visible on Mobile) -->
-        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+    <!-- Site Header -->
+<header class="fixed-header">
+  <div class="header-container">
+    <!-- Hamburger Menu Icon (Visible on Mobile) -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
 
-        <!-- Logo -->
-        <div class="logo">
-          <a href="/">EpicHugge</a>
-        </div>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">EpicHugge</a>
+    </div>
 
-        <!-- Navigation Links -->
-        <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-          <a href="/" class="active">Portfolio</a>
-          <a href="/about/" class="">About</a>
-          <a href="/contact/" class="">Contact</a>
-        </nav>
-      </div>
-    </header>
-    <!-- End of Fixed Header -->
+    <!-- Navigation Links -->
+    <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
+      <a href="/" class="active">Portfolio</a>
+      <a href="/projects/" class="">Projects</a>
+      <a href="/about/" class="">About</a>
+      <a href="/contact/" class="">Contact</a>
+    </nav>
+  </div>
+</header>
+
 
     <main id="content" class="main-content" role="main">
-      
       <!-- Introduction Section -->
-      <div class="introduction">
-        <div class="intro-text">
-          <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
-          <p class="intro-sub">Aspiring Quest/Level Designer</p>
-          <p class="intro-location">
-            <img src="/assets/images/location-pointer.png" alt="Location Pointer" class="location-pointer">
-            UMEÅ, SWEDEN
-          </p>
-        </div>
-        <div class="intro-logo">
-          <img src="/assets/images/logo-small.png" alt="Hugo's Logo" class="intro-logo-image">
-        </div>
+<section class="introduction">
+  <div class="intro-text">
+    <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
+    <p class="intro-sub">Aspiring Level Designer</p>
+    <p class="intro-location">
+      <img src="/assets/images/location-pointer.png" alt="Location Pointer" class="location-pointer">
+      SWEDEN
+    </p>
+  </div>
+  <div class="intro-logo">
+    <img src="/assets/images/logo-small.png" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
+  </div>
+</section>
+
+<!-- Toolchain -->
+<section class="toolchain" aria-label="Toolbox">
+  <div class="toolchain-icons">
+    
+      <div class="toolchip" aria-label="Unity">
+        <img src="/assets/images/tool-icons/unity.svg" alt="" loading="lazy" decoding="async">
+        <span class="sr-only">Unity</span>
       </div>
-      <!-- End of Introduction Section -->
-
-      <!-- Big Separator with Scroll Indicator -->
-      <div class="section-separator">
-        <a href="#portfolio-piece" class="scroll-indicator">
-          <span class="scroll-arrow">&#8595;</span>
-        </a>
+    
+      <div class="toolchip" aria-label="Unreal Engine">
+        <img src="/assets/images/tool-icons/unreal.svg" alt="" loading="lazy" decoding="async">
+        <span class="sr-only">Unreal Engine</span>
       </div>
+    
+      <div class="toolchip" aria-label="ProBuilder">
+        <img src="/assets/images/tool-icons/probuilder.svg" alt="" loading="lazy" decoding="async">
+        <span class="sr-only">ProBuilder</span>
+      </div>
+    
+      <div class="toolchip" aria-label="FMOD">
+        <img src="/assets/images/tool-icons/fmod.svg" alt="" loading="lazy" decoding="async">
+        <span class="sr-only">FMOD</span>
+      </div>
+    
+  </div>
+</section>
 
-      <!-- First Portfolio Piece: Game Project 2 (Moved above Level Design Assignment) -->
-      <section class="portfolio-piece" id="portfolio-piece-2">
-        <h2 class="portfolio-title">Game Project 2</h2>
-        <div class="portfolio-hero">
-          <img 
-            src="/assets/images/gp2-hero.png" 
-            alt="Project 2 Hero Placeholder" 
-            class="portfolio-video"
-          >
+<!-- Section Separator with Scroll Cue -->
+<div class="section-separator">
+  <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
+    <span class="scroll-arrow">&#8595;</span>
+  </a>
+</div>
+
+<!-- Featured Projects -->
+<section class="featured-projects" id="featured-projects">
+  <div class="section-header">
+    <p class="eyebrow">Featured Work</p>
+    <h2>Projects</h2>
+  </div>
+  <div class="featured-projects-grid">
+    
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/gp2-hero.png" alt="Game Project 2 hero image" loading="lazy" decoding="async">
         </div>
-
-        <!-- Project Overview Card (Styled like Assignment Summary) -->
-        <div class="portfolio-assignment-summary">
-          <h2 class="assignment-title">Project Overview</h2>
-          <div class="assignment-content" style="display: block;">
-            <div class="assignment-left">
-              <ul>
-                  <li><strong>Genre:</strong> 2.5D side-scrolling brawler with light platforming.</li>
-                  <li><strong>Development Time:</strong> Four weeks.</li>
-                  <li><strong>Team:</strong> Student group project.</li>
-                  <li><strong>Core Features:</strong> Fast-paced melee combat, dynamic enemy encounters, and traversal mechanics.</li>
-              </ul>
-            </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Level Designer &middot; 4 week team project</p>
+          <h3>Game Project 2</h3>
+          <p>Stepped in as the level designer mid-production, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Combat Design</span>
+            
+              <span class="tag">Level Design</span>
+            
+              <span class="tag">Team Project</span>
+            
           </div>
+          <a class="project-card-link" href="/projects/game-project-2/">
+            Breakdown
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
-
-        <div class="portfolio-sidecards">
-          <!-- Card 1: Transition (Text Left, Image Right) -->
-          <div class="portfolio-sidecard">
-            <div class="card-text">
-              <h2><strong>Transition</strong></h2>
-              <p>
-                I began the project as <strong>Sound & Music Designer</strong>, with a secondary role 
-                in Level Design. After the first week, I stepped into <strong>Level Design full-time</strong> 
-                when the original designer had to leave.
-              </p>
-              <p>
-                This shift required me to <strong>quickly adapt</strong>, ensuring a smooth workflow for the team 
-                while balancing <strong>combat, traversal, and level structure</strong> 
-                within the project’s tight timeline.
-              </p>
-            </div>
-            <div class="card-image">
-              <img 
-                src="/assets/images/gp2-screenshot1.png" 
-                alt="Concept &amp; Design Screenshot Placeholder"
-              >
-            </div>
-          </div>
-
-          <!-- Card 2: Development Process (Image Left, Text Right) -->
-          <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img 
-                src="/assets/images/gp2-screenshot2.png" 
-                alt="Development Process Screenshot Placeholder"
-              >
-            </div>
-            <div class="card-text">
-              <h2><strong>Design</strong></h2>
-              <p>
-                The <strong>hook ability</strong> was originally intended for reaching high platforms, 
-                but this conflicted with enemy AI, as they couldn't follow the player. 
-                To fix this, I repositioned <strong>hook anchors</strong> to focus on <strong>speed 
-                and traversal</strong> rather than vertical movement, allowing for 
-                <strong>fluid mobility</strong> without breaking combat flow.
-              </p>
-              <p>
-                Playtesting led to the <strong>removal of excess platforms</strong> to keep 
-                the brawler focus intact. I also fine-tuned <strong>ambush sections 
-                and enemy placement</strong> to maintain a balanced difficulty curve 
-                despite frequent AI tweaks.
-              </p>
-            </div>
-          </div>
-
-          <!-- Card 3: Collaboration (Text Left, Image Right) -->
-          <div class="portfolio-sidecard">
-            <div class="card-text">
-              <h2><strong>Collaboration</strong></h2>
-              <p>
-                I worked closely with <strong>programmers, artists, and designers</strong> to balance 
-                <strong>combat, traversal, and level flow</strong>. Frequent <strong>enemy AI tweaks</strong> 
-                required ongoing adjustments to <strong>enemy placement and ambush pacing</strong> 
-                to maintain fair difficulty.
-              </p>
-              <p>
-                I also coordinated with <strong>programmers</strong> to align <strong>jump mechanics 
-                with level design</strong>, ensuring platform spacing felt responsive. 
-                Through continuous communication, I made sure <strong>all disciplines could 
-                implement their work seamlessly</strong>, keeping the level balanced, polished, and fun.
-              </p>
-            </div>
-            <div class="card-image">
-              <img 
-                src="/assets/images/gp2-screenshot3.png" 
-                alt="Design Iterations Screenshot"
-              >
-            </div>
-          </div>
+      </article>
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/screenshot-3.png" alt="Level Design Assignment hero image" loading="lazy" decoding="async">
         </div>
-
-        <div class="portfolio-extra">
-          <section class="blockout-section">
-            <h2 class="section-title" style="font-size: 2.8rem;">Blockout</h2>
-            <div class="blockout-carousel gp2-carousel"> 
-              <div class="carousel-container">
-                <img 
-                  src="/assets/images/gp2-blockout.png" 
-                  alt="Blockout 1"
-                >
-                <img 
-                  src="/assets/images/gp2-final.png" 
-                  alt="Blockout 2"
-                >
-              </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
-            </div>
-            <div class="blockout-description">
-              <h2><strong>Blockout</strong></h2>
-              <p>
-                I inherited an <strong>unfinished blockout</strong> with <strong>technical issues</strong> 
-                that prevented the team from testing mechanics and implementing assets. 
-                I <strong>quickly fixed the structure</strong>, ensuring the level was 
-                <strong>fully playable and testable</strong> without blocking other disciplines.
-              </p>
-              <p>
-                Once the foundation was stable, I focused on <strong>optimizing level flow</strong>, 
-                adjusting <strong>pathing, spacing, and encounter pacing</strong> 
-                to keep movement <strong>fluid</strong> and <strong>combat engaging</strong>. 
-                This ensured a <strong>smooth development process</strong> while maintaining a 
-                <strong>fun and responsive gameplay experience</strong>.
-              </p>
-            </div>
-          </section>
-          <section class="reflection-textbox" style="max-width:600px; margin: 40px auto;">
-            <h2><strong>Reflections</strong></h2>
-            <p>
-              Game Project 2 challenged me to <strong>adapt quickly, problem-solve under pressure, 
-              and collaborate across disciplines</strong>. Taking over Level Design mid-project, 
-              I prioritized <strong>efficiency</strong>, ensuring a <strong>functional, testable level</strong> 
-              without blocking development.
-            </p>
-            <p>
-              I learned to <strong>balance combat and traversal</strong>, refining 
-              <strong>enemy placement, encounter pacing, and platforming density</strong> 
-              to keep movement fluid while maintaining the <strong>brawler focus</strong>. 
-              Handling the <strong>hook traversal mechanic</strong> reinforced the importance of 
-              <strong>mechanical cohesion</strong>, ensuring features complement rather than disrupt gameplay.
-            </p>
-            <p>
-              This project strengthened my ability to <strong>iterate based on feedback</strong>, 
-              quickly adjusting <strong>level structure, AI placement, and encounter flow</strong>. 
-              It solidified my passion for <strong>Level Design</strong> and the value of 
-              <strong>cross-discipline collaboration</strong> in game development.
-            </p>
-          </section>
-        </div>
-      </section>
-
-      <!-- Second Portfolio Piece: Level Design Assignment -->
-      <section class="portfolio-piece" id="portfolio-piece">
-        <h2 class="portfolio-title">Level Design Assignment</h2>
-
-        <!-- Hero (Video) -->
-        <div class="portfolio-hero">
-          <video autoplay loop muted playsinline class="portfolio-video">
-            <source src="/assets/videos/level-hero-shot.webm" type="video/webm">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-
-        <!-- Assignment Summary -->
-        <div class="portfolio-assignment-summary">
-          <h2 class="assignment-title">Assignment Summary</h2>
-          <div class="assignment-content" style="display: block;">
-            <div class="assignment-left">
-              <h3><strong>Level Assignment Overview</strong></h3>
-              <ul>
-                <li><strong>Objective:</strong> Plan, build, and refine a mid-game level.</li>
-                <li><strong>Scope:</strong> A short vertical slice of the game.</li>
-              </ul>
-              <h3><strong>Player Context</strong></h3>
-              <ul>
-                <li>Takes place at the midpoint of the game.</li>
-                <li>Player has full knowledge of controls and mechanics.</li>
-                <li>Level should challenge but not overwhelm.</li>
-              </ul>
-              <h3><strong>Narrative Setup</strong></h3>
-              <ul>
-                <li>Set in <strong>Feudal Japan.</strong></li>
-                <li>Play as Date Masamune/Senji Tome.</li>
-                <li>Framed for murder by General Oda Nobunaga.</li>
-                <li>Mission: Weaken the general’s influence over surrounding villages.</li>
-              </ul>
-            </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Solo Level Designer &middot; Course assignment</p>
+          <h3>Level Design Assignment</h3>
+          <p>Vertical slice of a stealth encounter set inside a feudal Japanese gatehouse, from blockout to guided lighting pass.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Stealth Design</span>
+            
+              <span class="tag">Blockout</span>
+            
+              <span class="tag">Lighting</span>
+            
           </div>
+          <a class="project-card-link" href="/projects/level-design-assignment/">
+            See Case Study
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
-
-        <!-- Level Design Assignment Sidecards -->
-        <div class="portfolio-sidecards">
-          <!-- Design Card -->
-          <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img src="/assets/images/screenshot-3.png" alt="Design Screenshot">
-            </div>
-            <div class="card-text">
-              <h2><strong>Design</strong></h2>
-              <p>
-                I chose a <strong>gatehouse setting</strong> to create a <strong>stealth-centric</strong> environment perfect for quiet, strategic gameplay. 
-                The level features a <strong>dark, moody atmosphere</strong> that heightens tension, while a 
-                <strong>clear spatial flow</strong>—achieved through <strong>strategic lighting</strong> and 
-                <strong>verticality</strong>—guides players subtly. The <strong>high ground</strong> and 
-                <strong>overlook position</strong> empower players to plan their routes effectively.
-              </p>
-            </div>
-          </div>
-          <!-- Narrative Card -->
-          <div class="portfolio-sidecard">
-            <div class="card-text">
-              <h2><strong>Narrative</strong></h2>
-              <p>
-                I used <strong>environmental storytelling, overheard dialogue, and NPC interaction</strong> 
-                to immerse the player in a world of <strong>betrayal and corruption</strong>.
-              </p>
-              <p>
-                <strong>Ushi Maki Ramen, a captured smuggler,</strong> offers a <strong>hidden escape</strong> in exchange for help. 
-                Guards <strong>misuse his confiscated wares</strong>, revealing their corruption through 
-                <strong>dialogue and scattered clues</strong>.
-              </p>
-              <p>
-                Players choose between <strong>escaping through the main gate</strong> or <strong>helping Ushi</strong> 
-                to access a <strong>hidden passage behind a bookshelf</strong>, rewarding exploration and choice.
-              </p>
-            </div>
-            <div class="card-image">
-              <img src="/assets/images/screenshot1.png" alt="Narrative Screenshot">
-            </div>
-          </div>
-          <!-- Guiding the Player Card -->
-          <div class="portfolio-sidecard">
-            <div class="card-image">
-              <img src="/assets/images/screenshot2.png" alt="Guiding the Player Screenshot">
-            </div>
-            <div class="card-text">
-              <h2><strong>Guiding the Player</strong></h2>
-              <p>
-                I designed the level to <strong>naturally guide players</strong> using 
-                <strong>lighting, elevation, and composition</strong>. A <strong>high vantage point</strong> 
-                lets players scan the <strong>open gatehouse</strong> and plan their route.
-              </p>
-              <p>
-                A <strong>large window casts god rays onto the main gate</strong>, marking the objective, 
-                while <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement.
-              </p>
-              <p>
-                <strong>Bright cloth on vaultable windows</strong> signals traversal points, and 
-                <strong>verticality</strong> naturally increases difficulty. Starting high grants control, 
-                while descending raises tension.
-              </p>
-            </div>
-          </div>
+      </article>
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/placeholder-gp3.svg" alt="Game Project 3 hero image" loading="lazy" decoding="async">
         </div>
-
-        <div class="portfolio-extra">
-          <section class="blockout-section">
-            <h2 class="section-title" style="font-size: 2.8rem;">Blockout</h2>
-            <div class="blockout-carousel">
-              <div class="carousel-container">
-                <img src="/assets/images/blockout1.png" alt="Blockout 1">
-                <img src="/assets/images/blockout2.png" alt="Blockout 2">
-                <img src="/assets/images/blockout3.png" alt="Blockout 3">
-              </div>
-              <button class="carousel-prev" aria-label="Previous">&#8249;</button>
-              <button class="carousel-next" aria-label="Next">&#8250;</button>
-            </div>
-            <div class="blockout-description">
-              <p>
-                I started to create a <strong>hand-drawn layout</strong> and then I did 
-                <strong>architectural research</strong>, then I built the <strong>blockout in ProBuilder (Unity)</strong> 
-                and refined it through <strong>peer feedback</strong>.
-              </p>
-              <p>
-                To fix <strong>predictable symmetry</strong>, I <strong>added support beams on the lower floor</strong> 
-                and a <strong>commander’s study on the upper floor</strong>, improving flow. 
-                <strong>Lighting and environmental cues</strong> were adjusted to enhance <strong>player guidance</strong>.
-              </p>
-              <p>
-                These changes made the level <strong>more engaging</strong>, balancing 
-                <strong>high-ground advantages</strong> with <strong>varied movement options</strong> 
-                for a <strong>fluid experience</strong>.
-              </p>
-            </div>
-          </section>
-          <section class="reflection-textbox" style="max-width:600px; margin: 40px auto;">
-            <h2><strong>Reflections</strong></h2>
-            <p>
-              This project taught me <strong>how to use ProBuilder and similar tools</strong> as well as 
-              <strong>lighting techniques and player guidance</strong> in stealth-based level design.
-              I learned the <strong>importance of giving players a vantage point early on</strong>, 
-              allowing them to plan their route strategically.
-            </p>
-            <p>
-              The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning 
-              the layout to using new tools like ProBuilder. At first, it was frustrating, but overcoming those 
-              struggles helped me <strong>understand how to approach the early phases of level creation 
-              more effectively</strong>.
-            </p>
-            <p>
-              If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> 
-              to further enhance the atmosphere. I would also implement <strong>audio and music</strong>, 
-              as I believe sound design could elevate the stealth experience by reinforcing tension and immersion.
-            </p>
-          </section>
+        <div class="project-card-body">
+          <p class="project-card-meta">Level Designer &middot; In development</p>
+          <h3>Game Project 3</h3>
+          <p>Placeholder breakdown for the next combat-focused slice. Full write-up coming soon.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Level Design</span>
+            
+              <span class="tag">Work in Progress</span>
+            
+          </div>
+          <a class="project-card-link" href="/projects/game-project-3/">
+            Preview
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
-      </section>
-      
-      
+      </article>
+    
+      <article class="project-card">
+        <div class="project-card-media">
+          <img src="/assets/images/placeholder-gp4.svg" alt="Game Project 4 hero image" loading="lazy" decoding="async">
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-meta">Product Owner &middot; In development</p>
+          <h3>Game Project 4</h3>
+          <p>High-level notes about my Product Owner responsibilities while we polish the experience.</p>
+          <div class="project-card-tags">
+            
+              <span class="tag">Production</span>
+            
+              <span class="tag">Leadership</span>
+            
+          </div>
+          <a class="project-card-link" href="/projects/game-project-4/">
+            Preview
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </article>
+    
+  </div>
+</section>
 
     </main>
 
     <footer class="site-footer">
-      <span class="site-footer-owner">
-        <a href="https://github.com/yourusername">EpicHugge</a>
-        &copy; 2025. All rights reserved.
-      </span>
-      <!-- Removed GitHub Pages Credit -->
-    </footer>
+  <span class="site-footer-owner">
+    <a href="https://github.com/yourusername">EpicHugge</a>
+    &copy; 2025. All rights reserved.
+  </span>
+</footer>
 
-    <!-- Scripts -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Typing Animation
-        const introMain = document.querySelector('.intro-main');
-        const caret = document.querySelector('.caret');
-        if (introMain && caret) {
-          const typingDuration = 3500, blinkDuration = 5000;
-          setTimeout(() => {
-            caret.classList.add('blink-caret');
-          }, typingDuration);
-          setTimeout(() => {
-            caret.classList.remove('blink-caret');
-            caret.classList.add('hide-caret');
-          }, typingDuration + blinkDuration);
-        }
+    <!-- Global Scripts -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const progressBar = document.getElementById('scroll-progress');
+    if (progressBar) {
+      const updateProgress = () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+        progressBar.style.width = progress + '%';
+      };
+      updateProgress();
+      window.addEventListener('scroll', updateProgress);
+    }
+    // Typing Animation
+    const introMain = document.querySelector('.intro-main');
+    const caret = document.querySelector('.caret');
+    if (introMain && caret) {
+      const typingDuration = 3500, blinkDuration = 5000;
+      setTimeout(() => {
+        caret.classList.add('blink-caret');
+      }, typingDuration);
+      setTimeout(() => {
+        caret.classList.remove('blink-caret');
+        caret.classList.add('hide-caret');
+      }, typingDuration + blinkDuration);
+    }
 
-        // Hamburger Menu
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        if (hamburger && navLinks) {
-          hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('nav-active');
-            hamburger.classList.toggle('toggle');
-            hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
-          });
-        }
-
-        // Portfolio Fade-In for Level Design Assignment
-        const portfolioSection = document.getElementById('portfolio-piece');
-        if (portfolioSection) {
-          portfolioSection.style.opacity = '0';
-          portfolioSection.style.transform = 'translateY(20px)';
-          portfolioSection.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                portfolioSection.style.opacity = '1';
-                portfolioSection.style.transform = 'translateY(0)';
-                observer.unobserve(portfolioSection);
-              }
-            });
-          }, { threshold: 0.1 });
-          observer.observe(portfolioSection);
-        }
-
-        // Portfolio Fade-In for Game Project 2 Section
-        const portfolioSection2 = document.getElementById('portfolio-piece-2');
-        if (portfolioSection2) {
-          portfolioSection2.style.opacity = '0';
-          portfolioSection2.style.transform = 'translateY(20px)';
-          portfolioSection2.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-          const observer2 = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                portfolioSection2.style.opacity = '1';
-                portfolioSection2.style.transform = 'translateY(0)';
-                observer2.unobserve(portfolioSection2);
-              }
-            });
-          }, { threshold: 0.1 });
-          observer2.observe(portfolioSection2);
-        }
-
-        // Header Shrink
-        window.addEventListener('scroll', function() {
-          const header = document.querySelector('.fixed-header');
-          header.classList.toggle('shrink', window.scrollY > 50);
-        });
-
-        // Floor Switcher
-        const floorSwitcher = document.getElementById('floor-switcher');
-        if (floorSwitcher) {
-          const floorImage = floorSwitcher.querySelector('.floor-image');
-          const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-          const arrowRight = floorSwitcher.querySelector('.arrow-right');
-          const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-          const floors = [
-            {
-              src: '/assets/images/top-floor.png',
-              alt: 'Top Floor Overview',
-              label: 'Top Floor'
-            },
-            {
-              src: '/assets/images/lower-floor.png',
-              alt: 'Lower Floor Overview',
-              label: 'Lower Floor'
-            }
-          ];
-          let currentIndex = 0;
-          function updateFloor() {
-            floorImage.src = floors[currentIndex].src;
-            floorImage.alt = floors[currentIndex].alt;
-            floorIndicator.textContent = floors[currentIndex].label;
-          }
-          updateFloor();
-          arrowLeft.addEventListener('click', () => {
-            currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-            updateFloor();
-          });
-          arrowRight.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % floors.length;
-            updateFloor();
-          });
-        }
-
-        // Blockout Carousel - handle all
-        const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
-        carouselContainers.forEach((container) => {
-          const images = container.querySelectorAll('img');
-          let currentCarouselIndex = 0;
-          const totalImages = images.length;
-          const updateCarousel = () => {
-            container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
-          };
-          updateCarousel();
-          const parent = container.parentElement;
-          const prevButton = parent.querySelector('.carousel-prev');
-          const nextButton = parent.querySelector('.carousel-next');
-          prevButton.addEventListener('click', () => {
-            currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
-            updateCarousel();
-          });
-          nextButton.addEventListener('click', () => {
-            currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-            updateCarousel();
-          });
-          setInterval(() => {
-            currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-            updateCarousel();
-          }, 5000);
-        });
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+        hamburger.classList.toggle('toggle');
+        hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
       });
-    </script>
+    }
 
-    
+    // Fade-in for any portfolio pieces
+    const portfolioSections = document.querySelectorAll('.portfolio-piece');
+    if (portfolioSections.length) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      portfolioSections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+        observer.observe(section);
+      });
+    }
+
+    // Header Shrink
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('.fixed-header');
+      if (header) {
+        header.classList.toggle('shrink', window.scrollY > 50);
+      }
+    });
+
+    // Floor Switcher
+    const floorSwitcher = document.getElementById('floor-switcher');
+    if (floorSwitcher) {
+      const floorImage = floorSwitcher.querySelector('.floor-image');
+      const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
+      const arrowRight = floorSwitcher.querySelector('.arrow-right');
+      const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
+      const floors = [
+        {
+          src: '/assets/images/top-floor.png',
+          alt: 'Top Floor Overview',
+          label: 'Top Floor'
+        },
+        {
+          src: '/assets/images/lower-floor.png',
+          alt: 'Lower Floor Overview',
+          label: 'Lower Floor'
+        }
+      ];
+      let currentIndex = 0;
+      function updateFloor() {
+        floorImage.src = floors[currentIndex].src;
+        floorImage.alt = floors[currentIndex].alt;
+        floorIndicator.textContent = floors[currentIndex].label;
+      }
+      updateFloor();
+      arrowLeft.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
+        updateFloor();
+      });
+      arrowRight.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % floors.length;
+        updateFloor();
+      });
+    }
+
+    // Blockout Carousel - handle all
+    const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+    carouselContainers.forEach((container) => {
+      const images = container.querySelectorAll('img');
+      let currentCarouselIndex = 0;
+      const totalImages = images.length;
+      const updateCarousel = () => {
+        container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
+      };
+      updateCarousel();
+      const parent = container.parentElement;
+      const prevButton = parent.querySelector('.carousel-prev');
+      const nextButton = parent.querySelector('.carousel-next');
+      prevButton.addEventListener('click', () => {
+        currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
+        updateCarousel();
+      });
+      nextButton.addEventListener('click', () => {
+        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+        updateCarousel();
+      });
+      setInterval(() => {
+        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+        updateCarousel();
+      }, 5000);
+    });
+  });
+</script>
+
+
+
   </body>
 </html>

@@ -8,12 +8,12 @@ permalink: /about/
 <section class="about-hero-card fade-in">
   <div class="card">
     <div class="card-media">
-      <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait">
+      <img src="{{ "/assets/images/hugo-portrait.jpg" | relative_url }}" alt="Hugo Portrait" loading="lazy" decoding="async">
     </div>
     <div class="card-content">
       <h1>Yo!, I'm Hugo!</h1>
       <p>
-        I'm a Game Design student at Futuregames in Umeå specializing in Level &amp; Quest Design.
+        I'm a Game Design student at Futuregames specializing in Level Design.
       </p>
     </div>
   </div>
@@ -24,14 +24,14 @@ permalink: /about/
   <div class="card">
     <h2>Beyond Game Design</h2>
     <p>
-      When I'm not designing Levels or Quests, you'll find me at the Gym lifting weights or Bouldering, playing with my family's dog, or immersing myself in RPGs / Movies. These passions fuel my creativity and keep me inspired.
+      When I'm not designing Levels, you'll find me at the Gym lifting weights or Bouldering, playing with my family's dog, or immersing myself in RPGs / Movies. These passions fuel my creativity and keep me inspired.
     </p>
     <div class="about-interests-media">
-      <video autoplay loop muted playsinline class="about-dog">
+      <video autoplay loop muted playsinline class="about-dog" preload="metadata">
         <source src="{{ '/assets/images/dog-playing.webm' | relative_url }}" type="video/webm">
         Your browser does not support the video.
       </video>
-      <video autoplay loop muted playsinline class="about-climbing">
+      <video autoplay loop muted playsinline class="about-climbing" preload="metadata">
         <source src="{{ '/assets/images/climbing.webm' | relative_url }}" type="video/webm">
         Your browser does not support the video.
       </video>
@@ -47,7 +47,7 @@ permalink: /about/
     <p>
       Volunteering with Arctic Game Dev has given me the opportunity to support local game development initiatives, network with industry professionals. This experience has deepened my insight into industry collaboration, event coordination, and professional networking.
     </p>
-    <img src="{{ '/assets/images/arctic-volunteers.jpg' | relative_url }}" alt="Arctic Game Dev Volunteers" class="about-volunteers">
+    <img src="{{ "/assets/images/arctic-volunteers.jpg" | relative_url }}" alt="Arctic Game Dev Volunteers" class="about-volunteers" loading="lazy" decoding="async">
   </div>
 </section>
 

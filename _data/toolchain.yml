@@ -1,0 +1,12 @@
+- name: Unity
+  icon: /assets/images/tool-icons/unity.svg
+  focus: Level + quest prototyping, ProBuilder blockouts
+- name: Unreal Engine
+  icon: /assets/images/tool-icons/unreal.svg
+  focus: Blueprint-driven encounters & cinematics
+- name: ProBuilder
+  icon: /assets/images/tool-icons/probuilder.svg
+  focus: Fast iteration on blockouts and modular kits
+- name: FMOD
+  icon: /assets/images/tool-icons/fmod.svg
+  focus: Hooking adaptive audio and mission scripting cues
