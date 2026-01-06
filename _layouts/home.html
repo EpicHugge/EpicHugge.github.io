@@ -45,7 +45,7 @@ layout: default
     <h2>Projects</h2>
   </div>
   <div class="featured-projects-grid">
-    {% assign featured_projects = site.data.projects | where: "featured", true | where_exp: "project", "project.slug != 'level-design-assignment' and project.slug != 'game-project-4'" %}
+    {% assign featured_projects = site.data.projects | where: "featured", true | where_exp: "project", "project.slug != 'level-design-assignment'" | where_exp: "project", "project.slug != 'game-project-4'" %}
     {% for project in featured_projects %}
       <article class="project-card">
         <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
