@@ -13,21 +13,31 @@ body_class: project-archive
   <div class="featured-projects-grid">
     {% for project in site.data.projects %}
       <article class="project-card">
+        <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
-          <img src="{{ project.image | relative_url }}" alt="{{ project.title }} cover image" loading="lazy" decoding="async">
+          {% if project.media_type == "video" %}
+            <video autoplay loop muted playsinline class="project-card-video">
+              <source src="{{ project.media_src | relative_url }}" type="video/webm">
+            </video>
+          {% else %}
+            <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
+          {% endif %}
+          {% if project.engine_icon %}
+            <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
+          {% endif %}
+        </div>
+        <div class="project-card-meta-row">
+          <span class="tag">Role: {{ project.role_tag }}</span>
+          <span class="tag">Team: {{ project.team_tag }}</span>
         </div>
         <div class="project-card-body">
-          <p class="project-card-meta">{{ project.role }} &middot; {{ project.timeframe }}</p>
           <h3>{{ project.title }}</h3>
-          <p>{{ project.summary }}</p>
-          <div class="project-card-tags">
+          <div class="project-keywords">
             {% for tag in project.tags %}
               <span class="tag">{{ tag }}</span>
             {% endfor %}
           </div>
-          <a class="project-card-link" href="{{ project.url | relative_url }}">Read case study &rarr;</a>
         </div>
       </article>
     {% endfor %}
-  </div>
-</section>
+  </div></section>

@@ -1,5 +1,5 @@
 - name: Unity
-  icon: /assets/images/tool-icons/unity.png
+  icon: /assets/images/tool-icons/unity.svg
   focus: Level + quest prototyping, ProBuilder blockouts
 - name: Unreal Engine
   icon: /assets/images/tool-icons/unreal.svg
@@ -13,3 +13,7 @@
 - name: Blender
   icon: /assets/images/tool-icons/blender.png
   focus: Blockout props & visualization
+- name: Jira
+  icon: /assets/images/tool-icons/jira.svg
+  focus: Sprint planning & issue tracking
+

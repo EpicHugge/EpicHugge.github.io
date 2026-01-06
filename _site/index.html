@@ -56,78 +56,93 @@
 
 
     <main id="content" class="main-content" role="main">
-      <!-- Introduction Section -->
-<section class="introduction">
-  <div class="intro-text">
-    <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
-    <p class="intro-sub">Aspiring Level Designer</p>
-    <p class="intro-location">
-      <img src="/assets/images/location-pointer.png" alt="Location Pointer" class="location-pointer">
-      SWEDEN
-    </p>
+      <section class="hero" aria-label="Hero">
+  <div class="hero-stack">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
+        <p class="intro-sub">Aspiring Level Designer</p>
+        <p class="intro-location">
+          <img src="/assets/images/location-pointer.png" alt="Location Pointer" class="location-pointer">
+          SWEDEN
+        </p>
+      </div>
+      <div class="hero-logo">
+        <img src="/assets/images/logo-small.png" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <section class="toolchain hero-toolchain" aria-label="Toolbox" data-reveal="true">
+      <h3 class="toolchain-title">Tools and skills</h3>
+      <div class="toolchain-icons">
+        
+          <div class="toolchip">
+            <img src="/assets/images/tool-icons/unity.svg" alt="Unity logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">Unity</span>
+          </div>
+        
+          <div class="toolchip">
+            <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">Unreal Engine</span>
+          </div>
+        
+          <div class="toolchip">
+            <img src="/assets/images/tool-icons/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">Perforce</span>
+          </div>
+        
+          <div class="toolchip">
+            <img src="/assets/images/tool-icons/github.png" alt="GitHub logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">GitHub</span>
+          </div>
+        
+          <div class="toolchip">
+            <img src="/assets/images/tool-icons/blender.png" alt="Blender logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">Blender</span>
+          </div>
+        
+          <div class="toolchip">
+            <img src="/assets/images/tool-icons/jira.svg" alt="Jira logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">Jira</span>
+          </div>
+        
+      </div>
+    </section>
   </div>
-  <div class="intro-logo">
-    <img src="/assets/images/logo-small.png" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
+
+  <div class="hero-scroll">
+    <span class="scroll-label">Featured Work</span>
+    <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
+      <span class="scroll-arrow">&#8595;</span>
+    </a>
   </div>
 </section>
-
-<!-- Toolchain -->
-<section class="toolchain" aria-label="Toolbox" data-reveal="true">
-  <div class="toolchain-icons">
-    
-      <div class="toolchip">
-        <img src="/assets/images/tool-icons/unity.png" alt="Unity logo" loading="lazy" decoding="async">
-        <span class="toolchip-label">Unity</span>
-      </div>
-    
-      <div class="toolchip">
-        <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
-        <span class="toolchip-label">Unreal Engine</span>
-      </div>
-    
-      <div class="toolchip">
-        <img src="/assets/images/tool-icons/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
-        <span class="toolchip-label">Perforce</span>
-      </div>
-    
-      <div class="toolchip">
-        <img src="/assets/images/tool-icons/github.png" alt="GitHub logo" loading="lazy" decoding="async">
-        <span class="toolchip-label">GitHub</span>
-      </div>
-    
-      <div class="toolchip">
-        <img src="/assets/images/tool-icons/blender.png" alt="Blender logo" loading="lazy" decoding="async">
-        <span class="toolchip-label">Blender</span>
-      </div>
-    
-  </div>
-</section>
-
-<!-- Section Separator with Scroll Cue -->
-<div class="section-separator">
-  <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
-    <span class="scroll-arrow">&#8595;</span>
-  </a>
-</div>
 
 <!-- Featured Projects -->
 <section class="featured-projects" id="featured-projects">
   <div class="section-header">
-    <p class="eyebrow">Featured Work</p>
     <h2>Projects</h2>
   </div>
   <div class="featured-projects-grid">
     
     
       <article class="project-card">
+        <a class="project-card-hit" href="/projects/game-project-2/" aria-label="View Game Project 2"></a>
         <div class="project-card-media">
-          <img src="/assets/images/gp2-hero.png" alt="Game Project 2 hero image" loading="lazy" decoding="async">
+          
+            <img src="/assets/images/gp2-hero.png" alt="Game Project 2 hero" loading="lazy" decoding="async">
+          
+          
+            <img class="engine-badge" src="/assets/images/tool-icons/unity.svg" alt="Game Project 2 engine">
+          
+        </div>
+        <div class="project-card-meta-row">
+          <span class="tag">Role: LD</span>
+          <span class="tag">Team: Team</span>
         </div>
         <div class="project-card-body">
-          <p class="project-card-meta">Level Designer &middot; 4 week team project</p>
           <h3>Game Project 2</h3>
-          <p>Stepped in as the level designer mid-production, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler.</p>
-          <div class="project-card-tags">
+          <div class="project-keywords">
             
               <span class="tag">Combat Design</span>
             
@@ -136,22 +151,28 @@
               <span class="tag">Team Project</span>
             
           </div>
-          <a class="project-card-link" href="/projects/game-project-2/">
-            Breakdown
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>
     
       <article class="project-card">
+        <a class="project-card-hit" href="/projects/level-design-assignment/" aria-label="View Level Design Assignment"></a>
         <div class="project-card-media">
-          <img src="/assets/images/screenshot-3.png" alt="Level Design Assignment hero image" loading="lazy" decoding="async">
+          
+            <video autoplay loop muted playsinline class="project-card-video">
+              <source src="/assets/videos/level-hero-shot.webm" type="video/webm">
+            </video>
+          
+          
+            <img class="engine-badge" src="/assets/images/tool-icons/unity.svg" alt="Level Design Assignment engine">
+          
+        </div>
+        <div class="project-card-meta-row">
+          <span class="tag">Role: LD</span>
+          <span class="tag">Team: Solo</span>
         </div>
         <div class="project-card-body">
-          <p class="project-card-meta">Solo Level Designer &middot; Course assignment</p>
           <h3>Level Design Assignment</h3>
-          <p>Vertical slice of a stealth encounter set inside a feudal Japanese gatehouse, from blockout to guided lighting pass.</p>
-          <div class="project-card-tags">
+          <div class="project-keywords">
             
               <span class="tag">Stealth Design</span>
             
@@ -160,54 +181,58 @@
               <span class="tag">Lighting</span>
             
           </div>
-          <a class="project-card-link" href="/projects/level-design-assignment/">
-            See Case Study
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>
     
       <article class="project-card">
+        <a class="project-card-hit" href="/projects/game-project-3/" aria-label="View Game Project 3"></a>
         <div class="project-card-media">
-          <img src="/assets/images/placeholder-gp3.svg" alt="Game Project 3 hero image" loading="lazy" decoding="async">
+          
+            <img src="/assets/images/placeholder-gp3.svg" alt="Game Project 3 hero" loading="lazy" decoding="async">
+          
+          
+            <img class="engine-badge" src="/assets/images/tool-icons/unity.svg" alt="Game Project 3 engine">
+          
+        </div>
+        <div class="project-card-meta-row">
+          <span class="tag">Role: LD</span>
+          <span class="tag">Team: Team</span>
         </div>
         <div class="project-card-body">
-          <p class="project-card-meta">Level Designer &middot; In development</p>
           <h3>Game Project 3</h3>
-          <p>Placeholder breakdown for the next combat-focused slice. Full write-up coming soon.</p>
-          <div class="project-card-tags">
+          <div class="project-keywords">
             
               <span class="tag">Level Design</span>
             
               <span class="tag">Work in Progress</span>
             
           </div>
-          <a class="project-card-link" href="/projects/game-project-3/">
-            Preview
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>
     
       <article class="project-card">
+        <a class="project-card-hit" href="/projects/game-project-4/" aria-label="View Game Project 4"></a>
         <div class="project-card-media">
-          <img src="/assets/images/placeholder-gp4.svg" alt="Game Project 4 hero image" loading="lazy" decoding="async">
+          
+            <img src="/assets/images/placeholder-gp4.svg" alt="Game Project 4 hero" loading="lazy" decoding="async">
+          
+          
+            <img class="engine-badge" src="/assets/images/tool-icons/unreal.svg" alt="Game Project 4 engine">
+          
+        </div>
+        <div class="project-card-meta-row">
+          <span class="tag">Role: LD</span>
+          <span class="tag">Team: Team</span>
         </div>
         <div class="project-card-body">
-          <p class="project-card-meta">Product Owner &middot; In development</p>
           <h3>Game Project 4</h3>
-          <p>High-level notes about my Product Owner responsibilities while we polish the experience.</p>
-          <div class="project-card-tags">
+          <div class="project-keywords">
             
               <span class="tag">Production</span>
             
               <span class="tag">Leadership</span>
             
           </div>
-          <a class="project-card-link" href="/projects/game-project-4/">
-            Preview
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>
     
@@ -219,7 +244,7 @@
     <footer class="site-footer">
   <span class="site-footer-owner">
     <a href="https://github.com/yourusername">EpicHugge</a>
-    &copy; 2025. All rights reserved.
+    &copy; 2026. All rights reserved.
   </span>
 </footer>
 
@@ -238,7 +263,7 @@
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         triggerToolchain();
       } else {
-        setTimeout(triggerToolchain, 1500);
+        setTimeout(triggerToolchain, 1200);
       }
     }
 
@@ -276,6 +301,25 @@
         hamburger.classList.toggle('toggle');
         hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
       });
+    }
+
+
+    // Fade-in for featured projects
+    const featured = document.querySelector('.featured-projects');
+    if (featured) {
+      featured.style.opacity = '0';
+      featured.style.transform = 'translateY(30px)';
+      featured.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      const featuredObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            featured.style.opacity = '1';
+            featured.style.transform = 'translateY(0)';
+            featuredObserver.unobserve(featured);
+          }
+        });
+      }, { threshold: 0.2 });
+      featuredObserver.observe(featured);
     }
 
     // Fade-in for any portfolio pieces

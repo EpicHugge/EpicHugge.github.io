@@ -2,66 +2,76 @@
 layout: default
 ---
 
-<!-- Introduction Section -->
-<section class="introduction">
-  <div class="intro-text">
-    <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
-    <p class="intro-sub">Aspiring Level Designer</p>
-    <p class="intro-location">
-      <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
-      SWEDEN
-    </p>
-  </div>
-  <div class="intro-logo">
-    <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
-  </div>
-</section>
-
-<!-- Toolchain -->
-<section class="toolchain" aria-label="Toolbox" data-reveal="true">
-  <div class="toolchain-icons">
-    {% for tool in site.data.toolchain %}
-      <div class="toolchip">
-        <img src="{{ tool.icon | relative_url }}" alt="{{ tool.name }} logo" loading="lazy" decoding="async">
-        <span class="toolchip-label">{{ tool.name }}</span>
+<section class="hero" aria-label="Hero">
+  <div class="hero-stack">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="intro-main">Yo!, I'm Hugo<span class="caret"></span></p>
+        <p class="intro-sub">Aspiring Level Designer</p>
+        <p class="intro-location">
+          <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
+          SWEDEN
+        </p>
       </div>
-    {% endfor %}
+      <div class="hero-logo">
+        <img src="{{ '/assets/images/logo-small.png' | relative_url }}" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
+      </div>
+    </div>
+
+    <section class="toolchain hero-toolchain" aria-label="Toolbox" data-reveal="true">
+      <h3 class="toolchain-title">Tools and skills</h3>
+      <div class="toolchain-icons">
+        {% for tool in site.data.toolchain %}
+          <div class="toolchip">
+            <img src="{{ tool.icon | relative_url }}" alt="{{ tool.name }} logo" loading="lazy" decoding="async">
+            <span class="toolchip-label">{{ tool.name }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+  <div class="hero-scroll">
+    <span class="scroll-label">Featured Work</span>
+    <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
+      <span class="scroll-arrow">&#8595;</span>
+    </a>
   </div>
 </section>
-
-<!-- Section Separator with Scroll Cue -->
-<div class="section-separator">
-  <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
-    <span class="scroll-arrow">&#8595;</span>
-  </a>
-</div>
 
 <!-- Featured Projects -->
 <section class="featured-projects" id="featured-projects">
   <div class="section-header">
-    <p class="eyebrow">Featured Work</p>
     <h2>Projects</h2>
   </div>
   <div class="featured-projects-grid">
     {% assign featured_projects = site.data.projects | where: "featured", true %}
     {% for project in featured_projects %}
       <article class="project-card">
+        <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
-          <img src="{{ project.image | relative_url }}" alt="{{ project.title }} hero image" loading="lazy" decoding="async">
+          {% if project.media_type == "video" %}
+            <video autoplay loop muted playsinline class="project-card-video">
+              <source src="{{ project.media_src | relative_url }}" type="video/webm">
+            </video>
+          {% else %}
+            <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
+          {% endif %}
+          {% if project.engine_icon %}
+            <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
+          {% endif %}
+        </div>
+        <div class="project-card-meta-row">
+          <span class="tag">Role: {{ project.role_tag }}</span>
+          <span class="tag">Team: {{ project.team_tag }}</span>
         </div>
         <div class="project-card-body">
-          <p class="project-card-meta">{{ project.role }} &middot; {{ project.timeframe }}</p>
           <h3>{{ project.title }}</h3>
-          <p>{{ project.summary }}</p>
-          <div class="project-card-tags">
+          <div class="project-keywords">
             {% for tag in project.tags %}
               <span class="tag">{{ tag }}</span>
             {% endfor %}
           </div>
-          <a class="project-card-link" href="{{ project.url | relative_url }}">
-            {{ project.cta | default: 'View Project' }}
-            <span aria-hidden="true">&rarr;</span>
-          </a>
         </div>
       </article>
     {% endfor %}

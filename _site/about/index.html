@@ -118,7 +118,7 @@
     <footer class="site-footer">
   <span class="site-footer-owner">
     <a href="https://github.com/yourusername">EpicHugge</a>
-    &copy; 2025. All rights reserved.
+    &copy; 2026. All rights reserved.
   </span>
 </footer>
 
@@ -137,7 +137,7 @@
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         triggerToolchain();
       } else {
-        setTimeout(triggerToolchain, 1500);
+        setTimeout(triggerToolchain, 1200);
       }
     }
 
@@ -175,6 +175,25 @@
         hamburger.classList.toggle('toggle');
         hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
       });
+    }
+
+
+    // Fade-in for featured projects
+    const featured = document.querySelector('.featured-projects');
+    if (featured) {
+      featured.style.opacity = '0';
+      featured.style.transform = 'translateY(30px)';
+      featured.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      const featuredObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            featured.style.opacity = '1';
+            featured.style.transform = 'translateY(0)';
+            featuredObserver.unobserve(featured);
+          }
+        });
+      }, { threshold: 0.2 });
+      featuredObserver.observe(featured);
     }
 
     // Fade-in for any portfolio pieces
