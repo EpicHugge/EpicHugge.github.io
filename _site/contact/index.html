@@ -46,7 +46,7 @@
 
     <!-- Navigation Links -->
     <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-      <a href="/" class="">Portfolio</a>
+      <a href="/" class="">Home</a>
       <a href="/projects/" class="">Projects</a>
       <a href="/about/" class="">About</a>
       <a href="/contact/" class="active">Contact</a>
@@ -56,31 +56,34 @@
 
 
     <main id="content" class="main-content" role="main">
-      <h1 id="contact-me">Contact Me</h1>
-
-<div class="contact-container fade-in">
-  <p>I’d love to hear from you!.</p>
-  <p>You can reach me via email:</p>
-
-  <!-- Mailto Link -->
-  <p>
-    <strong>Email:</strong> 
-    <a href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20...">
-      hugonykvist@hotmail.se
-    </a>
-  </p>
-
-  <!-- Alternatively, you can embed a small mailto-based form if you want a "click to open email draft." 
-       But typically, a simple mailto link is enough for minimalistic setups. -->
+      <div class="contact-container fade-in">
+  <div class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20..." aria-label="Email">
+        <img src="/assets/images/tool-icons/mail.svg" alt="Email icon" />
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/hugonykvist/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <img src="/assets/images/tool-icons/linkedin.png" alt="LinkedIn icon" />
+      </a>
+    </div>
+  </div>
+  <div class="contact-section">
+    <h2>Work</h2>
+    <div class="contact-links">
+      <a class="contact-link" href="https://github.com/EpicHugge" target="_blank" rel="noopener" aria-label="GitHub">
+        <img src="/assets/images/tool-icons/github.png" alt="GitHub icon" />
+      </a>
+      <a class="contact-link" href="https://epichugge.itch.io" target="_blank" rel="noopener" aria-label="itch.io">
+        <img src="/assets/images/tool-icons/itch.svg" alt="itch.io icon" />
+      </a>
+    </div>
+  </div>
 </div>
 
     </main>
 
     <footer class="site-footer">
-  <span class="site-footer-owner">
-    <a href="https://github.com/yourusername">EpicHugge</a>
-    &copy; 2026. All rights reserved.
-  </span>
 </footer>
 
     <!-- Global Scripts -->
@@ -113,20 +116,6 @@
       updateProgress();
       window.addEventListener('scroll', updateProgress);
     }
-    // Typing Animation
-    const introMain = document.querySelector('.intro-main');
-    const caret = document.querySelector('.caret');
-    if (introMain && caret) {
-      const typingDuration = 2000, blinkDuration = 3500;
-      setTimeout(() => {
-        caret.classList.add('blink-caret');
-      }, typingDuration);
-      setTimeout(() => {
-        caret.classList.remove('blink-caret');
-        caret.classList.add('hide-caret');
-      }, typingDuration + blinkDuration);
-    }
-
     // Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -138,6 +127,29 @@
       });
     }
 
+
+
+    const caseStudy = document.querySelector('.case-study');
+    if (caseStudy) {
+      const revealItems = caseStudy.querySelectorAll('[data-reveal]');
+      revealItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 80}ms`;
+      });
+      const reveal = (el) => el.classList.add('reveal');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealItems.forEach(reveal);
+      } else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              reveal(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealItems.forEach(item => observer.observe(item));
+      }
+    }
 
     // Fade-in for featured projects
     const featured = document.querySelector('.featured-projects');

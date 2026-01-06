@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
+    <title>Advanced Level Design Assignment</title>
     <meta name="description" content="Your short description here.">
 
     <!-- Favicon Links -->
@@ -25,7 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
 
   </head>
-  <body class="">
+  <body class="project-page">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
     <div class="scroll-progress" id="scroll-progress"></div>
 
@@ -47,8 +47,8 @@
     <!-- Navigation Links -->
     <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
       <a href="/" class="">Home</a>
-      <a href="/projects/" class="">Projects</a>
-      <a href="/about/" class="active">About</a>
+      <a href="/projects/" class="active">Projects</a>
+      <a href="/about/" class="">About</a>
       <a href="/contact/" class="">Contact</a>
     </nav>
   </div>
@@ -56,61 +56,109 @@
 
 
     <main id="content" class="main-content" role="main">
-      <!-- HERO CARD: Introduction -->
-<section class="about-hero-card fade-in">
-  <div class="card">
-    <div class="card-media">
-      <img src="/assets/images/hugo-portrait.jpg" alt="Hugo Portrait" loading="lazy" decoding="async" />
-    </div>
-    <div class="card-content">
-      <h1>Yo!, I'm Hugo!</h1>
-      <p>
-        I'm a Game Design student at Futuregames specializing in Level Design.
-      </p>
-    </div>
-  </div>
-</section>
+      <section class="case-study">
+  <header class="case-study-header">
+    <h1>Advanced Level Design Assignment</h1>
+    <p class="case-study-subtitle">Unreal Engine vertical slice focused on exploration, puzzles, and player guidance.</p>
+  </header>
 
-<!-- PERSONAL INTERESTS CARD -->
-<section class="about-interests-card fade-in">
-  <div class="card">
-    <h2>Beyond Game Design</h2>
-    <p>
-      When I'm not designing Levels, you'll find me at the Gym lifting weights or Bouldering, playing with my family's dog, or immersing myself in RPGs / Movies. These passions fuel my creativity and keep me inspired.
-    </p>
-    <div class="about-interests-media">
-      <video autoplay="" loop="" muted="" playsinline="" class="about-dog" preload="metadata">
-        <source src="/assets/images/dog-playing.webm" type="video/webm" />
-        Your browser does not support the video.
-      </video>
-      <video autoplay="" loop="" muted="" playsinline="" class="about-climbing" preload="metadata">
-        <source src="/assets/images/climbing.webm" type="video/webm" />
-        Your browser does not support the video.
-      </video>
+  <div class="case-study-hero" data-reveal="">
+    <img loading="lazy" decoding="async" src="/assets/images/placeholder-gp4.svg" alt="Main gameplay placeholder" />
+    <div class="case-study-hero-label">Main Gameplay GIF or Video</div>
+  </div>
+
+  <div class="case-study-cta" data-reveal="">
+    <a class="case-study-btn primary" href="#" aria-label="Watch full walkthrough">Watch Full Walkthrough</a>
+    <a class="case-study-btn secondary" href="#" aria-label="Download playable build">Download Playable Build</a>
+  </div>
+
+  <div class="case-study-section" data-reveal="">
+    <h2>Quick Facts</h2>
+    <div class="case-study-facts">
+      <div class="fact-card"><strong>Engine:</strong> Unreal</div>
+      <div class="fact-card"><strong>Role:</strong> Solo Level Designer</div>
+      <div class="fact-card"><strong>Focus:</strong> Exploration &amp; Puzzles</div>
+      <div class="fact-card"><strong>Scope:</strong> Vertical Slice</div>
     </div>
   </div>
-</section>
 
-<!-- INDUSTRY INVOLVEMENT CARD -->
-<section class="about-industry-card fade-in">
-  <div class="card">
-    <h2>Industry Involvement</h2>
-    <h3>Arctic Game Dev Volunteer</h3>
-    <p>
-      Volunteering with Arctic Game Dev has given me the opportunity to support local game development initiatives, network with industry professionals. This experience has deepened my insight into industry collaboration, event coordination, and professional networking.
-    </p>
-    <img src="/assets/images/arctic-volunteers.jpg" alt="Arctic Game Dev Volunteers" class="about-volunteers" loading="lazy" decoding="async" />
+  <div class="case-study-section" data-reveal="">
+    <h2>Design Goals</h2>
+    <ul class="case-study-goals">
+      <li>Readable Navigation</li>
+      <li>Pacing &amp; Tension</li>
+      <li>Engaging Puzzles</li>
+    </ul>
   </div>
-</section>
 
-<!-- CONTACT CARD -->
-<section class="about-contact-card fade-in">
-  <div class="card">
-    <h2>Contact Me!</h2>
-    <p>
-      Feel free to explore my work and <a href="/contact/">get in touch</a>—I'd love to chat!
-    </p>
+  <div class="case-study-section" data-reveal="">
+    <h2>Walkthrough Highlights</h2>
+    <div class="case-study-grid">
+      <figure class="case-study-tile">
+        <img loading="lazy" decoding="async" src="/assets/images/screenshot1.png" alt="Entry area highlight" />
+        <figcaption>Entry Area</figcaption>
+      </figure>
+      <figure class="case-study-tile">
+        <img loading="lazy" decoding="async" src="/assets/images/screenshot2.png" alt="Puzzle encounter highlight" />
+        <figcaption>Puzzle Encounter</figcaption>
+      </figure>
+      <figure class="case-study-tile">
+        <img loading="lazy" decoding="async" src="/assets/images/screenshot-3.png" alt="Final setpiece highlight" />
+        <figcaption>Final Setpiece</figcaption>
+      </figure>
+    </div>
   </div>
+
+  <div class="case-study-section" data-reveal="">
+    <h2>Level Map &amp; Beat Flow</h2>
+    <div class="case-study-map">
+      <img loading="lazy" decoding="async" src="/assets/images/top-floor.png" alt="Level map" class="case-study-map-image" />
+      <div class="case-study-flow">
+        <span class="flow-step">Start</span>
+        <span class="flow-arrow">&#8594;</span>
+        <span class="flow-step">Puzzle</span>
+        <span class="flow-arrow">&#8594;</span>
+        <span class="flow-step">Encounter</span>
+        <span class="flow-arrow">&#8594;</span>
+        <span class="flow-step">Finale</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-study-section" data-reveal="">
+    <h2>Player Guidance</h2>
+    <div class="case-study-grid">
+      <figure class="case-study-tile">
+        <img loading="lazy" decoding="async" src="/assets/images/gp2-screenshot1.png" alt="Landmark guidance" />
+        <figcaption>Landmark</figcaption>
+      </figure>
+      <figure class="case-study-tile">
+        <img loading="lazy" decoding="async" src="/assets/images/gp2-screenshot2.png" alt="Lighting guidance" />
+        <figcaption>Lighting</figcaption>
+      </figure>
+      <figure class="case-study-tile">
+        <img loading="lazy" decoding="async" src="/assets/images/gp2-screenshot3.png" alt="Pathing guidance" />
+        <figcaption>Pathing</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="case-study-section" data-reveal="">
+    <h2>Iteration Process</h2>
+    <div class="case-study-iteration">
+      <figure>
+        <img loading="lazy" decoding="async" src="/assets/images/blockout1.png" alt="Blockout v1" />
+        <figcaption>Blockout v1</figcaption>
+      </figure>
+      <div class="iteration-arrow">Feedback + Changes</div>
+      <figure>
+        <img loading="lazy" decoding="async" src="/assets/images/gp2-final.png" alt="Final version" />
+        <figcaption>Final Version</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <a class="case-study-full" data-reveal="" href="#">Read the Full Case Study &#8595;</a>
 </section>
 
     </main>

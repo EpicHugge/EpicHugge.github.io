@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Game Project 2"
+title: "It's a Fish, Your Majesty"
 permalink: /projects/game-project-2/
 body_class: project-page
 ---
 
 <section class="portfolio-piece" id="game-project-2">
-  <h1 class="portfolio-title">Game Project 2</h1>
+  <h1 class="portfolio-title">It's a Fish, Your Majesty</h1>
   <div class="portfolio-hero">
     <img loading="lazy" decoding="async"  
       src="{{ '/assets/images/gp2-hero.png' | relative_url }}" 
-      alt="Game Project 2 Hero" 
+      alt="It's a Fish, Your Majesty Hero" 
       class="portfolio-video"
     >
   </div>
@@ -22,7 +22,7 @@ body_class: project-page
         <ul>
             <li><strong>Genre:</strong> 2.5D side-scrolling brawler with light platforming.</li>
             <li><strong>Development Time:</strong> Four weeks.</li>
-            <li><strong>Team:</strong> Student group project.</li>
+            <li><strong>Team:</strong> 15-person team project.</li>
             <li><strong>Core Features:</strong> Fast-paced melee combat, dynamic enemy encounters, and traversal mechanics.</li>
         </ul>
       </div>
@@ -139,7 +139,7 @@ body_class: project-page
     <section class="reflection-textbox" style="max-width:600px; margin: 40px auto;">
       <h2><strong>Reflections</strong></h2>
       <p>
-        Game Project 2 challenged me to <strong>adapt quickly, problem-solve under pressure, 
+        It's a Fish, Your Majesty challenged me to <strong>adapt quickly, problem-solve under pressure, 
         and collaborate across disciplines</strong>. Taking over Level Design mid-project, 
         I prioritized <strong>efficiency</strong>, ensuring a <strong>functional, testable level</strong> 
         without blocking development.

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Project 4</title>
+    <title>Project Liminal</title>
     <meta name="description" content="Your short description here.">
 
     <!-- Favicon Links -->
@@ -46,7 +46,7 @@
 
     <!-- Navigation Links -->
     <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-      <a href="/" class="">Portfolio</a>
+      <a href="/" class="">Home</a>
       <a href="/projects/" class="active">Projects</a>
       <a href="/about/" class="">About</a>
       <a href="/contact/" class="">Contact</a>
@@ -57,9 +57,9 @@
 
     <main id="content" class="main-content" role="main">
       <section class="portfolio-piece" id="game-project-4">
-  <h1 class="portfolio-title">Game Project 4</h1>
+  <h1 class="portfolio-title">Project Liminal</h1>
   <div class="portfolio-hero">
-    <img loading="lazy" decoding="async" src="/assets/images/placeholder-gp4.svg" alt="Game Project 4 placeholder" class="portfolio-video" />
+    <img loading="lazy" decoding="async" src="/assets/images/placeholder-gp4.svg" alt="Project Liminal placeholder" class="portfolio-video" />
   </div>
 
   <div class="portfolio-assignment-summary">
@@ -68,6 +68,7 @@
       <div class="assignment-left">
         <ul>
           <li><strong>Role:</strong> Product Owner</li>
+          <li><strong>Team:</strong> 6-person team project</li>
           <li><strong>Status:</strong> Work in progress</li>
           <li><strong>Notes:</strong> Detailing production goals and learnings soon.</li>
         </ul>
@@ -80,7 +81,7 @@
       <div class="card-text">
         <h2><strong>Placeholder</strong></h2>
         <p>
-          Expect insights about prioritization, sprint rituals, and how I balanced scope with quality once the post-mortem is ready.
+          Expect insights about prioritization, sprint rituals, and how I balanced scope with quality on Project Liminal once the post-mortem is ready.
         </p>
       </div>
       <div class="card-image">
@@ -93,10 +94,6 @@
     </main>
 
     <footer class="site-footer">
-  <span class="site-footer-owner">
-    <a href="https://github.com/yourusername">EpicHugge</a>
-    &copy; 2026. All rights reserved.
-  </span>
 </footer>
 
     <!-- Global Scripts -->
@@ -129,20 +126,6 @@
       updateProgress();
       window.addEventListener('scroll', updateProgress);
     }
-    // Typing Animation
-    const introMain = document.querySelector('.intro-main');
-    const caret = document.querySelector('.caret');
-    if (introMain && caret) {
-      const typingDuration = 2000, blinkDuration = 3500;
-      setTimeout(() => {
-        caret.classList.add('blink-caret');
-      }, typingDuration);
-      setTimeout(() => {
-        caret.classList.remove('blink-caret');
-        caret.classList.add('hide-caret');
-      }, typingDuration + blinkDuration);
-    }
-
     // Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -154,6 +137,29 @@
       });
     }
 
+
+
+    const caseStudy = document.querySelector('.case-study');
+    if (caseStudy) {
+      const revealItems = caseStudy.querySelectorAll('[data-reveal]');
+      revealItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 80}ms`;
+      });
+      const reveal = (el) => el.classList.add('reveal');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealItems.forEach(reveal);
+      } else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              reveal(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealItems.forEach(item => observer.observe(item));
+      }
+    }
 
     // Fade-in for featured projects
     const featured = document.querySelector('.featured-projects');

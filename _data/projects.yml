@@ -1,18 +1,19 @@
-- title: "Game Project 2"
+- title: "It's a Fish, Your Majesty"
   slug: "game-project-2"
   url: "/projects/game-project-2/"
   role: "Level Designer"
-  timeframe: "4 week team project"
-  summary: "Stepped in as the level designer mid-production, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler."
+  timeframe: "4 week team project (15 people)"
+  summary: "Stepped in as the level designer mid-production on a 15-person team, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler."
   media_type: "image"
   media_src: "/assets/images/gp2-hero.png"
   engine_icon: "/assets/images/tool-icons/unity.svg"
   role_tag: "LD"
-  team_tag: "Team"
+  team_tag: "15"
   tags:
     - Combat Design
     - Level Design
     - Team Project
+    - Game Project 2
   cta: "Breakdown"
   featured: true
 
@@ -34,36 +35,56 @@
   cta: "See Case Study"
   featured: true
 
-- title: "Game Project 3"
+- title: "Asteroid Explorer"
   slug: "game-project-3"
   url: "/projects/game-project-3/"
   role: "Level Designer"
-  timeframe: "In development"
-  summary: "Placeholder breakdown for the next combat-focused slice. Full write-up coming soon."
+  timeframe: "In development (18 person team)"
+  summary: "Placeholder breakdown for Asteroid Explorer, an 18-person team project. Full write-up coming soon."
   media_type: "image"
   media_src: "/assets/images/placeholder-gp3.svg"
   engine_icon: "/assets/images/tool-icons/unity.svg"
   role_tag: "LD"
-  team_tag: "Team"
+  team_tag: "18"
   tags:
     - Level Design
     - Work in Progress
+    - Game Project 3
   cta: "Preview"
   featured: true
 
-- title: "Game Project 4"
-  slug: "game-project-4"
-  url: "/projects/game-project-4/"
-  role: "Product Owner"
-  timeframe: "In development"
-  summary: "High-level notes about my Product Owner responsibilities while we polish the experience."
+- title: "Advanced Level Design Assignment"
+  slug: "advanced-level-design-assignment"
+  url: "/projects/advanced-level-design-assignment/"
+  role: "Level Designer"
+  timeframe: "Course assignment"
+  summary: "Advanced assignment placeholder in Unreal focused on encounter flow and layout readability."
   media_type: "image"
   media_src: "/assets/images/placeholder-gp4.svg"
   engine_icon: "/assets/images/tool-icons/unreal.svg"
   role_tag: "LD"
-  team_tag: "Team"
+  team_tag: "Solo"
+  tags:
+    - Advanced Layout
+    - Encounter Design
+    - Work in Progress
+  cta: "Preview"
+  featured: true
+
+- title: "Project Liminal"
+  slug: "game-project-4"
+  url: "/projects/game-project-4/"
+  role: "Product Owner"
+  timeframe: "In development (6 person team)"
+  summary: "High-level notes about my Product Owner responsibilities on a 6-person team as we polish the experience."
+  media_type: "image"
+  media_src: "/assets/images/placeholder-gp4.svg"
+  engine_icon: "/assets/images/tool-icons/unreal.svg"
+  role_tag: "Product Owner"
+  team_tag: "6"
   tags:
     - Production
     - Leadership
+    - GP4
   cta: "Preview"
   featured: true

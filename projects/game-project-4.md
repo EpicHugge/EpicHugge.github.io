@@ -1,14 +1,14 @@
 ---
 layout: default
-title: "Game Project 4"
+title: "Project Liminal"
 permalink: /projects/game-project-4/
 body_class: project-page
 ---
 
 <section class="portfolio-piece" id="game-project-4">
-  <h1 class="portfolio-title">Game Project 4</h1>
+  <h1 class="portfolio-title">Project Liminal</h1>
   <div class="portfolio-hero">
-    <img loading="lazy" decoding="async"  src="{{ '/assets/images/placeholder-gp4.svg' | relative_url }}" alt="Game Project 4 placeholder" class="portfolio-video">
+    <img loading="lazy" decoding="async"  src="{{ '/assets/images/placeholder-gp4.svg' | relative_url }}" alt="Project Liminal placeholder" class="portfolio-video">
   </div>
 
   <div class="portfolio-assignment-summary">
@@ -17,6 +17,7 @@ body_class: project-page
       <div class="assignment-left">
         <ul>
           <li><strong>Role:</strong> Product Owner</li>
+          <li><strong>Team:</strong> 6-person team project</li>
           <li><strong>Status:</strong> Work in progress</li>
           <li><strong>Notes:</strong> Detailing production goals and learnings soon.</li>
         </ul>
@@ -29,7 +30,7 @@ body_class: project-page
       <div class="card-text">
         <h2><strong>Placeholder</strong></h2>
         <p>
-          Expect insights about prioritization, sprint rituals, and how I balanced scope with quality once the post-mortem is ready.
+          Expect insights about prioritization, sprint rituals, and how I balanced scope with quality on Project Liminal once the post-mortem is ready.
         </p>
       </div>
       <div class="card-image">

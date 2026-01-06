@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Project 2</title>
+    <title>It's a Fish, Your Majesty</title>
     <meta name="description" content="Your short description here.">
 
     <!-- Favicon Links -->
@@ -46,7 +46,7 @@
 
     <!-- Navigation Links -->
     <nav class="nav-links" id="nav-links" aria-label="Main Navigation" role="navigation">
-      <a href="/" class="">Portfolio</a>
+      <a href="/" class="">Home</a>
       <a href="/projects/" class="active">Projects</a>
       <a href="/about/" class="">About</a>
       <a href="/contact/" class="">Contact</a>
@@ -57,9 +57,9 @@
 
     <main id="content" class="main-content" role="main">
       <section class="portfolio-piece" id="game-project-2">
-  <h1 class="portfolio-title">Game Project 2</h1>
+  <h1 class="portfolio-title">It's a Fish, Your Majesty</h1>
   <div class="portfolio-hero">
-    <img loading="lazy" decoding="async" src="/assets/images/gp2-hero.png" alt="Game Project 2 Hero" class="portfolio-video" />
+    <img loading="lazy" decoding="async" src="/assets/images/gp2-hero.png" alt="It's a Fish, Your Majesty Hero" class="portfolio-video" />
   </div>
 
   <div class="portfolio-assignment-summary">
@@ -69,7 +69,7 @@
         <ul>
             <li><strong>Genre:</strong> 2.5D side-scrolling brawler with light platforming.</li>
             <li><strong>Development Time:</strong> Four weeks.</li>
-            <li><strong>Team:</strong> Student group project.</li>
+            <li><strong>Team:</strong> 15-person team project.</li>
             <li><strong>Core Features:</strong> Fast-paced melee combat, dynamic enemy encounters, and traversal mechanics.</li>
         </ul>
       </div>
@@ -171,7 +171,7 @@
     <section class="reflection-textbox" style="max-width:600px; margin: 40px auto;">
       <h2><strong>Reflections</strong></h2>
       <p>
-        Game Project 2 challenged me to <strong>adapt quickly, problem-solve under pressure, 
+        It's a Fish, Your Majesty challenged me to <strong>adapt quickly, problem-solve under pressure, 
         and collaborate across disciplines</strong>. Taking over Level Design mid-project, 
         I prioritized <strong>efficiency</strong>, ensuring a <strong>functional, testable level</strong> 
         without blocking development.
@@ -196,10 +196,6 @@
     </main>
 
     <footer class="site-footer">
-  <span class="site-footer-owner">
-    <a href="https://github.com/yourusername">EpicHugge</a>
-    &copy; 2026. All rights reserved.
-  </span>
 </footer>
 
     <!-- Global Scripts -->
@@ -232,20 +228,6 @@
       updateProgress();
       window.addEventListener('scroll', updateProgress);
     }
-    // Typing Animation
-    const introMain = document.querySelector('.intro-main');
-    const caret = document.querySelector('.caret');
-    if (introMain && caret) {
-      const typingDuration = 2000, blinkDuration = 3500;
-      setTimeout(() => {
-        caret.classList.add('blink-caret');
-      }, typingDuration);
-      setTimeout(() => {
-        caret.classList.remove('blink-caret');
-        caret.classList.add('hide-caret');
-      }, typingDuration + blinkDuration);
-    }
-
     // Hamburger Menu
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
@@ -257,6 +239,29 @@
       });
     }
 
+
+
+    const caseStudy = document.querySelector('.case-study');
+    if (caseStudy) {
+      const revealItems = caseStudy.querySelectorAll('[data-reveal]');
+      revealItems.forEach((item, index) => {
+        item.style.transitionDelay = `${index * 80}ms`;
+      });
+      const reveal = (el) => el.classList.add('reveal');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        revealItems.forEach(reveal);
+      } else {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              reveal(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+        revealItems.forEach(item => observer.observe(item));
+      }
+    }
 
     // Fade-in for featured projects
     const featured = document.querySelector('.featured-projects');
