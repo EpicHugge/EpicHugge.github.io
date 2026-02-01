@@ -38,29 +38,28 @@
         hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
       });
     }
-
-
-
-    const caseStudy = document.querySelector('.case-study');
-    if (caseStudy) {
-      const revealItems = caseStudy.querySelectorAll('[data-reveal]');
-      revealItems.forEach((item, index) => {
-        item.style.transitionDelay = `${index * 80}ms`;
+    const caseStudies = document.querySelectorAll('.case-study, .ald-case');
+    if (caseStudies.length) {
+      caseStudies.forEach((caseStudy) => {
+        const revealItems = caseStudy.querySelectorAll('[data-reveal]');
+        revealItems.forEach((item, index) => {
+          item.style.transitionDelay = `${index * 80}ms`;
+        });
+        const reveal = (el) => el.classList.add('reveal');
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          revealItems.forEach(reveal);
+        } else {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                reveal(entry.target);
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.15 });
+          revealItems.forEach(item => observer.observe(item));
+        }
       });
-      const reveal = (el) => el.classList.add('reveal');
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        revealItems.forEach(reveal);
-      } else {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              reveal(entry.target);
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        revealItems.forEach(item => observer.observe(item));
-      }
     }
 
     // Fade-in for featured projects
@@ -152,21 +151,34 @@
       const images = container.querySelectorAll('img');
       let currentCarouselIndex = 0;
       const totalImages = images.length;
+      if (!totalImages) {
+        return;
+      }
+      const parent = container.parentElement;
       const updateCarousel = () => {
-        container.style.transform = 'translateX(-' + (currentCarouselIndex * (100 / totalImages)) + '%)';
+        const slideWidth = parent.clientWidth;
+        images.forEach((img) => {
+          img.style.width = `${slideWidth}px`;
+        });
+        container.style.width = `${totalImages * slideWidth}px`;
+        container.style.transform = `translateX(-${currentCarouselIndex * slideWidth}px)`;
       };
       updateCarousel();
-      const parent = container.parentElement;
+      window.addEventListener('resize', updateCarousel);
       const prevButton = parent.querySelector('.carousel-prev');
       const nextButton = parent.querySelector('.carousel-next');
-      prevButton.addEventListener('click', () => {
-        currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
-        updateCarousel();
-      });
-      nextButton.addEventListener('click', () => {
-        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-        updateCarousel();
-      });
+      if (prevButton) {
+        prevButton.addEventListener('click', () => {
+          currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
+          updateCarousel();
+        });
+      }
+      if (nextButton) {
+        nextButton.addEventListener('click', () => {
+          currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
+          updateCarousel();
+        });
+      }
       setInterval(() => {
         currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
         updateCarousel();

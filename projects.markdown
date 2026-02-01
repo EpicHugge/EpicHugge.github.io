@@ -5,8 +5,8 @@ permalink: /projects/
 body_class: project-archive
 ---
 
-<section class="featured-projects project-archive">
-  <div class="section-header">
+<section class="featured-projects project-archive case-study">
+  <div class="section-header" data-reveal>
     <p class="eyebrow">Level Design</p>
     <h2>Projects</h2>
   </div>
@@ -15,7 +15,7 @@ body_class: project-archive
     {% for slug in level_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}
-      <article class="project-card">
+      <article class="project-card" data-reveal>
         <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
           {% if project.media_type == "video" %}
@@ -47,15 +47,15 @@ body_class: project-archive
   </div>
 </section>
 
-<section class="featured-projects project-archive">
-  <div class="section-header">
+<section class="featured-projects project-archive case-study">
+  <div class="section-header" data-reveal>
     <p class="eyebrow">Production &amp; Leadership</p>
     <h2>Projects</h2>
   </div>
   <div class="featured-projects-grid">
     {% assign leadership_projects = site.data.projects | where_exp: "project", "project.slug == 'game-project-4'" %}
     {% for project in leadership_projects %}
-      <article class="project-card">
+      <article class="project-card" data-reveal>
         <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
           {% if project.media_type == "video" %}

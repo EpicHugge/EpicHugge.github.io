@@ -10,9 +10,10 @@
   role_tag: "LD"
   team_tag: "15"
   tags:
-    - Combat Design
-    - Level Design
-    - Team Project
+    - 2.5D
+    - Adapting
+    - Team work
+    - Encounter Design
     - Game Project 2
   cta: "Breakdown"
   featured: true
@@ -59,15 +60,16 @@
   role: "Level Designer"
   timeframe: "Course assignment"
   summary: "Advanced assignment placeholder in Unreal focused on encounter flow and layout readability."
-  media_type: "image"
-  media_src: "/assets/images/placeholder-gp4.svg"
+  media_type: "video"
+  media_src: "/assets/images/AdvancedLevelDesign-Assignment/Intro.webm"
   engine_icon: "/assets/images/tool-icons/unreal.svg"
   role_tag: "LD"
   team_tag: "Solo"
   tags:
     - Advanced Layout
-    - Encounter Design
-    - Work in Progress
+    - First Person
+    - Horror
+    - Guidance
   cta: "Preview"
   featured: true
 
