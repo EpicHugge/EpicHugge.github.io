@@ -29,15 +29,15 @@ permalink: /about/
   <div class="card about-split">
     <div class="about-copy">
       <h2>Industry Involvement</h2>
-      <h3>Arctic Game Dev Volunteer</h3>
+      <h3>Umeå Game Conference / UGC Volunteer</h3>
       <p>
-        I've volunteered with Arctic Game Dev for two years, supporting local events and connecting with developers.
+        I've volunteered with Umeå Game Conference / UGC for two years, supporting local events and connecting with developers.
         The experience strengthened my collaboration skills and gave me hands-on exposure to how game events run.
       </p>
     </div>
     <div class="about-media about-media-grid">
-      <img src="{{ '/assets/images/arctic-volunteers.jpg' | relative_url }}" alt="Arctic Game Dev Volunteers" loading="lazy" decoding="async">
-      <img src="{{ '/assets/images/arctic-volunteers2.jpg' | relative_url }}" alt="Arctic Game Dev Volunteers 2024" loading="lazy" decoding="async">
+      <img src="{{ '/assets/images/arctic-volunteers.jpg' | relative_url }}" alt="Umeå Game Conference / UGC Volunteers" loading="lazy" decoding="async">
+      <img src="{{ '/assets/images/arctic-volunteers2.jpg' | relative_url }}" alt="Umeå Game Conference / UGC Volunteers 2024" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -47,7 +47,7 @@ permalink: /about/
     <div class="about-copy">
       <h2>Beyond Game Design</h2>
       <p>
-        When I'm not designing levels, you'll find me at the gym or bouldering, diving into RPGs, or watching films.
+        When I'm not designing levels, you'll find me at the gym or bouldering, playing story games or looter shooters with friends, or watching films.
         These hobbies keep my energy up and help me approach spaces with a fresh eye.
       </p>
     </div>

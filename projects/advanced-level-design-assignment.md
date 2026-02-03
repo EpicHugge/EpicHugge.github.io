@@ -11,7 +11,7 @@ body_class: project-page
   </header>
 
   <div class="ald-hero-media" data-reveal>
-    <video autoplay loop muted playsinline poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
+    <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
       <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Intro.webm' | relative_url }}" type="video/webm">
     </video>
     <a class="ald-hero-cta" href="#walkthrough">
@@ -44,15 +44,6 @@ body_class: project-page
         <li><strong>Genre:</strong> Horror</li>
       </ul>
       <p class="ald-assets"><strong>Assets:</strong> Built using Unreal Engine - Blockout Starter Pack .</p>
-    </section>
-    <section class="ald-panel" data-reveal>
-      <h2>Goals</h2>
-            <ul class="ald-goals">
-        <li><strong>Readable navigation:</strong> Build a space where players can orient themselves quickly without UI prompts.</li>
-        <li><strong>Clear interactions:</strong> Make every interaction feel fair and understandable through visible feedback.</li>
-        <li><strong>Pacing with tension:</strong> Balance calm exploration with short spikes of tension.</li>
-        <li><strong>Optional exploration:</strong> Leave room for curiosity without breaking the main path.</li>
-      </ul>
     </section>
   </div>
 

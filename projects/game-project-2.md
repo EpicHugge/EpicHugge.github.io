@@ -11,10 +11,10 @@ body_class: project-page
   </header>
 
   <div class="ald-hero-media" data-reveal>
-    <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-hero.png' | relative_url }}" alt="It's a Fish, Your Majesty hero">
-    <a class="ald-hero-cta" href="{{ '/assets/images/gp2-hero.png' | relative_url }}" target="_blank" rel="noopener">
-      View Hero Still <span aria-hidden="true">&rarr;</span>
-    </a>
+    <video preload="auto" class="ald-hero-video" autoplay loop muted playsinline poster="{{ '/assets/images/GP2/gp2-hero.png' | relative_url }}">
+      <source src="{{ '/assets/images/GP2/Hero.webm' | relative_url }}" type="video/webm">
+    </video>
+    <a class="ald-hero-cta" href="#walkthrough">Watch Full Walkthrough <span aria-hidden="true">&rarr;</span></a>
   </div>
 
   <div class="ald-split">
@@ -42,21 +42,12 @@ body_class: project-page
         <li><strong>Role:</strong> Level Designer</li>
       </ul>
     </section>
-    <section class="ald-panel ald-goals-panel" data-reveal>
-      <h2>Goals</h2>
-            <ul class="ald-goals">
-        <li><strong>Readable combat spaces:</strong> Keep fights clear so players can make quick decisions.</li>
-        <li><strong>Fast traversal feel:</strong> Make movement feel quick and satisfying without breaking combat.</li>
-        <li><strong>Encounter rhythm:</strong> Establish a steady flow of action and recovery beats.</li>
-        <li><strong>Team iteration:</strong> Keep the level stable and testable for frequent changes.</li>
-      </ul>
-    </section>
   </div>
 
   <div class="ald-section" data-reveal>
     <h2>Level Overview</h2>
     <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-final.png' | relative_url }}" alt="Level overview" class="ald-map-image">
+      <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-final.png' | relative_url }}" alt="Level overview" class="ald-map-image">
     </div>
   </div>
 
@@ -65,7 +56,7 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-screenshot1.png' | relative_url }}" alt="Role transition moment">
+          <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-hero.png' | relative_url }}" alt="Role transition moment">
         </div>
         <div class="ald-highlight-text">
           <h3>Role Transition</h3>
@@ -83,7 +74,9 @@ body_class: project-page
       </article>
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-screenshot2.png' | relative_url }}" alt="Traversal adjustments">
+          <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/images/GP2/gp2-screenshot2.png' | relative_url }}">
+            <source src="{{ '/assets/images/GP2/Hook.webm' | relative_url }}" type="video/webm">
+          </video>
         </div>
         <div class="ald-highlight-text">
           <h3>Design</h3>
@@ -101,7 +94,7 @@ body_class: project-page
       </article>
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-screenshot3.png' | relative_url }}" alt="Encounter pacing">
+          <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-screenshot3.png' | relative_url }}" alt="Encounter pacing">
         </div>
         <div class="ald-highlight-text">
           <h3>Collaboration</h3>
@@ -135,7 +128,7 @@ body_class: project-page
     </div>
     <div class="ald-iteration">
       <figure>
-        <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-blockout.png' | relative_url }}" alt="Blockout layout">
+        <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-blockout.png' | relative_url }}" alt="Blockout layout">
         <figcaption>Blockout v1</figcaption>
       </figure>
       <div class="ald-iteration-center">
@@ -143,11 +136,12 @@ body_class: project-page
         <small>4-week timeline</small>
       </div>
       <figure>
-        <img loading="lazy" decoding="async" src="{{ '/assets/images/gp2-final.png' | relative_url }}" alt="Polished level">
+        <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-final.png' | relative_url }}" alt="Polished level">
         <figcaption>Polished Level</figcaption>
       </figure>
     </div>
   </div>
+
   <div class="ald-section" data-reveal>
     <h2>Reflections &amp; Takeaways</h2>
     <div class="ald-reflections">
@@ -162,7 +156,10 @@ body_class: project-page
     </div>
   </div>
 
-  <a class="ald-footer-cta" href="{{ '/assets/images/gp2-hero.png' | relative_url }}" target="_blank" rel="noopener" data-reveal>
-    View Hero Still <span aria-hidden="true">&#9654;</span>
-  </a>
+  <div class="ald-walkthrough" id="walkthrough" data-reveal>
+    <h2>Full Walkthrough</h2>
+    <div class="ald-embed">
+      <iframe src="https://www.youtube.com/embed/q6qp8VoVdEg" title="It's a Fish, Your Majesty walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
 </section>

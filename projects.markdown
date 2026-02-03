@@ -19,7 +19,7 @@ body_class: project-archive
         <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
           {% if project.media_type == "video" %}
-            <video autoplay loop muted playsinline class="project-card-video">
+            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
               <source src="{{ project.media_src | relative_url }}" type="video/webm">
             </video>
           {% else %}
@@ -59,7 +59,7 @@ body_class: project-archive
         <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
           {% if project.media_type == "video" %}
-            <video autoplay loop muted playsinline class="project-card-video">
+            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
               <source src="{{ project.media_src | relative_url }}" type="video/webm">
             </video>
           {% else %}

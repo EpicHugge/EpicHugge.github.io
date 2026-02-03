@@ -4,8 +4,8 @@
   role: "Level Designer"
   timeframe: "4 week team project (15 people)"
   summary: "Stepped in as the level designer mid-production on a 15-person team, balancing traversal, combat reads, and technical fixes for a fast-paced 2.5D brawler."
-  media_type: "image"
-  media_src: "/assets/images/gp2-hero.png"
+  media_type: "video"
+  media_src: "/assets/images/GP2/Hero.webm"
   engine_icon: "/assets/images/tool-icons/unity.svg"
   role_tag: "LD"
   team_tag: "15"
@@ -70,6 +70,8 @@
     - First Person
     - Horror
     - Guidance
+    - Iterations
+    - Playtesting
   cta: "Preview"
   featured: true
 
