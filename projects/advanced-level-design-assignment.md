@@ -47,65 +47,9 @@ body_class: project-page
   </div>
 
   <div class="ald-section" data-reveal>
-    <h2>Level Highlights</h2>
-    <div class="ald-highlights">
-      <article class="ald-highlight">
-        <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Lighting%20and%20Guidence.webm' | relative_url }}" type="video/webm">
-          </video>
-        </div>
-        <div class="ald-highlight-text">
-          <h3>Restore the Pressure</h3>
-          <p class="ald-highlight-lede">
-            Main loop that gets the system running again.
-          </p>
-          <ul class="ald-highlight-points">
-            <li><strong>Loop:</strong> Lower pressure. Install the missing pipe. Reactivate the screen bars to open the route.</li>
-            <li><strong>Intent:</strong> Make the sequence feel like fixing a real industrial system. Not just pressing buttons.</li>
-            <li><strong>Clarity:</strong> Added VFX and lighting feedback so cause -> effect reads instantly without UI.</li>
-            <li><strong>Flow:</strong> Each step sends the player back through familiar space so the layout reads better on return.</li>
-          </ul>
-        </div>
-      </article>
-      <article class="ald-highlight alt">
-        <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00006.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Leading%20Lines.webm' | relative_url }}" type="video/webm">
-          </video>
-        </div>
-        <div class="ald-highlight-text">
-          <h3>Guided Exploration</h3>
-          <p class="ald-highlight-lede">
-            Navigation has no objective markers. The environment does the guiding.
-          </p>
-          <ul class="ald-highlight-points">
-            <li><strong>Guidance:</strong> Lighting contrast and framing plus leading lines pull players toward key interactables.</li>
-            <li><strong>Flow:</strong> Reworked the catwalk route to reduce confusion and clarify the critical path.</li>
-            <li><strong>Curiosity:</strong> Opened up areas players naturally wanted to explore so it felt rewarding.</li>
-            <li><strong>Landmarks:</strong> Used strong light sources and silhouettes so key spaces stayed memorable.</li>
-          </ul>
-        </div>
-      </article>
-      <article class="ald-highlight">
-        <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/The%20Reveal.webm' | relative_url }}" type="video/webm">
-          </video>
-        </div>
-        <div class="ald-highlight-text">
-          <h3>The Breach Reveal</h3>
-          <p class="ald-highlight-lede">
-            Narrative payoff that flips the mood from problem-solving to threat.
-          </p>
-          <ul class="ald-highlight-points">
-            <li><strong>Moment:</strong> Torn screen bars confirm something powerful forced its way through.</li>
-            <li><strong>Storytelling:</strong> Communicated through environment not exposition.</li>
-            <li><strong>Pacing:</strong> Relief beat followed by a new unanswered question and tension spike.</li>
-            <li><strong>Orientation:</strong> The breach doubles as a landmark that reorients the player.</li>
-          </ul>
-        </div>
-      </article>
+    <h2>Level Overview</h2>
+    <div class="ald-map ald-map-single">
+      <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Level_Map.png' | relative_url }}" alt="Level overview map" class="ald-map-image">
     </div>
   </div>
 
@@ -156,10 +100,67 @@ body_class: project-page
   </div>
 
   </div>
+
   <div class="ald-section" data-reveal>
-    <h2>Level Overview</h2>
-    <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Level_Map.png' | relative_url }}" alt="Level overview map" class="ald-map-image">
+    <h2>Level Highlights</h2>
+    <div class="ald-highlights">
+      <article class="ald-highlight">
+        <div class="ald-highlight-media">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Lighting%20and%20Guidence.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="ald-highlight-text">
+          <h3>Restore the Pressure</h3>
+          <p class="ald-highlight-lede">
+            Main sequence that gets the system running again.
+          </p>
+          <ul class="ald-highlight-points">
+            <li><strong>Puzzle sequence:</strong> Lower pressure. Install the missing pipe. Reactivate the screen bars to open the route.</li>
+            <li><strong>Intent:</strong> Make the sequence feel like fixing a real industrial system. Not just pressing buttons.</li>
+            <li><strong>Clarity:</strong> Added VFX and lighting feedback so cause -> effect reads instantly without UI.</li>
+            <li><strong>Flow:</strong> Each step sends the player back through familiar space so the layout reads better on return.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="ald-highlight alt">
+        <div class="ald-highlight-media">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00006.png' | relative_url }}">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Leading%20Lines.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="ald-highlight-text">
+          <h3>Guided Exploration</h3>
+          <p class="ald-highlight-lede">
+            Navigation has no objective markers. The environment does the guiding.
+          </p>
+          <ul class="ald-highlight-points">
+            <li><strong>Guidance:</strong> Lighting contrast and framing plus leading lines pull players toward key interactables.</li>
+            <li><strong>Flow:</strong> Reworked the catwalk route to reduce confusion and clarify the critical path.</li>
+            <li><strong>Curiosity:</strong> Opened up areas players naturally wanted to explore so it felt rewarding.</li>
+            <li><strong>Landmarks:</strong> Used strong light sources and silhouettes so key spaces stayed memorable.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="ald-highlight">
+        <div class="ald-highlight-media">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/The%20Reveal.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="ald-highlight-text">
+          <h3>The Breach Reveal</h3>
+          <p class="ald-highlight-lede">
+            Narrative payoff that flips the mood from problem-solving to threat.
+          </p>
+          <ul class="ald-highlight-points">
+            <li><strong>Moment:</strong> Torn screen bars confirm something powerful forced its way through.</li>
+            <li><strong>Storytelling:</strong> Communicated through environment not exposition.</li>
+            <li><strong>Pacing:</strong> Relief beat followed by a new unanswered question and tension spike.</li>
+            <li><strong>Orientation:</strong> The breach doubles as a landmark that reorients the player.</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 
