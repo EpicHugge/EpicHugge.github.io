@@ -21,7 +21,7 @@ body_class: project-page
       <div class="assignment-left">
         <h3><strong>Level Assignment Overview</strong></h3>
         <ul>
-          <li><strong>Objective:</strong> Plan, build, and refine a mid-game level.</li>
+          <li><strong>Objective:</strong> Plan build and refine a mid-game level.</li>
           <li><strong>Scope:</strong> A short vertical slice of the game.</li>
         </ul>
         <h3><strong>Player Context</strong></h3>
@@ -49,11 +49,8 @@ body_class: project-page
       <div class="card-text">
         <h2><strong>Design</strong></h2>
         <p>
-          I chose a <strong>gatehouse setting</strong> to create a <strong>stealth-centric</strong> environment perfect for quiet, strategic gameplay. 
-          The level features a <strong>dark, moody atmosphere</strong> that heightens tension, while a 
-          <strong>clear spatial flow</strong>—achieved through <strong>strategic lighting</strong> and 
-          <strong>verticality</strong>—guides players subtly. The <strong>high ground</strong> and 
-          <strong>overlook position</strong> empower players to plan their routes effectively.
+          I chose a <strong>gatehouse setting</strong> to support stealth and slow planning. The space is <strong>dark and moody</strong> to build tension.
+          <strong>Clear spatial flow</strong> uses <strong>lighting</strong> and <strong>verticality</strong> to guide players. The <strong>high ground</strong> overlook lets them plan routes.
         </p>
       </div>
     </div>
@@ -62,17 +59,15 @@ body_class: project-page
       <div class="card-text">
         <h2><strong>Narrative</strong></h2>
         <p>
-          I used <strong>environmental storytelling, overheard dialogue, and NPC interaction</strong> 
-          to immerse the player in a world of <strong>betrayal and corruption</strong>.
+          I used <strong>environmental storytelling</strong> plus <strong>overheard dialogue</strong> and <strong>NPC interaction</strong> to pull the player into a story of <strong>betrayal and corruption</strong>.
         </p>
         <p>
-          <strong>Ushi Maki Ramen, a captured smuggler,</strong> offers a <strong>hidden escape</strong> in exchange for help. 
-          Guards <strong>misuse his confiscated wares</strong>, revealing their corruption through 
-          <strong>dialogue and scattered clues</strong>.
+          <strong>Ushi Maki Ramen</strong> is a captured smuggler. He offers a <strong>hidden escape</strong> if you help him.
+          Guards <strong>misuse his confiscated wares</strong>. This shows their corruption through <strong>dialogue and scattered clues</strong>.
         </p>
         <p>
-          Players choose between <strong>escaping through the main gate</strong> or <strong>helping Ushi</strong> 
-          to access a <strong>hidden passage behind a bookshelf</strong>, rewarding exploration and choice.
+          Players can <strong>escape through the main gate</strong> or <strong>help Ushi</strong>. Helping him opens a <strong>hidden passage behind a bookshelf</strong>.
+          It rewards exploration and choice.
         </p>
       </div>
       <div class="card-image">
@@ -87,18 +82,16 @@ body_class: project-page
       <div class="card-text">
         <h2><strong>Guiding the Player</strong></h2>
         <p>
-          I designed the level to <strong>naturally guide players</strong> using 
-          <strong>lighting, elevation, and composition</strong>. A <strong>high vantage point</strong> 
-          lets players scan the <strong>open gatehouse</strong> and plan their route.
+          I designed the level to <strong>guide players</strong> using <strong>lighting</strong> and <strong>elevation</strong> plus <strong>composition</strong>.
+          A <strong>high vantage point</strong> lets players scan the <strong>open gatehouse</strong> and plan their route.
         </p>
         <p>
-          A <strong>large window casts god rays onto the main gate</strong>, marking the objective, 
-          while <strong>brightly lit paths contrast with darker side rooms</strong> to steer movement.
+          A <strong>large window casts god rays onto the main gate</strong>. This marks the objective.
+          <strong>Bright paths</strong> contrast with <strong>darker side rooms</strong> to steer movement.
         </p>
         <p>
-          <strong>Bright cloth on vaultable windows</strong> signals traversal points, and 
-          <strong>verticality</strong> naturally increases difficulty. Starting high grants control, 
-          while descending raises tension.
+          <strong>Bright cloth on vaultable windows</strong> signals traversal points. <strong>Verticality</strong> raises difficulty over time.
+          Starting high grants control. Dropping down raises tension.
         </p>
       </div>
     </div>
@@ -118,40 +111,31 @@ body_class: project-page
       </div>
       <div class="blockout-description">
         <p>
-          I started to create a <strong>hand-drawn layout</strong> and then I did 
-          <strong>architectural research</strong>, then I built the <strong>blockout in ProBuilder (Unity)</strong> 
-          and refined it through <strong>peer feedback</strong>.
+          I started with a <strong>hand-drawn layout</strong>. Then I did <strong>architectural research</strong>.
+          I built the <strong>blockout in ProBuilder (Unity)</strong>. I refined it through <strong>peer feedback</strong>.
         </p>
         <p>
-          To fix <strong>predictable symmetry</strong>, I <strong>added support beams on the lower floor</strong> 
-          and a <strong>commander’s study on the upper floor</strong>, improving flow. 
-          <strong>Lighting and environmental cues</strong> were adjusted to enhance <strong>player guidance</strong>.
+          To break <strong>predictable symmetry</strong> I added <strong>support beams on the lower floor</strong> and a <strong>commander’s study on the upper floor</strong>.
+          That improved flow. I also adjusted <strong>lighting and environmental cues</strong> to improve <strong>player guidance</strong>.
         </p>
         <p>
-          These changes made the level <strong>more engaging</strong>, balancing 
-          <strong>high-ground advantages</strong> with <strong>varied movement options</strong> 
-          for a <strong>fluid experience</strong>.
+          These changes made the level <strong>more engaging</strong>. High ground still mattered but movement options felt more varied.
         </p>
       </div>
     </section>
     <section class="reflection-textbox" style="max-width:600px; margin: 40px auto;">
       <h2><strong>Reflections</strong></h2>
       <p>
-        This project taught me <strong>how to use ProBuilder and similar tools</strong> as well as 
-        <strong>lighting techniques and player guidance</strong> in stealth-based level design.
-        I learned the <strong>importance of giving players a vantage point early on</strong>, 
-        allowing them to plan their route strategically.
+        This project taught me <strong>ProBuilder</strong> and similar tools. It also taught me <strong>lighting techniques</strong> and <strong>player guidance</strong> in stealth spaces.
+        I learned the value of giving players a strong vantage point early so they can plan their route.
       </p>
       <p>
-        The biggest challenge was <strong>grasping the fundamentals of level design</strong>—from planning 
-        the layout to using new tools like ProBuilder. At first, it was frustrating, but overcoming those 
-        struggles helped me <strong>understand how to approach the early phases of level creation 
-        more effectively</strong>.
+        The biggest challenge was learning the fundamentals. That meant planning the layout and using new tools like ProBuilder.
+        It was frustrating at first. Working through it helped me approach early layout work with more confidence.
       </p>
       <p>
-        If I had more time, I would refine <strong>color usage, narrative elements, and lighting adjustments</strong> 
-        to further enhance the atmosphere. I would also implement <strong>audio and music</strong>, 
-        as I believe sound design could elevate the stealth experience by reinforcing tension and immersion.
+        With more time I would refine <strong>color use</strong> and <strong>narrative beats</strong>. I would also refine <strong>lighting</strong>.
+        I would add <strong>audio and music</strong>. Sound design would push tension and immersion.
       </p>
     </section>
   </div>

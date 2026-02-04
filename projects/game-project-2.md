@@ -21,7 +21,7 @@ body_class: project-page
     <section class="ald-panel" data-reveal>
       <h2>Summary</h2>
       <p class="ald-text-lede">
-        2.5D side-scrolling brawler. I moved from sound and music to full-time level design after week one, taking
+        2.5D side-scrolling brawler. I moved from sound and music to full-time level design after week one. I took
         ownership of combat spaces and traversal flow.
       </p>
       <ul class="ald-text-points">
@@ -48,11 +48,11 @@ body_class: project-page
     <div class="ald-iteration-summary">
       <p>
         I inherited an unfinished blockout with technical issues that blocked testing and asset integration. I stabilized
-        the layout first, then iterated on flow, encounter pacing, and traversal spacing to keep the brawler focus sharp.
+        the layout first. Then I iterated on flow. I tuned encounter pacing and traversal spacing to keep the brawler focus sharp.
       </p>
       <ul class="ald-list">
         <li><strong>Stabilize:</strong> Repair layout and collisions so the team could playtest reliably.</li>
-        <li><strong>Refine:</strong> Adjust pathing, spacing, and ambush timing for clarity.</li>
+        <li><strong>Refine:</strong> Adjust pathing and spacing to improve clarity and ambush timing.</li>
         <li><strong>Align:</strong> Sync enemy placement and traversal tuning with gameplay updates.</li>
       </ul>
     </div>
@@ -70,6 +70,13 @@ body_class: project-page
         <figcaption>Polished Level</figcaption>
       </figure>
     </div>
+    <div class="ald-quote">
+      <blockquote>
+        During GP2 we did not have a playable prototype level when we expected. It caused delays and stress for the team.
+        After Hugo returned from the game conference, we had a proper level in place within a few days.
+      </blockquote>
+      <cite>— Product Owner, GP2 (15-person team)</cite>
+    </div>
   </div>
 
   <div class="ald-section" data-reveal>
@@ -84,7 +91,7 @@ body_class: project-page
         <div class="ald-highlight-text">
           <h3>Design</h3>
           <p class="ald-highlight-lede">
-            The hook ability was originally intended for reaching high platforms, but this conflicted with enemy AI, as they couldn't follow the player. To fix this, I repositioned hook anchors to focus on speed and traversal rather than vertical movement, allowing for fluid mobility without breaking combat flow.
+            The hook ability was meant for high platforms. That broke enemy AI since they could not follow. I moved hook anchors to focus on speed and traversal. This kept combat flow intact.
           </p>
           <div class="ald-highlight-detail">
             <ul class="ald-highlight-points">
@@ -101,11 +108,11 @@ body_class: project-page
         <div class="ald-highlight-text">
           <h3>Collaboration</h3>
           <p class="ald-highlight-lede">
-            I worked closely with programmers, artists, and designers to balance combat, traversal, and level flow.
+            I worked closely with programmers, artists and designers. We kept combat, traversal and level flow aligned.
           </p>
           <div class="ald-highlight-detail">
             <ul class="ald-highlight-points">
-              <li><strong>Jump alignment:</strong> Coordinated with programmers so platform spacing felt responsive.</li>
+              <li><strong>Game mechanics + AI:</strong> Adjusted level flow after new mechanics and AI changes landed.</li>
               <li><strong>Communication:</strong> Kept disciplines aligned so their work could ship smoothly.</li>
               <li><strong>Quality:</strong> Protected balance and polish while changes landed.</li>
             </ul>
@@ -126,12 +133,12 @@ body_class: project-page
     <h2>Reflections &amp; Takeaways</h2>
     <div class="ald-reflections">
       <p class="ald-text-lede">
-        It's a Fish, Your Majesty challenged me to adapt quickly, problem-solve under pressure, and collaborate across disciplines. Taking over Level Design mid-project, I prioritized efficiency, ensuring a functional, testable level without blocking development.
+        This project pushed me to adapt fast and solve problems under pressure. I took over level design mid project. I focused on speed and clarity so the team could keep moving.
       </p>
       <ul class="ald-text-points">
-        <li><strong>Combat + traversal:</strong> Refined enemy placement, encounter pacing, and platforming density to keep movement fluid and the brawler focus intact.</li>
-        <li><strong>Mechanical cohesion:</strong> The hook traversal work reinforced that features must complement, not disrupt, gameplay.</li>
-        <li><strong>Iteration:</strong> Feedback-driven changes to level structure, AI placement, and encounter flow strengthened my passion for level design and cross-discipline collaboration.</li>
+        <li><strong>Combat + traversal:</strong> Refined enemy placement and encounter pacing. Tuned platforming density to keep movement fluid and the brawler focus intact.</li>
+        <li><strong>Mechanical cohesion:</strong> The hook traversal work reinforced that features must complement gameplay and not disrupt it.</li>
+        <li><strong>Iteration:</strong> Feedback drove changes to level structure. I tuned AI placement and encounter flow. It strengthened my passion for level design and cross-discipline collaboration.</li>
       </ul>
     </div>
   </div>

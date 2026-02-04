@@ -23,12 +23,12 @@ body_class: project-page
     <section class="ald-panel" data-reveal>
       <h2>Summary</h2>
       <p class="ald-text-lede">
-        A first-person horror puzzle space designed to guide the player without UI, using lighting, framing.
+        A first-person horror puzzle space. It guides the player without UI using lighting and framing.
       </p>
       <ul class="ald-text-points">
         <li><strong>Experience:</strong> Calm problem-solving → unease → reveal.</li>
-        <li><strong>Constraints:</strong> One room, no objective markers, limited interactions.</li>
-        <li><strong>Focus:</strong> Player guidance, clarity, pacing through environment.</li>
+        <li><strong>Constraints:</strong> One room with no objective markers and limited interactions.</li>
+        <li><strong>Focus:</strong> Player guidance and clarity. Pacing through the environment.</li>
       </ul>
     </section>
     <section class="ald-panel" data-reveal>
@@ -42,7 +42,7 @@ body_class: project-page
         <li><strong>Perspective:</strong> First person</li>
         <li><strong>Genre:</strong> Horror</li>
       </ul>
-      <p class="ald-assets"><strong>Assets:</strong> Built using Unreal Engine - Blockout Starter Pack .</p>
+      <p class="ald-assets"><strong>Assets:</strong> Unreal Engine Blockout Starter Pack.</p>
     </section>
   </div>
 
@@ -58,11 +58,11 @@ body_class: project-page
         <div class="ald-highlight-text">
           <h3>Restore the Pressure</h3>
           <p class="ald-highlight-lede">
-            Primary progression loop that restores the water treatment system.
+            Main loop that gets the system running again.
           </p>
           <ul class="ald-highlight-points">
-            <li><strong>Loop:</strong> Lower pressure, install the missing pipe, then reactivate the screen bars to open the route forward.</li>
-            <li><strong>Intent:</strong> Make the sequence feel like repairing a real industrial system, not just pressing buttons.</li>
+            <li><strong>Loop:</strong> Lower pressure. Install the missing pipe. Reactivate the screen bars to open the route.</li>
+            <li><strong>Intent:</strong> Make the sequence feel like fixing a real industrial system. Not just pressing buttons.</li>
             <li><strong>Clarity:</strong> Added VFX and lighting feedback so cause -> effect reads instantly without UI.</li>
             <li><strong>Flow:</strong> Each step sends the player back through familiar space so the layout reads better on return.</li>
           </ul>
@@ -77,10 +77,10 @@ body_class: project-page
         <div class="ald-highlight-text">
           <h3>Guided Exploration</h3>
           <p class="ald-highlight-lede">
-            Navigation is built without objective markers, so the environment does the guiding.
+            Navigation has no objective markers. The environment does the guiding.
           </p>
           <ul class="ald-highlight-points">
-            <li><strong>Guidance:</strong> Lighting contrast, framing, and leading lines pull players toward key interactables.</li>
+            <li><strong>Guidance:</strong> Lighting contrast and framing plus leading lines pull players toward key interactables.</li>
             <li><strong>Flow:</strong> Reworked the catwalk route to reduce confusion and clarify the critical path.</li>
             <li><strong>Curiosity:</strong> Opened up areas players naturally wanted to explore so it felt rewarding.</li>
             <li><strong>Landmarks:</strong> Used strong light sources and silhouettes so key spaces stayed memorable.</li>
@@ -100,7 +100,7 @@ body_class: project-page
           </p>
           <ul class="ald-highlight-points">
             <li><strong>Moment:</strong> Torn screen bars confirm something powerful forced its way through.</li>
-            <li><strong>Storytelling:</strong> Communicated through environment, not exposition.</li>
+            <li><strong>Storytelling:</strong> Communicated through environment not exposition.</li>
             <li><strong>Pacing:</strong> Relief beat followed by a new unanswered question and tension spike.</li>
             <li><strong>Orientation:</strong> The breach doubles as a landmark that reorients the player.</li>
           </ul>
@@ -113,10 +113,9 @@ body_class: project-page
     <h2>Iteration</h2>
     <div class="ald-iteration-summary">
       <p>
-        I iterated this level through six playtests with peers. Early on, the level was scoped as two main rooms, but
-        feedback showed the screen bar room needed significantly more work, especially for navigation and puzzle
-        readability. I cut the second room to focus on polishing one space and improving clarity through layout,
-        lighting, and feedback.
+        I ran six playtests with peers. Early versions had two main rooms. Feedback showed the screen bar room needed more
+        work on navigation and puzzle clarity. I cut the second room. That let me polish one space and improve layout plus
+        lighting and feedback.
       </p>
       <ul class="ald-list">
         <li><strong>Scope cut:</strong> Removed the second room to increase polish and reduce cognitive load.</li>
@@ -168,12 +167,12 @@ body_class: project-page
     <h2>Reflections &amp; Takeaways</h2>
     <div class="ald-reflections">
       <p class="ald-text-lede">
-        Iteration is the real work of level design. Six playtests exposed behaviors I could not predict alone and showed where the space needed clearer reads.
+        Iteration is where the real work is. Six playtests showed me things I would not catch alone. They made the weak spots obvious.
       </p>
       <ul class="ald-text-points">
-        <li><strong>Observation &gt; opinion:</strong> Watching where players hesitated, misread, or guessed was more useful than likes or dislikes.</li>
-        <li><strong>Playtest-driven improvements:</strong> Reworked the catwalk flow for navigation clarity, strengthened cause -&gt; effect feedback, and opened curiosity hotspots.</li>
-        <li><strong>Scope choice:</strong> Cutting the second room let me polish one space and improve clarity, pacing, and overall quality.</li>
+        <li><strong>Observation &gt; opinion:</strong> Watching where players hesitated or misread was more useful than likes or dislikes.</li>
+        <li><strong>Playtest-driven improvements:</strong> Reworked the catwalk flow for navigation clarity. Strengthened cause -&gt; effect feedback and opened curiosity hotspots.</li>
+        <li><strong>Scope choice:</strong> Cutting the second room let me polish one space and improve clarity, pacing and overall quality.</li>
         <li><strong>Guidance takeaway:</strong> Strong lighting cues reduced hesitation more than extra signage.</li>
       </ul>
     </div>

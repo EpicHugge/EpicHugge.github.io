@@ -5,16 +5,8 @@ layout: default
 <section class="hero" aria-label="Hero">
   <div class="hero-stack">
     <div class="hero-content hero-fade">
-      <div class="hero-text">
-        <p class="intro-main">Hey!, I'm Hugo</p>
-        <p class="intro-sub">Level Designer</p>
-        <p class="intro-location">
-          <img src="{{ '/assets/images/location-pointer.png' | relative_url }}" alt="Location Pointer" class="location-pointer">
-          SWEDEN
-        </p>
-      </div>
       <div class="hero-logo">
-        <img src="{{ '/assets/images/Hero2.png' | relative_url }}" alt="Hugo's Logo" class="intro-logo-image" loading="lazy" decoding="async">
+        <img src="{{ '/assets/images/hugo_hero.png' | relative_url }}" alt="Hugo hero image" class="intro-logo-image" loading="lazy" decoding="async">
       </div>
     </div>
 
@@ -41,9 +33,6 @@ layout: default
 
 <!-- Featured Projects -->
 <section class="featured-projects" id="featured-projects">
-  <div class="section-header">
-    <h2>Projects</h2>
-  </div>
   <div class="featured-projects-grid">
     {% assign featured_projects = site.data.projects | where: "featured", true | where_exp: "project", "project.slug != 'level-design-assignment'" | where_exp: "project", "project.slug != 'game-project-3'" | where_exp: "project", "project.slug != 'game-project-4'" %}
     {% for project in featured_projects %}
@@ -67,6 +56,7 @@ layout: default
         </div>
         <div class="project-card-body">
           <h3>{{ project.title }}</h3>
+          <p class="project-card-summary">{{ project.summary }}</p>
           <div class="project-keywords">
             {% for tag in project.tags %}
               <span class="tag">{{ tag }}</span>

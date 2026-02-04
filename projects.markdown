@@ -35,6 +35,7 @@ body_class: project-archive
         </div>
         <div class="project-card-body">
           <h3>{{ project.title }}</h3>
+          <p class="project-card-summary">{{ project.summary }}</p>
           <div class="project-keywords">
             {% for tag in project.tags %}
               <span class="tag">{{ tag }}</span>
@@ -75,6 +76,7 @@ body_class: project-archive
         </div>
         <div class="project-card-body">
           <h3>{{ project.title }}</h3>
+          <p class="project-card-summary">{{ project.summary }}</p>
           <div class="project-keywords">
             {% for tag in project.tags %}
               <span class="tag">{{ tag }}</span>
