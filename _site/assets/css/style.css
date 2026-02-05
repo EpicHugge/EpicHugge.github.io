@@ -1920,6 +1920,34 @@ main > section {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
 }
+.ald-journey-flow {
+  display: grid;
+  gap: 52px;
+}
+.ald-journey-step {
+  display: grid;
+  gap: 14px;
+}
+.ald-journey-step img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+}
+.ald-journey-step h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+.ald-journey-text {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 68ch;
+}
 
 .ald-highlights {
   display: grid;
@@ -2151,6 +2179,9 @@ main > section {
   .ald-highlight-media video,
   .ald-highlight-media img {
     height: 240px;
+  }
+  .ald-journey-flow {
+    gap: 40px;
   }
 }
 

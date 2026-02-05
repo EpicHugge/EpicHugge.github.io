@@ -49,7 +49,82 @@ body_class: project-page
   <div class="ald-section" data-reveal>
     <h2>Level Overview</h2>
     <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Level_Map.png' | relative_url }}" alt="Level overview map" class="ald-map-image">
+      <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Overviewimage3.png' | relative_url }}" alt="Level overview map" class="ald-map-image">
+    </div>
+  </div>
+
+  <div class="ald-section" data-reveal>
+    <h2>Player Journey Breakdown</h2>
+    <div class="ald-highlights">
+      <article class="ald-highlight">
+        <div class="ald-highlight-media">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Intro.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="ald-highlight-text">
+          <h3>1. Entry &amp; First Read</h3>
+          <p class="ald-highlight-lede">The player enters from the catwalk and reads the pressure valve as important through red alarm lights and sound.</p>
+          <div class="ald-highlight-detail">
+            <ul class="ald-highlight-points">
+              <li><strong>What the player sees:</strong> Red alarm lights, steam, and a loud valve zone straight ahead.</li>
+              <li><strong>Why focus lands there:</strong> Strong color contrast and alarm audio make the valve the clearest first action.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ald-highlight alt">
+        <div class="ald-highlight-media">
+          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/HighresScreenshot00009.png' | relative_url }}" alt="State change and redirection">
+        </div>
+        <div class="ald-highlight-text">
+          <h3>2. State Change &amp; Redirection</h3>
+          <p class="ald-highlight-lede">Lowering the pressure turns off the alarm lights and clears the steam which redirects the player downward.</p>
+          <div class="ald-highlight-detail">
+            <ul class="ald-highlight-points">
+              <li><strong>What the player sees:</strong> Red light drops, steam clears, and the lower route becomes readable.</li>
+              <li><strong>Why focus shifts:</strong> The strongest visual noise disappears so attention moves to the newly opened path.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ald-highlight">
+        <div class="ald-highlight-media">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Lighting%20and%20Guidence.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="ald-highlight-text">
+          <h3>3. Problem Identification</h3>
+          <p class="ald-highlight-lede">The player spots a missing pipe in the screen bar and then sees the replacement part on the lower floor.</p>
+          <div class="ald-highlight-detail">
+            <ul class="ald-highlight-points">
+              <li><strong>What the player sees:</strong> A broken screen bar with an empty slot and a pipe part below.</li>
+              <li><strong>Why focus stays clear:</strong> The missing piece and the replacement are both in view so the task reads fast.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="ald-highlight alt">
+        <div class="ald-highlight-media">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/The%20Reveal.webm' | relative_url }}" type="video/webm">
+          </video>
+        </div>
+        <div class="ald-highlight-text">
+          <h3>4. Reveal &amp; Resolution Setup</h3>
+          <p class="ald-highlight-lede">Reaching the lower floor exposes the broken screen bars and confirms the source of the system failure, prompting the player to return and replace the missing pipe.</p>
+          <div class="ald-highlight-detail">
+            <ul class="ald-highlight-points">
+              <li><strong>What the player sees:</strong> The breach up close and clear damage around the screen bars.</li>
+              <li><strong>Why the return makes sense:</strong> The failure source is now confirmed so replacing the pipe feels like the direct next move.</li>
+            </ul>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 
@@ -107,7 +182,7 @@ body_class: project-page
       <article class="ald-highlight">
         <div class="ald-highlight-media">
           <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Lighting%20and%20Guidence.webm' | relative_url }}" type="video/webm">
+            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/PuzzleSolving.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
