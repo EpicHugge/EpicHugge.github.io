@@ -1,13 +1,13 @@
 ---
 layout: default
-title: "Advanced Level Design Assignment"
+title: "Water Treatment Plant"
 permalink: /projects/advanced-level-design-assignment/
 body_class: project-page
 ---
 
 <section class="ald-case">
   <header class="ald-header" data-reveal>
-    <h1>Advanced Level Design Assignment</h1>
+    <h1>Water Treatment Plant</h1>
   </header>
 
   <div class="ald-hero-media" data-reveal>
