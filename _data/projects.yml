@@ -55,6 +55,23 @@
   cta: "Breakdown"
   featured: true
 
+- title: "Subway Encounter"
+  slug: "subway-encounter"
+  url: "/projects/subway-encounter/"
+  role: "Solo Level Designer"
+  timeframe: "Solo project"
+  summary: "The Division inspired third person shooter encounter. Work in progress."
+  media_type: "image"
+  media_src: "/assets/images/placeholder-gp3.svg"
+  role_tag: "LD"
+  team_tag: "Solo"
+  tags:
+    - Third Person
+    - Encounter Design
+    - Work in progress
+  cta: "Preview"
+  featured: true
+
 - title: "Level Design Assignment"
   slug: "level-design-assignment"
   url: "/projects/level-design-assignment/"

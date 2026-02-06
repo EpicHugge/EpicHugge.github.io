@@ -27,7 +27,7 @@ body_class: project-page
       </p>
       <ul class="ald-text-points">
         <li><strong>Experience:</strong> Calm problem-solving → unease → reveal.</li>
-        <li><strong>Constraints:</strong> One room with no objective markers and limited interactions.</li>
+        <li><strong>Constraints:</strong> One room with limited interactions.</li>
         <li><strong>Focus:</strong> Player guidance and clarity. Pacing through the environment.</li>
       </ul>
     </section>
@@ -98,10 +98,10 @@ body_class: project-page
         </div>
         <div class="ald-highlight-text">
           <h3>3. Problem Identification</h3>
-          <p class="ald-highlight-lede">The player spots a missing pipe in the screen bar and then sees the replacement part on the lower floor.</p>
+          <p class="ald-highlight-lede">The screen bar looks damaged and draws the player in, then a quick look down reveals the replacement part waiting below.</p>
           <div class="ald-highlight-detail">
             <ul class="ald-highlight-points">
-              <li><strong>What the player sees:</strong> A broken screen bar with an empty slot and a pipe part below.</li>
+              <li><strong>What the player sees:</strong> A broken pipe at the screen bar and a visible part on the lower level.</li>
               <li><strong>Why focus stays clear:</strong> The missing piece and the replacement are both in view so the task reads fast.</li>
             </ul>
           </div>

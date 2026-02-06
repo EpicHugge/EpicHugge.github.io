@@ -11,7 +11,7 @@ body_class: project-archive
     <h2>Projects</h2>
   </div>
   <div class="featured-projects-grid">
-    {% assign level_order = "advanced-level-design-assignment,game-project-2,game-project-3,level-design-assignment" | split: "," %}
+    {% assign level_order = "advanced-level-design-assignment,game-project-2,subway-encounter,game-project-3,level-design-assignment" | split: "," %}
     {% for slug in level_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}
