@@ -129,13 +129,6 @@ body_class: project-page
   </div>
 
   <div class="ald-section" data-reveal>
-    <h2>Level Overview</h2>
-    <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-final.png' | relative_url }}" alt="Level overview" class="ald-map-image">
-    </div>
-  </div>
-
-  <div class="ald-section" data-reveal>
     <h2>Reflections &amp; Takeaways</h2>
     <div class="ald-reflections">
       <p class="ald-text-lede">
