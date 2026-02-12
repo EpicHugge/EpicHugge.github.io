@@ -2333,8 +2333,8 @@ main > section {
 }
 .ald-split {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   margin-top: 28px;
 }
 .ald-panel {
@@ -2834,8 +2834,8 @@ main > section {
   display: block;
   margin-top: 30px;
   text-align: center;
-  background: #333333;
-  color: var(--text-color);
+  background: var(--primary-color);
+  color: #151515;
   padding: 12px 18px;
   border-radius: 12px;
   font-weight: 700;
@@ -2845,7 +2845,7 @@ main > section {
 }
 .ald-footer-cta:hover {
   transform: translateY(-2px);
-  background: #3b3b3b;
+  background: #f0c476;
 }
 
 .ald-case [data-reveal] {

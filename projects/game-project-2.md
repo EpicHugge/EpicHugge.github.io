@@ -147,4 +147,6 @@ body_class: project-page
       </ul>
     </div>
   </div>
+
+  <a class="ald-footer-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
 </section>
