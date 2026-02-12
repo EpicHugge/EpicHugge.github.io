@@ -21,6 +21,13 @@ permalink: /about/
   </div>
 </section>
 
+<section class="about-mentorship-card fade-in">
+  <div class="card about-mentorship">
+    <h2>Mentorship</h2>
+    <p>Ongoing mentorship with <strong>Prashant Trivedi</strong> (Massive Entertainment), focused on <strong>advanced level design</strong>.</p>
+  </div>
+</section>
+
 <section class="about-interests-card fade-in">
   <div class="card about-split">
     <div class="about-copy">

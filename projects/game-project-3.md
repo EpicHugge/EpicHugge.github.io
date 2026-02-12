@@ -6,7 +6,7 @@ body_class: project-page
 ---
 
 <section class="ald-case">
-  <header class="ald-header" data-reveal>
+  <header class="ald-header ald-hero-card" data-reveal>
     <h1>Asteroid Explorer</h1>
     <p class="ald-subtitle">In development. <strong>Sci-fi exploration level</strong> focused on <strong>traversal beats</strong> and <strong>encounter pacing</strong>.</p>
   </header>

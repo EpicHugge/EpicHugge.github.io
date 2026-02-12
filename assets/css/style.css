@@ -794,6 +794,22 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+.about-mentorship-card .card {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-mentorship-card h2 {
+  margin: 0 0 10px;
+}
+.about-mentorship-card p {
+  margin: 0 auto;
+  max-width: 60ch;
+  color: var(--secondary-color);
+}
 
 .about-contact-card .card {
   text-align: left;
@@ -2062,6 +2078,13 @@ main > section {
   text-align: center;
   margin-bottom: 26px;
 }
+.ald-header.ald-hero-card {
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 24px 24px 18px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+}
 .ald-header h1 {
   font-size: 2.6rem;
   margin-bottom: 10px;
@@ -2078,6 +2101,12 @@ main > section {
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.08);
   display: inline-block;
+}
+.ald-header.ald-hero-card .ald-subtitle {
+  background: none;
+  border: 0;
+  padding: 0;
+  display: block;
 }
 .ald-hero-media {
   position: relative;
@@ -2112,6 +2141,33 @@ main > section {
   transform: translateX(-50%) translateY(-2px);
   background: rgba(0,0,0,0.75);
   box-shadow: 0 10px 18px rgba(0,0,0,0.35);
+}
+.ald-actions {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 6px;
+}
+.ald-link-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--text-color);
+  background: rgba(255,255,255,0.05);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+.ald-link-icon {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0.95);
+}
+.ald-link-pill:hover {
+  border-color: rgba(217,178,111,0.6);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25);
 }
 
 .ald-walkthrough {
@@ -2153,7 +2209,8 @@ main > section {
   margin-top: 28px;
 }
 .ald-panel {
-  background: #333333;
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 20px 22px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
@@ -2267,6 +2324,10 @@ main > section {
   grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: 16px;
   align-items: center;
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 16px;
 }
 .ald-map.ald-map-single {
   grid-template-columns: 1fr;
@@ -2351,7 +2412,8 @@ main > section {
   gap: 32px;
   padding: 28px;
   align-items: center;
-  background: #333333;
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
@@ -2435,7 +2497,8 @@ main > section {
   margin-bottom: 0;
 }
 .ald-card {
-  background: #333333;
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0,0,0,0.32);
@@ -2478,7 +2541,8 @@ main > section {
 }
 .ald-iteration-summary {
   margin-top: 22px;
-  background: #333333;
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 20px 22px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
@@ -2540,7 +2604,8 @@ main > section {
 }
 
 .ald-reflections {
-  background: #333333;
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 26px 28px;
   color: var(--secondary-color);

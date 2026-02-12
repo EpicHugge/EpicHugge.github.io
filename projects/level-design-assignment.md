@@ -6,7 +6,7 @@ body_class: project-page
 ---
 
 <section class="ald-case">
-  <header class="ald-header" data-reveal>
+  <header class="ald-header ald-hero-card" data-reveal>
     <h1>Level Design Assignment</h1>
     <p class="ald-subtitle">Solo <strong>stealth gatehouse</strong> slice focused on <strong>guidance</strong>, <strong>sightlines</strong>, and <strong>vertical planning</strong>.</p>
   </header>

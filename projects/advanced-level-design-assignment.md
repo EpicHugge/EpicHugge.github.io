@@ -6,7 +6,7 @@ body_class: project-page
 ---
 
 <section class="ald-case">
-  <header class="ald-header" data-reveal>
+  <header class="ald-header ald-hero-card" data-reveal>
     <h1>Water Treatment Plant</h1>
     <p class="ald-subtitle">A <strong>single-room horror puzzle</strong> that keeps the <strong>next step obvious</strong> even as the space changes and the mood shifts.</p>
   </header>

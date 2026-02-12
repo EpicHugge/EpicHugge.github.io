@@ -6,7 +6,7 @@ body_class: project-page
 ---
 
 <section class="ald-case">
-  <header class="ald-header" data-reveal>
+  <header class="ald-header ald-hero-card" data-reveal>
     <h1>It's a Fish, Your Majesty</h1>
     <p class="ald-subtitle">I stepped into level design <strong>mid-production</strong> to get a <strong>playable level</strong> back on track and keep the team moving.</p>
   </header>
@@ -16,6 +16,13 @@ body_class: project-page
       <source src="{{ '/assets/images/GP2/Hero.webm' | relative_url }}" type="video/webm">
     </video>
     <a class="ald-hero-cta" href="#walkthrough">Watch Full Walkthrough <span aria-hidden="true">&rarr;</span></a>
+  </div>
+
+  <div class="ald-actions" data-reveal>
+    <a class="ald-link-pill" href="https://futuregames.itch.io/its-a-fish-your-majesty" target="_blank" rel="noopener">
+      <img src="{{ '/assets/images/tool-icons/itch.svg' | relative_url }}" alt="" class="ald-link-icon" aria-hidden="true">
+      Play on itch.io <span aria-hidden="true">&rarr;</span>
+    </a>
   </div>
 
   <div class="ald-section" data-reveal>
