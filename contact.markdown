@@ -6,26 +6,51 @@ body_class: contact-page
 ---
 
 <div class="contact-container fade-in">
-  <div class="contact-section">
-    <h2>Contact Me</h2>
-    <div class="contact-links">
-      <a class="contact-link" href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20..." aria-label="Email">
-        <img src="/assets/images/tool-icons/mail.svg" alt="Email icon">
-      </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/hugonykvist/" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <img src="/assets/images/tool-icons/linkedin.png" alt="LinkedIn icon">
-      </a>
+  <div class="contact-card">
+    <div class="contact-section">
+      <h2>Contact Me</h2>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20..." aria-label="Email">
+          <img src="/assets/images/tool-icons/mail.svg" alt="Email icon">
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/hugonykvist/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <img src="/assets/images/tool-icons/linkedin.png" alt="LinkedIn icon">
+        </a>
+      </div>
+    </div>
+    <div class="contact-section">
+      <h2>Work</h2>
+      <div class="contact-links">
+        <a class="contact-link" href="https://github.com/EpicHugge" target="_blank" rel="noopener" aria-label="GitHub">
+          <img src="/assets/images/tool-icons/github.png" alt="GitHub icon">
+        </a>
+        <a class="contact-link" href="https://epichugge.itch.io" target="_blank" rel="noopener" aria-label="itch.io">
+          <img src="/assets/images/tool-icons/itch.svg" alt="itch.io icon">
+        </a>
+      </div>
     </div>
   </div>
-  <div class="contact-section">
-    <h2>Work</h2>
-    <div class="contact-links">
-      <a class="contact-link" href="https://github.com/EpicHugge" target="_blank" rel="noopener" aria-label="GitHub">
-        <img src="/assets/images/tool-icons/github.png" alt="GitHub icon">
-      </a>
-      <a class="contact-link" href="https://epichugge.itch.io" target="_blank" rel="noopener" aria-label="itch.io">
-        <img src="/assets/images/tool-icons/itch.svg" alt="itch.io icon">
-      </a>
+  <div class="contact-card">
+    <div class="contact-section">
+      <h2>What I’m Looking For</h2>
+      <dl class="contact-details">
+        <div class="contact-detail">
+          <dt>Role</dt>
+          <dd><strong>Level Design</strong>, <strong>Encounter Design</strong>, or <strong>World Design</strong> (<strong>Internship</strong> or <strong>Junior</strong> Position)</dd>
+        </div>
+        <div class="contact-detail">
+          <dt>Availability</dt>
+          <dd>Available <strong>May 18 – December 25</strong>. Open to <strong>internship</strong> or <strong>entry-level</strong> work, <strong>full-time</strong> or <strong>part-time</strong> depending on studio needs.</dd>
+        </div>
+        <div class="contact-detail">
+          <dt>Location</dt>
+          <dd>Based in <strong>Sweden</strong>. <strong>Open to relocation</strong>.</dd>
+        </div>
+        <div class="contact-detail">
+          <dt>Game Focus</dt>
+          <dd>Interested in <strong>Combat</strong>, <strong>Stealth</strong>, and <strong>Narrative-driven</strong> games, including <strong>FPS</strong>, <strong>TPS</strong>, and <strong>RPGs</strong>.</dd>
+        </div>
+      </dl>
     </div>
   </div>
 </div>

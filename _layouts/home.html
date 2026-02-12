@@ -2,40 +2,93 @@
 layout: default
 ---
 
-<section class="hero" aria-label="Hero">
-  <div class="hero-stack">
-    <div class="hero-content hero-fade">
-      <div class="hero-logo">
-        <img src="{{ '/assets/images/heroHugolame.png' | relative_url }}" alt="Hugo hero image" class="intro-logo-image" loading="lazy" decoding="async">
+<section class="about-hero-card fade-in hero-portfolio" aria-label="Hero">
+  <div class="card about-hero">
+    <div class="card-content">
+      <h1>Hey!, I'm Hugo</h1>
+      <p class="about-lede">I’m a <strong>player-focused</strong> level designer who <strong>iterates quickly</strong>, <strong>adapts under pressure</strong>, and isn’t afraid to <strong>cut ideas</strong> that don’t improve the experience.</p>
+      <div class="about-quickfacts">
+        <span>Level Designer</span>
+        <span>Sweden</span>
+        <span>Futuregames</span>
+      </div>
+      <div class="hero-actions">
+        <a class="hero-link" href="{{ '/contact/' | relative_url }}">
+          CV
+          <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </div>
-
-    <section class="toolchain hero-toolchain" aria-label="Toolbox" data-reveal="true">
-      <h3 class="toolchain-title">Tools</h3>
-      <div class="toolchain-icons">
-        {% for tool in site.data.toolchain %}
-          <div class="toolchip">
-            <img src="{{ tool.icon | relative_url }}" alt="{{ tool.name }} logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">{{ tool.name }}</span>
-          </div>
-        {% endfor %}
-      </div>
-    </section>
-  </div>
-
-  <div class="hero-scroll hero-fade">
-    <span class="scroll-label">Featured Work</span>
-    <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
-      <span class="scroll-arrow">&#8595;</span>
-    </a>
+    <div class="card-media">
+      <a class="hero-about-link" href="{{ '/about/' | relative_url }}" aria-label="About me">
+        <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" loading="lazy" decoding="async">
+        <span class="hero-about-label">About me</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- Featured Projects -->
-<section class="featured-projects" id="featured-projects">
+<div class="hero-scroll hero-fade">
+  <span class="scroll-label">Primary Showcase</span>
+  <a href="#primary-showcase" class="scroll-indicator" aria-label="Scroll to primary showcase">
+    <span class="scroll-arrow">&#8595;</span>
+  </a>
+</div>
+
+<section class="portfolio-spotlight" id="primary-showcase">
+  <div class="section-header">
+    <p class="eyebrow">Primary Showcase</p>
+    <h2>Water Treatment Plant</h2>
+  </div>
+  {% assign primary_project = site.data.projects | where: "slug", "advanced-level-design-assignment" | first %}
+  {% if primary_project %}
+  <article class="spotlight-card">
+    <a class="project-card-hit" href="{{ primary_project.url | relative_url }}" aria-label="View {{ primary_project.title }}"></a>
+    <div class="spotlight-media">
+      {% if primary_project.media_type == "video" %}
+        <video preload="auto" autoplay loop muted playsinline class="spotlight-video">
+          <source src="{{ primary_project.media_src | relative_url }}" type="video/webm">
+        </video>
+      {% else %}
+        <img src="{{ primary_project.media_src | relative_url }}" alt="{{ primary_project.title }} hero" loading="lazy" decoding="async">
+      {% endif %}
+      {% if primary_project.engine_icon %}
+        <img class="engine-badge" src="{{ primary_project.engine_icon | relative_url }}" alt="{{ primary_project.title }} engine">
+      {% endif %}
+      <span class="card-hover-label">Full breakdown</span>
+    </div>
+    <div class="spotlight-content">
+      <div>
+        <h3>{{ primary_project.title }}</h3>
+        <p class="spotlight-summary">{{ primary_project.summary }}</p>
+      </div>
+      <div class="spotlight-meta">
+        <span class="tag">Role: {{ primary_project.role_tag }}</span>
+        <span class="tag">Team: {{ primary_project.team_tag }}</span>
+        <span class="tag">{{ primary_project.timeframe }}</span>
+      </div>
+      <div class="spotlight-tags">
+        {% for tag in primary_project.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+  {% endif %}
+</section>
+
+<section class="featured-projects secondary-projects">
+  <div class="section-header">
+    <p class="eyebrow">More Projects</p>
+    <h2>Additional Work</h2>
+  </div>
   <div class="featured-projects-grid">
-    {% assign featured_projects = site.data.projects | where: "featured", true | where_exp: "project", "project.slug != 'level-design-assignment'" | where_exp: "project", "project.slug != 'game-project-3'" | where_exp: "project", "project.slug != 'game-project-4'" %}
-    {% for project in featured_projects %}
+    {% assign secondary_order = "game-project-2,subway-encounter" | split: "," %}
+    {% for slug in secondary_order %}
+      {% assign project = site.data.projects | where: "slug", slug | first %}
+      {% if project %}
       <article class="project-card">
         <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
         <div class="project-card-media">
@@ -49,6 +102,7 @@ layout: default
           {% if project.engine_icon %}
             <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
           {% endif %}
+          <span class="card-hover-label">Full breakdown</span>
         </div>
         <div class="project-card-meta-row">
           <span class="tag">Role: {{ project.role_tag }}</span>
@@ -64,6 +118,32 @@ layout: default
           </div>
         </div>
       </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta-band" aria-label="Contact CTA">
+  <div class="cta-card">
+    <div class="cta-text">
+      <p class="cta-eyebrow">Let’s Talk</p>
+      <h2>Open for <strong>internship</strong> and <strong>work</strong>.</h2>
+    </div>
+    <a class="cta-button" href="{{ '/contact/' | relative_url }}">
+      Get in touch
+      <span class="cta-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<section class="toolchain hero-toolchain" aria-label="Toolbox" data-reveal="true">
+  <h3 class="toolchain-title">Tools</h3>
+  <div class="toolchain-icons">
+    {% for tool in site.data.toolchain %}
+      <div class="toolchip">
+        <img src="{{ tool.icon | relative_url }}" alt="{{ tool.name }} logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">{{ tool.name }}</span>
+      </div>
     {% endfor %}
   </div>
 </section>

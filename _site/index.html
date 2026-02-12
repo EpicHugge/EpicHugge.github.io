@@ -56,102 +56,101 @@
 
 
     <main id="content" class="main-content" role="main">
-      <section class="hero" aria-label="Hero">
-  <div class="hero-stack">
-    <div class="hero-content hero-fade">
-      <div class="hero-logo">
-        <img src="/assets/images/heroHugolame.png" alt="Hugo hero image" class="intro-logo-image" loading="lazy" decoding="async">
+      <section class="about-hero-card fade-in hero-portfolio" aria-label="Hero">
+  <div class="card about-hero">
+    <div class="card-content">
+      <h1>Hey!, I'm Hugo</h1>
+      <p class="about-lede">I’m a <strong>player-focused</strong> level designer who <strong>iterates quickly</strong>, <strong>adapts under pressure</strong>, and isn’t afraid to <strong>cut ideas</strong> that don’t improve the experience.</p>
+      <div class="about-quickfacts">
+        <span>Level Designer</span>
+        <span>Sweden</span>
+        <span>Futuregames</span>
+      </div>
+      <div class="hero-actions">
+        <a class="hero-link" href="/contact/">
+          CV
+          <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
       </div>
     </div>
-
-    <section class="toolchain hero-toolchain" aria-label="Toolbox" data-reveal="true">
-      <h3 class="toolchain-title">Tools</h3>
-      <div class="toolchain-icons">
-        
-          <div class="toolchip">
-            <img src="/assets/images/tool-icons/unity.svg" alt="Unity logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">Unity</span>
-          </div>
-        
-          <div class="toolchip">
-            <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">Unreal Engine</span>
-          </div>
-        
-          <div class="toolchip">
-            <img src="/assets/images/tool-icons/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">Perforce</span>
-          </div>
-        
-          <div class="toolchip">
-            <img src="/assets/images/tool-icons/github.png" alt="GitHub logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">GitHub</span>
-          </div>
-        
-          <div class="toolchip">
-            <img src="/assets/images/tool-icons/blender.png" alt="Blender logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">Blender</span>
-          </div>
-        
-          <div class="toolchip">
-            <img src="/assets/images/tool-icons/jira.svg" alt="Jira logo" loading="lazy" decoding="async">
-            <span class="toolchip-label">Jira</span>
-          </div>
-        
-      </div>
-    </section>
-  </div>
-
-  <div class="hero-scroll hero-fade">
-    <span class="scroll-label">Featured Work</span>
-    <a href="#featured-projects" class="scroll-indicator" aria-label="Scroll to featured projects">
-      <span class="scroll-arrow">&#8595;</span>
-    </a>
+    <div class="card-media">
+      <a class="hero-about-link" href="/about/" aria-label="About me">
+        <img src="/assets/images/hugo-portrait.jpg" alt="Hugo Portrait" loading="lazy" decoding="async">
+        <span class="hero-about-label">About me</span>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- Featured Projects -->
-<section class="featured-projects" id="featured-projects">
+<div class="hero-scroll hero-fade">
+  <span class="scroll-label">Primary Showcase</span>
+  <a href="#primary-showcase" class="scroll-indicator" aria-label="Scroll to primary showcase">
+    <span class="scroll-arrow">&#8595;</span>
+  </a>
+</div>
+
+<section class="portfolio-spotlight" id="primary-showcase">
+  <div class="section-header">
+    <p class="eyebrow">Primary Showcase</p>
+    <h2>Water Treatment Plant</h2>
+  </div>
+  
+  
+  <article class="spotlight-card">
+    <a class="project-card-hit" href="/projects/advanced-level-design-assignment/" aria-label="View Water Treatment Plant"></a>
+    <div class="spotlight-media">
+      
+        <video preload="auto" autoplay loop muted playsinline class="spotlight-video">
+          <source src="/assets/images/AdvancedLevelDesign-Assignment/Intro.webm" type="video/webm">
+        </video>
+      
+      
+        <img class="engine-badge" src="/assets/images/tool-icons/unreal.svg" alt="Water Treatment Plant engine">
+      
+      <span class="card-hover-label">Full breakdown</span>
+    </div>
+    <div class="spotlight-content">
+      <div>
+        <h3>Water Treatment Plant</h3>
+        <p class="spotlight-summary"><strong>Solo horror puzzle room</strong> in Unreal. Focus on <strong>guidance</strong> and <strong>pacing</strong> with <strong>lighting</strong>.</p>
+      </div>
+      <div class="spotlight-meta">
+        <span class="tag">Role: LD</span>
+        <span class="tag">Team: Solo</span>
+        <span class="tag">Course assignment</span>
+      </div>
+      <div class="spotlight-tags">
+        
+          <span class="tag">Advanced Layout</span>
+        
+          <span class="tag">First Person</span>
+        
+          <span class="tag">Horror</span>
+        
+          <span class="tag">Guidance</span>
+        
+          <span class="tag">Iterations</span>
+        
+          <span class="tag">Playtesting</span>
+        
+      </div>
+    </div>
+  </article>
+  
+</section>
+
+<section class="featured-projects secondary-projects">
+  <div class="section-header">
+    <p class="eyebrow">More Projects</p>
+    <h2>Additional Work</h2>
+  </div>
   <div class="featured-projects-grid">
     
     
-      <article class="project-card">
-        <a class="project-card-hit" href="/projects/advanced-level-design-assignment/" aria-label="View Water Treatment Plant"></a>
-        <div class="project-card-media">
-          
-            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-              <source src="/assets/images/AdvancedLevelDesign-Assignment/Intro.webm" type="video/webm">
-            </video>
-          
-          
-            <img class="engine-badge" src="/assets/images/tool-icons/unreal.svg" alt="Water Treatment Plant engine">
-          
-        </div>
-        <div class="project-card-meta-row">
-          <span class="tag">Role: LD</span>
-          <span class="tag">Team: Solo</span>
-        </div>
-        <div class="project-card-body">
-          <h3>Water Treatment Plant</h3>
-          <p class="project-card-summary">Solo horror puzzle room in Unreal. Focus on guidance and pacing with lighting.</p>
-          <div class="project-keywords">
-            
-              <span class="tag">Advanced Layout</span>
-            
-              <span class="tag">First Person</span>
-            
-              <span class="tag">Horror</span>
-            
-              <span class="tag">Guidance</span>
-            
-              <span class="tag">Iterations</span>
-            
-              <span class="tag">Playtesting</span>
-            
-          </div>
-        </div>
-      </article>
-    
+      
+      
       <article class="project-card">
         <a class="project-card-hit" href="/projects/game-project-2/" aria-label="View It's a Fish, Your Majesty"></a>
         <div class="project-card-media">
@@ -163,6 +162,7 @@
           
             <img class="engine-badge" src="/assets/images/tool-icons/unity.svg" alt="It's a Fish, Your Majesty engine">
           
+          <span class="card-hover-label">Full breakdown</span>
         </div>
         <div class="project-card-meta-row">
           <span class="tag">Role: LD</span>
@@ -170,7 +170,7 @@
         </div>
         <div class="project-card-body">
           <h3>It's a Fish, Your Majesty</h3>
-          <p class="project-card-summary">Jumped into level design mid-project on a 2.5D brawler. Focused on flow, combat reads, and fixes.</p>
+          <p class="project-card-summary">Jumped into level design <strong>mid-project</strong> on a <strong>2.5D brawler</strong>. Focused on <strong>flow</strong>, <strong>combat reads</strong>, and fixes.</p>
           <div class="project-keywords">
             
               <span class="tag">2.5D</span>
@@ -186,7 +186,10 @@
           </div>
         </div>
       </article>
+      
     
+      
+      
       <article class="project-card">
         <a class="project-card-hit" href="/projects/subway-encounter/" aria-label="View Subway Encounter"></a>
         <div class="project-card-media">
@@ -194,6 +197,7 @@
             <img src="/assets/images/placeholder-gp3.svg" alt="Subway Encounter hero" loading="lazy" decoding="async">
           
           
+          <span class="card-hover-label">Full breakdown</span>
         </div>
         <div class="project-card-meta-row">
           <span class="tag">Role: LD</span>
@@ -201,7 +205,7 @@
         </div>
         <div class="project-card-body">
           <h3>Subway Encounter</h3>
-          <p class="project-card-summary">The Division inspired third person shooter encounter. Work in progress.</p>
+          <p class="project-card-summary">The Division inspired <strong>third person shooter encounter</strong>. Work in progress.</p>
           <div class="project-keywords">
             
               <span class="tag">Third Person</span>
@@ -213,6 +217,57 @@
           </div>
         </div>
       </article>
+      
+    
+  </div>
+</section>
+
+<section class="cta-band" aria-label="Contact CTA">
+  <div class="cta-card">
+    <div class="cta-text">
+      <p class="cta-eyebrow">Let’s Talk</p>
+      <h2>Open for <strong>internship</strong> and <strong>work</strong>.</h2>
+    </div>
+    <a class="cta-button" href="/contact/">
+      Get in touch
+      <span class="cta-arrow">→</span>
+    </a>
+  </div>
+</section>
+
+<section class="toolchain hero-toolchain" aria-label="Toolbox" data-reveal="true">
+  <h3 class="toolchain-title">Tools</h3>
+  <div class="toolchain-icons">
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/unity.svg" alt="Unity logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Unity</span>
+      </div>
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Unreal Engine</span>
+      </div>
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Perforce</span>
+      </div>
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/github.png" alt="GitHub logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">GitHub</span>
+      </div>
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/blender.png" alt="Blender logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Blender</span>
+      </div>
+    
+      <div class="toolchip">
+        <img src="/assets/images/tool-icons/jira.svg" alt="Jira logo" loading="lazy" decoding="async">
+        <span class="toolchip-label">Jira</span>
+      </div>
     
   </div>
 </section>
