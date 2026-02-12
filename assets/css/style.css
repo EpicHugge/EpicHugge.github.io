@@ -56,6 +56,17 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   padding: 16px 0 24px;
 }
+.hero-stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+  padding-bottom: 18px;
+}
+.hero-stage .hero-scroll {
+  margin-top: auto;
+}
 .hero-stack {
   display: flex;
   flex-direction: column;
@@ -940,6 +951,74 @@ a:hover {
   text-decoration: none;
 }
 @media (max-width: 768px) {
+  .hamburger {
+    width: 32px;
+    height: 24px;
+  }
+  .hamburger-line {
+    height: 4px;
+  }
+  .hero-stage {
+    min-height: 100vh;
+    padding-bottom: 12px;
+  }
+  .hero-scroll {
+    position: static;
+    padding-bottom: 8px;
+  }
+  .portfolio-spotlight {
+    margin-top: 24px;
+    padding: 0 12px;
+  }
+  .section-header h2 {
+    font-size: 2.1rem;
+  }
+  .section-header .eyebrow {
+    font-size: 0.7rem;
+  }
+  .featured-projects {
+    padding: 0 12px;
+  }
+  .toolchain {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+  .toolchain-icons {
+    flex-wrap: wrap;
+  }
+  .toolchip {
+    padding: 10px 14px;
+  }
+  .toolchip img {
+    width: 36px;
+    height: 36px;
+  }
+  .toolchip-label {
+    font-size: 1rem;
+  }
+  .hero-link {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+  }
+  .hero-link-icon {
+    width: 22px;
+    height: 22px;
+  }
+  .cta-button {
+    padding: 14px 22px;
+    font-size: 0.95rem;
+  }
+  .cta-arrow {
+    font-size: 1.1rem;
+  }
+  .contact-page .contact-link {
+    width: 72px;
+    height: 72px;
+  }
+  .contact-page .contact-link img {
+    width: 36px;
+    height: 36px;
+  }
   .contact-page .contact-container {
     margin: 20px 20px;
     font-size: 1rem;

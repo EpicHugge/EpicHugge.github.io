@@ -2,40 +2,42 @@
 layout: default
 ---
 
-<section class="about-hero-card fade-in hero-portfolio" aria-label="Hero">
-  <div class="card about-hero">
-    <div class="card-content">
-      <h1>Hey!, I'm Hugo</h1>
-      <p class="about-lede">I’m a <strong>player-focused</strong> level designer who <strong>iterates quickly</strong>, <strong>adapts under pressure</strong>, and isn’t afraid to <strong>cut ideas</strong> that don’t improve the experience.</p>
-      <div class="about-quickfacts">
-        <span>Level Designer</span>
-        <span>Sweden</span>
-        <span>Futuregames</span>
+<section class="hero-stage">
+  <section class="about-hero-card fade-in hero-portfolio" aria-label="Hero">
+    <div class="card about-hero">
+      <div class="card-content">
+        <h1>Hey!, I'm Hugo</h1>
+        <p class="about-lede">I’m a <strong>player-focused</strong> level designer who <strong>iterates quickly</strong>, <strong>adapts under pressure</strong>, and isn’t afraid to <strong>cut ideas</strong> that don’t improve the experience.</p>
+        <div class="about-quickfacts">
+          <span>Level Designer</span>
+          <span>Sweden</span>
+          <span>Futuregames</span>
+        </div>
+        <div class="hero-actions">
+          <a class="hero-link" href="{{ '/contact/' | relative_url }}">
+            CV
+            <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="hero-actions">
-        <a class="hero-link" href="{{ '/contact/' | relative_url }}">
-          CV
-          <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-            <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+      <div class="card-media">
+        <a class="hero-about-link" href="{{ '/about/' | relative_url }}" aria-label="About me">
+          <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" loading="lazy" decoding="async">
+          <span class="hero-about-label">About me</span>
         </a>
       </div>
     </div>
-    <div class="card-media">
-      <a class="hero-about-link" href="{{ '/about/' | relative_url }}" aria-label="About me">
-        <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" loading="lazy" decoding="async">
-        <span class="hero-about-label">About me</span>
-      </a>
-    </div>
+  </section>
+
+  <div class="hero-scroll hero-fade">
+    <span class="scroll-label">Primary Showcase</span>
+    <a href="#primary-showcase" class="scroll-indicator" aria-label="Scroll to primary showcase">
+      <span class="scroll-arrow">&#8595;</span>
+    </a>
   </div>
 </section>
-
-<div class="hero-scroll hero-fade">
-  <span class="scroll-label">Primary Showcase</span>
-  <a href="#primary-showcase" class="scroll-indicator" aria-label="Scroll to primary showcase">
-    <span class="scroll-arrow">&#8595;</span>
-  </a>
-</div>
 
 <section class="portfolio-spotlight" id="primary-showcase">
   <div class="section-header">
