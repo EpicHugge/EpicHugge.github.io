@@ -3018,6 +3018,21 @@ main > section {
   .about-hero-card.hero-portfolio {
     margin-bottom: 20px;
   }
+  .hero-portfolio .card.about-hero {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .hero-portfolio .card-media img {
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+  .hero-portfolio .card-media .hero-about-link {
+    margin: 0 auto;
+  }
+  .hero-portfolio .card-content {
+    text-align: center;
+  }
   .hero-scroll {
     position: static;
     margin-top: 12px;
