@@ -142,6 +142,26 @@ a:hover {
   color: #ffe2b1;
 }
 
+/* Skip Link */
+#skip-to-content {
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  padding: 10px 14px;
+  background: #2c2c2c;
+  color: var(--text-color);
+  border-radius: 8px;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+}
+#skip-to-content:focus {
+  left: 12px;
+  top: 12px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 /* Scroll Progress Bar */
 .scroll-progress {
   position: fixed;
@@ -951,6 +971,10 @@ a:hover {
   text-decoration: none;
 }
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
   .hamburger {
     width: 32px;
     height: 24px;
@@ -961,10 +985,6 @@ a:hover {
   .hero-stage {
     min-height: 100vh;
     padding-bottom: 12px;
-  }
-  .hero-scroll {
-    position: static;
-    padding-bottom: 8px;
   }
   .portfolio-spotlight {
     margin-top: 24px;
@@ -979,22 +999,18 @@ a:hover {
   .featured-projects {
     padding: 0 12px;
   }
-  .toolchain {
-    max-width: 100%;
-    padding: 0 12px;
+  .hero-scroll {
+    padding-bottom: 0;
+    margin-top: 12px;
   }
-  .toolchain-icons {
-    flex-wrap: wrap;
+  .hero-stage {
+    padding-bottom: 24px;
   }
-  .toolchip {
-    padding: 10px 14px;
-  }
-  .toolchip img {
-    width: 36px;
-    height: 36px;
-  }
-  .toolchip-label {
-    font-size: 1rem;
+  .engine-badge {
+    width: 44px;
+    height: 44px;
+    left: 12px;
+    bottom: 12px;
   }
   .hero-link {
     padding: 12px 20px;
@@ -1003,6 +1019,35 @@ a:hover {
   .hero-link-icon {
     width: 22px;
     height: 22px;
+  }
+  .ald-split {
+    grid-template-columns: 1fr;
+  }
+  .ald-hero-cta {
+    font-size: 0.7rem;
+    padding: 8px 14px;
+    bottom: 10px;
+  }
+  .ald-embed {
+    max-width: 100%;
+    margin: 0 12px;
+    border-radius: 12px;
+  }
+  .ald-iteration {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .ald-iteration-center {
+    order: 3;
+  }
+  .ald-iteration figure {
+    margin: 0;
+  }
+  .ald-iteration .blockout-carousel {
+    height: auto;
+  }
+  .ald-iteration .carousel-container img {
+    height: auto;
   }
   .cta-button {
     padding: 14px 22px;
@@ -1184,6 +1229,11 @@ main > section {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+.spotlight-meta-line {
+  margin: 6px 0 0;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
 }
 .focus-band {
   max-width: 1000px;
@@ -1800,7 +1850,7 @@ main > section {
   .latest-posts-grid {
     grid-template-columns: 1fr;
   }
-  .project-card-media img {
+  .project-card-media > img:not(.engine-badge) {
     height: 200px;
   }
   .project-card-body {
@@ -2707,7 +2757,7 @@ main > section {
   .spotlight-card {
     grid-template-columns: 1fr;
   }
-  .spotlight-media img,
+  .spotlight-media img:not(.engine-badge),
   .spotlight-video {
     min-height: 240px;
   }
@@ -2961,5 +3011,67 @@ main > section {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-card.hero-portfolio {
+    margin-bottom: 20px;
+  }
+  .hero-scroll {
+    position: static;
+    margin-top: 12px;
+    padding-bottom: 8px;
+  }
+  .toolchain {
+    max-width: 100%;
+    padding: 0 16px;
+    width: 100%;
+    overflow-x: hidden;
+    opacity: 1;
+    transform: none;
+  }
+  .toolchain-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+  }
+  .toolchip {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    opacity: 1;
+    transform: none;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+  .toolchip-label {
+    font-size: 1rem;
+    white-space: normal;
+  }
+  .blockout-carousel {
+    height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .blockout-carousel .carousel-container {
+    display: flex !important;
+    width: auto !important;
+    transform: none !important;
+    gap: 12px;
+  }
+  .blockout-carousel .carousel-container img {
+    flex: 0 0 85%;
+    width: 85% !important;
+    height: auto !important;
+    scroll-snap-align: center;
+    border-radius: 12px;
+  }
+  .carousel-prev,
+  .carousel-next {
+    display: none;
   }
 }

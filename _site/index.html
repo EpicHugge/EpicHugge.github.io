@@ -118,11 +118,6 @@
         <h3>Water Treatment Plant</h3>
         <p class="spotlight-summary"><strong>Solo horror puzzle room</strong> in Unreal. Focus on <strong>guidance</strong> and <strong>pacing</strong> with <strong>lighting</strong>.</p>
       </div>
-      <div class="spotlight-meta">
-        <span class="tag">Role: LD</span>
-        <span class="tag">Team: Solo</span>
-        <span class="tag">Course assignment</span>
-      </div>
       <div class="spotlight-tags">
         
           <span class="tag">Advanced Layout</span>
@@ -138,6 +133,9 @@
           <span class="tag">Playtesting</span>
         
       </div>
+      <p class="spotlight-meta-line">
+        Role: LD · Team: Solo · Course assignment
+      </p>
     </div>
   </article>
   
@@ -428,6 +426,9 @@
 
     // Blockout Carousel - handle all
     const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      return;
+    }
     carouselContainers.forEach((container) => {
       const images = container.querySelectorAll('img');
       let currentCarouselIndex = 0;

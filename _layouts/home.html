@@ -66,16 +66,14 @@ layout: default
         <h3>{{ primary_project.title }}</h3>
         <p class="spotlight-summary">{{ primary_project.summary }}</p>
       </div>
-      <div class="spotlight-meta">
-        <span class="tag">Role: {{ primary_project.role_tag }}</span>
-        <span class="tag">Team: {{ primary_project.team_tag }}</span>
-        <span class="tag">{{ primary_project.timeframe }}</span>
-      </div>
       <div class="spotlight-tags">
         {% for tag in primary_project.tags %}
           <span class="tag">{{ tag }}</span>
         {% endfor %}
       </div>
+      <p class="spotlight-meta-line">
+        Role: {{ primary_project.role_tag }} · Team: {{ primary_project.team_tag }} · {{ primary_project.timeframe }}
+      </p>
     </div>
   </article>
   {% endif %}

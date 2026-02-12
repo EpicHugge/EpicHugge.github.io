@@ -463,6 +463,9 @@
 
     // Blockout Carousel - handle all
     const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
+    if (window.matchMedia('(max-width: 768px)').matches) {
+      return;
+    }
     carouselContainers.forEach((container) => {
       const images = container.querySelectorAll('img');
       let currentCarouselIndex = 0;
