@@ -11,7 +11,7 @@ body_class: project-archive
     <h2>Primary Showcase</h2>
   </div>
   <div class="featured-projects-grid">
-    {% assign project = site.data.projects | where: "slug", "advanced-level-design-assignment" | first %}
+    {% assign project = site.data.projects | where: "slug", "underground-garage-encounter" | first %}
     {% if project %}
     <article class="project-card" data-reveal>
       <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
@@ -96,7 +96,7 @@ body_class: project-archive
     <h2>Additional Work</h2>
   </div>
   <div class="featured-projects-grid">
-    {% assign solo_order = "subway-encounter,level-design-assignment" | split: "," %}
+    {% assign solo_order = "advanced-level-design-assignment,level-design-assignment" | split: "," %}
     {% for slug in solo_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}

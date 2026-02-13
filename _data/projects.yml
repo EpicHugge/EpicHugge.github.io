@@ -35,6 +35,24 @@
   cta: "Preview"
   featured: true
 
+- title: "Underground Garage Encounter"
+  slug: "underground-garage-encounter"
+  url: "/projects/underground-garage-encounter/"
+  role: "Level & Encounter Designer"
+  timeframe: "4-day sprint"
+  summary: "Division-inspired <strong>TPS encounter</strong> focused on <strong>cover-to-cover pacing</strong>, <strong>route choice</strong>, and a <strong>push → defend</strong> reversal."
+  media_type: "video"
+  media_src: "/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Hero%20Clip.webm"
+  role_tag: "LD"
+  team_tag: "Solo"
+  tags:
+    - Third Person
+    - Encounter Design
+    - Cover Flow
+    - Iteration
+  cta: "Breakdown"
+  featured: true
+
 - title: "It's a Fish, Your Majesty"
   slug: "game-project-2"
   url: "/projects/game-project-2/"
@@ -53,23 +71,6 @@
     - Encounter Design
     - Game Project 2
   cta: "Breakdown"
-  featured: true
-
-- title: "Subway Encounter"
-  slug: "subway-encounter"
-  url: "/projects/subway-encounter/"
-  role: "Solo Level Designer"
-  timeframe: "Solo project"
-  summary: "The Division inspired <strong>third person shooter encounter</strong>. Work in progress."
-  media_type: "image"
-  media_src: "/assets/images/placeholder-gp3.svg"
-  role_tag: "LD"
-  team_tag: "Solo"
-  tags:
-    - Third Person
-    - Encounter Design
-    - Work in progress
-  cta: "Preview"
   featured: true
 
 - title: "Level Design Assignment"

@@ -14,12 +14,12 @@ layout: default
           <span>Futuregames</span>
         </div>
         <div class="hero-actions">
-          <a class="hero-link" href="{{ '/contact/' | relative_url }}">
-            CV
-            <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+        <a class="hero-link" href="{{ '/assets/CV-Hugo.pdf' | relative_url }}" target="_blank" rel="noopener">
+          CV
+          <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
         </div>
       </div>
       <div class="card-media">
@@ -39,12 +39,11 @@ layout: default
   </div>
 </section>
 
+{% assign primary_project = site.data.projects | where: "slug", "underground-garage-encounter" | first %}
 <section class="portfolio-spotlight" id="primary-showcase">
   <div class="section-header">
     <p class="eyebrow">Primary Showcase</p>
-    <h2>Water Treatment Plant</h2>
   </div>
-  {% assign primary_project = site.data.projects | where: "slug", "advanced-level-design-assignment" | first %}
   {% if primary_project %}
   <article class="spotlight-card">
     <a class="project-card-hit" href="{{ primary_project.url | relative_url }}" aria-label="View {{ primary_project.title }}"></a>
@@ -85,7 +84,7 @@ layout: default
     <h2>Additional Work</h2>
   </div>
   <div class="featured-projects-grid">
-    {% assign secondary_order = "game-project-2,subway-encounter" | split: "," %}
+    {% assign secondary_order = "advanced-level-design-assignment,game-project-2" | split: "," %}
     {% for slug in secondary_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}
