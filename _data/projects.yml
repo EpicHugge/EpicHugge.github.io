@@ -43,6 +43,7 @@
   summary: "Division-inspired <strong>TPS encounter</strong> focused on <strong>cover-to-cover pacing</strong>, <strong>route choice</strong>, and a <strong>push → defend</strong> reversal."
   media_type: "video"
   media_src: "/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Hero%20Clip.webm"
+  engine_icon: "/assets/images/tool-icons/unreal.svg"
   role_tag: "LD"
   team_tag: "Solo"
   tags:
