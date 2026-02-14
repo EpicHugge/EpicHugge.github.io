@@ -1,0 +1,29 @@
+{% assign items = site.data.projects %}
+{% assign current_index = nil %}
+{% for item in items %}
+  {% if item.slug == include.slug %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% if current_index != nil %}
+  <nav class="project-nav" aria-label="Project navigation">
+    {% if current_index > 0 %}
+      {% assign prev_index = current_index | minus: 1 %}
+      {% assign prev_project = items[prev_index] %}
+      {% if prev_project %}
+        <a class="project-nav-link" data-project-nav="prev" href="{{ prev_project.url | relative_url }}">
+          <span class="project-nav-label">Previous</span>
+          <span class="project-nav-title">{{ prev_project.title }}</span>
+        </a>
+      {% endif %}
+    {% endif %}
+    {% assign next_index = current_index | plus: 1 %}
+    {% assign next_project = items[next_index] %}
+    {% if next_project %}
+      <a class="project-nav-link" data-project-nav="next" href="{{ next_project.url | relative_url }}">
+        <span class="project-nav-label">Next</span>
+        <span class="project-nav-title">{{ next_project.title }}</span>
+      </a>
+    {% endif %}
+  </nav>
+{% endif %}

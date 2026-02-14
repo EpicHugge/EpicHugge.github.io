@@ -12,8 +12,8 @@ body_class: project-page
   </header>
 
   <div class="ald-hero-media" data-reveal>
-    <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
-      <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Intro.webm' | relative_url }}" type="video/webm">
+    <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/media/projects/water-treatment-plant/images/highres/highresscreenshot00003.png' | relative_url }}">
+      <source src="{{ '/assets/media/projects/water-treatment-plant/videos/intro.webm' | relative_url }}" type="video/webm">
     </video>
     <a class="ald-hero-cta" href="#walkthrough">
       Watch Full Walkthrough <span aria-hidden="true">&rarr;</span>
@@ -37,7 +37,7 @@ body_class: project-page
           <li><strong>Duration:</strong> 5 weeks</li>
           <li class="ald-engine">
             <strong>Engine:</strong> Unreal Engine
-            <img src="{{ '/assets/images/tool-icons/unreal.svg' | relative_url }}" alt="Unreal Engine logo" class="ald-engine-logo">
+            <img src="{{ '/assets/icons/tools/unreal.svg' | relative_url }}" alt="Unreal Engine logo" class="ald-engine-logo">
           </li>
           <li><strong>Perspective:</strong> First person</li>
         </ul>
@@ -49,7 +49,7 @@ body_class: project-page
   <div class="ald-section" data-reveal>
     <h2>Level Overview</h2>
     <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Overviewimage3.png' | relative_url }}" alt="Level overview map" class="ald-map-image">
+      <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/overview/overviewimage3.png' | relative_url }}" alt="Level overview map" class="ald-map-image">
     </div>
   </div>
 
@@ -58,8 +58,8 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Intro.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/water-treatment-plant/images/highres/highresscreenshot00003.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/water-treatment-plant/videos/intro.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -76,7 +76,7 @@ body_class: project-page
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/HighresScreenshot00009.png' | relative_url }}" alt="State change and redirection">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/highresscreenshot00009.png' | relative_url }}" alt="State change and redirection">
         </div>
         <div class="ald-highlight-text">
           <h3>2. State Change &amp; Redirection</h3>
@@ -92,8 +92,8 @@ body_class: project-page
 
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Lighting%20and%20Guidence.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/highresscreenshot00008.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/water-treatment-plant/videos/lighting-and-guidence.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -110,8 +110,8 @@ body_class: project-page
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/The%20Reveal.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/highresscreenshot00008.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/water-treatment-plant/videos/the-reveal.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -147,11 +147,11 @@ body_class: project-page
     <figure>
       <div class="blockout-carousel ald-carousel">
         <div class="carousel-container">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration1/Iteration1-1.png' | relative_url }}" alt="Iteration 1 1">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration1/Iteration1-2.png' | relative_url }}" alt="Iteration 1 2">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration1/Iteration1-3.png' | relative_url }}" alt="Iteration 1 3">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration1/Iteration1-4.png' | relative_url }}" alt="Iteration 1 4">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration1/Iteration1-5.png' | relative_url }}" alt="Iteration 1 5">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-1/iteration1-1.png' | relative_url }}" alt="Iteration 1 1">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-1/iteration1-2.png' | relative_url }}" alt="Iteration 1 2">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-1/iteration1-3.png' | relative_url }}" alt="Iteration 1 3">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-1/iteration1-4.png' | relative_url }}" alt="Iteration 1 4">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-1/iteration1-5.png' | relative_url }}" alt="Iteration 1 5">
         </div>
       </div>
       <figcaption>Blockout v1</figcaption>
@@ -163,11 +163,11 @@ body_class: project-page
     <figure>
       <div class="blockout-carousel ald-carousel">
         <div class="carousel-container">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/Iteration6-1.png' | relative_url }}" alt="Iteration 6 1">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/Iteration6-2.png' | relative_url }}" alt="Iteration 6 2">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/Iteration6-3.png' | relative_url }}" alt="Iteration 6 3">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/Iteration6-4.png' | relative_url }}" alt="Iteration 6 4">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Iteration6/Iteration6-5.png' | relative_url }}" alt="Iteration 6 5">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/iteration6-1.png' | relative_url }}" alt="Iteration 6 1">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/iteration6-2.png' | relative_url }}" alt="Iteration 6 2">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/iteration6-3.png' | relative_url }}" alt="Iteration 6 3">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/iteration6-4.png' | relative_url }}" alt="Iteration 6 4">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/iteration6-5.png' | relative_url }}" alt="Iteration 6 5">
         </div>
       </div>
       <figcaption>Iteration 6</figcaption>
@@ -181,8 +181,8 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00003.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/PuzzleSolving.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/water-treatment-plant/images/highres/highresscreenshot00003.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/water-treatment-plant/videos/puzzlesolving.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -200,8 +200,8 @@ body_class: project-page
       </article>
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00006.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/Leading%20Lines.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/highresscreenshot00006.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/water-treatment-plant/videos/leading-lines.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -219,8 +219,8 @@ body_class: project-page
       </article>
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/images/AdvancedLevelDesign-Assignment/HighresScreenshot00008.png' | relative_url }}">
-            <source src="{{ '/assets/images/AdvancedLevelDesign-Assignment/The%20Reveal.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/water-treatment-plant/images/iteration-6/highresscreenshot00008.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/water-treatment-plant/videos/the-reveal.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -258,4 +258,5 @@ body_class: project-page
   </div>
 
   <a class="ald-footer-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+  {% include project-nav.html slug="advanced-level-design-assignment" %}
 </section>

@@ -11,3 +11,7 @@ theme:
 
 plugins:
   - jekyll-feed
+
+exclude:
+  - scripts
+  - templates

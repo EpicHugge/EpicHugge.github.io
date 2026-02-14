@@ -1,0 +1,33 @@
+{% assign project = include.project %}
+{% if project %}
+<article class="spotlight-card" data-reveal>
+  <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
+  {% if project.engine_icon %}
+    <img class="spotlight-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
+  {% endif %}
+  <div class="spotlight-media">
+    {% if project.media_type == "video" %}
+      <video preload="none" autoplay loop muted playsinline class="spotlight-video" data-lazy-video{% if project.media_poster %} poster="{{ project.media_poster | relative_url }}"{% endif %}>
+        <source data-src="{{ project.media_src | relative_url }}" type="video/webm">
+      </video>
+    {% else %}
+      <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
+    {% endif %}
+    <span class="card-hover-label">Full breakdown</span>
+  </div>
+  <div class="spotlight-content">
+    <div>
+      <h3>{{ project.title }}</h3>
+      <p class="spotlight-summary">{{ project.summary }}</p>
+    </div>
+    <div class="spotlight-tags">
+      {% for tag in project.tags %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    <p class="spotlight-meta-line">
+      Role: {{ project.role_tag }} · Team: {{ project.team_tag }} · {{ project.timeframe }}
+    </p>
+  </div>
+</article>
+{% endif %}

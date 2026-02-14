@@ -11,10 +11,10 @@ body_class: contact-page
       <h2>Contact Me</h2>
       <div class="contact-links">
         <a class="contact-link" href="mailto:hugonykvist@hotmail.se?subject=Hello%20from%20..." aria-label="Email">
-          <img src="/assets/images/tool-icons/mail.svg" alt="Email icon">
+          <img src="/assets/icons/social/mail.svg" alt="Email icon">
         </a>
         <a class="contact-link" href="https://www.linkedin.com/in/hugonykvist/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <img src="/assets/images/tool-icons/linkedin.png" alt="LinkedIn icon">
+          <img src="/assets/icons/social/linkedin.png" alt="LinkedIn icon">
         </a>
       </div>
     </div>
@@ -22,13 +22,13 @@ body_class: contact-page
       <h2>Work</h2>
       <div class="contact-links">
         <a class="contact-link" href="https://github.com/EpicHugge" target="_blank" rel="noopener" aria-label="GitHub">
-          <img src="/assets/images/tool-icons/github.png" alt="GitHub icon">
+          <img src="/assets/icons/tools/github.png" alt="GitHub icon">
         </a>
         <a class="contact-link" href="https://epichugge.itch.io" target="_blank" rel="noopener" aria-label="itch.io">
-          <img src="/assets/images/tool-icons/itch.svg" alt="itch.io icon">
+          <img src="/assets/icons/social/itch.svg" alt="itch.io icon">
         </a>
       </div>
-      <a class="hero-link contact-cv-link" href="{{ '/assets/CV-Hugo.pdf' | relative_url }}" target="_blank" rel="noopener">
+      <a class="hero-link contact-cv-link" href="{{ '/assets/docs/CV-HugoN.pdf' | relative_url }}" target="_blank" rel="noopener">
         CV
         <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
           <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

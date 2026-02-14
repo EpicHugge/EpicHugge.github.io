@@ -15,8 +15,8 @@ permalink: /about/
       </p>
     </div>
     <div class="about-media about-media-grid">
-      <img src="{{ '/assets/images/arctic-volunteers.jpg' | relative_url }}" alt="Umeå Game Conference / UGC Volunteers" loading="lazy" decoding="async">
-      <img src="{{ '/assets/images/arctic-volunteers2.jpg' | relative_url }}" alt="Umeå Game Conference / UGC Volunteers 2024" loading="lazy" decoding="async">
+      <img src="{{ '/assets/media/about/images/arctic-volunteers.jpg' | relative_url }}" alt="Umeå Game Conference / UGC Volunteers" loading="lazy" decoding="async">
+      <img src="{{ '/assets/media/about/images/arctic-volunteers2.jpg' | relative_url }}" alt="Umeå Game Conference / UGC Volunteers 2024" loading="lazy" decoding="async">
     </div>
   </div>
 </section>
@@ -39,7 +39,7 @@ permalink: /about/
     </div>
     <div class="about-media">
       <video autoplay loop muted playsinline class="about-climbing" preload="metadata">
-        <source src="{{ '/assets/images/climbing.webm' | relative_url }}" type="video/webm">
+        <source src="{{ '/assets/media/about/videos/climbing.webm' | relative_url }}" type="video/webm">
         Your browser does not support the video.
       </video>
     </div>

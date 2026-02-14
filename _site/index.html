@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="page-loading no-js">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +8,60 @@
     <meta name="description" content="Your short description here.">
 
     <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
-    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/brand/favicon.ico">
+    <link rel="manifest" href="/assets/brand/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
 
     <!-- Stylesheet -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #1a1a1a;
+        color: #f3f1ec;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+      html.page-loading body {
+        opacity: 0;
+      }
+      html.page-exit body {
+        opacity: 0;
+      }
+    </style>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <noscript>
+      <style>
+        html.page-loading body {
+          opacity: 1;
+        }
+      </style>
+    </noscript>
 
     <!-- Add any custom head elements here -->
+
+<!-- Preconnect for Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Google Fonts: More Sugar -->
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
 
-  </head>
-  <body class="">
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <div class="scroll-progress" id="scroll-progress"></div>
 
+  
+  
+    <link rel="preload" as="video" href="/assets/media/projects/underground-garage-encounter/videos/hero-clip.webm" type="video/webm" fetchpriority="high">
+  
+
+
+  </head>
+  <body class="home-page">
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
     <!-- Site Header -->
 <header class="fixed-header">
   <div class="header-container">
@@ -68,7 +101,7 @@
           <span>Futuregames</span>
         </div>
         <div class="hero-actions">
-        <a class="hero-link" href="/assets/CV-Hugo.pdf" target="_blank" rel="noopener">
+        <a class="hero-link" href="/assets/docs/CV-HugoN.pdf" target="_blank" rel="noopener">
           CV
           <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,7 +111,7 @@
       </div>
       <div class="card-media">
         <a class="hero-about-link" href="/about/" aria-label="About me">
-          <img src="/assets/images/hugo-portrait.jpg" alt="Hugo Portrait" loading="lazy" decoding="async">
+          <img src="/assets/media/about/images/hugo-portrait.jpg" alt="Hugo Portrait" loading="lazy" decoding="async">
           <span class="hero-about-label">About me</span>
         </a>
       </div>
@@ -99,40 +132,44 @@
     <p class="eyebrow">Primary Showcase</p>
   </div>
   
-  <article class="spotlight-card">
-    <a class="project-card-hit" href="/projects/underground-garage-encounter/" aria-label="View Underground Garage Encounter"></a>
-    <div class="spotlight-media">
-      
-        <video preload="auto" autoplay loop muted playsinline class="spotlight-video">
-          <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Hero%20Clip.webm" type="video/webm">
-        </video>
-      
-      
-        <img class="engine-badge" src="/assets/images/tool-icons/unreal.svg" alt="Underground Garage Encounter engine">
-      
-      <span class="card-hover-label">Full breakdown</span>
+    
+
+<article class="spotlight-card" data-reveal>
+  <a class="project-card-hit" href="/projects/underground-garage-encounter/" aria-label="View Underground Garage Encounter"></a>
+  
+    <img class="spotlight-badge" src="/assets/icons/tools/unreal.svg" alt="Underground Garage Encounter engine">
+  
+  <div class="spotlight-media">
+    
+      <video preload="none" autoplay loop muted playsinline class="spotlight-video" data-lazy-video poster="/assets/media/projects/underground-garage-encounter/images/highresscreenshot00001.png">
+        <source data-src="/assets/media/projects/underground-garage-encounter/videos/hero-clip.webm" type="video/webm">
+      </video>
+    
+    <span class="card-hover-label">Full breakdown</span>
+  </div>
+  <div class="spotlight-content">
+    <div>
+      <h3>Underground Garage Encounter</h3>
+      <p class="spotlight-summary">Division-inspired <strong>TPS encounter</strong> focused on <strong>cover-to-cover pacing</strong>, <strong>route choice</strong>, and a <strong>push → defend</strong> reversal.</p>
     </div>
-    <div class="spotlight-content">
-      <div>
-        <h3>Underground Garage Encounter</h3>
-        <p class="spotlight-summary">Division-inspired <strong>TPS encounter</strong> focused on <strong>cover-to-cover pacing</strong>, <strong>route choice</strong>, and a <strong>push → defend</strong> reversal.</p>
-      </div>
-      <div class="spotlight-tags">
-        
-          <span class="tag">Third Person</span>
-        
-          <span class="tag">Encounter Design</span>
-        
-          <span class="tag">Cover Flow</span>
-        
-          <span class="tag">Iteration</span>
-        
-      </div>
-      <p class="spotlight-meta-line">
-        Role: LD · Team: Solo · 4-day sprint
-      </p>
+    <div class="spotlight-tags">
+      
+        <span class="tag">Third Person</span>
+      
+        <span class="tag">Encounter Design</span>
+      
+        <span class="tag">Cover Flow</span>
+      
+        <span class="tag">Iteration</span>
+      
     </div>
-  </article>
+    <p class="spotlight-meta-line">
+      Role: LD · Team: Solo · 4-day sprint
+    </p>
+  </div>
+</article>
+
+
   
 </section>
 
@@ -146,82 +183,90 @@
     
       
       
-      <article class="project-card">
-        <a class="project-card-hit" href="/projects/advanced-level-design-assignment/" aria-label="View Water Treatment Plant"></a>
-        <div class="project-card-media">
-          
-            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-              <source src="/assets/images/AdvancedLevelDesign-Assignment/Intro.webm" type="video/webm">
-            </video>
-          
-          
-            <img class="engine-badge" src="/assets/images/tool-icons/unreal.svg" alt="Water Treatment Plant engine">
-          
-          <span class="card-hover-label">Full breakdown</span>
-        </div>
-        <div class="project-card-meta-row">
-          <span class="tag">Role: LD</span>
-          <span class="tag">Team: Solo</span>
-        </div>
-        <div class="project-card-body">
-          <h3>Water Treatment Plant</h3>
-          <p class="project-card-summary"><strong>Solo horror puzzle room</strong> in Unreal. Focus on <strong>guidance</strong> and <strong>pacing</strong> with <strong>lighting</strong>.</p>
-          <div class="project-keywords">
-            
-              <span class="tag">Advanced Layout</span>
-            
-              <span class="tag">First Person</span>
-            
-              <span class="tag">Horror</span>
-            
-              <span class="tag">Guidance</span>
-            
-              <span class="tag">Iterations</span>
-            
-              <span class="tag">Playtesting</span>
-            
-          </div>
-        </div>
-      </article>
+        
+
+<article class="project-card" data-reveal>
+  <a class="project-card-hit" href="/projects/advanced-level-design-assignment/" aria-label="View Water Treatment Plant"></a>
+  <div class="project-card-media">
+    
+      <video preload="none" autoplay loop muted playsinline class="project-card-video" data-lazy-video poster="/assets/media/projects/water-treatment-plant/images/highres/highresscreenshot00003.png">
+        <source data-src="/assets/media/projects/water-treatment-plant/videos/intro.webm" type="video/webm">
+      </video>
+    
+    
+      <img class="engine-badge" src="/assets/icons/tools/unreal.svg" alt="Water Treatment Plant engine">
+    
+    <span class="card-hover-label">Full breakdown</span>
+  </div>
+  <div class="project-card-meta-row">
+    <span class="tag">Role: LD</span>
+    <span class="tag">Team: Solo</span>
+  </div>
+  <div class="project-card-body">
+    <h3>Water Treatment Plant</h3>
+    <p class="project-card-summary"><strong>Solo horror puzzle room</strong> in Unreal. Focus on <strong>guidance</strong> and <strong>pacing</strong> with <strong>lighting</strong>.</p>
+    <div class="project-keywords">
+      
+        <span class="tag">Advanced Layout</span>
+      
+        <span class="tag">First Person</span>
+      
+        <span class="tag">Horror</span>
+      
+        <span class="tag">Guidance</span>
+      
+        <span class="tag">Iterations</span>
+      
+        <span class="tag">Playtesting</span>
+      
+    </div>
+  </div>
+</article>
+
+
       
     
       
       
-      <article class="project-card">
-        <a class="project-card-hit" href="/projects/game-project-2/" aria-label="View It's a Fish, Your Majesty"></a>
-        <div class="project-card-media">
-          
-            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-              <source src="/assets/images/GP2/Hero.webm" type="video/webm">
-            </video>
-          
-          
-            <img class="engine-badge" src="/assets/images/tool-icons/unity.svg" alt="It's a Fish, Your Majesty engine">
-          
-          <span class="card-hover-label">Full breakdown</span>
-        </div>
-        <div class="project-card-meta-row">
-          <span class="tag">Role: LD</span>
-          <span class="tag">Team: 15</span>
-        </div>
-        <div class="project-card-body">
-          <h3>It's a Fish, Your Majesty</h3>
-          <p class="project-card-summary">Jumped into level design <strong>mid-project</strong> on a <strong>2.5D brawler</strong>. Focused on <strong>flow</strong>, <strong>combat reads</strong>, and fixes.</p>
-          <div class="project-keywords">
-            
-              <span class="tag">2.5D</span>
-            
-              <span class="tag">Adapting</span>
-            
-              <span class="tag">Team work</span>
-            
-              <span class="tag">Encounter Design</span>
-            
-              <span class="tag">Game Project 2</span>
-            
-          </div>
-        </div>
-      </article>
+        
+
+<article class="project-card" data-reveal>
+  <a class="project-card-hit" href="/projects/game-project-2/" aria-label="View It's a Fish, Your Majesty"></a>
+  <div class="project-card-media">
+    
+      <video preload="none" autoplay loop muted playsinline class="project-card-video" data-lazy-video poster="/assets/media/projects/gp2/images/gp2-hero.png">
+        <source data-src="/assets/media/projects/gp2/videos/hero.webm" type="video/webm">
+      </video>
+    
+    
+      <img class="engine-badge" src="/assets/icons/tools/unity.svg" alt="It's a Fish, Your Majesty engine">
+    
+    <span class="card-hover-label">Full breakdown</span>
+  </div>
+  <div class="project-card-meta-row">
+    <span class="tag">Role: LD</span>
+    <span class="tag">Team: 15</span>
+  </div>
+  <div class="project-card-body">
+    <h3>It's a Fish, Your Majesty</h3>
+    <p class="project-card-summary">Jumped into level design <strong>mid-project</strong> on a <strong>2.5D brawler</strong>. Focused on <strong>flow</strong>, <strong>combat reads</strong>, and fixes.</p>
+    <div class="project-keywords">
+      
+        <span class="tag">2.5D</span>
+      
+        <span class="tag">Adapting</span>
+      
+        <span class="tag">Team work</span>
+      
+        <span class="tag">Encounter Design</span>
+      
+        <span class="tag">Game Project 2</span>
+      
+    </div>
+  </div>
+</article>
+
+
       
     
   </div>
@@ -245,32 +290,32 @@
   <div class="toolchain-icons">
     
       <div class="toolchip">
-        <img src="/assets/images/tool-icons/unity.svg" alt="Unity logo" loading="lazy" decoding="async">
+        <img src="/assets/icons/tools/unity.svg" alt="Unity logo" loading="lazy" decoding="async">
         <span class="toolchip-label">Unity</span>
       </div>
     
       <div class="toolchip">
-        <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
+        <img src="/assets/icons/tools/unreal.svg" alt="Unreal Engine logo" loading="lazy" decoding="async">
         <span class="toolchip-label">Unreal Engine</span>
       </div>
     
       <div class="toolchip">
-        <img src="/assets/images/tool-icons/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
+        <img src="/assets/icons/tools/perforce.png" alt="Perforce logo" loading="lazy" decoding="async">
         <span class="toolchip-label">Perforce</span>
       </div>
     
       <div class="toolchip">
-        <img src="/assets/images/tool-icons/github.png" alt="GitHub logo" loading="lazy" decoding="async">
+        <img src="/assets/icons/tools/github.png" alt="GitHub logo" loading="lazy" decoding="async">
         <span class="toolchip-label">GitHub</span>
       </div>
     
       <div class="toolchip">
-        <img src="/assets/images/tool-icons/blender.png" alt="Blender logo" loading="lazy" decoding="async">
+        <img src="/assets/icons/tools/blender.png" alt="Blender logo" loading="lazy" decoding="async">
         <span class="toolchip-label">Blender</span>
       </div>
     
       <div class="toolchip">
-        <img src="/assets/images/tool-icons/jira.svg" alt="Jira logo" loading="lazy" decoding="async">
+        <img src="/assets/icons/tools/jira.svg" alt="Jira logo" loading="lazy" decoding="async">
         <span class="toolchip-label">Jira</span>
       </div>
     
@@ -283,196 +328,7 @@
 </footer>
 
     <!-- Global Scripts -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const toolchainSection = document.querySelector('.toolchain');
-    if (toolchainSection) {
-      const chips = toolchainSection.querySelectorAll('.toolchip');
-      chips.forEach((chip, index) => {
-        chip.style.transitionDelay = `${index * 120}ms`;
-      });
-      const triggerToolchain = () => {
-        toolchainSection.classList.add('reveal');
-      };
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        triggerToolchain();
-      } else {
-        setTimeout(triggerToolchain, 1200);
-      }
-    }
-
-    const progressBar = document.getElementById('scroll-progress');
-    if (progressBar) {
-      const updateProgress = () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        progressBar.style.width = progress + '%';
-      };
-      updateProgress();
-      window.addEventListener('scroll', updateProgress);
-    }
-    // Hamburger Menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        hamburger.classList.toggle('toggle');
-        hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
-      });
-    }
-    const caseStudies = document.querySelectorAll('.case-study, .ald-case');
-    if (caseStudies.length) {
-      caseStudies.forEach((caseStudy) => {
-        const revealItems = caseStudy.querySelectorAll('[data-reveal]');
-        revealItems.forEach((item, index) => {
-          item.style.transitionDelay = `${index * 80}ms`;
-        });
-        const reveal = (el) => el.classList.add('reveal');
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          revealItems.forEach(reveal);
-        } else {
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                reveal(entry.target);
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.15 });
-          revealItems.forEach(item => observer.observe(item));
-        }
-      });
-    }
-
-    // Fade-in for featured projects
-    const featured = document.querySelector('.featured-projects');
-    if (featured) {
-      featured.style.opacity = '0';
-      featured.style.transform = 'translateY(30px)';
-      featured.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-      const featuredObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            featured.style.opacity = '1';
-            featured.style.transform = 'translateY(0)';
-            featuredObserver.unobserve(featured);
-          }
-        });
-      }, { threshold: 0.2 });
-      featuredObserver.observe(featured);
-    }
-
-    // Fade-in for any portfolio pieces
-    const portfolioSections = document.querySelectorAll('.portfolio-piece');
-    if (portfolioSections.length) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      portfolioSections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-        observer.observe(section);
-      });
-    }
-
-    // Header Shrink
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.fixed-header');
-      if (header) {
-        header.classList.toggle('shrink', window.scrollY > 50);
-      }
-    });
-
-    // Floor Switcher
-    const floorSwitcher = document.getElementById('floor-switcher');
-    if (floorSwitcher) {
-      const floorImage = floorSwitcher.querySelector('.floor-image');
-      const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-      const arrowRight = floorSwitcher.querySelector('.arrow-right');
-      const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-      const floors = [
-        {
-          src: '/assets/images/top-floor.png',
-          alt: 'Top Floor Overview',
-          label: 'Top Floor'
-        },
-        {
-          src: '/assets/images/lower-floor.png',
-          alt: 'Lower Floor Overview',
-          label: 'Lower Floor'
-        }
-      ];
-      let currentIndex = 0;
-      function updateFloor() {
-        floorImage.src = floors[currentIndex].src;
-        floorImage.alt = floors[currentIndex].alt;
-        floorIndicator.textContent = floors[currentIndex].label;
-      }
-      updateFloor();
-      arrowLeft.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-        updateFloor();
-      });
-      arrowRight.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % floors.length;
-        updateFloor();
-      });
-    }
-
-    // Blockout Carousel - handle all
-    const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
-    if (window.matchMedia('(max-width: 768px)').matches) {
-      return;
-    }
-    carouselContainers.forEach((container) => {
-      const images = container.querySelectorAll('img');
-      let currentCarouselIndex = 0;
-      const totalImages = images.length;
-      if (!totalImages) {
-        return;
-      }
-      const parent = container.parentElement;
-      const updateCarousel = () => {
-        const slideWidth = parent.clientWidth;
-        images.forEach((img) => {
-          img.style.width = `${slideWidth}px`;
-        });
-        container.style.width = `${totalImages * slideWidth}px`;
-        container.style.transform = `translateX(-${currentCarouselIndex * slideWidth}px)`;
-      };
-      updateCarousel();
-      window.addEventListener('resize', updateCarousel);
-      const prevButton = parent.querySelector('.carousel-prev');
-      const nextButton = parent.querySelector('.carousel-next');
-      if (prevButton) {
-        prevButton.addEventListener('click', () => {
-          currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
-          updateCarousel();
-        });
-      }
-      if (nextButton) {
-        nextButton.addEventListener('click', () => {
-          currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-          updateCarousel();
-        });
-      }
-      setInterval(() => {
-        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-        updateCarousel();
-      }, 5000);
-    });
-  });
-</script>
+<script src="/assets/js/main.js" defer></script>
 
 
 

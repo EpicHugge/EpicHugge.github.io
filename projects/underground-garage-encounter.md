@@ -12,8 +12,8 @@ body_class: project-page
   </header>
 
   <div class="ald-hero-media" data-reveal>
-    <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00001.png' | relative_url }}">
-      <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Hero%20Clip.webm' | relative_url }}" type="video/webm">
+    <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/media/projects/underground-garage-encounter/images/highresscreenshot00001.png' | relative_url }}">
+      <source src="{{ '/assets/media/projects/underground-garage-encounter/videos/hero-clip.webm' | relative_url }}" type="video/webm">
     </video>
     <a class="ald-hero-cta" href="#walkthrough">Watch Full Walkthrough <span aria-hidden="true">&rarr;</span></a>
   </div>
@@ -36,7 +36,7 @@ body_class: project-page
           <li><strong>Duration:</strong> 4-day sprint</li>
           <li class="ald-engine">
             <strong>Engine:</strong> Unreal Engine 5
-            <img src="{{ '/assets/images/tool-icons/unreal.svg' | relative_url }}" alt="Unreal Engine logo" class="ald-engine-logo">
+            <img src="{{ '/assets/icons/tools/unreal.svg' | relative_url }}" alt="Unreal Engine logo" class="ald-engine-logo">
           </li>
           <li><strong>Perspective:</strong> Third person</li>
         </ul>
@@ -48,7 +48,7 @@ body_class: project-page
   <div class="ald-section" data-reveal>
     <h2>Level Overview</h2>
     <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Overview%20Image.png' | relative_url }}" alt="Top-down encounter overview" class="ald-map-image">
+      <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/overview/overview-image.png' | relative_url }}" alt="Top-down encounter overview" class="ald-map-image">
     </div>
   </div>
 
@@ -57,8 +57,8 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00002.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Initial%20Read%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/highresscreenshot00002.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/initial-read-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -74,8 +74,8 @@ body_class: project-page
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00003.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Different%20Paths%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00003.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/different-paths-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -91,8 +91,8 @@ body_class: project-page
 
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00004.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Calm%20Moment%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00004.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/calm-moment-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -108,8 +108,8 @@ body_class: project-page
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00007.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Defend%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00007.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/defend-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -135,12 +135,12 @@ body_class: project-page
       <figure>
         <div class="blockout-carousel ald-carousel">
           <div class="carousel-container">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Itertaion1%20without%20breach%20readability.png' | relative_url }}" alt="Iteration screenshot 1">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Iterion%20with%20breach%20readability.png' | relative_url }}" alt="Iteration screenshot 2">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Ska%CC%88rmbild%202026-02-11%20113629.png' | relative_url }}" alt="Iteration screenshot 3">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Ska%CC%88rmbild%202026-02-11%20113648.png' | relative_url }}" alt="Iteration screenshot 4">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Ska%CC%88rmbild%202026-02-11%20131330.png' | relative_url }}" alt="Iteration screenshot 5">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Ska%CC%88rmbild%202026-02-11%20131345.png' | relative_url }}" alt="Iteration screenshot 6">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/iterations/itertaion1-without-breach-readability.png' | relative_url }}" alt="Iteration screenshot 1">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/iterations/iterion-with-breach-readability.png' | relative_url }}" alt="Iteration screenshot 2">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-113629.png' | relative_url }}" alt="Iteration screenshot 3">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-113648.png' | relative_url }}" alt="Iteration screenshot 4">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-131330.png' | relative_url }}" alt="Iteration screenshot 5">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-131345.png' | relative_url }}" alt="Iteration screenshot 6">
           </div>
         </div>
         <figcaption>Iteration Passes</figcaption>
@@ -152,11 +152,11 @@ body_class: project-page
       <figure>
         <div class="blockout-carousel ald-carousel">
           <div class="carousel-container">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00003.png' | relative_url }}" alt="Finished screenshot 1">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00004.png' | relative_url }}" alt="Finished screenshot 2">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00005.png' | relative_url }}" alt="Finished screenshot 3">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00006.png' | relative_url }}" alt="Finished screenshot 4">
-            <img loading="lazy" decoding="async" src="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00007.png' | relative_url }}" alt="Finished screenshot 5">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00003.png' | relative_url }}" alt="Finished screenshot 1">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00004.png' | relative_url }}" alt="Finished screenshot 2">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00005.png' | relative_url }}" alt="Finished screenshot 3">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00006.png' | relative_url }}" alt="Finished screenshot 4">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00007.png' | relative_url }}" alt="Finished screenshot 5">
           </div>
         </div>
         <figcaption>Final Pass</figcaption>
@@ -173,8 +173,8 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00001.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Defend%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/highresscreenshot00001.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/defend-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -190,8 +190,8 @@ body_class: project-page
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00002.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Different%20Paths%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/highresscreenshot00002.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/different-paths-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -207,8 +207,8 @@ body_class: project-page
 
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay loop muted playsinline preload="metadata" poster="{{ '/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00007.png' | relative_url }}">
-            <source src="{{ '/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Signature%20Clip.webm' | relative_url }}" type="video/webm">
+          <video class="ald-highlight-video" autoplay loop muted playsinline preload="none" data-lazy-video poster="{{ '/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00007.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/underground-garage-encounter/videos/signature-clip.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -244,4 +244,5 @@ body_class: project-page
   </div>
 
   <a class="ald-footer-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+  {% include project-nav.html slug="underground-garage-encounter" %}
 </section>

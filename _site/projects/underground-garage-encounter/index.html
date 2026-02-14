@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" class="page-loading no-js">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,27 +8,55 @@
     <meta name="description" content="Your short description here.">
 
     <!-- Favicon Links -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="shortcut icon" href="/assets/images/favicon.ico">
-    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/brand/favicon.ico">
+    <link rel="manifest" href="/assets/brand/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
 
     <!-- Stylesheet -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: #1a1a1a;
+        color: #f3f1ec;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.25s ease;
+      }
+      html.page-loading body {
+        opacity: 0;
+      }
+      html.page-exit body {
+        opacity: 0;
+      }
+    </style>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <noscript>
+      <style>
+        html.page-loading body {
+          opacity: 1;
+        }
+      </style>
+    </noscript>
 
     <!-- Add any custom head elements here -->
+
+<!-- Preconnect for Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Google Fonts: More Sugar -->
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
 
+
+
   </head>
   <body class="project-page">
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <div class="scroll-progress" id="scroll-progress"></div>
-
     <!-- Site Header -->
 <header class="fixed-header">
   <div class="header-container">
@@ -63,8 +91,8 @@
   </header>
 
   <div class="ald-hero-media" data-reveal="">
-    <video preload="auto" autoplay="" loop="" muted="" playsinline="" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00001.png">
-      <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Hero%20Clip.webm" type="video/webm" />
+    <video preload="auto" autoplay="" loop="" muted="" playsinline="" poster="/assets/media/projects/underground-garage-encounter/images/highresscreenshot00001.png">
+      <source src="/assets/media/projects/underground-garage-encounter/videos/hero-clip.webm" type="video/webm" />
     </video>
     <a class="ald-hero-cta" href="#walkthrough">Watch Full Walkthrough <span aria-hidden="true">&rarr;</span></a>
   </div>
@@ -87,7 +115,7 @@
           <li><strong>Duration:</strong> 4-day sprint</li>
           <li class="ald-engine">
             <strong>Engine:</strong> Unreal Engine 5
-            <img src="/assets/images/tool-icons/unreal.svg" alt="Unreal Engine logo" class="ald-engine-logo" />
+            <img src="/assets/icons/tools/unreal.svg" alt="Unreal Engine logo" class="ald-engine-logo" />
           </li>
           <li><strong>Perspective:</strong> Third person</li>
         </ul>
@@ -99,7 +127,7 @@
   <div class="ald-section" data-reveal="">
     <h2>Level Overview</h2>
     <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Overview%20Image.png" alt="Top-down encounter overview" class="ald-map-image" />
+      <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/overview/overview-image.png" alt="Top-down encounter overview" class="ald-map-image" />
     </div>
   </div>
 
@@ -108,8 +136,8 @@
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00002.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Initial%20Read%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/highresscreenshot00002.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/initial-read-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -125,8 +153,8 @@
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00003.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Different%20Paths%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00003.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/different-paths-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -142,8 +170,8 @@
 
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00004.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Calm%20Moment%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00004.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/calm-moment-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -159,8 +187,8 @@
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00007.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Defend%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00007.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/defend-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -186,12 +214,12 @@
       <figure>
         <div class="blockout-carousel ald-carousel">
           <div class="carousel-container">
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Itertaion1%20without%20breach%20readability.png" alt="Iteration screenshot 1" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Iterion%20with%20breach%20readability.png" alt="Iteration screenshot 2" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Sk%C3%A4rmbild%202026-02-11%20113629.png" alt="Iteration screenshot 3" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Sk%C3%A4rmbild%202026-02-11%20113648.png" alt="Iteration screenshot 4" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Sk%C3%A4rmbild%202026-02-11%20131330.png" alt="Iteration screenshot 5" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Iterations/Sk%C3%A4rmbild%202026-02-11%20131345.png" alt="Iteration screenshot 6" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/iterations/itertaion1-without-breach-readability.png" alt="Iteration screenshot 1" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/iterations/iterion-with-breach-readability.png" alt="Iteration screenshot 2" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-113629.png" alt="Iteration screenshot 3" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-113648.png" alt="Iteration screenshot 4" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-131330.png" alt="Iteration screenshot 5" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/iterations/skarmbild-2026-02-11-131345.png" alt="Iteration screenshot 6" />
           </div>
         </div>
         <figcaption>Iteration Passes</figcaption>
@@ -203,11 +231,11 @@
       <figure>
         <div class="blockout-carousel ald-carousel">
           <div class="carousel-container">
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00003.png" alt="Finished screenshot 1" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00004.png" alt="Finished screenshot 2" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00005.png" alt="Finished screenshot 3" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00006.png" alt="Finished screenshot 4" />
-            <img loading="lazy" decoding="async" src="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00007.png" alt="Finished screenshot 5" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00003.png" alt="Finished screenshot 1" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00004.png" alt="Finished screenshot 2" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00005.png" alt="Finished screenshot 3" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00006.png" alt="Finished screenshot 4" />
+            <img loading="lazy" decoding="async" src="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00007.png" alt="Finished screenshot 5" />
           </div>
         </div>
         <figcaption>Final Pass</figcaption>
@@ -224,8 +252,8 @@
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00001.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Defend%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/highresscreenshot00001.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/defend-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -241,8 +269,8 @@
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00002.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Different%20Paths%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/highresscreenshot00002.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/different-paths-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -258,8 +286,8 @@
 
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="metadata" poster="/assets/Parking%20Garage/Portfolio/Screenshots/Finished/HighresScreenshot00007.png">
-            <source src="/assets/Parking%20Garage/Portfolio/Portfolio%20Clips/WEBM%20Clips/Signature%20Clip.webm" type="video/webm" />
+          <video class="ald-highlight-video" autoplay="" loop="" muted="" playsinline="" preload="none" data-lazy-video="" poster="/assets/media/projects/underground-garage-encounter/images/finished/highresscreenshot00007.png">
+            <source data-src="/assets/media/projects/underground-garage-encounter/videos/signature-clip.webm" type="video/webm" />
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -295,6 +323,32 @@
   </div>
 
   <a class="ald-footer-cta" href="/contact/">Get in touch</a>
+  
+
+
+
+  <nav class="project-nav" aria-label="Project navigation">
+    
+      
+      
+      
+        <a class="project-nav-link" data-project-nav="prev" href="/projects/advanced-level-design-assignment/">
+          <span class="project-nav-label">Previous</span>
+          <span class="project-nav-title">Water Treatment Plant</span>
+        </a>
+      
+    
+    
+    
+    
+      <a class="project-nav-link" data-project-nav="next" href="/projects/game-project-2/">
+        <span class="project-nav-label">Next</span>
+        <span class="project-nav-title">It's a Fish, Your Majesty</span>
+      </a>
+    
+  </nav>
+
+
 </section>
 
     </main>
@@ -303,196 +357,7 @@
 </footer>
 
     <!-- Global Scripts -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const toolchainSection = document.querySelector('.toolchain');
-    if (toolchainSection) {
-      const chips = toolchainSection.querySelectorAll('.toolchip');
-      chips.forEach((chip, index) => {
-        chip.style.transitionDelay = `${index * 120}ms`;
-      });
-      const triggerToolchain = () => {
-        toolchainSection.classList.add('reveal');
-      };
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        triggerToolchain();
-      } else {
-        setTimeout(triggerToolchain, 1200);
-      }
-    }
-
-    const progressBar = document.getElementById('scroll-progress');
-    if (progressBar) {
-      const updateProgress = () => {
-        const scrollTop = window.scrollY;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-        progressBar.style.width = progress + '%';
-      };
-      updateProgress();
-      window.addEventListener('scroll', updateProgress);
-    }
-    // Hamburger Menu
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    if (hamburger && navLinks) {
-      hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('nav-active');
-        hamburger.classList.toggle('toggle');
-        hamburger.setAttribute('aria-expanded', hamburger.classList.contains('toggle'));
-      });
-    }
-    const caseStudies = document.querySelectorAll('.case-study, .ald-case');
-    if (caseStudies.length) {
-      caseStudies.forEach((caseStudy) => {
-        const revealItems = caseStudy.querySelectorAll('[data-reveal]');
-        revealItems.forEach((item, index) => {
-          item.style.transitionDelay = `${index * 80}ms`;
-        });
-        const reveal = (el) => el.classList.add('reveal');
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          revealItems.forEach(reveal);
-        } else {
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                reveal(entry.target);
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.15 });
-          revealItems.forEach(item => observer.observe(item));
-        }
-      });
-    }
-
-    // Fade-in for featured projects
-    const featured = document.querySelector('.featured-projects');
-    if (featured) {
-      featured.style.opacity = '0';
-      featured.style.transform = 'translateY(30px)';
-      featured.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-      const featuredObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            featured.style.opacity = '1';
-            featured.style.transform = 'translateY(0)';
-            featuredObserver.unobserve(featured);
-          }
-        });
-      }, { threshold: 0.2 });
-      featuredObserver.observe(featured);
-    }
-
-    // Fade-in for any portfolio pieces
-    const portfolioSections = document.querySelectorAll('.portfolio-piece');
-    if (portfolioSections.length) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-
-      portfolioSections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-        observer.observe(section);
-      });
-    }
-
-    // Header Shrink
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('.fixed-header');
-      if (header) {
-        header.classList.toggle('shrink', window.scrollY > 50);
-      }
-    });
-
-    // Floor Switcher
-    const floorSwitcher = document.getElementById('floor-switcher');
-    if (floorSwitcher) {
-      const floorImage = floorSwitcher.querySelector('.floor-image');
-      const arrowLeft  = floorSwitcher.querySelector('.arrow-left');
-      const arrowRight = floorSwitcher.querySelector('.arrow-right');
-      const floorIndicator = floorSwitcher.querySelector('.floor-indicator');
-      const floors = [
-        {
-          src: '/assets/images/top-floor.png',
-          alt: 'Top Floor Overview',
-          label: 'Top Floor'
-        },
-        {
-          src: '/assets/images/lower-floor.png',
-          alt: 'Lower Floor Overview',
-          label: 'Lower Floor'
-        }
-      ];
-      let currentIndex = 0;
-      function updateFloor() {
-        floorImage.src = floors[currentIndex].src;
-        floorImage.alt = floors[currentIndex].alt;
-        floorIndicator.textContent = floors[currentIndex].label;
-      }
-      updateFloor();
-      arrowLeft.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? floors.length - 1 : currentIndex - 1;
-        updateFloor();
-      });
-      arrowRight.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % floors.length;
-        updateFloor();
-      });
-    }
-
-    // Blockout Carousel - handle all
-    const carouselContainers = document.querySelectorAll('.blockout-carousel .carousel-container');
-    if (window.matchMedia('(max-width: 768px)').matches) {
-      return;
-    }
-    carouselContainers.forEach((container) => {
-      const images = container.querySelectorAll('img');
-      let currentCarouselIndex = 0;
-      const totalImages = images.length;
-      if (!totalImages) {
-        return;
-      }
-      const parent = container.parentElement;
-      const updateCarousel = () => {
-        const slideWidth = parent.clientWidth;
-        images.forEach((img) => {
-          img.style.width = `${slideWidth}px`;
-        });
-        container.style.width = `${totalImages * slideWidth}px`;
-        container.style.transform = `translateX(-${currentCarouselIndex * slideWidth}px)`;
-      };
-      updateCarousel();
-      window.addEventListener('resize', updateCarousel);
-      const prevButton = parent.querySelector('.carousel-prev');
-      const nextButton = parent.querySelector('.carousel-next');
-      if (prevButton) {
-        prevButton.addEventListener('click', () => {
-          currentCarouselIndex = (currentCarouselIndex === 0) ? totalImages - 1 : currentCarouselIndex - 1;
-          updateCarousel();
-        });
-      }
-      if (nextButton) {
-        nextButton.addEventListener('click', () => {
-          currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-          updateCarousel();
-        });
-      }
-      setInterval(() => {
-        currentCarouselIndex = (currentCarouselIndex + 1) % totalImages;
-        updateCarousel();
-      }, 5000);
-    });
-  });
-</script>
+<script src="/assets/js/main.js" defer></script>
 
 
 

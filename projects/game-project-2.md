@@ -12,15 +12,15 @@ body_class: project-page
   </header>
 
   <div class="ald-hero-media" data-reveal>
-    <video preload="auto" class="ald-hero-video" autoplay loop muted playsinline poster="{{ '/assets/images/GP2/gp2-hero.png' | relative_url }}">
-      <source src="{{ '/assets/images/GP2/Hero.webm' | relative_url }}" type="video/webm">
+    <video preload="auto" class="ald-hero-video" autoplay loop muted playsinline poster="{{ '/assets/media/projects/gp2/images/gp2-hero.png' | relative_url }}">
+      <source src="{{ '/assets/media/projects/gp2/videos/hero.webm' | relative_url }}" type="video/webm">
     </video>
     <a class="ald-hero-cta" href="#walkthrough">Watch Full Walkthrough <span aria-hidden="true">&rarr;</span></a>
   </div>
 
   <div class="ald-actions" data-reveal>
     <a class="ald-link-pill" href="https://futuregames.itch.io/its-a-fish-your-majesty" target="_blank" rel="noopener">
-      <img src="{{ '/assets/images/tool-icons/itch.svg' | relative_url }}" alt="" class="ald-link-icon" aria-hidden="true">
+      <img src="{{ '/assets/icons/social/itch.svg' | relative_url }}" alt="" class="ald-link-icon" aria-hidden="true">
       Play on itch.io <span aria-hidden="true">&rarr;</span>
     </a>
   </div>
@@ -41,7 +41,7 @@ body_class: project-page
           <li><strong>Duration:</strong> 4 weeks</li>
           <li class="ald-engine">
             <strong>Engine:</strong> Unity
-            <img src="{{ '/assets/images/tool-icons/unity.svg' | relative_url }}" alt="Unity logo" class="ald-engine-logo">
+            <img src="{{ '/assets/icons/tools/unity.svg' | relative_url }}" alt="Unity logo" class="ald-engine-logo">
           </li>
           <li><strong>Team:</strong> 15 people</li>
           <li><strong>Perspective:</strong> 2.5D side-scroller</li>
@@ -77,7 +77,7 @@ body_class: project-page
     </div>
     <div class="ald-iteration">
       <figure>
-        <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-blockout.png' | relative_url }}" alt="Blockout layout">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/gp2/images/gp2-blockout.png' | relative_url }}" alt="Blockout layout">
         <figcaption>Blockout v1</figcaption>
       </figure>
       <div class="ald-iteration-center">
@@ -85,7 +85,7 @@ body_class: project-page
         <small>4-week timeline</small>
       </div>
       <figure>
-        <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-final.png' | relative_url }}" alt="Polished level">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/gp2/images/gp2-final.png' | relative_url }}" alt="Polished level">
         <figcaption>Playable Level</figcaption>
       </figure>
     </div>
@@ -96,8 +96,8 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <video preload="auto" autoplay loop muted playsinline poster="{{ '/assets/images/GP2/gp2-screenshot2.png' | relative_url }}">
-            <source src="{{ '/assets/images/GP2/Hook.webm' | relative_url }}" type="video/webm">
+          <video preload="none" data-lazy-video autoplay loop muted playsinline poster="{{ '/assets/media/projects/gp2/images/gp2-screenshot2.png' | relative_url }}">
+            <source data-src="{{ '/assets/media/projects/gp2/videos/hook.webm' | relative_url }}" type="video/webm">
           </video>
         </div>
         <div class="ald-highlight-text">
@@ -113,7 +113,7 @@ body_class: project-page
       </article>
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/GP2/gp2-screenshot3.png' | relative_url }}" alt="Encounter pacing">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/gp2/images/gp2-screenshot3.png' | relative_url }}" alt="Encounter pacing">
         </div>
         <div class="ald-highlight-text">
           <h3>Cross-Discipline Sync</h3>
@@ -149,4 +149,5 @@ body_class: project-page
   </div>
 
   <a class="ald-footer-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+  {% include project-nav.html slug="game-project-2" %}
 </section>

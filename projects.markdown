@@ -13,35 +13,7 @@ body_class: project-archive
   <div class="featured-projects-grid">
     {% assign project = site.data.projects | where: "slug", "underground-garage-encounter" | first %}
     {% if project %}
-    <article class="project-card" data-reveal>
-      <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
-      <div class="project-card-media">
-        {% if project.media_type == "video" %}
-          <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-            <source src="{{ project.media_src | relative_url }}" type="video/webm">
-          </video>
-        {% else %}
-          <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
-        {% endif %}
-        {% if project.engine_icon %}
-          <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
-        {% endif %}
-        <span class="card-hover-label">Full breakdown</span>
-      </div>
-      <div class="project-card-meta-row">
-        <span class="tag">Role: {{ project.role_tag }}</span>
-        <span class="tag">Team: {{ project.team_tag }}</span>
-      </div>
-      <div class="project-card-body">
-        <h3>{{ project.title }}</h3>
-        <p class="project-card-summary">{{ project.summary }}</p>
-        <div class="project-keywords">
-          {% for tag in project.tags %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      </div>
-    </article>
+      {% include project-card.html project=project %}
     {% endif %}
   </div>
 </section>
@@ -56,35 +28,7 @@ body_class: project-archive
     {% for slug in collab_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}
-      <article class="project-card" data-reveal>
-        <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
-        <div class="project-card-media">
-          {% if project.media_type == "video" %}
-            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-              <source src="{{ project.media_src | relative_url }}" type="video/webm">
-            </video>
-          {% else %}
-            <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
-          {% endif %}
-          {% if project.engine_icon %}
-            <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
-          {% endif %}
-          <span class="card-hover-label">Full breakdown</span>
-        </div>
-        <div class="project-card-meta-row">
-          <span class="tag">Role: {{ project.role_tag }}</span>
-          <span class="tag">Team: {{ project.team_tag }}</span>
-        </div>
-        <div class="project-card-body">
-          <h3>{{ project.title }}</h3>
-          <p class="project-card-summary">{{ project.summary }}</p>
-          <div class="project-keywords">
-            {% for tag in project.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      </article>
+        {% include project-card.html project=project %}
       {% endif %}
     {% endfor %}
   </div>
@@ -100,35 +44,7 @@ body_class: project-archive
     {% for slug in solo_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}
-      <article class="project-card" data-reveal>
-        <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
-        <div class="project-card-media">
-          {% if project.media_type == "video" %}
-            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-              <source src="{{ project.media_src | relative_url }}" type="video/webm">
-            </video>
-          {% else %}
-            <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
-          {% endif %}
-          {% if project.engine_icon %}
-            <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
-          {% endif %}
-          <span class="card-hover-label">Full breakdown</span>
-        </div>
-        <div class="project-card-meta-row">
-          <span class="tag">Role: {{ project.role_tag }}</span>
-          <span class="tag">Team: {{ project.team_tag }}</span>
-        </div>
-        <div class="project-card-body">
-          <h3>{{ project.title }}</h3>
-          <p class="project-card-summary">{{ project.summary }}</p>
-          <div class="project-keywords">
-            {% for tag in project.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      </article>
+        {% include project-card.html project=project %}
       {% endif %}
     {% endfor %}
   </div>

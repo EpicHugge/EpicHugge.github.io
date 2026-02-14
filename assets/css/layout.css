@@ -1,0 +1,161 @@
+/* 4. Fixed Header Styles */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  height: 64px;
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+.fixed-header.shrink {
+  height: 52px;
+  padding: 0 var(--space-3);
+}
+
+/* 5. Header Container */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-9);
+  height: 100%;
+  position: relative;
+}
+
+/* 7. Logo (Desktop) */
+.logo {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo a {
+  font-family: 'More Sugar Custom', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  text-transform: uppercase;
+  transition: color var(--transition-duration);
+}
+.logo a:hover {
+  color: #ffffff;
+}
+
+/* 8. Navigation Links */
+.nav-links {
+  display: flex;
+  gap: var(--space-9);
+}
+.nav-links a {
+  font-family: 'Roboto', sans-serif;
+  font-size: var(--type-lg);
+  color: var(--secondary-color);
+  font-weight: bold;
+  transition: color var(--transition-duration);
+}
+.nav-links a.active {
+  color: var(--text-color);
+  border-bottom: 3px solid var(--text-color);
+}
+.nav-links a:hover {
+  color: #ffffff;
+}
+.nav-links a:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+/* 9. Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.toggle .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.toggle .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+.toggle .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 10. Main Content Padding */
+.main-content {
+  flex: 1;
+  padding-top: 90px;
+  padding-left: var(--space-9);
+  padding-right: var(--space-9);
+}
+
+/* 12. Footer Styles */
+.site-footer {
+  width: 100%;
+  text-align: center;
+  font-size: var(--type-md);
+  color: var(--secondary-color);
+  padding: var(--space-5) 0;
+  background-color: var(--background-color);
+}
+
+/* SECTION SEPARATOR */
+.section-separator {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding-bottom: var(--space-7);
+  margin-top: auto;
+}
+.scroll-label {
+  font-size: var(--type-md);
+  color: var(--secondary-color);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* NEW: General Section Spacing */
+main > section {
+  margin-bottom: var(--space-14);
+}
+
+.home-page .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-page .main-content > section {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-22);
+}
+.home-page .main-content > section:not(.hero-stage) {
+  padding-top: var(--space-9);
+}

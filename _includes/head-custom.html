@@ -1,4 +1,17 @@
 <!-- Add any custom head elements here -->
 
+<!-- Preconnect for Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <!-- Google Fonts: More Sugar -->
 <link href="https://fonts.googleapis.com/css2?family=More+Sugar&display=swap" rel="stylesheet">
+
+{% if page.layout == "home" %}
+  {% assign primary_project = site.data.projects | where: "slug", "underground-garage-encounter" | first %}
+  {% if primary_project and primary_project.media_type == "video" %}
+    <link rel="preload" as="video" href="{{ primary_project.media_src | relative_url }}" type="video/webm" fetchpriority="high">
+  {% elsif primary_project and primary_project.media_type == "image" %}
+    <link rel="preload" as="image" href="{{ primary_project.media_src | relative_url }}" fetchpriority="high">
+  {% endif %}
+{% endif %}

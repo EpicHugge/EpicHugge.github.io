@@ -1,0 +1,230 @@
+/* 1. CSS Variables */
+:root {
+  --primary-color: #d9b26f;
+  --secondary-color: #c1c1c1;
+  --background-color: #1a1a1a;
+  --text-color: #f3f1ec;
+  --accent-color: #b99654;
+  --transition-duration: 0.3s;
+  --link-color: #f0c476;
+
+  /* Spacing Scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 40px;
+  --space-10: 48px;
+  --space-11: 56px;
+  --space-12: 64px;
+  --space-13: 72px;
+  --space-14: 80px;
+  --space-15: 100px;
+  --space-18: 18px;
+  --space-22: 22px;
+  --space-26: 26px;
+  --space-30: 30px;
+  --space-36: 36px;
+
+  /* Type Scale */
+  --type-xs: 0.85rem;
+  --type-sm: 0.95rem;
+  --type-md: 1rem;
+  --type-lg: 1.2rem;
+  --type-xl: 1.4rem;
+  --type-2xl: 1.6rem;
+  --type-3xl: 2.2rem;
+  --type-4xl: 2.8rem;
+  --type-5xl: 3rem;
+
+  /* Card Surface */
+  --card-bg: #2c2c2c;
+  --card-border: 1px solid rgba(255,255,255,0.08);
+  --card-radius: 12px;
+  --card-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  --card-shadow-hover: 0 12px 24px rgba(0,0,0,0.45);
+
+  /* Hover */
+  --hover-lift: -4px;
+  --hover-shadow: 0 12px 24px rgba(0,0,0,0.45);
+}
+
+/* 2. Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-color) #0f0f0f;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 8px;
+}
+
+
+.hero {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-4) 0 var(--space-6);
+}
+.hero-stage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--space-8);
+  padding: var(--space-7) var(--space-5) var(--space-22);
+}
+.hero-stage .hero-scroll {
+  margin-top: auto;
+}
+.hero-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+}
+.hero-portfolio {
+  margin-top: var(--space-9);
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+.hero-text {
+  text-align: left;
+}
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-copy {
+  text-align: center;
+  max-width: 640px;
+}
+.hero-title {
+  font-size: var(--type-3xl);
+  margin: 0 0 var(--space-2);
+  color: var(--text-color);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.hero-subtitle {
+  margin: 0;
+  color: var(--secondary-color);
+  font-size: var(--type-md);
+  line-height: 1.6;
+}
+
+.hero-toolchain {
+  margin: 0 auto;
+}
+.hero-scroll {
+  position: sticky;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: var(--space-6);
+  z-index: 10;
+}
+
+.hero-fade {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* 3. Link Styles */
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  transition: color var(--transition-duration);
+}
+a:hover {
+  color: #ffe2b1;
+}
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+p strong,
+li strong {
+  font-weight: 700;
+  background-image: linear-gradient(120deg, rgba(255,226,177,0.45), rgba(255,226,177,0.45));
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  transition: background-size 0.2s ease;
+}
+p strong:hover,
+li strong:hover {
+  background-size: 100% 2px;
+}
+
+/* Skip Link */
+#skip-to-content {
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  padding: 10px 14px;
+  background: #2c2c2c;
+  color: var(--text-color);
+  border-radius: 8px;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+}
+#skip-to-content:focus {
+  left: 12px;
+  top: 12px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 6. Load Custom Font */
+@font-face {
+  font-family: 'More Sugar Custom';
+  src: url('../fonts/MoreSugar-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

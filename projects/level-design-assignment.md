@@ -13,7 +13,7 @@ body_class: project-page
 
   <div class="ald-hero-media" data-reveal>
     <video preload="metadata" autoplay loop muted playsinline class="ald-hero-video">
-      <source src="{{ '/assets/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
+      <source src="{{ '/assets/media/projects/level-design-assignment/videos/level-hero-shot.webm' | relative_url }}" type="video/webm">
     </video>
   </div>
 
@@ -43,7 +43,7 @@ body_class: project-page
     <div class="ald-highlights">
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/screenshot-3.png' | relative_url }}" alt="Gatehouse layout">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/screenshot-3.png' | relative_url }}" alt="Gatehouse layout">
         </div>
         <div class="ald-highlight-text">
           <h3>Gatehouse Layout</h3>
@@ -53,7 +53,7 @@ body_class: project-page
 
       <article class="ald-highlight alt">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/screenshot1.png' | relative_url }}" alt="Environmental storytelling">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/screenshot1.png' | relative_url }}" alt="Environmental storytelling">
         </div>
         <div class="ald-highlight-text">
           <h3>Environmental Storytelling</h3>
@@ -63,7 +63,7 @@ body_class: project-page
 
       <article class="ald-highlight">
         <div class="ald-highlight-media">
-          <img loading="lazy" decoding="async" src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Guidance cues">
+          <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/screenshot2.png' | relative_url }}" alt="Guidance cues">
         </div>
         <div class="ald-highlight-text">
           <h3>Guidance Cues</h3>
@@ -86,9 +86,9 @@ body_class: project-page
       <figure>
         <div class="blockout-carousel ald-carousel">
           <div class="carousel-container">
-            <img loading="lazy" decoding="async" src="{{ '/assets/images/blockout1.png' | relative_url }}" alt="Blockout 1">
-            <img loading="lazy" decoding="async" src="{{ '/assets/images/blockout2.png' | relative_url }}" alt="Blockout 2">
-            <img loading="lazy" decoding="async" src="{{ '/assets/images/blockout3.png' | relative_url }}" alt="Blockout 3">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/blockout1.png' | relative_url }}" alt="Blockout 1">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/blockout2.png' | relative_url }}" alt="Blockout 2">
+            <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/blockout3.png' | relative_url }}" alt="Blockout 3">
           </div>
         </div>
         <figcaption>Blockout Pass</figcaption>
@@ -98,7 +98,7 @@ body_class: project-page
         <small>Peer feedback loop</small>
       </div>
       <figure>
-        <img loading="lazy" decoding="async" src="{{ '/assets/images/screenshot2.png' | relative_url }}" alt="Final lighting pass">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/level-design-assignment/images/screenshot2.png' | relative_url }}" alt="Final lighting pass">
         <figcaption>Lighting Pass</figcaption>
       </figure>
     </div>
@@ -116,4 +116,5 @@ body_class: project-page
   </div>
 
   <a class="ald-footer-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+  {% include project-nav.html slug="level-design-assignment" %}
 </section>

@@ -14,7 +14,7 @@ layout: default
           <span>Futuregames</span>
         </div>
         <div class="hero-actions">
-        <a class="hero-link" href="{{ '/assets/CV-Hugo.pdf' | relative_url }}" target="_blank" rel="noopener">
+        <a class="hero-link" href="{{ '/assets/docs/CV-HugoN.pdf' | relative_url }}" target="_blank" rel="noopener">
           CV
           <svg class="hero-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path d="M12 3v10m0 0l4-4m-4 4l-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -24,7 +24,7 @@ layout: default
       </div>
       <div class="card-media">
         <a class="hero-about-link" href="{{ '/about/' | relative_url }}" aria-label="About me">
-          <img src="{{ '/assets/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" loading="lazy" decoding="async">
+          <img src="{{ '/assets/media/about/images/hugo-portrait.jpg' | relative_url }}" alt="Hugo Portrait" loading="lazy" decoding="async">
           <span class="hero-about-label">About me</span>
         </a>
       </div>
@@ -45,36 +45,7 @@ layout: default
     <p class="eyebrow">Primary Showcase</p>
   </div>
   {% if primary_project %}
-  <article class="spotlight-card">
-    <a class="project-card-hit" href="{{ primary_project.url | relative_url }}" aria-label="View {{ primary_project.title }}"></a>
-    <div class="spotlight-media">
-      {% if primary_project.media_type == "video" %}
-        <video preload="auto" autoplay loop muted playsinline class="spotlight-video">
-          <source src="{{ primary_project.media_src | relative_url }}" type="video/webm">
-        </video>
-      {% else %}
-        <img src="{{ primary_project.media_src | relative_url }}" alt="{{ primary_project.title }} hero" loading="lazy" decoding="async">
-      {% endif %}
-      {% if primary_project.engine_icon %}
-        <img class="engine-badge" src="{{ primary_project.engine_icon | relative_url }}" alt="{{ primary_project.title }} engine">
-      {% endif %}
-      <span class="card-hover-label">Full breakdown</span>
-    </div>
-    <div class="spotlight-content">
-      <div>
-        <h3>{{ primary_project.title }}</h3>
-        <p class="spotlight-summary">{{ primary_project.summary }}</p>
-      </div>
-      <div class="spotlight-tags">
-        {% for tag in primary_project.tags %}
-          <span class="tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-      <p class="spotlight-meta-line">
-        Role: {{ primary_project.role_tag }} · Team: {{ primary_project.team_tag }} · {{ primary_project.timeframe }}
-      </p>
-    </div>
-  </article>
+    {% include project-spotlight.html project=primary_project %}
   {% endif %}
 </section>
 
@@ -88,35 +59,7 @@ layout: default
     {% for slug in secondary_order %}
       {% assign project = site.data.projects | where: "slug", slug | first %}
       {% if project %}
-      <article class="project-card">
-        <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
-        <div class="project-card-media">
-          {% if project.media_type == "video" %}
-            <video preload="auto" autoplay loop muted playsinline class="project-card-video">
-              <source src="{{ project.media_src | relative_url }}" type="video/webm">
-            </video>
-          {% else %}
-            <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
-          {% endif %}
-          {% if project.engine_icon %}
-            <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
-          {% endif %}
-          <span class="card-hover-label">Full breakdown</span>
-        </div>
-        <div class="project-card-meta-row">
-          <span class="tag">Role: {{ project.role_tag }}</span>
-          <span class="tag">Team: {{ project.team_tag }}</span>
-        </div>
-        <div class="project-card-body">
-          <h3>{{ project.title }}</h3>
-          <p class="project-card-summary">{{ project.summary }}</p>
-          <div class="project-keywords">
-            {% for tag in project.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
-        </div>
-      </article>
+        {% include project-card.html project=project %}
       {% endif %}
     {% endfor %}
   </div>

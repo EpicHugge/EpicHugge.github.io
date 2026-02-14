@@ -12,7 +12,7 @@ body_class: project-page
   </header>
 
   <div class="ald-hero-media" data-reveal>
-    <img loading="lazy" decoding="async" src="{{ '/assets/images/placeholder-gp4.svg' | relative_url }}" alt="Project Liminal placeholder">
+    <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/placeholders/placeholder-gp4.svg' | relative_url }}" alt="Project Liminal placeholder">
   </div>
 
   <div class="ald-section" data-reveal>
@@ -28,4 +28,5 @@ body_class: project-page
   </div>
 
   <a class="ald-footer-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+  {% include project-nav.html slug="game-project-4" %}
 </section>
