@@ -689,6 +689,10 @@ main > section {
   transform: scale(1.02);
   box-shadow: 0 12px 20px rgba(0,0,0,0.4);
 }
+.about-mentorship-media img:hover {
+  transform: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+}
 .about-media-grid {
   grid-template-columns: 1fr;
 }
@@ -710,12 +714,39 @@ main > section {
 }
 
 .about-mentorship-card .card {
-  text-align: center;
-  max-width: 900px;
+  text-align: left;
+  max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+}
+.about-mentorship-card .about-copy {
+  text-align: center;
   align-items: center;
+}
+.about-mentorship-media {
+  position: relative;
+}
+.about-mentorship-link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(17,17,17,0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.about-mentorship-media:is(:hover, :focus-within) .about-mentorship-link {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: rgba(217,178,111,0.6);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 }
 .about-mentorship-card h2 {
   margin: 0 0 10px;
@@ -925,6 +956,22 @@ main > section {
   line-height: 1.7;
   max-width: 46ch;
 }
+.spotlight-meta-row {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 var(--space-5) var(--space-2);
+  margin-top: -48px;
+  position: relative;
+  z-index: 3;
+  justify-content: flex-start;
+  padding-left: calc(var(--space-5) + 64px);
+}
+.spotlight-meta-row .tag {
+  background: rgba(22,22,22,0.8);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
 .spotlight-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1065,8 +1112,9 @@ main > section {
 }
 .engine-badge {
   position: absolute;
-  bottom: 12px;
   left: 12px;
+  top: 12px;
+  bottom: auto;
   width: 44px;
   height: 44px;
   border-radius: 8px;
@@ -2229,6 +2277,33 @@ main > section {
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.35);
 }
+.ald-moodboard-card {
+  display: grid;
+  gap: var(--space-4);
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: var(--space-5);
+}
+.ald-moodboard-feature img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+  display: block;
+}
+.ald-moodboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-3);
+}
+.ald-moodboard-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  display: block;
+}
 .ald-flow {
   display: flex;
   align-items: center;
@@ -2776,7 +2851,7 @@ main > section {
   }
   .nav-links {
     position: absolute;
-    top: 80px;
+    top: 64px;
     left: 0;
     width: 100%;
     background-color: var(--background-color);
@@ -2863,6 +2938,7 @@ main > section {
   html,
   body {
     overflow-x: hidden;
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-6));
   }
   .hamburger {
     width: 32px;
@@ -2898,8 +2974,13 @@ main > section {
   .engine-badge {
     width: 44px;
     height: 44px;
-    left: 12px;
-    bottom: 12px;
+  }
+  .engine-badge--mobile-top,
+  .project-card .engine-badge,
+  .spotlight-card .spotlight-badge {
+    top: 12px !important;
+    left: 12px !important;
+    bottom: auto !important;
   }
   .hero-link {
     padding: var(--space-3) var(--space-5);
@@ -2960,6 +3041,14 @@ main > section {
   }
   .contact-page .contact-details {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) {
+  .engine-badge {
+    top: auto;
+    bottom: 12px;
+    left: 12px;
   }
 }
 
@@ -3098,10 +3187,25 @@ main > section {
 @media (max-width: 900px) {
   .spotlight-card {
     grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  .spotlight-badge {
+    top: 12px;
+    left: 12px;
+    bottom: auto;
   }
   .spotlight-media img:not(.engine-badge),
   .spotlight-video {
     min-height: 240px;
+  }
+  .spotlight-meta-row {
+    display: flex;
+  }
+  .spotlight-meta-line {
+    display: none;
+  }
+  .spotlight-content {
+    padding: var(--space-4) var(--space-5) var(--space-5);
   }
   .ald-highlight {
     grid-template-columns: 1fr;

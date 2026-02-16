@@ -54,7 +54,7 @@ body_class: contact-page
         </div>
         <div class="contact-detail">
           <dt>Game Focus</dt>
-          <dd>Interested in <strong>Combat</strong>, <strong>Stealth</strong>, and <strong>Narrative-driven</strong> games, including <strong>FPS</strong>, <strong>TPS</strong>, and <strong>RPGs</strong>.</dd>
+          <dd>Interested in <strong>Combat</strong>, <strong>Stealth</strong>, <strong>Horror</strong>, and <strong>Narrative-driven</strong> games, including <strong>FPS</strong>, <strong>TPS</strong>, and <strong>RPGs</strong>.</dd>
         </div>
       </dl>
     </div>

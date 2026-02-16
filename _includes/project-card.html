@@ -11,7 +11,7 @@
       <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
     {% endif %}
     {% if project.engine_icon %}
-      <img class="engine-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
+      <img class="engine-badge engine-badge--mobile-top" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
     {% endif %}
     <span class="card-hover-label">Full breakdown</span>
   </div>

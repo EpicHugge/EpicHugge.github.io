@@ -8,7 +8,7 @@ body_class: project-page
 <section class="ald-case">
   <header class="ald-header ald-hero-card" data-reveal>
     <h1>Underground Garage Encounter</h1>
-    <p class="ald-subtitle">A Division-inspired third-person shooter encounter in an underground parking garage focused on cover-to-cover pacing, route choice, and a push → defend reversal with a clearly signaled door-breach flank event.</p>
+    <p class="ald-subtitle">A Division-inspired third-person shooter encounter in an underground parking garage focused on a cover-to-cover shooter, route choice, and a push → defend reversal with a clearly signaled door-breach flank event.</p>
   </header>
 
   <div class="ald-hero-media" data-reveal>
@@ -49,6 +49,35 @@ body_class: project-page
     <h2>Level Overview</h2>
     <div class="ald-map ald-map-single">
       <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/overview/overview-image.png' | relative_url }}" alt="Top-down encounter overview" class="ald-map-image">
+    </div>
+  </div>
+
+  <div class="ald-section" data-reveal>
+    <h2>Moodboard</h2>
+    <div class="ald-moodboard-card">
+      <div class="ald-moodboard-grid">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132616.png' | relative_url }}" alt="Moodboard reference image 1">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132647.png' | relative_url }}" alt="Moodboard reference image 2">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132749.png' | relative_url }}" alt="Moodboard reference image 3">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132905.png' | relative_url }}" alt="Moodboard reference image 4">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133015.png' | relative_url }}" alt="Moodboard reference image 5">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133025.png' | relative_url }}" alt="Moodboard reference image 6">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133411.png' | relative_url }}" alt="Moodboard reference image 7">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133537.png' | relative_url }}" alt="Moodboard reference image 8">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133725.png' | relative_url }}" alt="Moodboard reference image 9">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133838.png' | relative_url }}" alt="Moodboard reference image 10">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133848.png' | relative_url }}" alt="Moodboard reference image 11">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133900.png' | relative_url }}" alt="Moodboard reference image 12">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133932.png' | relative_url }}" alt="Moodboard reference image 13">
+        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20134054.png' | relative_url }}" alt="Moodboard reference image 14">
+      </div>
+    </div>
+  </div>
+
+  <div class="ald-section" data-reveal>
+    <h2>Level Drawing</h2>
+    <div class="ald-map ald-map-single">
+      <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Level%20Drawing.png' | relative_url }}" alt="Level drawing for the underground garage encounter" class="ald-map-image">
     </div>
   </div>
 
@@ -165,6 +194,13 @@ body_class: project-page
 
     <div class="ald-iteration-summary">
       <p><strong>Extra note:</strong> Players rushed into the open without reading the encounter. I added a subtle blocker and adjusted first-cover placement to create a deliberate “pause and scan” moment.</p>
+    </div>
+  </div>
+
+  <div class="ald-section" data-reveal>
+    <h2>Mentor Playtest</h2>
+    <div class="ald-iteration-summary">
+      <p>Playtested and approved by <strong>Prashant Trivedi</strong> (Senior Level Designer, Massive Entertainment). The feedback confirmed the encounter reads clearly and the pressure curve stays fair.</p>
     </div>
   </div>
 

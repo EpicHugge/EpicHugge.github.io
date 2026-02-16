@@ -285,6 +285,10 @@
   transform: scale(1.02);
   box-shadow: 0 12px 20px rgba(0,0,0,0.4);
 }
+.about-mentorship-media img:hover {
+  transform: none;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+}
 .about-media-grid {
   grid-template-columns: 1fr;
 }
@@ -306,12 +310,39 @@
 }
 
 .about-mentorship-card .card {
-  text-align: center;
-  max-width: 900px;
+  text-align: left;
+  max-width: 1000px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+}
+.about-mentorship-card .about-copy {
+  text-align: center;
   align-items: center;
+}
+.about-mentorship-media {
+  position: relative;
+}
+.about-mentorship-link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(17,17,17,0.85);
+  color: #ffffff;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+}
+.about-mentorship-media:is(:hover, :focus-within) .about-mentorship-link {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: rgba(217,178,111,0.6);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
 }
 .about-mentorship-card h2 {
   margin: 0 0 10px;
@@ -521,6 +552,22 @@
   line-height: 1.7;
   max-width: 46ch;
 }
+.spotlight-meta-row {
+  display: none;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 var(--space-5) var(--space-2);
+  margin-top: -48px;
+  position: relative;
+  z-index: 3;
+  justify-content: flex-start;
+  padding-left: calc(var(--space-5) + 64px);
+}
+.spotlight-meta-row .tag {
+  background: rgba(22,22,22,0.8);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+}
 .spotlight-meta {
   display: flex;
   flex-wrap: wrap;
@@ -661,8 +708,9 @@
 }
 .engine-badge {
   position: absolute;
-  bottom: 12px;
   left: 12px;
+  top: 12px;
+  bottom: auto;
   width: 44px;
   height: 44px;
   border-radius: 8px;

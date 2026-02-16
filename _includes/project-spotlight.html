@@ -3,7 +3,7 @@
 <article class="spotlight-card" data-reveal>
   <a class="project-card-hit" href="{{ project.url | relative_url }}" aria-label="View {{ project.title }}"></a>
   {% if project.engine_icon %}
-    <img class="spotlight-badge" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
+    <img class="spotlight-badge engine-badge--mobile-top" src="{{ project.engine_icon | relative_url }}" alt="{{ project.title }} engine">
   {% endif %}
   <div class="spotlight-media">
     {% if project.media_type == "video" %}
@@ -14,6 +14,10 @@
       <img src="{{ project.media_src | relative_url }}" alt="{{ project.title }} hero" loading="lazy" decoding="async">
     {% endif %}
     <span class="card-hover-label">Full breakdown</span>
+  </div>
+  <div class="spotlight-meta-row">
+    <span class="tag">Role: {{ project.role_tag }}</span>
+    <span class="tag">Team: {{ project.team_tag }}</span>
   </div>
   <div class="spotlight-content">
     <div>

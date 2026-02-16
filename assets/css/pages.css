@@ -755,6 +755,33 @@
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.35);
 }
+.ald-moodboard-card {
+  display: grid;
+  gap: var(--space-4);
+  background: linear-gradient(135deg, rgba(217,178,111,0.12), #2c2c2c);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: var(--space-5);
+}
+.ald-moodboard-feature img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+  display: block;
+}
+.ald-moodboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: var(--space-3);
+}
+.ald-moodboard-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  display: block;
+}
 .ald-flow {
   display: flex;
   align-items: center;
