@@ -2982,6 +2982,23 @@ main > section {
     left: 12px !important;
     bottom: auto !important;
   }
+  .card-hover-label,
+  .hero-about-label,
+  .about-mentorship-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .project-card[data-reveal] .card-hover-label,
+  .spotlight-card[data-reveal] .card-hover-label {
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  .project-card[data-reveal].reveal .card-hover-label,
+  .spotlight-card[data-reveal].reveal .card-hover-label {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .hero-link {
     padding: var(--space-3) var(--space-5);
     font-size: var(--type-sm);
