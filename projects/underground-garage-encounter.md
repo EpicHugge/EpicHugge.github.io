@@ -8,7 +8,7 @@ body_class: project-page
 <section class="ald-case">
   <header class="ald-header ald-hero-card" data-reveal>
     <h1>Underground Garage Encounter</h1>
-    <p class="ald-subtitle">A Division-inspired third-person shooter encounter in an underground parking garage focused on a cover-to-cover shooter, route choice, and a push → defend reversal with a clearly signaled door-breach flank event.</p>
+    <p class="ald-subtitle">A Division-inspired third-person shooter encounter in an underground parking garage focused on cover-to-cover shooting, route choice, and a push → defend reversal with a clearly signaled side-door entry event.</p>
   </header>
 
   <div class="ald-hero-media" data-reveal>
@@ -25,7 +25,7 @@ body_class: project-page
         <p>I built this as a short, intense portfolio sprint to combine my recent learning into one complete TPS encounter slice.</p>
         <ul class="ald-text-points">
           <li><strong>Level + encounter design:</strong> Layout, pacing, and player guidance.</li>
-          <li><strong>Implementation:</strong> Objective flow, spawns, and encounter sequencing.</li>
+          <li><strong>Implementation:</strong> Spawns and encounter sequencing.</li>
           <li><strong>Documentation + capture:</strong> Notes, screenshots, and clips.</li>
         </ul>
       </section>
@@ -63,7 +63,6 @@ body_class: project-page
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133015.png' | relative_url }}" alt="Moodboard reference image 5">
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133025.png' | relative_url }}" alt="Moodboard reference image 6">
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133411.png' | relative_url }}" alt="Moodboard reference image 7">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133537.png' | relative_url }}" alt="Moodboard reference image 8">
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133725.png' | relative_url }}" alt="Moodboard reference image 9">
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133838.png' | relative_url }}" alt="Moodboard reference image 10">
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133848.png' | relative_url }}" alt="Moodboard reference image 11">
@@ -71,13 +70,6 @@ body_class: project-page
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133932.png' | relative_url }}" alt="Moodboard reference image 13">
         <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20134054.png' | relative_url }}" alt="Moodboard reference image 14">
       </div>
-    </div>
-  </div>
-
-  <div class="ald-section" data-reveal>
-    <h2>Level Drawing</h2>
-    <div class="ald-map ald-map-single">
-      <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Level%20Drawing.png' | relative_url }}" alt="Level drawing for the underground garage encounter" class="ald-map-image">
     </div>
   </div>
 
@@ -200,7 +192,7 @@ body_class: project-page
   <div class="ald-section" data-reveal>
     <h2>Mentor Playtest</h2>
     <div class="ald-iteration-summary">
-      <p>Playtested and approved by <strong>Prashant Trivedi</strong> (Senior Level Designer, Massive Entertainment). The feedback confirmed the encounter reads clearly and the pressure curve stays fair.</p>
+      <p>Playtested and approved by <strong>Prashant Trivedi</strong> (Senior Level Designer, Massive Entertainment). The feedback confirmed the escalation beats are readable and the mid-fight shift feels fair.</p>
     </div>
   </div>
 
@@ -235,8 +227,7 @@ body_class: project-page
           <p class="ald-highlight-lede">The space supports multiple viable approaches, so decision-making matters, not just aim.</p>
           <ul class="ald-highlight-points">
             <li><strong>Tradeoffs:</strong> Multiple holds with clear control vs safety tradeoffs.</li>
-            <li><strong>Repositioning:</strong> Strong positions become risky when conditions change.</li>
-            <li><strong>Planning:</strong> Rewards movement and planning over one “correct” spot.</li>
+            <li><strong>Decision making:</strong> Encourages committing to a position and rotating at the right time.</li>
           </ul>
         </div>
       </article>
@@ -272,7 +263,7 @@ body_class: project-page
     <div class="ald-reflections">
       <ul class="ald-text-points">
         <li><strong>Timeboxing:</strong> Forced better prioritization and clearer beats.</li>
-        <li><strong>Telegraphing:</strong> Essential when a new combat angle appears mid-fight.</li>
+        <li><strong>Clear cues:</strong> Essential when a new combat angle appears mid-fight.</li>
         <li><strong>Route clarity:</strong> Small layout and lighting changes improved discovery.</li>
         <li><strong>Next:</strong> Extend the newly opened area and improve lighting/material pass for clarity.</li>
       </ul>

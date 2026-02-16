@@ -46,7 +46,7 @@ body_class: contact-page
         </div>
         <div class="contact-detail">
           <dt>Availability</dt>
-          <dd>Available <strong>May 18 – December 25</strong>. Open to <strong>internship</strong> or <strong>entry-level</strong> work, <strong>full-time</strong> or <strong>part-time</strong> depending on studio needs.</dd>
+          <dd>Available from <strong>May 2026</strong>. Open to <strong>internship</strong> or <strong>entry-level</strong> work.</dd>
         </div>
         <div class="contact-detail">
           <dt>Location</dt>

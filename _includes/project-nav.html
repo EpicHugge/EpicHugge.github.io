@@ -14,6 +14,13 @@
         <a class="project-nav-link" data-project-nav="prev" href="{{ prev_project.url | relative_url }}">
           <span class="project-nav-label">Previous</span>
           <span class="project-nav-title">{{ prev_project.title }}</span>
+          {% if prev_project.tags and prev_project.tags.size > 0 %}
+            <div class="project-nav-tags">
+              {% for tag in prev_project.tags limit:3 %}
+                <span class="project-nav-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
         </a>
       {% endif %}
     {% endif %}
@@ -23,6 +30,13 @@
       <a class="project-nav-link" data-project-nav="next" href="{{ next_project.url | relative_url }}">
         <span class="project-nav-label">Next</span>
         <span class="project-nav-title">{{ next_project.title }}</span>
+        {% if next_project.tags and next_project.tags.size > 0 %}
+          <div class="project-nav-tags">
+            {% for tag in next_project.tags limit:3 %}
+              <span class="project-nav-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
       </a>
     {% endif %}
   </nav>

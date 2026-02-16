@@ -78,7 +78,10 @@
 }
 .contact-page .contact-detail dt {
   display: inline-flex;
-  width: fit-content;
+  justify-self: start;
+  align-self: start;
+  width: max-content;
+  max-width: 100%;
   padding: var(--space-1) 10px;
   border-radius: 999px;
   background: #333333;
@@ -1180,6 +1183,21 @@
 .project-nav-title {
   font-size: var(--type-lg);
   font-weight: 600;
+}
+.project-nav-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.project-nav-tag {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(22,22,22,0.8);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
 }
 
 .ald-case [data-reveal] {
