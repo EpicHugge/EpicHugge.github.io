@@ -56,19 +56,48 @@ body_class: project-page
     <h2>Moodboard</h2>
     <div class="ald-moodboard-card">
       <div class="ald-moodboard-grid">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132616.png' | relative_url }}" alt="Moodboard reference image 1">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132647.png' | relative_url }}" alt="Moodboard reference image 2">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132749.png' | relative_url }}" alt="Moodboard reference image 3">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132905.png' | relative_url }}" alt="Moodboard reference image 4">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133015.png' | relative_url }}" alt="Moodboard reference image 5">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133025.png' | relative_url }}" alt="Moodboard reference image 6">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133411.png' | relative_url }}" alt="Moodboard reference image 7">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133725.png' | relative_url }}" alt="Moodboard reference image 9">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133838.png' | relative_url }}" alt="Moodboard reference image 10">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133848.png' | relative_url }}" alt="Moodboard reference image 11">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133900.png' | relative_url }}" alt="Moodboard reference image 12">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133932.png' | relative_url }}" alt="Moodboard reference image 13">
-        <img loading="lazy" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20134054.png' | relative_url }}" alt="Moodboard reference image 14">
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132616.png' | relative_url }}" aria-label="Open inspiration image 1">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132616.png' | relative_url }}" alt="Moodboard reference image 1">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132647.png' | relative_url }}" aria-label="Open inspiration image 2">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132647.png' | relative_url }}" alt="Moodboard reference image 2">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132749.png' | relative_url }}" aria-label="Open inspiration image 3">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132749.png' | relative_url }}" alt="Moodboard reference image 3">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132905.png' | relative_url }}" aria-label="Open inspiration image 4">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20132905.png' | relative_url }}" alt="Moodboard reference image 4">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133015.png' | relative_url }}" aria-label="Open inspiration image 5">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133015.png' | relative_url }}" alt="Moodboard reference image 5">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133025.png' | relative_url }}" aria-label="Open inspiration image 6">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133025.png' | relative_url }}" alt="Moodboard reference image 6">
+        </button>
+<button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133725.png' | relative_url }}" aria-label="Open inspiration image 7">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133725.png' | relative_url }}" alt="Moodboard reference image 7">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133838.png' | relative_url }}" aria-label="Open inspiration image 8">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133838.png' | relative_url }}" alt="Moodboard reference image 8">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133848.png' | relative_url }}" aria-label="Open inspiration image 9">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133848.png' | relative_url }}" alt="Moodboard reference image 9">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133900.png' | relative_url }}" aria-label="Open inspiration image 10">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133900.png' | relative_url }}" alt="Moodboard reference image 10">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133932.png' | relative_url }}" aria-label="Open inspiration image 11">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20133932.png' | relative_url }}" alt="Moodboard reference image 11">
+        </button>
+        <button class="ald-moodboard-item" type="button" data-full="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20134054.png' | relative_url }}" aria-label="Open inspiration image 12">
+          <img loading="eager" decoding="async" src="{{ '/assets/media/projects/underground-garage-encounter/images/docs/Documentation/Inspiration%20Pics/Inspiration%202026-02-09%20134054.png' | relative_url }}" alt="Moodboard reference image 12">
+        </button>
+      </div>
+      <div class="ald-lightbox" aria-hidden="true">
+        <button class="ald-lightbox-close" type="button" aria-label="Close image">×</button>
+        <div class="ald-lightbox-content" role="dialog" aria-label="Moodboard image viewer">
+          <img src="" alt="">
+        </div>
       </div>
     </div>
   </div>

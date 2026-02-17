@@ -194,6 +194,65 @@ document.addEventListener('DOMContentLoaded', function() {
   setupMediaShimmer();
   setupHeroParallax();
   setupBackToTop();
+  const setupMoodboardLightbox = () => {
+    const items = document.querySelectorAll('.ald-moodboard-item');
+    const lightbox = document.querySelector('.ald-lightbox');
+    if (!items.length || !lightbox) return;
+
+    if (lightbox.parentElement !== document.body) {
+      document.body.appendChild(lightbox);
+    }
+
+    const lightboxImage = lightbox.querySelector('img');
+    const closeButton = lightbox.querySelector('.ald-lightbox-close');
+
+    const openLightbox = (src, alt) => {
+      lightboxImage.src = src;
+      lightboxImage.alt = alt || 'Moodboard image';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+    };
+
+    items.forEach((item) => {
+      item.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        const img = item.querySelector('img');
+        const src = item.dataset.full || (img ? img.src : '');
+        if (!src) return;
+        openLightbox(src, img ? img.alt : '');
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      closeLightbox();
+    });
+
+    // Click anywhere on the overlay (including the image area) to close.
+
+    if (closeButton) {
+      closeButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        closeLightbox();
+      });
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  };
+
+  setupMoodboardLightbox();
 
   const toolchainSection = document.querySelector('.toolchain');
   if (toolchainSection) {
